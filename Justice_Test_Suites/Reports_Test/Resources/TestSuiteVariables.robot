@@ -1,0 +1,3 @@
+*** Variables ***
+
+${BROWSER}   Chrome
