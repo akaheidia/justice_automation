@@ -20,5 +20,4 @@ Login Should Be Disabled When Missing Credentials
     [Arguments]  ${user}  ${pwd}
     Enter User Name  ${user}
     Enter Password   ${pwd}
-    Verify Missing Credentials
-
+    Confirm Missing Credentials

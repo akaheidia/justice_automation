@@ -26,20 +26,20 @@ Clear Credentials
     Clear Element Text  ${login_password_text}
     Reload Page
 
-Verify Successful Login
+Confirm Successful Login
     Wait Until Page Contains Element  ${nav_side_bar}
     ${page_url}=  Get Location
     Location Should Contain  ${home_page_url_suffix}
     Page Should Contain Image  ${nav_logo_image}
 
-Verify Unauthorized Login
+Confirm Unauthorized Login
     Wait Until Page Contains Element  ${login_failed_ok}
     Page Should Contain Element  ${login_unauthorized_message}
 
-Verify Missing Credentials
+Confirm Missing Credentials
     Element Should Be Disabled  ${login_login_btn}
 
-Verify Successful Logout
+Confirm Successful Logout
     Wait Until Page Contains Element  ${login_username_text}
     ${page_url}=  Get Location
     Location Should Contain  ${login_page_url_suffix}

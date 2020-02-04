@@ -11,6 +11,6 @@ Suite Teardown  Close Browser
 *** Test Cases ***
 Valid Login and Logout
     Log In  ${USERNAME}  ${PASSWORD}
-    Verify Successful Login
+    Confirm Successful Login
     Log Out
-    Verify Successful Logout
+    Confirm Successful Logout

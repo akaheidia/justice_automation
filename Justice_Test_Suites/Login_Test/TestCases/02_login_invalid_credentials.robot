@@ -20,5 +20,5 @@ Login With Invalid Credentials Should Fail
     Enter User Name  ${user}
     Enter Password   ${pwd}
     Click Login
-    Verify Unauthorized Login
+    Confirm Unauthorized Login
     Close Message Box
