@@ -17,13 +17,13 @@ Click Settings
 Click User
     Click Element  ${nav_user_icon}
 
-Verify Monitoring Page Loaded
+Confirm Monitoring Page Loaded
     Page Should Contain Element  ${monitor_page_title}
     Page Should Contain Element  ${selected slider}
     Page Should Contain Element  ${unselected slider}
 
-Verify Reports Page Loaded
+Confirm Reports Page Loaded
     Page Should Contain Element  ${reports_page_title}
 
-Verify Settings Page Loaded
+Confirm Settings Page Loaded
     Page Should Contain Element  ${settings_page_title}

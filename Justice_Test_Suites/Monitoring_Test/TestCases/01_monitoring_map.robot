@@ -10,4 +10,4 @@ Suite Teardown   Log Out and Close Browser
 *** Test Cases ***
 Verify Navigation Menu
     Click Monitoring
-    Verify Monitoring Page Loaded
+    Confirm Monitoring Page Loaded

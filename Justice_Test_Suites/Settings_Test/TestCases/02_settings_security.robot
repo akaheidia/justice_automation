@@ -10,4 +10,4 @@ Suite Teardown   Log Out and Close Browser
 *** Test Cases ***
 Verify Navigation Menu
     Click Settings
-    Verify Settings Page Loaded
+    Confirm Settings Page Loaded
