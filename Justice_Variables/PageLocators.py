@@ -39,7 +39,15 @@ refresh_button = "xpath://mat-icon[@class='mat-icon notranslate ei ei-refresh ma
 # Reports Page Elements
 reports_page_title = "xpath://h1[contains(text(),'Reports')]"
 
+# Reports - Network Scorecard Page Elements
+
 # Settings Page Elements
 settings_page_title = "xpath://span[@class='settings-title']"
 settings_usergroups_menu = "xpath://div[contains(text(),'User Groups')]"
 settings_security_menu = "xpath://div[contains(text(),'Security')]"
+
+# Settings - User Groups Page Elements
+user_groups_page_title = "xpath://span[@class='user-groups-title']"
+
+# Settings - Security Page Elements
+security_page_title = "xpath://span[@class='security-title']"

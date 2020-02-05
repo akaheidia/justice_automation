@@ -12,3 +12,5 @@ Suite Teardown   Log Out and Close Browser
 Confirm Page Loads
     Click Settings
     Confirm Settings Page Loaded
+    Click Security
+    Confirm Security Page Loaded
