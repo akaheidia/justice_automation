@@ -18,7 +18,7 @@ Log Out and Close Browser
 Open and Maximize Browser
     [Arguments]  ${url}  ${browser}
     Open Browser  ${url}  ${browser}  options=add_argument("--ignore-certificate-errors")
-    Set Browser Implicit Wait  30
+    Set Browser Implicit Wait  10
     Maximize Browser Window
     Wait Until Page Contains Element  ${login_username_text}
 
