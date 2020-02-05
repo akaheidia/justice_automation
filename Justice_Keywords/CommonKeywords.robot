@@ -27,7 +27,7 @@ Log In
     Enter User Name  ${user}
     Enter Password   ${pwd}
     Click Login
-    Verify Successful Login
+    Confirm Successful Login
 
 Log Out
     Page Should Contain Element  ${nav_user_icon}
