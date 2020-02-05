@@ -15,4 +15,4 @@ Confirm Page Loads
     Open Sidebar Menu
     Expand Reports Tree Reports Node
     Click Network Summary Reports Menu
-    Confirm Network Summary Report Page Loaded
+    Confirm Network Summary Reports Page Loaded
