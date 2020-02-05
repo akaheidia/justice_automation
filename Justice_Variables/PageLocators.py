@@ -27,7 +27,11 @@ selected_slider_class = "list-switcher-selected-text"
 unselected_slider_class = "list-switcher-unselected-text"
 
 # Map Page Elements
-
+zoom_in_enabled_button = "xpath://a[@class='leaflet-control-zoom-in']"
+zoom_in_disabled_button = "xpath://a[@class='leaflet-control-zoom-in leaflet-disabled']"
+zoom_out_enabled_button = "xpath://a[@class='leaflet-control-zoom-out']"
+zoom_out_disabled_button = "xpath://a[@class='leaflet-control-zoom-out leaflet-disabled']"
+refresh_button = "xpath://mat-icon[@class='mat-icon notranslate ei ei-refresh mat-icon-no-color']"
 
 # List Page Elements
 
