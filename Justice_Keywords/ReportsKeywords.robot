@@ -45,7 +45,18 @@ Click Network Scorecard Reports Menu
     Click Element  ${reports_network_scorecard_menu}
     Unselect Frame
 
+Click Network Summary Reports Menu
+    Select Frame  xpath://iframe
+    Element Should Be Visible  ${reports_network_summary_menu}
+    Click Element  ${reports_network_summary_menu}
+    Unselect Frame
+
 Confirm Network Scorecard Report Page Loaded
     Select Frame  xpath://iframe
     Page Should Contain Element  ${reports_network_scorecard_page_title}
+    Unselect Frame
+
+Confirm Network Summary Report Page Loaded
+    Select Frame  xpath://iframe
+    Page Should Contain Element  ${reports_network_summary_page_title}
     Unselect Frame
