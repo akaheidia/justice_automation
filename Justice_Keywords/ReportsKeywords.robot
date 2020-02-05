@@ -40,16 +40,16 @@ Collapse Reports Tree Reports Node
     Run Keyword If  ${need_to_collapse} > 0  Click Element  ${reports_tree_collapse_reports_icon}
     Unselect Frame
 
-Expand Reports Tree Sites Node
+Expand Reports Tree Site Node
     Select Frame  xpath://iframe
-    ${need_to_expand}=  Get Element Count  ${reports_tree_expand_sites_icon}
-    Run Keyword If  ${need_to_expand} > 0  Click Element  ${reports_tree_expand_sites_icon}
+    ${need_to_expand}=  Get Element Count  ${reports_tree_expand_site_icon}
+    Run Keyword If  ${need_to_expand} > 0  Click Element  ${reports_tree_expand_site_icon}
     Unselect Frame
 
-Collapse Reports Tree Sites Node
+Collapse Reports Tree Site Node
     Select Frame  xpath://iframe
-    ${need_to_collapse}=  Get Element Count  ${reports_tree_collapse_sites_icon}
-    Run Keyword If  ${need_to_collapse} > 0  Click Element  ${reports_tree_collapse_sites_icon}
+    ${need_to_collapse}=  Get Element Count  ${reports_tree_collapse_site_icon}
+    Run Keyword If  ${need_to_collapse} > 0  Click Element  ${reports_tree_collapse_site_icon}
     Unselect Frame
 
 Expand Reports Tree Top N Node
