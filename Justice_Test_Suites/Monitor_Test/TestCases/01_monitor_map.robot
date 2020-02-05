@@ -9,5 +9,6 @@ Suite Teardown   Log Out and Close Browser
 
 *** Test Cases ***
 Verify Navigation Menu
-    Click Monitoring
-    Confirm Monitoring Page Loaded
+    Click Monitor
+    Click Map Slider
+    Confirm Map Page Loaded

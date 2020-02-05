@@ -21,8 +21,16 @@ nav_open_btn = "xpath://mat-icon[@class='mat-icon notranslate ei ei-apps mat-ico
 
 # Monitor Page Elements
 monitor_page_title = "xpath://h1[contains(text(),'Monitor')]"
-selected_slider = "xpath://span[@class='list-switcher-selected-text']"
-unselected_slider = "xpath://span[@class='list-switcher-unselected-text']"
+map_slider = "xpath://span[contains(text(),'Map')]"
+list_slider = "xpath://span[contains(text(),'List')]"
+selected_slider_class = "list-switcher-selected-text"
+unselected_slider_class = "list-switcher-unselected-text"
+
+# Map Page Elements
+
+
+# List Page Elements
+
 
 # Reports Page Elements
 reports_page_title = "xpath://h1[contains(text(),'Reports')]"
