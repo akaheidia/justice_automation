@@ -8,7 +8,8 @@ Suite Setup      Open Browser and Log In  ${URL}  ${BROWSER}  ${USERNAME}  ${PAS
 Suite Teardown   Log Out and Close Browser
 
 *** Test Cases ***
-Verify Navigation Menu
+
+Confirm Page Loads
     Click Monitor
     Click Map Slider
     Confirm Map Page Loaded
