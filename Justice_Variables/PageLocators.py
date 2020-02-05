@@ -38,6 +38,42 @@ refresh_button = "xpath://mat-icon[@class='mat-icon notranslate ei ei-refresh ma
 
 # Reports Page Elements
 reports_page_title = "xpath://h1[contains(text(),'Reports')]"
+reports_sidebar_menu_button = "id:actShowSidebar"
+reports_add_button = "xpath://span[@class='btn btn-info ti-plus']"
+reports_menu_table = "id:rdMenuTable"
+
+# Reports Page Tree Nodes
+reports_tree_reports_node = "xpath://span[@id='rdDmtCaption' and contains(text(),'Reports')]"
+reports_tree_expand_reports_icon = "xpath://span[@id='rdDmtCaption' and contains(text(),'Reports')]/../..//td[@id='rdImage']/img[contains(@src, 'rdArrowRight')]"
+reports_tree_collapse_reports_icon = "xpath://span[@id='rdDmtCaption' and contains(text(),'Reports')]/../..//td[@id='rdImage']/img[contains(@src, 'rdArrowDown')]"
+reports_tree_sites_node = "xpath://span[@id='rdDmtCaption' and contains(text(),'Sites')]"
+reports_tree_topn_node = "xpath://span[@id='rdDmtCaption' and contains(text(),'Top N')]"
+reports_tree_analytics_node = "xpath://span[@id='rdDmtCaption' and contains(text(),'Analytics')]"
+
+# Reports Page Tree Node Menus
+reports_network_scorecard_menu = "xpath://span[@id='rdDmtCaption' and contains(text(),'Scorecard')]"
+
+# Reports Page Titles
+reports_network_scorecard_page_title = "xpath://h2[contains(text(),'Network Scorecard')]"
+reports_network_summary_page_title = "xpath://h2[contains(text(),'Network Summary')]"
+reports_site_availability_page_title = "xpath://h2[contains(text(),'Site Availability')]"
+reports_site_cpu_utilization_page_title = "xpath://h2[contains(text(),'CPU Utilization')]"
+reports_site_memory_utilization_page_title = "xpath://h2[contains(text(),'Memory Utilization')]"
+reports_site_port_utilization_page_title = "xpath://h2[contains(text(),'Port Utilization')]"
+reports_site_port_error_page_title = "xpath://h2[contains(text(),'Port Error')]"
+reports_topn_device_availability_page_title = "xpath://h2[contains(text(),'Device Availability')]"
+reports_topn_site_availability_page_title = "xpath://h2[contains(text(),'Site Availability')]"
+reports_topn_cpu_utilization_page_title = "xpath://h2[contains(text(),'CPU Utilization')]"
+reports_topn_memory_utilization_page_title = "xpath://h2[contains(text(),'Memory Utilization')]"
+reports_topn_port_utilization_page_title = "xpath://h2[contains(text(),'Port Utilization')]"
+reports_topn_port_error_page_title = "xpath://h2[contains(text(),'Port Error')]"
+reports_topn_top_aps_by_client_page_title = "xpath://h2[contains(text(),'Wireless Clients')]"
+reports_topn_top_aps_by_bandwidth_page_title = "xpath://h2[contains(text(),'Wireless Bandwidth')]"
+reports_analytics_analytics_summary_page_title = "//h2[contains(text(),'Analytics Summary')]"
+reports_analytics_top_applications_page_title = "xpath://h2[contains(text(),'Top Applications By Clients')]"
+reports_analytics_daily_usage_page_title = "xpath://h2[contains(text(),'Daily Analytics Usage')]"
+reports_analytics_monthly_usage_page_title = "xpath://h2[contains(text(),'Monthly Analytics Usage')]"
+reports_analytics_quarterly_usage_page_title = "xpath://h2[contains(text(),'Analytics Quarterly Summary')]"
 
 # Reports - Network Scorecard Page Elements
 

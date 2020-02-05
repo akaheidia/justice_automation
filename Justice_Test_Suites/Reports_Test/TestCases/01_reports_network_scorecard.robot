@@ -12,3 +12,7 @@ Suite Teardown   Log Out and Close Browser
 Confirm Page Loads
     Click Reports
     Confirm Reports Page Loaded
+    Open Sidebar Menu
+    Expand Reports Tree Reports Node
+    Click Network Scorecard Reports Menu
+    Confirm Network Scorecard Report Page Loaded
