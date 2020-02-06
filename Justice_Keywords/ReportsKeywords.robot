@@ -95,6 +95,50 @@ Click Site Availability Reports Menu
     Click Element  ${reports_site_availability_menu}
     Unselect Frame
 
+Click Site CPU Utilization Reports Menu
+    Select Frame  xpath://iframe
+    Element Should Be Visible  ${reports_site_cpu_utilization_menu}
+    Click Element  ${reports_site_cpu_utilization_menu}
+    Unselect Frame
+
+
+Click Top N Device Availability Reports Menu
+    Select Frame  xpath://iframe
+    Element Should Be Visible  ${reports_topn_device_availability_menu}
+    Click Element  ${reports_topn_device_availability_menu}
+    Unselect Frame
+
+
+Click Analytics Summary Reports Menu
+    Select Frame  xpath://iframe
+    Element Should Be Visible  ${reports_analytics_analytics_summary_menu}
+    Click Element  ${reports_analytics_analytics_summary_menu}
+    Unselect Frame
+
+Click Analytics Top Applications Reports Menu
+    Select Frame  xpath://iframe
+    Element Should Be Visible  ${reports_analytics_top_applications_menu}
+    Click Element  ${reports_analytics_top_applications_menu}
+    Unselect Frame
+
+Click Analytics Daily Usage Reports Menu
+    Select Frame  xpath://iframe
+    Element Should Be Visible  ${reports_analytics_daily_usage_menu}
+    Click Element  ${reports_analytics_daily_usage_menu}
+    Unselect Frame
+
+Click Analytics Monthly Usage Reports Menu
+    Select Frame  xpath://iframe
+    Element Should Be Visible  ${reports_analytics_monthly_usage_menu}
+    Click Element  ${reports_analytics_monthly_usage_menu}
+    Unselect Frame
+
+Click Analytics Quarterly Usage Reports Menu
+    Select Frame  xpath://iframe
+    Element Should Be Visible  ${reports_analytics_quarterly_usage_menu}
+    Click Element  ${reports_analytics_quarterly_usage_menu}
+    Unselect Frame
+
 
 Confirm Network Scorecard Reports Page Loaded
     Select Frame  xpath://iframe
@@ -106,7 +150,62 @@ Confirm Network Summary Reports Page Loaded
     Page Should Contain Element  ${reports_network_summary_page_title}
     Unselect Frame
 
+
 Confirm Site Availability Reports Page Loaded
+#    ${count}=  Get Element Count  xpath://iframe
+#    Log To Console  IFrame Count: ${count}
     Select Frame  xpath://iframe
-    Page Should Contain Element  ${reports_site_availability_page_title}
+#    ${count2}=  Get Element Count  xpath://iframe
+#    Log To Console  IFrame 2 Count: ${count2}
+
+    Select Frame  xpath://iframe[@name='availability']
+#    ${count3}=  Get Element Count  xpath://iframe
+#    Log To Console  IFrame 3 Count: ${count3}
+#
+#    Select Frame  xpath://iframe
+#    ${count4}=  Get Element Count  xpath://iframe
+#    Log To Console  IFrame 4 Count: ${count4}
+
+    ${elem_count}=  Get Element Count  ${reports_site_availability_page_title}
+    Log To Console  page title: ${elem_count}
+#    Page Should Contain Element  ${reports_site_availability_page_title}
+#    Unselect Frame
+    UnSelect Frame
+    Unselect Frame
+
+Confirm Site CPU Utilization Reports Page Loaded
+    Select Frame  xpath://iframe
+    Page Should Contain Element  ${reports_site_cpu_utilization_page_title}
+    Unselect Frame
+
+
+Confirm Top N Device Availability Reports Page Loaded
+    Select Frame  xpath://iframe
+    Page Should Contain Element  ${reports_topn_device_availability_page_title}
+    Unselect Frame
+
+
+Confirm Analytics Summary Reports Page Loaded
+    Select Frame  xpath://iframe
+    Page Should Contain Element  ${reports_analytics_analytics_summary_page_title}
+    Unselect Frame
+
+Confirm Analytics Top Applications Reports Page Loaded
+    Select Frame  xpath://iframe
+    Page Should Contain Element  ${reports_analytics_top_applications_page_title}
+    Unselect Frame
+
+Confirm Analytics Daily Usage Reports Page Loaded
+    Select Frame  xpath://iframe
+    Page Should Contain Element  ${reports_analytics_daily_usage_page_title}
+    Unselect Frame
+
+Confirm Analytics Monthly Usage Reports Page Loaded
+    Select Frame  xpath://iframe
+    Page Should Contain Element  ${reports_analytics_monthly_usage_page_title}
+    Unselect Frame
+
+Confirm Analytics Quarterly Usage Reports Page Loaded
+    Select Frame  xpath://iframe
+    Page Should Contain Element  ${reports_analytics_quarterly_usage_page_title}
     Unselect Frame
