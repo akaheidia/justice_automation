@@ -101,11 +101,71 @@ Click Site CPU Utilization Reports Menu
     Click Element  ${reports_site_cpu_utilization_menu}
     Unselect Frame
 
+Click Site Memory Utilization Reports Menu
+    Select Frame  xpath://iframe
+    Element Should Be Visible  ${reports_site_memory_utilization_menu}
+    Click Element  ${reports_site_memory_utilization_menu}
+    Unselect Frame
+
+Click Site Port Utilization Reports Menu
+    Select Frame  xpath://iframe
+    Element Should Be Visible  ${reports_site_port_utilization_menu}
+    Click Element  ${reports_site_port_utilization_menu}
+    Unselect Frame
+
+Click Site Port Error Reports Menu
+    Select Frame  xpath://iframe
+    Element Should Be Visible  ${reports_site_port_error_menu}
+    Click Element  ${reports_site_port_error_menu}
+    Unselect Frame
+
 
 Click Top N Device Availability Reports Menu
     Select Frame  xpath://iframe
     Element Should Be Visible  ${reports_topn_device_availability_menu}
     Click Element  ${reports_topn_device_availability_menu}
+    Unselect Frame
+
+Click Top N Site Availability Reports Menu
+    Select Frame  xpath://iframe
+    Element Should Be Visible  ${reports_topn_site_availability_menu}
+    Click Element  ${reports_topn_site_availability_menu}
+    Unselect Frame
+
+Click Top N CPU Utilization Reports Menu
+    Select Frame  xpath://iframe
+    Element Should Be Visible  ${reports_topn_cpu_utilization_menu}
+    Click Element  ${reports_topn_cpu_utilization_menu}
+    Unselect Frame
+
+Click Top N Memory Utilization Reports Menu
+    Select Frame  xpath://iframe
+    Element Should Be Visible  ${reports_topn_memory_utilization_menu}
+    Click Element  ${reports_topn_memory_utilization_menu}
+    Unselect Frame
+
+Click Top N Port Utilization Reports Menu
+    Select Frame  xpath://iframe
+    Element Should Be Visible  ${reports_topn_port_utilization_menu}
+    Click Element  ${reports_topn_port_utilization_menu}
+    Unselect Frame
+
+Click Top N Port Error Reports Menu
+    Select Frame  xpath://iframe
+    Element Should Be Visible  ${reports_topn_port_error_menu}
+    Click Element  ${reports_topn_port_error_menu}
+    Unselect Frame
+
+Click Top N Top APs By Clients Reports Menu
+    Select Frame  xpath://iframe
+    Element Should Be Visible  ${reports_topn_top_aps_by_clients_menu}
+    Click Element  ${reports_topn_top_aps_by_clients_menu}
+    Unselect Frame
+
+Click Top N Top APs By Bandwidth Reports Menu
+    Select Frame  xpath://iframe
+    Element Should Be Visible  ${reports_topn_top_aps_by_bandwidth_menu}
+    Click Element  ${reports_topn_top_aps_by_bandwidth_menu}
     Unselect Frame
 
 
@@ -175,13 +235,87 @@ Confirm Site Availability Reports Page Loaded
 
 Confirm Site CPU Utilization Reports Page Loaded
     Select Frame  xpath://iframe
-    Page Should Contain Element  ${reports_site_cpu_utilization_page_title}
+    ${elem_count}=  Get Element Count  ${reports_site_cpu_utilization_page_title}
+    Log To Console  page title: ${elem_count}
+#    Page Should Contain Element  ${reports_site_cpu_utilization_page_title}
+    Unselect Frame
+
+Confirm Site Memory Utilization Reports Page Loaded
+    Select Frame  xpath://iframe
+    ${elem_count}=  Get Element Count  ${reports_site_memory_utilization_page_title}
+    Log To Console  page title: ${elem_count}
+#    Page Should Contain Element  ${reports_site_memory_utilization_page_title}
+    Unselect Frame
+
+Confirm Site Port Utilization Reports Page Loaded
+    Select Frame  xpath://iframe
+    ${elem_count}=  Get Element Count  ${reports_site_port_utilization_page_title}
+    Log To Console  page title: ${elem_count}
+#    Page Should Contain Element  ${reports_site_port_utilization_page_title}
+    Unselect Frame
+
+Confirm Site Port Error Reports Page Loaded
+    Select Frame  xpath://iframe
+    ${elem_count}=  Get Element Count  ${reports_site_port_error_page_title}
+    Log To Console  page title: ${elem_count}
+#    Page Should Contain Element  ${reports_site_port_error_page_title}
     Unselect Frame
 
 
 Confirm Top N Device Availability Reports Page Loaded
     Select Frame  xpath://iframe
-    Page Should Contain Element  ${reports_topn_device_availability_page_title}
+    ${elem_count}=  Get Element Count  ${reports_topn_device_availability_page_title}
+    Log To Console  page title: ${elem_count}
+#    Page Should Contain Element  ${reports_topn_device_availability_page_title}
+    Unselect Frame
+
+Confirm Top N Site Availability Reports Page Loaded
+    Select Frame  xpath://iframe
+    ${elem_count}=  Get Element Count  ${reports_topn_site_availability_page_title}
+    Log To Console  page title: ${elem_count}
+#    Page Should Contain Element  ${reports_topn_site_availability_page_title}
+    Unselect Frame
+
+Confirm Top N CPU Utilization Reports Page Loaded
+    Select Frame  xpath://iframe
+    ${elem_count}=  Get Element Count  ${reports_topn_cpu_utilization_page_title}
+    Log To Console  page title: ${elem_count}
+#    Page Should Contain Element  ${reports_topn_cpu_utilization_page_title}
+    Unselect Frame
+
+Confirm Top N Memory Utilization Reports Page Loaded
+    Select Frame  xpath://iframe
+    ${elem_count}=  Get Element Count  ${reports_topn_memory_utilization_page_title}
+    Log To Console  page title: ${elem_count}
+#    Page Should Contain Element  ${reports_topn_memory_utilization_page_title}
+    Unselect Frame
+
+Confirm Top N Port Utilization Reports Page Loaded
+    Select Frame  xpath://iframe
+    ${elem_count}=  Get Element Count  ${reports_topn_port_utilization_page_title}
+    Log To Console  page title: ${elem_count}
+#    Page Should Contain Element  ${reports_topn_port_utilization_page_title}
+    Unselect Frame
+
+Confirm Top N Port Error Reports Page Loaded
+    Select Frame  xpath://iframe
+    ${elem_count}=  Get Element Count  ${reports_topn_port_error_page_title}
+    Log To Console  page title: ${elem_count}
+#    Page Should Contain Element  ${reports_topn_port_error_page_title}
+    Unselect Frame
+
+Confirm Top N Wireless Clients Reports Page Loaded
+    Select Frame  xpath://iframe
+    ${elem_count}=  Get Element Count  ${reports_topn_wireless_clients_page_title}
+    Log To Console  page title: ${elem_count}
+#    Page Should Contain Element  ${reports_topn_wireless_clients_page_title}
+    Unselect Frame
+
+Confirm Top N Wireless Bandwidth Reports Page Loaded
+    Select Frame  xpath://iframe
+    ${elem_count}=  Get Element Count  ${reports_topn_wireless_bandwidth_page_title}
+    Log To Console  page title: ${elem_count}
+#    Page Should Contain Element  ${reports_topn_wireless_bandwidth_page_title}
     Unselect Frame
 
 
