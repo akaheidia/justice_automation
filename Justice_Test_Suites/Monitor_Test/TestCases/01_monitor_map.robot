@@ -9,7 +9,7 @@ Suite Teardown   Log Out and Close Browser
 
 *** Test Cases ***
 
-Confirm Page Loads
+Confirm Map Page Loads
     Click Monitor
     Click Map Slider
     Confirm Map Page Loaded
