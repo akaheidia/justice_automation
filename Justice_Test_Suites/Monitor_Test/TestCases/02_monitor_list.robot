@@ -9,7 +9,7 @@ Suite Teardown   Log Out and Close Browser
 
 *** Test Cases ***
 
-Confirm Page Loads
+Confirm List Page Loads
     Click Monitor
     Click List Slider
     Confirm List Page Loaded
