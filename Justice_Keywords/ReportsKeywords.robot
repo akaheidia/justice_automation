@@ -263,59 +263,83 @@ Confirm Site Port Error Reports Page Loaded
 
 
 Confirm Top N Device Availability Reports Page Loaded
+    sleep  1 second
     Select Frame  xpath://iframe
-    ${elem_count}=  Get Element Count  ${reports_topn_device_availability_page_title}
-    Log To Console  page title: ${elem_count}
-#    Page Should Contain Element  ${reports_topn_device_availability_page_title}
+    Select Frame  xpath://iframe[@id='resource']
+
+    Page Should Contain Element  ${reports_topn_device_availability_page_title}
+
+    UnSelect Frame
     Unselect Frame
 
 Confirm Top N Site Availability Reports Page Loaded
+    sleep  1 second
     Select Frame  xpath://iframe
-    ${elem_count}=  Get Element Count  ${reports_topn_site_availability_page_title}
-    Log To Console  page title: ${elem_count}
-#    Page Should Contain Element  ${reports_topn_site_availability_page_title}
+    Select Frame  xpath://iframe[@id='resource']
+
+    Page Should Contain Element  ${reports_topn_site_availability_page_title}
+
+    UnSelect Frame
     Unselect Frame
 
 Confirm Top N CPU Utilization Reports Page Loaded
+    sleep  1 second
     Select Frame  xpath://iframe
-    ${elem_count}=  Get Element Count  ${reports_topn_cpu_utilization_page_title}
-    Log To Console  page title: ${elem_count}
-#    Page Should Contain Element  ${reports_topn_cpu_utilization_page_title}
+    Select Frame  xpath://iframe[@id='resource']
+
+    Page Should Contain Element  ${reports_topn_cpu_utilization_page_title}
+
+    UnSelect Frame
     Unselect Frame
 
 Confirm Top N Memory Utilization Reports Page Loaded
+    sleep  1 second
     Select Frame  xpath://iframe
-    ${elem_count}=  Get Element Count  ${reports_topn_memory_utilization_page_title}
-    Log To Console  page title: ${elem_count}
-#    Page Should Contain Element  ${reports_topn_memory_utilization_page_title}
+    Select Frame  xpath://iframe[@id='resource']
+
+    Page Should Contain Element  ${reports_topn_memory_utilization_page_title}
+
+    UnSelect Frame
     Unselect Frame
 
 Confirm Top N Port Utilization Reports Page Loaded
+    sleep  1 second
     Select Frame  xpath://iframe
-    ${elem_count}=  Get Element Count  ${reports_topn_port_utilization_page_title}
-    Log To Console  page title: ${elem_count}
-#    Page Should Contain Element  ${reports_topn_port_utilization_page_title}
+    Select Frame  xpath://iframe[@id='resource']
+
+    Page Should Contain Element  ${reports_topn_port_utilization_page_title}
+
+    UnSelect Frame
     Unselect Frame
 
 Confirm Top N Port Error Reports Page Loaded
+    sleep  1 second
     Select Frame  xpath://iframe
-    ${elem_count}=  Get Element Count  ${reports_topn_port_error_page_title}
-    Log To Console  page title: ${elem_count}
-#    Page Should Contain Element  ${reports_topn_port_error_page_title}
+    Select Frame  xpath://iframe[@id='resource']
+
+    Page Should Contain Element  ${reports_topn_port_error_page_title}
+
+    UnSelect Frame
     Unselect Frame
 
 Confirm Top N Wireless Clients Reports Page Loaded
+    sleep  1 second
     Select Frame  xpath://iframe
-    ${elem_count}=  Get Element Count  ${reports_topn_wireless_clients_page_title}
-    Log To Console  page title: ${elem_count}
-#    Page Should Contain Element  ${reports_topn_wireless_clients_page_title}
+    Select Frame  xpath://iframe[@id='resource']
+
+    Page Should Contain Element  ${reports_topn_wireless_clients_page_title}
+
+    UnSelect Frame
     Unselect Frame
 
 Confirm Top N Wireless Bandwidth Reports Page Loaded
+    sleep  1 second
     Select Frame  xpath://iframe
-    ${elem_count}=  Get Element Count  ${reports_topn_wireless_bandwidth_page_title}
-    Log To Console  page title: ${elem_count}
-#    Page Should Contain Element  ${reports_topn_wireless_bandwidth_page_title}
+    Select Frame  xpath://iframe[@id='resource']
+
+    Page Should Contain Element  ${reports_topn_wireless_bandwidth_page_title}
+
+    UnSelect Frame
     Unselect Frame
 
 
