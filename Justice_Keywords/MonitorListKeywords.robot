@@ -9,6 +9,18 @@ Documentation    Keywords specific to the Monitor List page.
 Click List Slider
     Click Element  ${list_slider}
 
+Click Devices Tab
+    Click Element  ${devices_tab}
+
+Click Endpoints Tab
+    Click Element  ${endpoints_tab}
+
+Click Alarms Tab
+    Click Element  ${alarms_tab}
+
+Click Events Tab
+    Click Element  ${events_tab}
+
 Confirm List Page Loaded
     Page Should Contain Element  ${monitor_page_title}
     Page Should Contain Element  ${map_slider}

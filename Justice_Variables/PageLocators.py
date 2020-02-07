@@ -34,7 +34,10 @@ zoom_out_disabled_button = "xpath://a[@class='leaflet-control-zoom-out leaflet-d
 refresh_button = "xpath://mat-icon[@class='mat-icon notranslate ei ei-refresh mat-icon-no-color']"
 
 # List Page Elements
-
+devices_tab = "xpath://a[@href='#/monitoring/lists/devices']"
+endpoints_tab = "xpath://a[@href='#/monitoring/lists/endpoints']"
+alarms_tab = "xpath://a[@href='#/monitoring/lists/alarms']"
+events_tab = "xpath://a[@href='#/monitoring/lists/events']"
 
 # Reports Page Elements
 reports_page_title = "xpath://h1[text()='Reports']"

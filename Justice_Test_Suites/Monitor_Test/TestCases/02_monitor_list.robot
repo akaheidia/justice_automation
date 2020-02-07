@@ -13,3 +13,9 @@ Confirm Page Loads
     Click Monitor
     Click List Slider
     Confirm List Page Loaded
+
+Click Each Tab
+    Click Endpoints Tab
+    Click Alarms Tab
+    Click Events Tab
+    Click Devices Tab
