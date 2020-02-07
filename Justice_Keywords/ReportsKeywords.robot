@@ -2,24 +2,24 @@
 Library    SeleniumLibrary
 Variables  ../Justice_Variables/PageLocators.py
 
-Documentation    Keywords specific to the navigation side bar.
+Documentation    Keywords specific to the Reports page.
 
 *** Keywords ***
 
 Open Sidebar Menu
     Select Frame  xpath://iframe
     Wait Until Page Contains Element  ${reports_sidebar_menu_button}
-    Element Should Not Be Visible  ${reports_menu_table}
-    Click Element  ${reports_sidebar_menu_button}
-    Element Should Be Visible  ${reports_menu_table}
+    ${need_to_open}=  Run Keyword And Return Status  Element Should Not Be Visible  ${reports_menu_tree}
+    Run Keyword If  ${need_to_open}  Click Element  ${reports_sidebar_menu_button}
+    Element Should Be Visible  ${reports_menu_tree}
     Unselect Frame
 
 Close Sidebar Menu
     Select Frame  xpath://iframe
     Wait Until Page Contains Element  ${reports_sidebar_menu_button}
-    Element Should Be Visible  ${reports_menu_table}
-    Click Element  ${reports_sidebar_menu_button}
-    Element Should Not Be Visible  ${reports_menu_table}
+    ${need_to_close}=  Run Keyword And Return Status  Element Should Be Visible  ${reports_menu_tree}
+    Run Keyword If  ${need_to_close}  Click Element  ${reports_sidebar_menu_button}
+    Element Should Not Be Visible  ${reports_menu_tree}
     Unselect Frame
 
 Click Add Button

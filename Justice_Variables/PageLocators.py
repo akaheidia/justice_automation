@@ -41,6 +41,7 @@ reports_page_title = "xpath://h1[text()='Reports']"
 reports_sidebar_menu_button = "id:actShowSidebar"
 reports_add_button = "xpath://span[@class='btn btn-info ti-plus']"
 reports_menu_table = "id:rdMenuTable"
+reports_menu_tree = "id:menuTreeSide"
 
 # Reports Page Tree Nodes
 reports_tree_reports_node = "xpath://span[@id='rdDmtCaption' and @class='ThemeBold' and text()='Reports']"
