@@ -212,53 +212,53 @@ Confirm Network Summary Reports Page Loaded
 
 
 Confirm Site Availability Reports Page Loaded
-#    ${count}=  Get Element Count  xpath://iframe
-#    Log To Console  IFrame Count: ${count}
+    sleep  1 second
     Select Frame  xpath://iframe
-#    ${count2}=  Get Element Count  xpath://iframe
-#    Log To Console  IFrame 2 Count: ${count2}
+    Select Frame  xpath://iframe[@id='availability']
 
-    Select Frame  xpath://iframe[@name='availability']
-#    ${count3}=  Get Element Count  xpath://iframe
-#    Log To Console  IFrame 3 Count: ${count3}
-#
-#    Select Frame  xpath://iframe
-#    ${count4}=  Get Element Count  xpath://iframe
-#    Log To Console  IFrame 4 Count: ${count4}
+    Page Should Contain Element  ${reports_site_availability_page_title}
 
-    ${elem_count}=  Get Element Count  ${reports_site_availability_page_title}
-    Log To Console  page title: ${elem_count}
-#    Page Should Contain Element  ${reports_site_availability_page_title}
-#    Unselect Frame
     UnSelect Frame
     Unselect Frame
 
 Confirm Site CPU Utilization Reports Page Loaded
+    sleep  1 second
     Select Frame  xpath://iframe
-    ${elem_count}=  Get Element Count  ${reports_site_cpu_utilization_page_title}
-    Log To Console  page title: ${elem_count}
-#    Page Should Contain Element  ${reports_site_cpu_utilization_page_title}
+    Select Frame  xpath://iframe[@id='resource']
+
+    Page Should Contain Element  ${reports_site_cpu_utilization_page_title}
+
+    UnSelect Frame
     Unselect Frame
 
 Confirm Site Memory Utilization Reports Page Loaded
+    sleep  1 second
     Select Frame  xpath://iframe
-    ${elem_count}=  Get Element Count  ${reports_site_memory_utilization_page_title}
-    Log To Console  page title: ${elem_count}
-#    Page Should Contain Element  ${reports_site_memory_utilization_page_title}
+    Select Frame  xpath://iframe[@id='resource']
+
+    Page Should Contain Element  ${reports_site_memory_utilization_page_title}
+
+    UnSelect Frame
     Unselect Frame
 
 Confirm Site Port Utilization Reports Page Loaded
+    sleep  1 second
     Select Frame  xpath://iframe
-    ${elem_count}=  Get Element Count  ${reports_site_port_utilization_page_title}
-    Log To Console  page title: ${elem_count}
-#    Page Should Contain Element  ${reports_site_port_utilization_page_title}
+    Select Frame  xpath://iframe[@id='resource']
+
+    Page Should Contain Element  ${reports_site_port_utilization_page_title}
+
+    UnSelect Frame
     Unselect Frame
 
 Confirm Site Port Error Reports Page Loaded
+    sleep  1 second
     Select Frame  xpath://iframe
-    ${elem_count}=  Get Element Count  ${reports_site_port_error_page_title}
-    Log To Console  page title: ${elem_count}
-#    Page Should Contain Element  ${reports_site_port_error_page_title}
+    Select Frame  xpath://iframe[@id='resource']
+
+    Page Should Contain Element  ${reports_site_port_error_page_title}
+
+    UnSelect Frame
     Unselect Frame
 
 
