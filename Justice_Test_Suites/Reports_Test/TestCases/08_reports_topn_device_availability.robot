@@ -16,4 +16,4 @@ Confirm Page Loads
     Expand Reports Tree Reports Node
     Expand Reports Tree Top N Node
     Click Top N Device Availability Reports Menu
-    Confirm Top N Device Availability Reports Page Loaded
+    Confirm Top N Device Availability Reports Page Title

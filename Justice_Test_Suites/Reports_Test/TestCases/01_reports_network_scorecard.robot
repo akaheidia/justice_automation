@@ -15,4 +15,4 @@ Confirm Page Loads
     Open Sidebar Menu
     Expand Reports Tree Reports Node
     Click Network Scorecard Reports Menu
-    Confirm Network Scorecard Reports Page Loaded
+    Confirm Network Scorecard Reports Page Title

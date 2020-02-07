@@ -16,4 +16,4 @@ Confirm Page Loads
     Expand Reports Tree Reports Node
     Expand Reports Tree Top N Node
     Click Top N Port Error Reports Menu
-    Confirm Top N Port Error Reports Page Loaded
+    Confirm Top N Port Error Reports Page Title

@@ -16,4 +16,4 @@ Confirm Page Loads
     Expand Reports Tree Reports Node
     Expand Reports Tree Site Node
     Click Site Memory Utilization Reports Menu
-    Confirm Site Memory Utilization Reports Page Loaded
+    Confirm Site Memory Utilization Reports Page Title

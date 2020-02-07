@@ -16,4 +16,4 @@ Confirm Page Loads
     Expand Reports Tree Reports Node
     Expand Reports Tree Analytics Node
     Click Analytics Top Applications Reports Menu
-    Confirm Analytics Top Applications Reports Page Loaded
+    Confirm Analytics Top Applications Reports Page Title

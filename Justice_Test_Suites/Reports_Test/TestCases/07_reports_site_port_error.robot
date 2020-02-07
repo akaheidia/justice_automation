@@ -16,4 +16,4 @@ Confirm Page Loads
     Expand Reports Tree Reports Node
     Expand Reports Tree Site Node
     Click Site Port Error Reports Menu
-    Confirm Site Port Error Reports Page Loaded
+    Confirm Site Port Error Reports Page Title

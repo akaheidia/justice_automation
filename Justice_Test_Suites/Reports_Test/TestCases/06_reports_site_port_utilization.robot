@@ -16,4 +16,4 @@ Confirm Page Loads
     Expand Reports Tree Reports Node
     Expand Reports Tree Site Node
     Click Site Port Utilization Reports Menu
-    Confirm Site Port Utilization Reports Page Loaded
+    Confirm Site Port Utilization Reports Page Title

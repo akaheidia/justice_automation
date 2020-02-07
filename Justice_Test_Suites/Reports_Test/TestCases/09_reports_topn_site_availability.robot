@@ -16,4 +16,4 @@ Confirm Page Loads
     Expand Reports Tree Reports Node
     Expand Reports Tree Top N Node
     Click Top N Site Availability Reports Menu
-    Confirm Top N Site Availability Reports Page Loaded
+    Confirm Top N Site Availability Reports Page Title

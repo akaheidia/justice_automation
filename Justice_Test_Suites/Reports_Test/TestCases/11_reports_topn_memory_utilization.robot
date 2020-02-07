@@ -16,4 +16,4 @@ Confirm Page Loads
     Expand Reports Tree Reports Node
     Expand Reports Tree Top N Node
     Click Top N Memory Utilization Reports Menu
-    Confirm Top N Memory Utilization Reports Page Loaded
+    Confirm Top N Memory Utilization Reports Page Title

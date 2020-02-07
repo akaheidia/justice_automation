@@ -16,4 +16,4 @@ Confirm Page Loads
     Expand Reports Tree Reports Node
     Expand Reports Tree Analytics Node
     Click Analytics Monthly Usage Reports Menu
-    Confirm Analytics Monthly Usage Reports Page Loaded
+    Confirm Analytics Monthly Usage Reports Page Title

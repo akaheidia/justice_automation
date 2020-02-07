@@ -16,4 +16,4 @@ Confirm Page Loads
     Expand Reports Tree Reports Node
     Expand Reports Tree Analytics Node
     Click Analytics Daily Usage Reports Menu
-    Confirm Analytics Daily Usage Reports Page Loaded
+    Confirm Analytics Daily Usage Reports Page Title

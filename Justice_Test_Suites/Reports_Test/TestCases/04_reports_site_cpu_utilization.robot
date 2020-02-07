@@ -16,4 +16,4 @@ Confirm Page Loads
     Expand Reports Tree Reports Node
     Expand Reports Tree Site Node
     Click Site CPU Utilization Reports Menu
-    Confirm Site CPU Utilization Reports Page Loaded
+    Confirm Site CPU Utilization Reports Page Title

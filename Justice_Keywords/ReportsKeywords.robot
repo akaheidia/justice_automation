@@ -200,18 +200,18 @@ Click Analytics Quarterly Usage Reports Menu
     Unselect Frame
 
 
-Confirm Network Scorecard Reports Page Loaded
+Confirm Network Scorecard Reports Page Title
     Select Frame  xpath://iframe
     Page Should Contain Element  ${reports_network_scorecard_page_title}
     Unselect Frame
 
-Confirm Network Summary Reports Page Loaded
+Confirm Network Summary Reports Page Title
     Select Frame  xpath://iframe
     Page Should Contain Element  ${reports_network_summary_page_title}
     Unselect Frame
 
 
-Confirm Site Availability Reports Page Loaded
+Confirm Site Availability Reports Page Title
     sleep  1 second
     Select Frame  xpath://iframe
     Select Frame  xpath://iframe[@id='availability']
@@ -221,7 +221,7 @@ Confirm Site Availability Reports Page Loaded
     UnSelect Frame
     Unselect Frame
 
-Confirm Site CPU Utilization Reports Page Loaded
+Confirm Site CPU Utilization Reports Page Title
     sleep  1 second
     Select Frame  xpath://iframe
     Select Frame  xpath://iframe[@id='resource']
@@ -231,7 +231,7 @@ Confirm Site CPU Utilization Reports Page Loaded
     UnSelect Frame
     Unselect Frame
 
-Confirm Site Memory Utilization Reports Page Loaded
+Confirm Site Memory Utilization Reports Page Title
     sleep  1 second
     Select Frame  xpath://iframe
     Select Frame  xpath://iframe[@id='resource']
@@ -241,7 +241,7 @@ Confirm Site Memory Utilization Reports Page Loaded
     UnSelect Frame
     Unselect Frame
 
-Confirm Site Port Utilization Reports Page Loaded
+Confirm Site Port Utilization Reports Page Title
     sleep  1 second
     Select Frame  xpath://iframe
     Select Frame  xpath://iframe[@id='resource']
@@ -251,7 +251,7 @@ Confirm Site Port Utilization Reports Page Loaded
     UnSelect Frame
     Unselect Frame
 
-Confirm Site Port Error Reports Page Loaded
+Confirm Site Port Error Reports Page Title
     sleep  1 second
     Select Frame  xpath://iframe
     Select Frame  xpath://iframe[@id='resource']
@@ -262,7 +262,7 @@ Confirm Site Port Error Reports Page Loaded
     Unselect Frame
 
 
-Confirm Top N Device Availability Reports Page Loaded
+Confirm Top N Device Availability Reports Page Title
     sleep  1 second
     Select Frame  xpath://iframe
     Select Frame  xpath://iframe[@id='resource']
@@ -272,7 +272,7 @@ Confirm Top N Device Availability Reports Page Loaded
     UnSelect Frame
     Unselect Frame
 
-Confirm Top N Site Availability Reports Page Loaded
+Confirm Top N Site Availability Reports Page Title
     sleep  1 second
     Select Frame  xpath://iframe
     Select Frame  xpath://iframe[@id='resource']
@@ -282,7 +282,7 @@ Confirm Top N Site Availability Reports Page Loaded
     UnSelect Frame
     Unselect Frame
 
-Confirm Top N CPU Utilization Reports Page Loaded
+Confirm Top N CPU Utilization Reports Page Title
     sleep  1 second
     Select Frame  xpath://iframe
     Select Frame  xpath://iframe[@id='resource']
@@ -292,7 +292,7 @@ Confirm Top N CPU Utilization Reports Page Loaded
     UnSelect Frame
     Unselect Frame
 
-Confirm Top N Memory Utilization Reports Page Loaded
+Confirm Top N Memory Utilization Reports Page Title
     sleep  1 second
     Select Frame  xpath://iframe
     Select Frame  xpath://iframe[@id='resource']
@@ -302,7 +302,7 @@ Confirm Top N Memory Utilization Reports Page Loaded
     UnSelect Frame
     Unselect Frame
 
-Confirm Top N Port Utilization Reports Page Loaded
+Confirm Top N Port Utilization Reports Page Title
     sleep  1 second
     Select Frame  xpath://iframe
     Select Frame  xpath://iframe[@id='resource']
@@ -312,7 +312,7 @@ Confirm Top N Port Utilization Reports Page Loaded
     UnSelect Frame
     Unselect Frame
 
-Confirm Top N Port Error Reports Page Loaded
+Confirm Top N Port Error Reports Page Title
     sleep  1 second
     Select Frame  xpath://iframe
     Select Frame  xpath://iframe[@id='resource']
@@ -322,7 +322,7 @@ Confirm Top N Port Error Reports Page Loaded
     UnSelect Frame
     Unselect Frame
 
-Confirm Top N Wireless Clients Reports Page Loaded
+Confirm Top N Wireless Clients Reports Page Title
     sleep  1 second
     Select Frame  xpath://iframe
     Select Frame  xpath://iframe[@id='resource']
@@ -332,7 +332,7 @@ Confirm Top N Wireless Clients Reports Page Loaded
     UnSelect Frame
     Unselect Frame
 
-Confirm Top N Wireless Bandwidth Reports Page Loaded
+Confirm Top N Wireless Bandwidth Reports Page Title
     sleep  1 second
     Select Frame  xpath://iframe
     Select Frame  xpath://iframe[@id='resource']
@@ -343,27 +343,27 @@ Confirm Top N Wireless Bandwidth Reports Page Loaded
     Unselect Frame
 
 
-Confirm Analytics Summary Reports Page Loaded
+Confirm Analytics Summary Reports Page Title
     Select Frame  xpath://iframe
     Page Should Contain Element  ${reports_analytics_analytics_summary_page_title}
     Unselect Frame
 
-Confirm Analytics Top Applications Reports Page Loaded
+Confirm Analytics Top Applications Reports Page Title
     Select Frame  xpath://iframe
     Page Should Contain Element  ${reports_analytics_top_applications_page_title}
     Unselect Frame
 
-Confirm Analytics Daily Usage Reports Page Loaded
+Confirm Analytics Daily Usage Reports Page Title
     Select Frame  xpath://iframe
     Page Should Contain Element  ${reports_analytics_daily_usage_page_title}
     Unselect Frame
 
-Confirm Analytics Monthly Usage Reports Page Loaded
+Confirm Analytics Monthly Usage Reports Page Title
     Select Frame  xpath://iframe
     Page Should Contain Element  ${reports_analytics_monthly_usage_page_title}
     Unselect Frame
 
-Confirm Analytics Quarterly Usage Reports Page Loaded
+Confirm Analytics Quarterly Usage Reports Page Title
     Select Frame  xpath://iframe
     Page Should Contain Element  ${reports_analytics_quarterly_usage_page_title}
     Unselect Frame

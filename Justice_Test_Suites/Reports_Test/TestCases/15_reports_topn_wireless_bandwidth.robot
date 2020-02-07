@@ -16,4 +16,4 @@ Confirm Page Loads
     Expand Reports Tree Reports Node
     Expand Reports Tree Top N Node
     Click Top N Top APs By Bandwidth Reports Menu
-    Confirm Top N Wireless Bandwidth Reports Page Loaded
+    Confirm Top N Wireless Bandwidth Reports Page Title
