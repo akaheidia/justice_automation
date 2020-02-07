@@ -10,7 +10,7 @@ Documentation    Keywords specific to testing APIs.
 *** Keywords ***
 Set Access Token
     &{header}=  Create Dictionary  Content-Type=application/json
-    Create Session  alias=justice   url=${URL}:${AUTH_PORT}  headers=${header}
+    Create Session  alias=justice   url=${URL}  headers=${header}
     &{data}=    Create Dictionary   userId=${USERNAME}  password=${PASSWORD}  grant_type=password  scope=Extreme Networks
     ${resp}=     Post Request  justice  /auth/api/login    json=${data}
     Should Be Equal As Strings  ${resp.status_code}  200
@@ -21,14 +21,14 @@ Set Access Token
 Confirm Get Request Successful
     [Arguments]    ${api}
     &{auth}=  Create Dictionary  Authorization  Bearer ${access_token}
-    Create Session  alias=justice  url=${URL}:${SAAS_ONE_FUNC_PORT}
+    Create Session  alias=justice  url=${URL}
     ${resp}=  Get Request  justice  ${api}  ${auth}
     Should Be Equal As Strings  ${resp.status_code}  200
 
 Confirm Post Request Successful
     [Arguments]    ${api}  ${json_string}
     &{postheader}=  Create Dictionary  Content-Type=application/json  Authorization=Bearer ${access_token}
-    Create Session  alias=justice  url=${URL}:${SAAS_ONE_FUNC_PORT}
+    Create Session  alias=justice  url=${URL}
     ${body}=  To Json    ${json_string}
     ${resp}=  Post Request  justice  ${api}  json=${body}  headers=${postheader}
     Should Be Equal As Strings  ${resp.status_code}  200
@@ -36,31 +36,31 @@ Confirm Post Request Successful
 
 Get All Sites
     &{auth}=  Create Dictionary  Authorization  Bearer ${access_token}
-    Create Session  alias=justice  url=${URL}:${SAAS_ONE_FUNC_PORT}
+    Create Session  alias=justice  url=${URL}
     ${resp}=  Get Request  justice  /v1/api/allSites  ${auth}
     Should Be Equal As Strings  ${resp.status_code}  200
 
 Get Alarms Summary
     &{auth}=  Create Dictionary  Authorization  Bearer ${access_token}
-    Create Session  alias=justice  url=${URL}:${SAAS_ONE_FUNC_PORT}
+    Create Session  alias=justice  url=${URL}
     ${resp}=  Get Request  justice  /v1/api/alarms/summary  ${auth}
     Should Be Equal As Strings  ${resp.status_code}  200
 
 Get All Domain Nodes
     &{auth}=  Create Dictionary  Authorization  Bearer ${access_token}
-    Create Session  alias=justice  url=${URL}:${SAAS_ONE_FUNC_PORT}
+    Create Session  alias=justice  url=${URL}
     ${resp}=  Get Request  justice  /v1/api/domainNodes  ${auth}
     Should Be Equal As Strings  ${resp.status_code}  200
 
 Get Database Password
     &{auth}=  Create Dictionary  Authorization  Bearer ${access_token}
-    Create Session  alias=justice  url=${URL}:${SAAS_ONE_FUNC_PORT}
+    Create Session  alias=justice  url=${URL}
     ${resp}=  Get Request  justice  /v1/api/settings/security  ${auth}
     Should Be Equal As Strings  ${resp.status_code}  200
 
 Get All Tags
     &{auth}=  Create Dictionary  Authorization  Bearer ${access_token}
-    Create Session  alias=justice  url=${URL}:${SAAS_ONE_FUNC_PORT}
+    Create Session  alias=justice  url=${URL}
     ${resp}=  Get Request  justice  /v1/api/tags  ${auth}
 
     # Validations
@@ -70,7 +70,7 @@ Get All Tags
 
 Get Devices
     &{postheader}=  Create Dictionary  Content-Type=application/json  Authorization=Bearer ${access_token}
-    Create Session  alias=justice  url=${URL}:${SAAS_ONE_FUNC_PORT}
+    Create Session  alias=justice  url=${URL}
     ${json_string}=  catenate
     ...  {
     ...    "paginator": {
@@ -84,7 +84,7 @@ Get Devices
 
 Get Endpoints
     &{postheader}=  Create Dictionary  Content-Type=application/json  Authorization=Bearer ${access_token}
-    Create Session  alias=justice  url=${URL}:${SAAS_ONE_FUNC_PORT}
+    Create Session  alias=justice  url=${URL}
     ${json_string}=  catenate
     ...  {
     ...    "paginator": {
@@ -98,7 +98,7 @@ Get Endpoints
 
 Get Events
     &{postheader}=  Create Dictionary  Content-Type=application/json  Authorization=Bearer ${access_token}
-    Create Session  alias=justice  url=${URL}:${SAAS_ONE_FUNC_PORT}
+    Create Session  alias=justice  url=${URL}
     ${json_string}=  catenate
     ...  {
     ...    "paginator": {
@@ -112,7 +112,7 @@ Get Events
 
 Get Map
     &{postheader}=  Create Dictionary  Content-Type=application/json  Authorization=Bearer ${access_token}
-    Create Session  alias=justice  url=${URL}:${SAAS_ONE_FUNC_PORT}
+    Create Session  alias=justice  url=${URL}
     ${json_string}=  catenate
     ...  {
     ...    "paginator": {
