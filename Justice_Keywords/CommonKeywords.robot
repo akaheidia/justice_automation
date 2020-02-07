@@ -34,3 +34,8 @@ Log Out
     Click Element  ${nav_user_icon}
     Page Should Contain Element  ${nav_user_signout_menu}
     Click Element  ${nav_user_signout_menu}
+
+Print Number of Elements
+    [Arguments]  ${element}
+    ${count}=  Get Element Count  ${element}
+    Log To Console  Number of Elements: ${count}
