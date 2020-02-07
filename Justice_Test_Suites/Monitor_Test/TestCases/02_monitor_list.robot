@@ -14,8 +14,18 @@ Confirm Page Loads
     Click List Slider
     Confirm List Page Loaded
 
-Click Each Tab
+Confirm Endpoints Tab Loads
     Click Endpoints Tab
+    Confirm Endpoints Tab Selected
+
+Confirm Alarms Tab Loads
     Click Alarms Tab
+    Confirm Alarms Tab Selected
+
+Confirm Events Tab Loads
     Click Events Tab
+    Confirm Events Tab Selected
+
+Confirm Devices Tab Loads
     Click Devices Tab
+    Confirm Devices Tab Selected

@@ -38,6 +38,10 @@ devices_tab = "xpath://a[@href='#/monitoring/lists/devices']"
 endpoints_tab = "xpath://a[@href='#/monitoring/lists/endpoints']"
 alarms_tab = "xpath://a[@href='#/monitoring/lists/alarms']"
 events_tab = "xpath://a[@href='#/monitoring/lists/events']"
+devices_page_url_suffix = "/#/monitoring/lists/devices"
+endpoints_page_url_suffix = "/#/monitoring/lists/endpoints"
+alarms_page_url_suffix = "/#/monitoring/lists/alarms"
+events_page_url_suffix = "/#/monitoring/lists/events"
 
 # Reports Page Elements
 reports_page_title = "xpath://h1[text()='Reports']"
