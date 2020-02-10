@@ -7,19 +7,19 @@ Documentation    Keywords specific to the Login page and logging in/out function
 *** Keywords ***
 Enter XMC User Name
     [Arguments]  ${USERNAME}
-    Input Text  ${xmclogin_username_text}  ${USERNAME}  clear=True
+    Input Text  ${xmc_login_username_text}  ${USERNAME}  clear=True
 
 Enter XMC Password
     [Arguments]  ${PASSWORD}
-    Input Password  ${xmclogin_password_text}  ${PASSWORD}  clear=True
+    Input Password  ${xmc_login_password_text}  ${PASSWORD}  clear=True
 
 Click XMC Login
-    Element Should Be Enabled  ${xmclogin_login_btn}
-    Click Element  ${xmclogin_login_btn}
+    Element Should Be Enabled  ${xmc_login_login_btn}
+    Click Element  ${xmc_login_login_btn}
 
 Clear XMC Credentials
-    Clear Element Text  ${xmclogin_username_text}
-    Clear Element Text  ${xmclogin_password_text}
+    Clear Element Text  ${xmc_login_username_text}
+    Clear Element Text  ${xmc_login_password_text}
     Reload Page
 
 Confirm Successful XMC Login
@@ -28,9 +28,9 @@ Confirm Successful XMC Login
     Page Should Contain Image  ${xmcnav_logo_image}
 
 Confirm Unauthorized XMC Login
-    Wait Until Page Contains Element  ${xmclogin_failed_ok}
-    Page Should Contain Element  ${xmclogin_unauthorized_message}
+    Wait Until Page Contains Element  ${xmc_login_failed_ok}
+    Page Should Contain Element  ${xmc_login_unauthorized_message}
 
 Confirm Successful XMC Logout
-    Wait Until Page Contains Element  ${xmclogin_username_text}
-    Page Should Contain Image  ${xmclogin_logo_image}
+    Wait Until Page Contains Element  ${xmc_login_username_text}
+    Page Should Contain Image  ${xmc_login_logo_image}
