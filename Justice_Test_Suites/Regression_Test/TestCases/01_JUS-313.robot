@@ -14,6 +14,6 @@ Log In With Chrome              Chrome
 *** Keywords ***
 Confirm Browser Login Successful
     [Arguments]  ${browser}
-    Open and Maximize Browser  ${URL}  ${browser}
-    Log In  ${USERNAME}  ${PASSWORD}
+    Open and Maximize Browser  ${JUS_URL}  ${browser}
+    Log In  ${JUS_USERNAME}  ${JUS_PASSWORD}
     Confirm Successful Login

@@ -4,7 +4,7 @@ Resource  ../Resources/AllResources.robot
 
 Documentation    Tests the Reports Top N CPU Utilization page.
 
-Suite Setup      Open Browser and Log In  ${URL}  ${BROWSER}  ${USERNAME}  ${PASSWORD}
+Suite Setup      Open Browser and Log In  ${JUS_URL}  ${BROWSER}  ${JUS_USERNAME}  ${JUS_PASSWORD}
 Suite Teardown   Log Out and Close Browser
 
 *** Test Cases ***

@@ -6,12 +6,12 @@ Documentation    Keywords specific to the Login page and logging in/out function
 
 *** Keywords ***
 Enter User Name
-    [Arguments]  ${USERNAME}
-    Input Text  ${login_username_text}  ${USERNAME}  clear=True
+    [Arguments]  ${username}
+    Input Text  ${login_username_text}  ${username}  clear=True
 
 Enter Password
-    [Arguments]  ${PASSWORD}
-    Input Password  ${login_password_text}  ${PASSWORD}  clear=True
+    [Arguments]  ${pwd}
+    Input Password  ${login_password_text}  ${pwd}  clear=True
 
 Click Login
     Element Should Be Enabled  ${login_login_btn}
