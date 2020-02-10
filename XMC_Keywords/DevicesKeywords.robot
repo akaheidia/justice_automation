@@ -32,15 +32,19 @@ XMC Create Site
     XMC Click Devices Context Menu
     Click Element  ${xmc_devices_tree_context_icon_maps_sites_menu}
     Click Element  ${xmc_devices_tree_context_icon_create_site_menu}
+    Page Should Contain Element  ${xmc_create_site_dialog}
     XMC Create Site Enter Site Name  ${site_name}
     XMC Create Site Click OK
 
 XMC Create Site Enter Site Name
     [Arguments]  ${site_name}
+    Page Should Contain Element  ${xmc_create_site_dialog_name_text}
     Input Text  ${xmc_create_site_dialog_name_text}  ${site_name}  clear=True
 
 XMC Create Site Click OK
+    Page Should Contain Element  ${xmc_create_site_dialog_ok_btn}
     Click Element  ${xmc_create_site_dialog_ok_btn}
 
 XMC Create Site Click Cancel
+    Page Should Contain Element  ${xmc_create_site_dialog_cancel_btn}
     Click Element  ${xmc_create_site_dialog_cancel_btn}

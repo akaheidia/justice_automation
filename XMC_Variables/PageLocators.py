@@ -40,6 +40,6 @@ xmc_devices_tree_context_icon_create_site_menu="xpath://span[text()='Create Site
 
 ## Create Site Dialog
 xmc_create_site_dialog = "xpath://div[contains(text(),'Create Site')]"
-xmc_create_site_dialog_name_text = "xpath://div[contains(@class,'x-form-trigger-wrap x-form-trigger-wrap-default x-form-trigger-wrap-invalid')]"
+xmc_create_site_dialog_name_text = "xpath://input[contains(@id, 'textfield')][contains(@id, 'inputEl')][@aria-hidden='false']"
 xmc_create_site_dialog_ok_btn = "xpath://span[contains(@class,'x-btn-inner x-btn-inner-blue-small')][text()='OK']"
 xmc_create_site_dialog_cancel_btn = "xpath://span[contains(@class,'x-btn-inner x-btn-inner-default-small')][text()='Cancel']"
