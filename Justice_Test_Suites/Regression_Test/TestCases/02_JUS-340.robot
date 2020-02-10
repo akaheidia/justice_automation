@@ -2,7 +2,7 @@
 Library   SeleniumLibrary
 Resource  ../Resources/AllResources.robot
 
-Documentation    Regression test for JUS-40:  Site Availability report is missing page title.
+Documentation    Regression test for JUS-340:  Site Availability report is missing page title.
 
 Suite Setup      Open Browser and Log In  ${URL}  ${BROWSER}  ${USERNAME}  ${PASSWORD}
 Suite Teardown   Log Out and Close Browser
