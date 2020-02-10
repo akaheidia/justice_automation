@@ -37,3 +37,9 @@ xmc_devices_devices_tab = "xpath://span[contains(@class,'x-tab-inner x-tab-inner
 xmc_devices_tree_context_icon = "xpath://div[contains(@class,'x-panel x-border-item x-box-item x-panel-default x-tree-panel x-tree-arrows x-grid')]//span[contains(@class,'x-btn-icon-el x-btn-icon-el-default-toolbar-small fa fa-bars')]"
 xmc_devices_tree_context_icon_maps_sites_menu="xpath://span[text()='Maps/Sites']"
 xmc_devices_tree_context_icon_create_site_menu="xpath://span[text()='Create Site...']"
+
+## Create Site Dialog
+xmc_create_site_dialog = "xpath://div[contains(text(),'Create Site')]"
+xmc_create_site_dialog_name_text = "xpath://div[contains(@class,'x-form-trigger-wrap x-form-trigger-wrap-default x-form-trigger-wrap-invalid')]"
+xmc_create_site_dialog_ok_btn = "xpath://span[contains(@class,'x-btn-inner x-btn-inner-blue-small')][text()='OK']"
+xmc_create_site_dialog_cancel_btn = "xpath://span[contains(@class,'x-btn-inner x-btn-inner-default-small')][text()='Cancel']"

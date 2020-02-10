@@ -5,24 +5,24 @@ Variables  ../XMC_Variables/PageLocators.py
 Documentation    Keywords specific to the Network Page in XMC.
 
 *** Keywords ***
-Click XMC Dashboard Tab
+XMC Click Dashboard Tab
     Click Element  ${xmc_network_dashboard_tab}
 
-Click XMC Devices Tab
+XMC Click Devices Tab
     Click Element  ${xmc_network_devices_tab}
 
-Click XMC Discovered Tab
+XMC Click Discovered Tab
     Click Element  ${xmc_network_discovered_tab}
 
-Click XMC Firmware Tab
+XMC Click Firmware Tab
     Click Element  ${xmc_network_firmware_tab}
 
-Click XMC Archives Tab
+XMC Click Archives Tab
     Click Element  ${xmc_network_archives_tab}
 
-Click XMC Reports Tab
+XMC Click Reports Tab
     Click Element  ${xmc_network_reports_tab}
 
 
-Confirm XMC Devices Tab Loaded
+XMC Confirm Devices Tab Loaded
     Page Should Contain Element  ${xmc_network_devices_view}

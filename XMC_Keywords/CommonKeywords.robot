@@ -7,26 +7,26 @@ Variables  ../XMC_Variables/PageLocators.py
 Documentation    Keywords useful to all XMC tests.
 
 *** Keywords ***
-Open Browser and Log Into XMC
+XMC Open Browser and Log In
     [Arguments]  ${url}  ${browser}  ${user}  ${pwd}
     Open and Maximize Browser  ${url}  ${browser}
-    Log Into XMC  ${user}  ${pwd}
+    XMC Log In  ${user}  ${pwd}
 
-Log Out From XMC and Close Browser
-    Log Out From XMC
+XMC Log Out and Close Browser
+    XMC Log Out
     Close Browser
 
-Log Into XMC
+XMC Log In
     [Arguments]  ${user}  ${pwd}
-    Enter XMC User Name  ${user}
-    Enter XMC Password   ${pwd}
-    Click XMC Login
-    Confirm Successful XMC Login
+    XMC Enter User Name  ${user}
+    XMC Enter Password   ${pwd}
+    XMC Click Login
+    XMC Confirm Successful Login
 
-Log Out From XMC
+XMC Log Out
     Log to Console  Need to implement this
     Page Should Contain Element  ${xmc_main_context_icon}
     Click Element  ${xmc_main_context_icon}
     Page Should Contain Element  ${xmc_main_context_icon_logout_menu}
     Click Element  ${xmc_main_context_icon_logout_menu}
-    Confirm Successful XMC Logout
+    XMC Confirm Successful Logout
