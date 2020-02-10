@@ -1,6 +1,7 @@
 *** Settings ***
 
 Resource  ../../../Justice_Global_References/Justice_Keyword_Libraries.robot
+Resource  ../../../XMC_Global_References/XMC_Keyword_Libraries.robot
 Resource  ./TestSuiteVariables.robot
 
 # TEST ENVIRONMENT
