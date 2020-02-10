@@ -1,6 +1,6 @@
 *** Settings ***
 Library    SeleniumLibrary
-Resource   LoginKeywords.robot
+Resource   ./LoginKeywords.robot
 Variables  ../Justice_Variables/PageLocators.py
 
 Documentation    Keywords useful to all tests.
