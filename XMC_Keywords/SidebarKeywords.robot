@@ -37,7 +37,6 @@ Navigate to XMC Connect Page
 
 
 Confirm Network Page Loaded
-    Log To Console  This needs to be implemented
     ${page_url}=  Get Location
     Location Should Contain  ${xmc_network_url_suffix}
     Page Should Contain Element  ${xmc_network_devices_tab}

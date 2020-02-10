@@ -24,6 +24,12 @@ xmc_nav_connect_button = "xpath://span[@class='x-btn-inner x-btn-inner-extr-nav-
 
 # Network Page
 xmc_network_url_suffix = "/OneView/view/devices"
+xmc_network_dashboard_tab = "xpath://span[@class='x-tab-inner x-tab-inner-extr-main-tab-panel'][text()='Dashboard']"
 xmc_network_devices_tab = "xpath://span[@class='x-tab-inner x-tab-inner-extr-main-tab-panel'][text()='Devices']"
+xmc_network_discovered_tab = "xpath://span[@class='x-tab-inner x-tab-inner-extr-main-tab-panel'][text()='Discovered']"
+xmc_network_firmware_tab = "xpath://span[@class='x-tab-inner x-tab-inner-extr-main-tab-panel'][text()='Firmware']"
+xmc_network_archives_tab = "xpath://span[@class='x-tab-inner x-tab-inner-extr-main-tab-panel'][text()='Archives']"
+xmc_network_reports_tab = "xpath://span[@class='x-tab-inner x-tab-inner-extr-main-tab-panel'][text()='Reports']"
 
 # Network> Devices Page
+xmc_network_devices_view = "xpath://div[@id='networkDeviceView']"
