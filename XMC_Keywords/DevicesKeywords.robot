@@ -27,6 +27,12 @@ XMC Confirm Devices Devices Tab Loaded
 XMC Click Devices Context Menu
     Click Element  ${xmc_devices_tree_context_icon}
 
+
+XMC Select Tree Node
+    [Arguments]  ${nodename}
+    Page Should Contain Element  xpath://span[contains(text(),'${nodename}')]
+    Click Element  xpath://span[contains(text(),'${nodename}')]
+
 XMC Create Site
     [Arguments]  ${site_name}
     XMC Click Devices Context Menu
@@ -48,3 +54,28 @@ XMC Create Site Click OK
 XMC Create Site Click Cancel
     Page Should Contain Element  ${xmc_create_site_dialog_cancel_btn}
     Click Element  ${xmc_create_site_dialog_cancel_btn}
+
+
+XMC Delete Site
+    [Arguments]  ${site_name}
+    XMC Select Tree Node  ${site_name}
+    sleep  2 seconds
+    XMC Click Devices Context Menu
+    Click Element  ${xmc_devices_tree_context_icon_maps_sites_menu}
+    Click Element  ${xmc_devices_tree_context_icon_delete_site_menu}
+
+    Page Should Contain Element  ${xmc_delete_site_dialog}
+    XMC Delete Site Confirmation Should Contain Site  ${site_name}
+    XMC Delete Site Click Yes
+
+XMC Delete Site Confirmation Should Contain Site
+    [Arguments]  ${site_name}
+    Page Should Contain Element  xpath://div[contains(@class,'x-component x-window-text x-box-item x-component-default')][contains(text(), ${site_name})]
+
+XMC Delete Site Click Yes
+    Page Should Contain Element  ${xmc_delete_site_dialog_yes_btn}
+    Click Element  ${xmc_delete_site_dialog_yes_btn}
+
+XMC Delete Site Click No
+    Page Should Contain Element  ${xmc_delete_site_dialog_no_btn}
+    Click Element  ${xmc_delete_site_dialog_no_btn}
