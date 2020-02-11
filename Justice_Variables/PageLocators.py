@@ -33,7 +33,11 @@ filters_servers_and_sites_panel_title = "xpath://div[contains(text(),'Servers & 
 filters_servers_and_sites_panel_expand_icon = "xpath://div[contains(text(),'Servers & Sites')]/mat-icon[contains(@class, 'arrow_right')]"
 filters_servers_and_sites_panel_collapse_icon = "xpath://div[contains(text(),'Servers & Sites')]/mat-icon[contains(@class, 'arrow_down')]"
 filters_alarm_severity_panel_title = "xpath://div[contains(text(),'Alarm Severity')]"
+filters_alarm_severity_panel_expand_icon = "xpath://div[contains(text(),'Alarm Severity')]/mat-icon[contains(@class, 'arrow_right')]"
+filters_alarm_severity_panel_collapse_icon = "xpath://div[contains(text(),'Alarm Severity')]/mat-icon[contains(@class, 'arrow_down')]"
 filters_site_availability_panel_title = "xpath://div[contains(text(),'Site Availability')]"
+filters_site_availability_panel_expand_icon = "xpath://div[contains(text(),'Site Availability')]/mat-icon[contains(@class, 'arrow_right')]"
+filters_site_availability_panel_collapse_icon = "xpath://div[contains(text(),'Site Availability')]/mat-icon[contains(@class, 'arrow_down')]"
 
 # Map Page Elements
 map_zoom_in_enabled_button = "xpath://a[@class='leaflet-control-zoom-in']"
