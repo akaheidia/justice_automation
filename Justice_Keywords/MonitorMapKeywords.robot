@@ -8,6 +8,6 @@ Documentation    Keywords specific to the Monitor Map page.
 
 Confirm Map Page Loaded
     Page Should Contain Element  ${monitor_page_title}
-    Page Should Contain Element  ${map_slider}
-    Page Should Contain Element  ${list_slider}
+    Page Should Contain Element  ${monitor_map_slider}
+    Page Should Contain Element  ${monitor_list_slider}
     Confirm Map Slider Selected

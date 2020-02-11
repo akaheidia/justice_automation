@@ -19,8 +19,8 @@ Click User
 
 Confirm Monitor Page Loaded
     Page Should Contain Element  ${monitor_page_title}
-    Page Should Contain Element  ${map_slider}
-    Page Should Contain Element  ${list_slider}
+    Page Should Contain Element  ${monitor_map_slider}
+    Page Should Contain Element  ${monitor_list_slider}
 
 Confirm Reports Page Loaded
     Page Should Contain Element  ${reports_page_title}

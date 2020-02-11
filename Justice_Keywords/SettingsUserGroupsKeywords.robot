@@ -7,7 +7,7 @@ Documentation    Keywords specific to the Settings - User Groups page.
 *** Keywords ***
 
 Click User Groups
-    Click Element  ${settings_user_groups_menu}
+    Click Element  ${settings_usergroups_menu}
 
 Confirm User Groups Page Loaded
-    Page Should Contain Element  ${user_groups_page_title}
+    Page Should Contain Element  ${usergroups_page_title}

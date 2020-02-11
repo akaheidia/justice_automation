@@ -21,36 +21,36 @@ nav_open_btn = "xpath://mat-icon[@class='mat-icon notranslate ei ei-apps mat-ico
 
 # Monitor Page Elements
 monitor_page_title = "xpath://h1[text()='Monitor']"
-map_slider = "xpath://span[text()='Map']"
-list_slider = "xpath://span[text()='List']"
-selected_slider_class = "list-switcher-selected-text"
-unselected_slider_class = "list-switcher-unselected-text"
-filter_icon = "xpath://mat-icon[@class='mat-icon notranslate ei ei-filter mat-icon-no-color']"
+monitor_map_slider = "xpath://span[text()='Map']"
+monitor_list_slider = "xpath://span[text()='List']"
+monitor_selected_slider_class = "list-switcher-selected-text"
+monitor_unselected_slider_class = "list-switcher-unselected-text"
+monitor_filter_icon = "xpath://mat-icon[@class='mat-icon notranslate ei ei-filter mat-icon-no-color']"
 
 # Filters Panel Elements
 filters_panel_title = "xpath://div[@class='filters-header-text']"
-servers_and_sites_panel_title = "xpath://div[contains(text(),'Servers & Sites')]"
-servers_and_sites_panel_expand_icon = "xpath://div[contains(text(),'Servers & Sites')]/mat-icon[contains(@class, 'arrow_right')]"
-servers_and_sites_panel_collapse_icon = "xpath://div[contains(text(),'Servers & Sites')]/mat-icon[contains(@class, 'arrow_down')]"
-alarm_severity_panel_title = "xpath://div[contains(text(),'Alarm Severity')]"
-site_availability_panel_title = "xpath://div[contains(text(),'Site Availability')]"
+filters_servers_and_sites_panel_title = "xpath://div[contains(text(),'Servers & Sites')]"
+filters_servers_and_sites_panel_expand_icon = "xpath://div[contains(text(),'Servers & Sites')]/mat-icon[contains(@class, 'arrow_right')]"
+filters_servers_and_sites_panel_collapse_icon = "xpath://div[contains(text(),'Servers & Sites')]/mat-icon[contains(@class, 'arrow_down')]"
+filters_alarm_severity_panel_title = "xpath://div[contains(text(),'Alarm Severity')]"
+filters_site_availability_panel_title = "xpath://div[contains(text(),'Site Availability')]"
 
 # Map Page Elements
-zoom_in_enabled_button = "xpath://a[@class='leaflet-control-zoom-in']"
-zoom_in_disabled_button = "xpath://a[@class='leaflet-control-zoom-in leaflet-disabled']"
-zoom_out_enabled_button = "xpath://a[@class='leaflet-control-zoom-out']"
-zoom_out_disabled_button = "xpath://a[@class='leaflet-control-zoom-out leaflet-disabled']"
-refresh_button = "xpath://mat-icon[@class='mat-icon notranslate ei ei-refresh mat-icon-no-color']"
+map_zoom_in_enabled_button = "xpath://a[@class='leaflet-control-zoom-in']"
+map_zoom_in_disabled_button = "xpath://a[@class='leaflet-control-zoom-in leaflet-disabled']"
+map_zoom_out_enabled_button = "xpath://a[@class='leaflet-control-zoom-out']"
+map_zoom_out_disabled_button = "xpath://a[@class='leaflet-control-zoom-out leaflet-disabled']"
+map_refresh_button = "xpath://mat-icon[@class='mat-icon notranslate ei ei-refresh mat-icon-no-color']"
 
 # List Page Elements
-devices_tab = "xpath://a[@href='#/monitoring/lists/devices']"
-endpoints_tab = "xpath://a[@href='#/monitoring/lists/endpoints']"
-alarms_tab = "xpath://a[@href='#/monitoring/lists/alarms']"
-events_tab = "xpath://a[@href='#/monitoring/lists/events']"
-devices_page_url_suffix = "/#/monitoring/lists/devices"
-endpoints_page_url_suffix = "/#/monitoring/lists/endpoints"
-alarms_page_url_suffix = "/#/monitoring/lists/alarms"
-events_page_url_suffix = "/#/monitoring/lists/events"
+list_devices_tab = "xpath://a[@href='#/monitoring/lists/devices']"
+list_endpoints_tab = "xpath://a[@href='#/monitoring/lists/endpoints']"
+list_alarms_tab = "xpath://a[@href='#/monitoring/lists/alarms']"
+list_events_tab = "xpath://a[@href='#/monitoring/lists/events']"
+list_devices_page_url_suffix = "/#/monitoring/lists/devices"
+list_endpoints_page_url_suffix = "/#/monitoring/lists/endpoints"
+list_alarms_page_url_suffix = "/#/monitoring/lists/alarms"
+list_events_page_url_suffix = "/#/monitoring/lists/events"
 
 # Reports Page Elements
 reports_page_title = "xpath://h1[text()='Reports']"
@@ -125,7 +125,7 @@ settings_usergroups_menu = "xpath://div[text()='User Groups']"
 settings_security_menu = "xpath://div[text()='Security']"
 
 # Settings - User Groups Page Elements
-user_groups_page_title = "xpath://span[@class='user-groups-title']"
+usergroups_page_title = "xpath://span[@class='user-groups-title']"
 
 # Settings - Security Page Elements
 security_page_title = "xpath://span[@class='security-title']"
