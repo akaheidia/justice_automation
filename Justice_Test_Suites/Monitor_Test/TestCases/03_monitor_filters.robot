@@ -29,3 +29,6 @@ Confirm Filter Panel Expand and Collapse Functionality
     Confirm Servers and Sites Filter Expanded
     Confirm Alarm Severity Filter Expanded
     Confirm Site Availability Filter Expanded
+
+    Expand Servers and Sites Tree Node  ${XMC_HOSTNAME}
+    Collapse Servers and Sites Tree Node  ${XMC_HOSTNAME}

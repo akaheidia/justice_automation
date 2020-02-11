@@ -48,3 +48,19 @@ Confirm Site Availability Filter Expanded
 
 Confirm Site Availability Filter Collapsed
     Element Should Be Visible  ${filters_site_availability_panel_expand_icon}
+
+
+Select Servers and Sites Tree Node
+    [Arguments]  ${nodename}
+    Page Should Contain Element  xpath://span[@class='ui-treenode-label ui-corner-all']/span[contains(text(), '${nodename}')]
+    Click Element  xpath://span[@class='ui-treenode-label ui-corner-all']/span[contains(text(), '${nodename}')]
+
+Expand Servers and Sites Tree Node
+    [Arguments]  ${nodename}
+    Page Should Contain Element  xpath://span[@class='ui-treenode-label ui-corner-all']/span[contains(text(), '${nodename}')]/../../span[contains(@class, 'caret-right')]
+    Click Element  xpath://span[@class='ui-treenode-label ui-corner-all']/span[contains(text(), '${nodename}')]/../../span[contains(@class, 'caret-right')]
+
+Collapse Servers and Sites Tree Node
+    [Arguments]  ${nodename}
+    Page Should Contain Element  xpath://span[@class='ui-treenode-label ui-corner-all']/span[contains(text(), '${nodename}')]/../../span[contains(@class, 'caret-down')]
+    Click Element  xpath://span[@class='ui-treenode-label ui-corner-all']/span[contains(text(), '${nodename}')]/../../span[contains(@class, 'caret-down')]
