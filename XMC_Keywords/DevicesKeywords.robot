@@ -30,8 +30,8 @@ XMC Click Devices Context Menu
 
 XMC Select Tree Node
     [Arguments]  ${nodename}
-    Page Should Contain Element  xpath://span[contains(text(),'${nodename}')]
-    Click Element  xpath://span[contains(text(),'${nodename}')]
+    Page Should Contain Element  xpath://span[contains(@class,'x-tree-node-text')]//span[contains(text(),'${nodename}')]
+    Click Element  xpath://span[contains(@class,'x-tree-node-text')]//span[contains(text(),'${nodename}')]
 
 XMC Create Site
     [Arguments]  ${site_name}
@@ -59,7 +59,8 @@ XMC Create Site Click Cancel
 XMC Delete Site
     [Arguments]  ${site_name}
     XMC Select Tree Node  ${site_name}
-    sleep  2 seconds
+    XMC Wait For Site Tab To Load  ${site_name}
+    sleep  1 second
     XMC Click Devices Context Menu
     Click Element  ${xmc_devices_tree_context_icon_maps_sites_menu}
     Click Element  ${xmc_devices_tree_context_icon_delete_site_menu}
@@ -67,6 +68,10 @@ XMC Delete Site
     Page Should Contain Element  ${xmc_delete_site_dialog}
     XMC Delete Site Confirmation Should Contain Site  ${site_name}
     XMC Delete Site Click Yes
+
+XMC Wait For Site Tab To Load
+    [Arguments]  ${site_name}
+    Wait Until Page Contains Element  xpath://span[@class='x-tab-inner x-tab-inner-extr-sec-tab-panel'][contains(text(), ${site_name})]
 
 XMC Delete Site Confirmation Should Contain Site
     [Arguments]  ${site_name}
