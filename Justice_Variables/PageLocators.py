@@ -26,6 +26,7 @@ monitor_list_slider = "xpath://span[text()='List']"
 monitor_selected_slider_class = "list-switcher-selected-text"
 monitor_unselected_slider_class = "list-switcher-unselected-text"
 monitor_filter_icon = "xpath://mat-icon[@class='mat-icon notranslate ei ei-filter mat-icon-no-color']"
+monitor_tag_icon = "xpath://mat-icon[@class='mat-icon notranslate ei ei-label_outline mat-icon-no-color']"
 
 # Filters Panel Elements
 filters_panel_title = "xpath://div[@class='filters-header-text']"
@@ -38,6 +39,9 @@ filters_alarm_severity_panel_collapse_icon = "xpath://div[contains(text(),'Alarm
 filters_site_availability_panel_title = "xpath://div[contains(text(),'Site Availability')]"
 filters_site_availability_panel_expand_icon = "xpath://div[contains(text(),'Site Availability')]/mat-icon[contains(@class, 'arrow_right')]"
 filters_site_availability_panel_collapse_icon = "xpath://div[contains(text(),'Site Availability')]/mat-icon[contains(@class, 'arrow_down')]"
+
+# Tags Panel Elements
+tags_panel_title = "xpath://div[@class='tags-header-text']"
 
 # Map Page Elements
 map_zoom_in_enabled_button = "xpath://a[@class='leaflet-control-zoom-in']"
