@@ -25,6 +25,7 @@ map_slider = "xpath://span[text()='Map']"
 list_slider = "xpath://span[text()='List']"
 selected_slider_class = "list-switcher-selected-text"
 unselected_slider_class = "list-switcher-unselected-text"
+filter_icon = "xpath://mat-icon[@class='mat-icon notranslate ei ei-filter mat-icon-no-color']"
 
 # Map Page Elements
 zoom_in_enabled_button = "xpath://a[@class='leaflet-control-zoom-in']"

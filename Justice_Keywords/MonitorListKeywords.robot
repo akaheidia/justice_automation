@@ -6,9 +6,6 @@ Documentation    Keywords specific to the Monitor List page.
 
 *** Keywords ***
 
-Click List Slider
-    Click Element  ${list_slider}
-
 Click Devices Tab
     Click Element  ${devices_tab}
 
@@ -21,9 +18,6 @@ Click Alarms Tab
 Click Events Tab
     Click Element  ${events_tab}
 
-Confirm List Slider Selected
-    ${selected_slider}=  Get Element Attribute  ${list_slider}  class
-    Should Be Equal As Strings  ${selected_slider}  ${selected_slider_class}
 
 Confirm List Page Loaded
     Page Should Contain Element  ${monitor_page_title}

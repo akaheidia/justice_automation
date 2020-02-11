@@ -2,6 +2,7 @@
 Resource   ../Justice_Keywords/APIKeywords.robot
 Resource   ../Justice_Keywords/CommonKeywords.robot
 Resource   ../Justice_Keywords/LoginKeywords.robot
+Resource   ../Justice_Keywords/MonitorKeywords.robot
 Resource   ../Justice_Keywords/MonitorListKeywords.robot
 Resource   ../Justice_Keywords/MonitorMapKeywords.robot
 Resource   ../Justice_Keywords/ReportsKeywords.robot
