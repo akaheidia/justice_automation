@@ -10,6 +10,7 @@ XMC Click Dashboard Tab
 
 XMC Click Devices Tab
     Click Element  ${xmc_network_devices_tab}
+    sleep  2 seconds
 
 XMC Click Discovered Tab
     Click Element  ${xmc_network_discovered_tab}
