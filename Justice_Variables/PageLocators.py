@@ -27,6 +27,14 @@ selected_slider_class = "list-switcher-selected-text"
 unselected_slider_class = "list-switcher-unselected-text"
 filter_icon = "xpath://mat-icon[@class='mat-icon notranslate ei ei-filter mat-icon-no-color']"
 
+# Filters Panel Elements
+filters_panel_title = "xpath://div[@class='filters-header-text']"
+servers_and_sites_panel_title = "xpath://div[contains(text(),'Servers & Sites')]"
+servers_and_sites_panel_expand_icon = "xpath://div[contains(text(),'Servers & Sites')]/mat-icon[contains(@class, 'arrow_right')]"
+servers_and_sites_panel_collapse_icon = "xpath://div[contains(text(),'Servers & Sites')]/mat-icon[contains(@class, 'arrow_down')]"
+alarm_severity_panel_title = "xpath://div[contains(text(),'Alarm Severity')]"
+site_availability_panel_title = "xpath://div[contains(text(),'Site Availability')]"
+
 # Map Page Elements
 zoom_in_enabled_button = "xpath://a[@class='leaflet-control-zoom-in']"
 zoom_in_disabled_button = "xpath://a[@class='leaflet-control-zoom-in leaflet-disabled']"

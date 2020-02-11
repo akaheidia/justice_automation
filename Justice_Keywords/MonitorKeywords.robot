@@ -2,7 +2,7 @@
 Library    SeleniumLibrary
 Variables  ../Justice_Variables/PageLocators.py
 
-Documentation    Keywords specific to the Monitor List page.
+Documentation    Keywords specific to the Monitor page.
 
 *** Keywords ***
 
@@ -23,3 +23,9 @@ Confirm List Slider Selected
 Confirm Map Slider Selected
     ${selected_slider}=  Get Element Attribute  ${map_slider}  class
     Should Be Equal As Strings  ${selected_slider}  ${selected_slider_class}
+
+Confirm Filters Panel Visible
+    Page Should Contain Element  ${filters_panel_title}
+
+Confirm Filters Panel Not Visible
+    Page Should Not Contain Element  ${filters_panel_title}
