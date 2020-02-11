@@ -32,3 +32,7 @@ Confirm Filter Panel Expand and Collapse Functionality
 
     Expand Servers and Sites Tree Node  ${XMC_HOSTNAME}
     Collapse Servers and Sites Tree Node  ${XMC_HOSTNAME}
+
+Confirm Filter Panel Select Server Functionality
+    Select Servers and Sites Server Tree Node  ${XMC_HOSTNAME}
+    Deselect Servers and Sites Server Tree Node  ${XMC_HOSTNAME}
