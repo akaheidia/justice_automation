@@ -24,6 +24,7 @@ Confirm Device Added To Justice
     Confirm Filters Panel Visible
     Confirm Servers and Sites Filter Expanded
     Select Servers and Sites Server Tree Node  ${XMC_HOSTNAME}
+    Refresh Devices Table
     Confirm Table Contains Device  ${device_ip}
     Log Out and Close Browser
 

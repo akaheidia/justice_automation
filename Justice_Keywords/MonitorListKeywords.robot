@@ -18,7 +18,7 @@ Click Alarms Tab
 Click Events Tab
     Click Element  ${list_events_tab}
 
-Refresh Table
+Refresh Devices Table
     Click Element  ${list_refresh_icon}
 
 Confirm List Page Loaded
