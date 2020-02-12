@@ -86,7 +86,6 @@ XMC Delete Site Click No
     Click Element  ${xmc_delete_site_dialog_no_btn}
 
 
-
 XMC Create Device
     [Arguments]  ${device_ip}  ${device_profile}  ${device_nickname}
     XMC Click Add Device
@@ -94,7 +93,6 @@ XMC Create Device
     XMC Create Device Enter IP Address  ${device_ip}
 #    XMC Create Device Select Profile  ${device_profile}
     XMC Create Device Enter Nickname  ${device_nickname}
-    sleep  3 seconds
     XMC Create Device Click OK
 
 XMC Click Add Device
@@ -118,8 +116,13 @@ XMC Create Device Enter Nickname
     Input Text  ${xmc_create_device_dialog_nickname_text}  ${device_nickname}  clear=True
 
 XMC Create Device Click OK
-    Wait Until Page Contains Element  ${xmc_create_device_dialog_ok_btn}
-    Click Element  ${xmc_create_device_dialog_ok_btn}
+    # Give the button a chance to become enabled
+    : FOR  ${index}  IN RANGE  1  1000
+    \    Log To Console  Attempt ${index}
+    \    ${ok_enabled}=  Run Keyword And Return Status  Page Should Contain Element  ${xmc_create_device_dialog_ok_btn_enabled}
+    \    Exit For Loop If  ${ok_enabled} == True
+    Page Should Contain Element  ${xmc_create_device_dialog_ok_btn_enabled}
+    Click Element  ${xmc_create_device_dialog_ok_btn_enabled}
 
 XMC Create Device Click Apply
     Wait Until Page Contains Element  ${xmc_create_device_dialog_apply_btn}
@@ -128,6 +131,7 @@ XMC Create Device Click Apply
 XMC Create Device Click Close
     Page Should Contain Element  ${xmc_create_device_dialog_close_btn}
     Click Element  ${xmc_create_device_dialog_close_btn}
+
 
 XMC Refresh Devices Table
     Click Element  ${xmc_devices_table_refresh_icon}
@@ -151,6 +155,7 @@ XMC Right Click Device In Table
     [Arguments]  ${device_ip}
     Page Should Contain Element  xpath://div[contains(@class,'x-grid-cell-inner')][contains(text(),'${device_ip}')]
     Open Context Menu  xpath://div[contains(@class,'x-grid-cell-inner')][contains(text(),'${device_ip}')]
+
 
 XMC Delete Device
     [Arguments]  ${device_ip}
