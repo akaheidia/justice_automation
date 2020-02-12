@@ -4,4 +4,4 @@ report.html
 venv
 .idea
 *.pyc
-
+*.png
