@@ -18,6 +18,8 @@ Click Alarms Tab
 Click Events Tab
     Click Element  ${list_events_tab}
 
+Refresh Table
+    Click Element  ${list_refresh_icon}
 
 Confirm List Page Loaded
     Page Should Contain Element  ${monitor_page_title}

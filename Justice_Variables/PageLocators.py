@@ -60,6 +60,7 @@ list_endpoints_page_url_suffix = "/#/monitoring/lists/endpoints"
 list_alarms_page_url_suffix = "/#/monitoring/lists/alarms"
 list_events_page_url_suffix = "/#/monitoring/lists/events"
 list_devices_table = "id:devicesGrid"
+list_refresh_icon = "xpath://mat-icon[@class='mat-icon notranslate ei ei-refresh mat-icon-no-color']"
 
 # Reports Page Elements
 reports_page_title = "xpath://h1[text()='Reports']"
