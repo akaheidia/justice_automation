@@ -24,7 +24,6 @@ XMC Log In
     XMC Confirm Successful Login
 
 XMC Log Out
-    Log to Console  Need to implement this
     Page Should Contain Element  ${xmc_main_context_icon}
     Click Element  ${xmc_main_context_icon}
     Page Should Contain Element  ${xmc_main_context_icon_logout_menu}

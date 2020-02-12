@@ -23,7 +23,6 @@ XMC Clear Credentials
     Reload Page
 
 XMC Confirm Successful Login
-    Log To Console  Need to implement this
     Wait Until Page Contains Element  ${xmcnav_side_bar}
     Page Should Contain Image  ${xmcnav_logo_image}
 
