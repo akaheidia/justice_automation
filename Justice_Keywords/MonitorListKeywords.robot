@@ -40,3 +40,13 @@ Confirm Alarms Tab Selected
 Confirm Events Tab Selected
     ${page_url}=  Get Location
     Location Should Contain  ${list_events_page_url_suffix}
+
+Confirm Table Contains Device
+    [Arguments]  ${device_ip}
+    Table Should Contain  ${list_devices_table}  ${device_ip}
+
+Confirm Table Does Not Contain Device
+    [Arguments]  ${device_ip}
+    ${orig_wait}=  Set Selenium Implicit Wait  1 second
+    Element Should Not Contain  ${list_devices_table}  ${device_ip}
+    Set Selenium Implicit Wait  ${orig_wait}

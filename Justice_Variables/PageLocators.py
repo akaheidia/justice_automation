@@ -59,6 +59,7 @@ list_devices_page_url_suffix = "/#/monitoring/lists/devices"
 list_endpoints_page_url_suffix = "/#/monitoring/lists/endpoints"
 list_alarms_page_url_suffix = "/#/monitoring/lists/alarms"
 list_events_page_url_suffix = "/#/monitoring/lists/events"
+list_devices_table = "id:devicesGrid"
 
 # Reports Page Elements
 reports_page_title = "xpath://h1[text()='Reports']"
