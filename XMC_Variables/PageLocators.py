@@ -70,6 +70,7 @@ xmc_create_device_dialog_close_btn = "xpath://span[contains(@class,'x-btn-inner 
 
 ## Delete Device Dialog
 xmc_delete_device_dialog = "xpath://div[text()='Confirm Delete']"
+xmc_delete_device_dialog_delete_data_check_btn = "xpath://label[text()='Delete Extreme Management Center Data']"
 xmc_delete_device_dialog_yes_btn = "xpath://span[contains(@class,'x-btn-inner x-btn-inner-blue-small')][contains(text(),'Yes')]"
 xmc_delete_device_dialog_no_btn = "xpath://span[contains(@class,'x-btn-inner x-btn-inner-default-small')][contains(text(),'No')]"
 

@@ -158,4 +158,5 @@ XMC Delete Device
     Click Element  ${xmc_devices_context_more_actions_menu}
     Click Element  ${xmc_devices_context_delete_device_menu}
     Page Should Contain Element  ${xmc_delete_device_dialog}
+    Click Element  ${xmc_delete_device_dialog_delete_data_check_btn}
     Click Element  ${xmc_delete_device_dialog_yes_btn}
