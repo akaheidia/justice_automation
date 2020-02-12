@@ -79,3 +79,13 @@ Confirm Filters Panel Does Not Contain Site
     ${orig_wait}=  Set Selenium Implicit Wait  1 second
     Page Should Not Contain Element  xpath://span[@class='ui-treenode-label ui-corner-all']/span[contains(text(), '${site_name}')]
     Set Selenium Implicit Wait  ${orig_wait}
+
+Confirm Filters Panel Contains Server
+    [Arguments]  ${server_name}
+    Page Should Contain Element  xpath://span[@class='ui-treenode-label ui-corner-all']/span[contains(text(), '${server_name}')]
+
+Confirm Filters Panel Does Not Contain Server
+    [Arguments]  ${server_name}
+    ${orig_wait}=  Set Selenium Implicit Wait  1 second
+    Page Should Not Contain Element  xpath://span[@class='ui-treenode-label ui-corner-all']/span[contains(text(), '${server_name}')]
+    Set Selenium Implicit Wait  ${orig_wait}
