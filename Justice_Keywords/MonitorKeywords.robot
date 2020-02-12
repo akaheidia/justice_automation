@@ -32,7 +32,6 @@ Confirm Filters Panel Visible
 
 Confirm Filters Panel Not Visible
     ${orig_wait}=  Set Selenium Implicit Wait  1 second
-    Log To Console  Original Wait is ${orig_wait}
     Page Should Not Contain Element  ${filters_panel_title}
     Set Selenium Implicit Wait  ${orig_wait}
 
@@ -41,6 +40,5 @@ Confirm Tags Panel Visible
 
 Confirm Tags Panel Not Visible
     ${orig_wait}=  Set Selenium Implicit Wait  1 second
-    Log To Console  Original Wait is ${orig_wait}
     Page Should Not Contain Element  ${tags_panel_title}
     Set Selenium Implicit Wait  ${orig_wait}

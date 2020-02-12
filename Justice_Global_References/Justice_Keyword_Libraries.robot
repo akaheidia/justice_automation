@@ -10,3 +10,4 @@ Resource   ../Justice_Keywords/ReportsKeywords.robot
 Resource   ../Justice_Keywords/SettingsSecurityKeywords.robot
 Resource   ../Justice_Keywords/SettingsUserGroupsKeywords.robot
 Resource   ../Justice_Keywords/SidebarKeywords.robot
+Resource   ../Justice_Keywords/TagsKeywords.robot

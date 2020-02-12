@@ -50,17 +50,32 @@ Confirm Site Availability Filter Collapsed
     Element Should Be Visible  ${filters_site_availability_panel_expand_icon}
 
 
-Select Servers and Sites Tree Node
-    [Arguments]  ${nodename}
-    Page Should Contain Element  xpath://span[@class='ui-treenode-label ui-corner-all']/span[contains(text(), '${nodename}')]
-    Click Element  xpath://span[@class='ui-treenode-label ui-corner-all']/span[contains(text(), '${nodename}')]
+Select Servers and Sites Server Tree Node
+    [Arguments]  ${node_name}
+    Page Should Contain Element  xpath://span[@class='ui-treenode-label ui-corner-all']/span[contains(text(), '${node_name}')]/../..//div[contains(@class, 'ui-chkbox-box')]/span[@class='ui-chkbox-icon ui-clickable pi']/..
+    Click Element  xpath://span[@class='ui-treenode-label ui-corner-all']/span[contains(text(), '${node_name}')]/../..//div[contains(@class, 'ui-chkbox-box')]/span[@class='ui-chkbox-icon ui-clickable pi']/..
+
+Deselect Servers and Sites Server Tree Node
+    [Arguments]  ${node_name}
+    Page Should Contain Element  xpath://span[@class='ui-treenode-label ui-corner-all ui-state-highlight']/span[contains(text(), '${nodename}')]/../..//div[contains(@class, 'ui-chkbox-box')]/span[@class='ui-chkbox-icon ui-clickable pi pi-check']/..
+    Click Element  xpath://span[@class='ui-treenode-label ui-corner-all ui-state-highlight']/span[contains(text(), '${node_name}')]/../..//div[contains(@class, 'ui-chkbox-box')]/span[@class='ui-chkbox-icon ui-clickable pi pi-check']/..
 
 Expand Servers and Sites Tree Node
-    [Arguments]  ${nodename}
-    Page Should Contain Element  xpath://span[@class='ui-treenode-label ui-corner-all']/span[contains(text(), '${nodename}')]/../../span[contains(@class, 'caret-right')]
-    Click Element  xpath://span[@class='ui-treenode-label ui-corner-all']/span[contains(text(), '${nodename}')]/../../span[contains(@class, 'caret-right')]
+    [Arguments]  ${node_name}
+    Page Should Contain Element  xpath://span[@class='ui-treenode-label ui-corner-all']/span[contains(text(), '${node_name}')]/../../span[contains(@class, 'caret-right')]
+    Click Element  xpath://span[@class='ui-treenode-label ui-corner-all']/span[contains(text(), '${node_name}')]/../../span[contains(@class, 'caret-right')]
 
 Collapse Servers and Sites Tree Node
-    [Arguments]  ${nodename}
-    Page Should Contain Element  xpath://span[@class='ui-treenode-label ui-corner-all']/span[contains(text(), '${nodename}')]/../../span[contains(@class, 'caret-down')]
-    Click Element  xpath://span[@class='ui-treenode-label ui-corner-all']/span[contains(text(), '${nodename}')]/../../span[contains(@class, 'caret-down')]
+    [Arguments]  ${node_name}
+    Page Should Contain Element  xpath://span[@class='ui-treenode-label ui-corner-all']/span[contains(text(), '${node_name}')]/../../span[contains(@class, 'caret-down')]
+    Click Element  xpath://span[@class='ui-treenode-label ui-corner-all']/span[contains(text(), '${noden_ame}')]/../../span[contains(@class, 'caret-down')]
+
+Confirm Filters Panel Contains Site
+    [Arguments]  ${site_name}
+    Page Should Contain Element  xpath://span[@class='ui-treenode-label ui-corner-all']/span[contains(text(), '${site_name}')]
+
+Confirm Filters Panel Does Not Contain Site
+    [Arguments]  ${site_name}
+    ${orig_wait}=  Set Selenium Implicit Wait  1 second
+    Page Should Not Contain Element  xpath://span[@class='ui-treenode-label ui-corner-all']/span[contains(text(), '${site_name}')]
+    Set Selenium Implicit Wait  ${orig_wait}
