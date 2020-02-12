@@ -40,14 +40,38 @@ xmc_devices_tree_context_icon_maps_sites_menu="xpath://span[text()='Maps/Sites']
 xmc_devices_tree_context_icon_create_site_menu="xpath://span[text()='Create Site...']"
 xmc_devices_tree_context_icon_delete_site_menu="xpath://span[text()='Delete Site']"
 
+## Toolbar Buttons
+xmc_devices_toolbar_add_device = "xpath://span[@class='x-btn-inner x-btn-inner-default-toolbar-small'][text()='Add Device...']"
+
+## Menus
+xmc_devices_context_more_actions_menu = "xpath://span[text()='More Actions']"
+xmc_devices_context_delete_device_menu = "xpath://span[text()='Delete Device']"
+
 ## Create Site Dialog
-xmc_create_site_dialog = "xpath://div[contains(text(),'Create Site')]"
+xmc_create_site_dialog = "xpath://div[text()='Create Site']"
 xmc_create_site_dialog_name_text = "xpath://input[contains(@id, 'textfield')][contains(@id, 'inputEl')][@aria-hidden='false']"
 xmc_create_site_dialog_ok_btn = "xpath://span[contains(@class,'x-btn-inner x-btn-inner-blue-small')][text()='OK']"
 xmc_create_site_dialog_cancel_btn = "xpath://span[contains(@class,'x-btn-inner x-btn-inner-default-small')][text()='Cancel']"
 
 ## Delete Site Confirmation Dialog
-xmc_delete_site_dialog = "xpath://div[contains(text(),'Delete Site')]"
+xmc_delete_site_dialog = "xpath://div[text()='Delete Site']"
 xmc_delete_site_dialog_message = "xpath://div[contains(@class,'x-component x-window-text x-box-item x-component-default')]"
 xmc_delete_site_dialog_yes_btn = "xpath://span[text()='Yes']"
 xmc_delete_site_dialog_no_btn = "xpath://span[text()='No']"
+
+## Create Device Dialog
+xmc_create_device_dialog = "xpath://div[text()='Add Device']"
+xmc_create_device_dialog_ip_text = "xpath://input[@name='ip']"
+xmc_create_device_dialog_profile_list = "xpath://input[@name='profile_id']"
+xmc_create_device_dialog_nickname_text = "xpath://input[@name='nickname']"
+xmc_create_device_dialog_ok_btn = "xpath://span[contains(@class,'x-btn-inner x-btn-inner-blue-small')][text()='OK']"
+xmc_create_device_dialog_apply_btn = "xpath://span[contains(@class,'x-btn-inner x-btn-inner-default-small')][text()='Apply']"
+xmc_create_device_dialog_close_btn = "xpath://span[contains(@class,'x-btn-inner x-btn-inner-default-small')][text()='Close']"
+
+## Delete Device Dialog
+xmc_delete_device_dialog = "xpath://div[text()='Confirm Delete']"
+xmc_delete_device_dialog_yes_btn = "xpath://span[contains(@class,'x-btn-inner x-btn-inner-blue-small')][contains(text(),'Yes')]"
+xmc_delete_device_dialog_no_btn = "xpath://span[contains(@class,'x-btn-inner x-btn-inner-default-small')][contains(text(),'No')]"
+
+## Table Icons
+xmc_devices_table_refresh_icon = "xpath://*[@data-qtip='Refresh']"

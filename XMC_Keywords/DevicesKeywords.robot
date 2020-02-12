@@ -84,3 +84,78 @@ XMC Delete Site Click Yes
 XMC Delete Site Click No
     Page Should Contain Element  ${xmc_delete_site_dialog_no_btn}
     Click Element  ${xmc_delete_site_dialog_no_btn}
+
+
+
+XMC Create Device
+    [Arguments]  ${device_ip}  ${device_profile}  ${device_nickname}
+    XMC Click Add Device
+    Page Should Contain Element  ${xmc_create_device_dialog}
+    XMC Create Device Enter IP Address  ${device_ip}
+#    XMC Create Device Select Profile  ${device_profile}
+#    XMC Create Device Enter Nickname  ${device_nickname}
+    sleep  3 seconds
+    XMC Create Device Click OK
+
+XMC Click Add Device
+    Page Should Contain Element  ${xmc_devices_toolbar_add_device}
+    Click Element  ${xmc_devices_toolbar_add_device}
+
+XMC Create Device Enter IP Address
+    [Arguments]  ${device_ip}
+    Page Should Contain Element  ${xmc_create_device_dialog_ip_text}
+    Input Text  ${xmc_create_device_dialog_ip_text}  ${device_ip}  clear=True
+
+XMC Create Device Select Profile
+    [Arguments]  ${device_profile}
+    Page Should Contain Element  ${xmc_create_device_dialog_profile_list}
+    Click Element  ${xmc_create_device_dialog_profile_list}
+    Select From List By Label  ${xmc_create_device_dialog_profile_list}  ${device_profile}
+
+XMC Create Device Enter Nickname
+    [Arguments]  ${device_nickname}
+    Page Should Contain Element  ${xmc_create_device_dialog_nickname_text}
+    Input Text  ${xmc_create_device_dialog_nickname_text}  ${device_nickname}  clear=True
+
+XMC Create Device Click OK
+    Wait Until Page Contains Element  ${xmc_create_device_dialog_ok_btn}
+    Click Element  ${xmc_create_device_dialog_ok_btn}
+
+XMC Create Device Click Apply
+    Wait Until Page Contains Element  ${xmc_create_device_dialog_apply_btn}
+    Click Element  ${xmc_create_device_dialog_apply_btn}
+
+XMC Create Device Click Close
+    Page Should Contain Element  ${xmc_create_device_dialog_close_btn}
+    Click Element  ${xmc_create_device_dialog_close_btn}
+
+XMC Refresh Devices Table
+    Click Element  ${xmc_devices_table_refresh_icon}
+
+XMC Confirm Device In Table
+    [Arguments]  ${device_ip}
+    Page Should Contain Element  xpath://div[contains(@class,'x-grid-cell-inner')][contains(text(),'${device_ip}')]
+
+XMC Confirm Device Not In Table
+    [Arguments]  ${device_ip}
+    ${orig_wait}=  Set Selenium Implicit Wait  1 second
+    Page Should Not Contain Element  xpath://div[contains(@class,'x-grid-cell-inner')][contains(text(),'${device_ip}')]
+    Set Selenium Implicit Wait  ${orig_wait}
+
+XMC Select Device In Table
+    [Arguments]  ${device_ip}
+    Page Should Contain Element  xpath://div[contains(@class,'x-grid-cell-inner')][contains(text(),'${device_ip}')]
+    Click Element  xpath://div[contains(@class,'x-grid-cell-inner')][contains(text(),'${device_ip}')]
+
+XMC Right Click Device In Table
+    [Arguments]  ${device_ip}
+    Page Should Contain Element  xpath://div[contains(@class,'x-grid-cell-inner')][contains(text(),'${device_ip}')]
+    Open Context Menu  xpath://div[contains(@class,'x-grid-cell-inner')][contains(text(),'${device_ip}')]
+
+XMC Delete Device
+    [Arguments]  ${device_ip}
+    XMC Right Click Device In Table  ${device_ip}
+    Click Element  ${xmc_devices_context_more_actions_menu}
+    Click Element  ${xmc_devices_context_delete_device_menu}
+    Page Should Contain Element  ${xmc_delete_device_dialog}
+    Click Element  ${xmc_delete_device_dialog_yes_btn}
