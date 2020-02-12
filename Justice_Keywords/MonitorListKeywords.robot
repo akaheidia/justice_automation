@@ -45,6 +45,10 @@ Confirm Events Tab Selected
 
 Confirm Table Contains Device
     [Arguments]  ${device_ip}
+    : FOR  ${index}  IN RANGE  1  10
+    \    Refresh Devices Table
+    \    ${found_device}=  Run Keyword And Return Status  Table Should Contain  ${list_devices_table}  ${device_ip}
+    \    Exit For Loop If  ${found_device} == True
     Table Should Contain  ${list_devices_table}  ${device_ip}
 
 Confirm Table Does Not Contain Device
