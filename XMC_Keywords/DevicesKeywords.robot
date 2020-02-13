@@ -93,7 +93,7 @@ XMC Create Device
     XMC Create Device Enter IP Address  ${device_ip}
     XMC Create Device Select Profile    ${device_profile}
     XMC Create Device Enter Nickname    ${device_nickname}
-    XMC Create Device Click Close
+    XMC Create Device Click OK
 
 XMC Click Add Device
     Page Should Contain Element  ${xmc_devices_toolbar_add_device}
