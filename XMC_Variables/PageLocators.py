@@ -39,6 +39,7 @@ xmc_devices_tree_node = "xpath://span[contains(text(),'${SITENAME}')]"
 xmc_devices_tree_context_icon_maps_sites_menu="xpath://span[text()='Maps/Sites']"
 xmc_devices_tree_context_icon_create_site_menu="xpath://span[text()='Create Site...']"
 xmc_devices_tree_context_icon_delete_site_menu="xpath://span[text()='Delete Site']"
+xmc_devices_table = "xpath://div[contains(@id, 'deviceGrid')][contains(@id, 'bodyWrap')]"
 
 ## Toolbar Buttons
 xmc_devices_toolbar_add_device = "xpath://span[@class='x-btn-inner x-btn-inner-default-toolbar-small'][text()='Add Device...']"
