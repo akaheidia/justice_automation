@@ -43,7 +43,7 @@ Confirm Events Tab Selected
     ${page_url}=  Get Location
     Location Should Contain  ${list_events_page_url_suffix}
 
-Confirm Table Contains Device
+Confirm Device In Table
     [Arguments]  ${device_ip}
     : FOR  ${index}  IN RANGE  1  10
     \    Refresh Devices Table
@@ -51,7 +51,7 @@ Confirm Table Contains Device
     \    Exit For Loop If  ${found_device} == True
     Table Should Contain  ${list_devices_table}  ${device_ip}
 
-Confirm Table Does Not Contain Device
+Confirm Device Not In Table
     [Arguments]  ${device_ip}
     ${orig_wait}=  Set Selenium Implicit Wait  1 second
     Element Should Not Contain  ${list_devices_table}  ${device_ip}
