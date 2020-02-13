@@ -89,11 +89,11 @@ XMC Delete Site Click No
 XMC Create Device
     [Arguments]  ${device_ip}  ${device_profile}  ${device_nickname}
     XMC Click Add Device
-    Page Should Contain Element  ${xmc_create_device_dialog}
+    Page Should Contain Element         ${xmc_create_device_dialog}
     XMC Create Device Enter IP Address  ${device_ip}
-#    XMC Create Device Select Profile  ${device_profile}
-    XMC Create Device Enter Nickname  ${device_nickname}
-    XMC Create Device Click OK
+    XMC Create Device Select Profile    ${device_profile}
+    XMC Create Device Enter Nickname    ${device_nickname}
+    XMC Create Device Click Close
 
 XMC Click Add Device
     Page Should Contain Element  ${xmc_devices_toolbar_add_device}
@@ -108,7 +108,7 @@ XMC Create Device Select Profile
     [Arguments]  ${device_profile}
     Page Should Contain Element  ${xmc_create_device_dialog_profile_list}
     Click Element  ${xmc_create_device_dialog_profile_list}
-    Select From List By Label  ${xmc_create_device_dialog_profile_list}  ${device_profile}
+    Click Element  xpath://div[contains(text(),'${device_profile}')]
 
 XMC Create Device Enter Nickname
     [Arguments]  ${device_nickname}
