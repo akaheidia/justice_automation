@@ -175,10 +175,16 @@ Click Analytics Summary Reports Menu
     Click Element  ${reports_analytics_analytics_summary_menu}
     Unselect Frame
 
-Click Analytics Top Applications Reports Menu
+Click Analytics Top Applications By Clients Reports Menu
     Select Frame  xpath://iframe
-    Element Should Be Visible  ${reports_analytics_top_applications_menu}
-    Click Element  ${reports_analytics_top_applications_menu}
+    Element Should Be Visible  ${reports_analytics_top_applications_by_clients_menu}
+    Click Element  ${reports_analytics_top_applications_by_clients_menu}
+    Unselect Frame
+
+Click Analytics Top Applications By Volume Reports Menu
+    Select Frame  xpath://iframe
+    Element Should Be Visible  ${reports_analytics_top_applications_by_volume_menu}
+    Click Element  ${reports_analytics_top_applications_by_volume_menu}
     Unselect Frame
 
 Click Analytics Daily Usage Reports Menu
@@ -348,9 +354,14 @@ Confirm Analytics Summary Reports Page Title
     Page Should Contain Element  ${reports_analytics_analytics_summary_page_title}
     Unselect Frame
 
-Confirm Analytics Top Applications Reports Page Title
+Confirm Analytics Top Applications By Clients Reports Page Title
     Select Frame  xpath://iframe
-    Page Should Contain Element  ${reports_analytics_top_applications_page_title}
+    Page Should Contain Element  ${reports_analytics_top_applications_by_clients_page_title}
+    Unselect Frame
+
+Confirm Analytics Top Applications By Volume Reports Page Title
+    Select Frame  xpath://iframe
+    Page Should Contain Element  ${reports_analytics_top_applications_by_volume_page_title}
     Unselect Frame
 
 Confirm Analytics Daily Usage Reports Page Title
