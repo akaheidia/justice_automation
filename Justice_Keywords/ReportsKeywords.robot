@@ -187,6 +187,12 @@ Click Analytics Top Applications By Volume Reports Menu
     Click Element  ${reports_analytics_top_applications_by_volume_menu}
     Unselect Frame
 
+Click Analytics Slowest Responding Applications Reports Menu
+    Select Frame  xpath://iframe
+    Element Should Be Visible  ${reports_analytics_slowest_responding_applications_menu}
+    Click Element  ${reports_analytics_slowest_responding_applications_menu}
+    Unselect Frame
+
 Click Analytics Daily Usage Reports Menu
     Select Frame  xpath://iframe
     Element Should Be Visible  ${reports_analytics_daily_usage_menu}
@@ -362,6 +368,11 @@ Confirm Analytics Top Applications By Clients Reports Page Title
 Confirm Analytics Top Applications By Volume Reports Page Title
     Select Frame  xpath://iframe
     Page Should Contain Element  ${reports_analytics_top_applications_by_volume_page_title}
+    Unselect Frame
+
+Confirm Analytics Slowest Responding Applications Reports Page Title
+    Select Frame  xpath://iframe
+    Page Should Contain Element  ${reports_analytics_slowest_responding_applications_page_title}
     Unselect Frame
 
 Confirm Analytics Daily Usage Reports Page Title
