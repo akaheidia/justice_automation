@@ -322,22 +322,22 @@ Confirm Top N Port Error Reports Page Title
     UnSelect Frame
     Unselect Frame
 
-Confirm Top N Wireless Clients Reports Page Title
+Confirm Top N Top APs By Clients Reports Page Title
     sleep  1 second
     Select Frame  xpath://iframe
     Select Frame  xpath://iframe[@id='resource']
 
-    Page Should Contain Element  ${reports_topn_wireless_clients_page_title}
+    Page Should Contain Element  ${reports_topn_top_aps_by_clients_page_title}
 
     UnSelect Frame
     Unselect Frame
 
-Confirm Top N Wireless Bandwidth Reports Page Title
+Confirm Top N Top APs By Bandwidth Reports Page Title
     sleep  1 second
     Select Frame  xpath://iframe
     Select Frame  xpath://iframe[@id='resource']
 
-    Page Should Contain Element  ${reports_topn_wireless_bandwidth_page_title}
+    Page Should Contain Element  ${reports_topn_top_aps_by_bandwidth_page_title}
 
     UnSelect Frame
     Unselect Frame

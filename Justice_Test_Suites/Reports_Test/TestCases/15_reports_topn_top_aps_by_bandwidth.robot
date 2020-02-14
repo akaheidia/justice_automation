@@ -2,7 +2,7 @@
 Library   SeleniumLibrary
 Resource  ../Resources/AllResources.robot
 
-Documentation    Tests the Reports Top N Wireless Clients page.
+Documentation    Tests the Reports Top N Wireless Bandwidth page.
 
 Suite Setup      Open Browser and Log In  ${JUS_URL}  ${BROWSER}  ${JUS_USERNAME}  ${JUS_PASSWORD}
 Suite Teardown   Log Out and Close Browser
@@ -15,5 +15,5 @@ Confirm Page Loads
     Open Sidebar Menu
     Expand Reports Tree Reports Node
     Expand Reports Tree Top N Node
-    Click Top N Top APs By Clients Reports Menu
-    Confirm Top N Wireless Clients Reports Page Title
+    Click Top N Top APs By Bandwidth Reports Menu
+    Confirm Top N Top APs By Bandwidth Reports Page Title
