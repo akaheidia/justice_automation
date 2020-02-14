@@ -14,11 +14,13 @@ ${PASSWORD}     ${JUS_PASSWORD}
 
 *** Test Cases ***
 Execute Command and Verify Output
-    ${output}=  Execute Command  docker ps
-    Should Contain  ${output}  justice_elasticsearch_1
+    ${docker_output}=  Execute Command  docker ps
+    Log  ${docker_output}
+    Should Contain  ${docker_output}  justice_elasticsearch_1
 
 *** Keywords ***
 Open Connection and Log In
     Open Connection    ${HOST}
     ${login_output}=  SSHLibrary.Login   ${USERNAME}  ${PASSWORD}
+    Log  ${login_output}
     Should Contain  ${login_output}  Justice Server Appliance
