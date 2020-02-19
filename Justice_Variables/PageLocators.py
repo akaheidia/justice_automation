@@ -86,6 +86,7 @@ reports_tree_collapse_analytics_icon = "xpath://span[@id='rdDmtCaption' and @cla
 # Reports Page Tree Node Menus
 reports_network_scorecard_menu = "xpath://span[@id='rdDmtCaption' and text()='Scorecard']"
 reports_network_summary_menu = "xpath://span[@id='rdDmtCaption' and text()='Network Summary']"
+reports_xmc_server_utilization_menu = "xpath://span[@id='rdDmtCaption' and text()='XMC Server Utilization']"
 reports_site_availability_menu = "xpath://span[@id='rdDmtCaption' and text()='Availability']"
 reports_site_cpu_utilization_menu = "xpath://span[@id='rdDmtCaption' and @class='ThemeBold' and text()='Site']//following::span[@id='rdDmtCaption' and text()='CPU Utilization']"
 reports_site_memory_utilization_menu = "xpath://span[@id='rdDmtCaption' and @class='ThemeBold' and text()='Site']//following::span[@id='rdDmtCaption' and text()='Memory Utilization']"
@@ -110,6 +111,7 @@ reports_analytics_quarterly_usage_menu = "xpath://span[@id='rdDmtCaption' and te
 # Reports Page Titles
 reports_network_scorecard_page_title = "xpath://h2[text()='Network Scorecard']"
 reports_network_summary_page_title = "xpath://h2[text()='Network Summary']"
+reports_xmc_server_utilization_page_title = "xpath://h2[text()='XMC Server Utilization']"
 reports_site_availability_page_title = "xpath://h2[text()='Site Availability']"
 reports_site_cpu_utilization_page_title = "xpath://h2[text()='CPU Utilization']"
 reports_site_memory_utilization_page_title = "xpath://h2[text()='Memory Utilization']"

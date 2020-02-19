@@ -89,6 +89,12 @@ Click Network Summary Reports Menu
     Click Element  ${reports_network_summary_menu}
     Unselect Frame
 
+Click XMC Server Utilization Reports Menu
+    Select Frame  xpath://iframe
+    Element Should Be Visible  ${reports_xmc_server_utilization_menu}
+    Click Element  ${reports_xmc_server_utilization_menu}
+    Unselect Frame
+
 Click Site Availability Reports Menu
     Select Frame  xpath://iframe
     Element Should Be Visible  ${reports_site_availability_menu}
@@ -220,6 +226,15 @@ Confirm Network Scorecard Reports Page Title
 Confirm Network Summary Reports Page Title
     Select Frame  xpath://iframe
     Page Should Contain Element  ${reports_network_summary_page_title}
+    Unselect Frame
+
+Confirm XMC Server Utilization Reports Page Title
+    Select Frame  xpath://iframe
+    Select Frame  xpath://iframe[@id='server_usage']
+
+    Page Should Contain Element  ${reports_xmc_server_utilization_page_title}
+
+    Unselect Frame
     Unselect Frame
 
 
