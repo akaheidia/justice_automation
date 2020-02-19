@@ -236,7 +236,7 @@ Confirm Site Availability Reports Page Title
 Confirm Site CPU Utilization Reports Page Title
     sleep  1 second
     Select Frame  xpath://iframe
-    Select Frame  xpath://iframe[@id='resource']
+    Select Frame  xpath://iframe[@id='statistic']
 
     Page Should Contain Element  ${reports_site_cpu_utilization_page_title}
 
@@ -246,7 +246,7 @@ Confirm Site CPU Utilization Reports Page Title
 Confirm Site Memory Utilization Reports Page Title
     sleep  1 second
     Select Frame  xpath://iframe
-    Select Frame  xpath://iframe[@id='resource']
+    Select Frame  xpath://iframe[@id='statistic']
 
     Page Should Contain Element  ${reports_site_memory_utilization_page_title}
 
@@ -256,7 +256,7 @@ Confirm Site Memory Utilization Reports Page Title
 Confirm Site Port Utilization Reports Page Title
     sleep  1 second
     Select Frame  xpath://iframe
-    Select Frame  xpath://iframe[@id='resource']
+    Select Frame  xpath://iframe[@id='statistic']
 
     Page Should Contain Element  ${reports_site_port_utilization_page_title}
 
@@ -266,7 +266,7 @@ Confirm Site Port Utilization Reports Page Title
 Confirm Site Port Error Reports Page Title
     sleep  1 second
     Select Frame  xpath://iframe
-    Select Frame  xpath://iframe[@id='resource']
+    Select Frame  xpath://iframe[@id='statistic']
 
     Page Should Contain Element  ${reports_site_port_error_page_title}
 
