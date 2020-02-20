@@ -69,3 +69,8 @@ Confirm Device Not In Table
     \    Exit For Loop If  ${found_device} == False
     Element Should Not Contain  ${list_devices_table}  ${device_ip}
     Set Selenium Implicit Wait  ${orig_wait}
+
+Confirm Download Menu Closed
+    ${orig_wait}=  Set Selenium Implicit Wait  1 second
+    Element Should Not Be Visible  ${list_download_selected_icon}
+    Set Selenium Implicit Wait  ${orig_wait}
