@@ -9,6 +9,36 @@ Documentation    Keywords specific to the Devices tab on the Monitor List page.
 Refresh Devices Table
     Click Element  ${list_refresh_icon}
 
+Download CSV Visible Rows
+    Click Element  ${list_download_icon}
+    Page Should Contain Element  ${download_csv_visible_rows_menu}
+    Click Element  ${download_csv_visible_rows_menu}
+
+Download CSV All Rows
+    Click Element  ${list_download_icon}
+    Page Should Contain Element  ${download_csv_all_rows_menu}
+    Click Element  ${download_csv_all_rows_menu}
+
+Download CSV All Filtered Rows
+    Click Element  ${list_download_icon}
+    Page Should Contain Element  ${download_csv_all_filtered_rows_menu}
+    Click Element  ${download_csv_all_filtered_rows_menu}
+
+Download PDF Visible Rows
+    Click Element  ${list_download_icon}
+    Page Should Contain Element  ${download_pdf_visible_rows_menu}
+    Click Element  ${download_pdf_visible_rows_menu}
+
+Download PDF All Rows
+    Click Element  ${list_download_icon}
+    Page Should Contain Element  ${download_pdf_all_rows_menu}
+    Click Element  ${download_pdf_all_rows_menu}
+
+Download PDF All Filtered Rows
+    Click Element  ${list_download_icon}
+    Page Should Contain Element  ${download_pdf_all_filtered_rows_menu}
+    Click Element  ${download_pdf_all_filtered_rows_menu}
+
 
 Confirm Device In Table
     [Arguments]  ${device_ip}

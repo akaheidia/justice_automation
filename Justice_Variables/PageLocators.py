@@ -68,6 +68,15 @@ list_download_icon = "xpath://mat-icon[@class='mat-icon notranslate ei ei-downlo
 list_sort_icon = "xpath://mat-icon[@class='mat-icon notranslate ei ei-sort_by_alpha mat-icon-no-color']"
 list_columns_icon = "xpath://mat-icon[@class='mat-icon notranslate ei ei-view_column mat-icon-no-color']"
 
+## Download Menu Elements
+download_csv_visible_rows_menu = "xpath://span[@class='option'][text()='CSV']/..//span[@class='text'][text()='(Visible Rows)']"
+download_csv_all_rows_menu = "xpath://span[@class='option'][text()='CSV']/..//span[@class='text'][text()='(All Rows)']"
+download_csv_all_filtered_rows_menu = "xpath://span[@class='option'][text()='CSV']/..//span[@class='text'][text()='(All Filtered Rows)']"
+download_pdf_visible_rows_menu = "xpath://span[@class='option'][text()='PDF']/..//span[@class='text'][text()='(Visible Rows)']"
+download_pdf_all_rows_menu = "xpath://span[@class='option'][text()='PDF']/..//span[@class='text'][text()='(All Rows)']"
+download_pdf_all_filtered_rows_menu = "xpath://span[@class='option'][text()='PDF']/..//span[@class='text'][text()='(All Filtered Rows)']"
+
+
 # Reports Page Elements
 reports_page_title = "xpath://h1[text()='Reports']"
 reports_sidebar_menu_button = "id:actShowSidebar"
