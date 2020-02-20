@@ -49,7 +49,6 @@ Close Download Menu
     ${orig_wait}=  Set Selenium Implicit Wait  1 second
     ${menu_open}=  Run Keyword And Return Status  Element Should Be Visible  ${list_download_selected_icon}
     Run Keyword If  '${menu_open}'=='True'  Click Element  ${list_download_selected_icon}
-    ...    ELSE    Log To Console  Download Menu Not Open
     Set Selenium Implicit Wait  ${orig_wait}
 
 

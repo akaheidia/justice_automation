@@ -7,6 +7,7 @@ Documentation    Tests the Devices tab of the Monitor List page.
 Suite Setup      Open Browser and Log In  ${JUS_URL}  ${BROWSER}  ${JUS_USERNAME}  ${JUS_PASSWORD}
 Suite Teardown   Log Out and Close Browser
 Test Setup       Navigate To Devices Tab
+Test Teardown    Close Download Menu
 
 *** Test Cases ***
 
