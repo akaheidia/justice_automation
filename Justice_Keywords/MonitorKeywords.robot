@@ -16,7 +16,7 @@ Click Filter Icon
     Click Element  ${monitor_filter_icon}
 
 Click Tag Icon
-    Click Element  ${monitor_tag_icon}
+    Click Element  ${monitor_tags_icon}
 
 
 Confirm List Slider Selected

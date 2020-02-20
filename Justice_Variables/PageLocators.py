@@ -25,8 +25,11 @@ monitor_map_slider = "xpath://span[text()='Map']"
 monitor_list_slider = "xpath://span[text()='List']"
 monitor_selected_slider_class = "list-switcher-selected-text"
 monitor_unselected_slider_class = "list-switcher-unselected-text"
+monitor_search_icon = "xpath://mat-icon[@class='mat-icon notranslate ei ei-search mat-icon-no-color']"
+monitor_help_icon = "xpath://mat-icon[@class='mat-icon notranslate ei ei-help mat-icon-no-color']"
+monitor_alarms_icon = "xpath://mat-icon[@class='mat-icon notranslate ei ei-alarm_type mat-icon-no-color']"
+monitor_tags_icon = "xpath://mat-icon[@class='mat-icon notranslate ei ei-label_outline mat-icon-no-color']"
 monitor_filter_icon = "xpath://mat-icon[@class='mat-icon notranslate ei ei-filter mat-icon-no-color']"
-monitor_tag_icon = "xpath://mat-icon[@class='mat-icon notranslate ei ei-label_outline mat-icon-no-color']"
 
 # Filters Panel Elements
 filters_panel_title = "xpath://div[@class='filters-header-text']"
@@ -61,6 +64,9 @@ list_alarms_page_url_suffix = "/#/monitoring/lists/alarms"
 list_events_page_url_suffix = "/#/monitoring/lists/events"
 list_devices_table = "id:devicesGrid"
 list_refresh_icon = "xpath://mat-icon[@class='mat-icon notranslate ei ei-refresh mat-icon-no-color']"
+list_download_icon = "xpath://mat-icon[@class='mat-icon notranslate ei ei-download mat-icon-no-color']"
+list_sort_icon = "xpath://mat-icon[@class='mat-icon notranslate ei ei-sort_by_alpha mat-icon-no-color']"
+list_columns_icon = "xpath://mat-icon[@class='mat-icon notranslate ei ei-view_column mat-icon-no-color']"
 
 # Reports Page Elements
 reports_page_title = "xpath://h1[text()='Reports']"
