@@ -13,10 +13,10 @@ Test Setup       Navigate To Devices Tab
 Confirm Download Menus
     Download CSV Visible Rows
     Download CSV All Rows
-#    Download CSV All Filtered Rows
+    Download CSV All Filtered Rows
     Download PDF Visible Rows
     Download PDF All Rows
-#    Download PDF All Filtered Rows
+    Download PDF All Filtered Rows
 
 *** Keywords ***
 Navigate To Devices Tab

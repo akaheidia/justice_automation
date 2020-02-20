@@ -65,6 +65,7 @@ list_events_page_url_suffix = "/#/monitoring/lists/events"
 list_devices_table = "id:devicesGrid"
 list_refresh_icon = "xpath://mat-icon[@class='mat-icon notranslate ei ei-refresh mat-icon-no-color']"
 list_download_icon = "xpath://mat-icon[@class='mat-icon notranslate ei ei-download mat-icon-no-color']"
+list_download_selected_icon = "xpath://div[@class='cdk-overlay-backdrop app-overlays cdk-overlay-backdrop-showing']"
 list_sort_icon = "xpath://mat-icon[@class='mat-icon notranslate ei ei-sort_by_alpha mat-icon-no-color']"
 list_columns_icon = "xpath://mat-icon[@class='mat-icon notranslate ei ei-view_column mat-icon-no-color']"
 
