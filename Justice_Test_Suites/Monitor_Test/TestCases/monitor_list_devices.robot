@@ -10,6 +10,7 @@ Suite Teardown   Log Out and Close Browser
 *** Test Cases ***
 
 Confirm Download Menus
+    Set Server Filter
     Download CSV Visible Rows
     Download CSV All Rows
     Download CSV All Filtered Rows
@@ -24,6 +25,8 @@ Log In and Navigate to Devices Tab
     Click List Slider
     Click Devices Tab
     Confirm Devices Tab Selected
+
+Set Server Filter
     Click Filter Icon
     Confirm Filters Panel Visible
     Select Servers and Sites Server Tree Node  ${XMC_HOSTNAME}
