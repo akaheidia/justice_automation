@@ -5,6 +5,7 @@ Resource   ../Justice_Keywords/FiltersKeywords.robot
 Resource   ../Justice_Keywords/LoginKeywords.robot
 Resource   ../Justice_Keywords/MonitorKeywords.robot
 Resource   ../Justice_Keywords/MonitorListKeywords.robot
+Resource   ../Justice_Keywords/MonitorListDevicesKeywords.robot
 Resource   ../Justice_Keywords/MonitorMapKeywords.robot
 Resource   ../Justice_Keywords/ReportsKeywords.robot
 Resource   ../Justice_Keywords/SettingsSecurityKeywords.robot

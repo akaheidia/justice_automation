@@ -18,8 +18,6 @@ Click Alarms Tab
 Click Events Tab
     Click Element  ${list_events_tab}
 
-Refresh Devices Table
-    Click Element  ${list_refresh_icon}
 
 Confirm List Page Loaded
     Page Should Contain Element  ${monitor_page_title}
@@ -42,21 +40,3 @@ Confirm Alarms Tab Selected
 Confirm Events Tab Selected
     ${page_url}=  Get Location
     Location Should Contain  ${list_events_page_url_suffix}
-
-Confirm Device In Table
-    [Arguments]  ${device_ip}
-    : FOR  ${index}  IN RANGE  1  10
-    \    Refresh Devices Table
-    \    ${found_device}=  Run Keyword And Return Status  Table Should Contain  ${list_devices_table}  ${device_ip}
-    \    Exit For Loop If  ${found_device} == True
-    Table Should Contain  ${list_devices_table}  ${device_ip}
-
-Confirm Device Not In Table
-    [Arguments]  ${device_ip}
-    ${orig_wait}=  Set Selenium Implicit Wait  1 second
-    : FOR  ${index}  IN RANGE  1  10
-    \    Refresh Devices Table
-    \    ${found_device}=  Run Keyword And Return Status  Table Should Contain  ${list_devices_table}  ${device_ip}
-    \    Exit For Loop If  ${found_device} == False
-    Element Should Not Contain  ${list_devices_table}  ${device_ip}
-    Set Selenium Implicit Wait  ${orig_wait}
