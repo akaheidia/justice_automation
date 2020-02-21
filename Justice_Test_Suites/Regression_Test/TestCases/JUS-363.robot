@@ -22,7 +22,7 @@ Confirm Duplicate Sites Present Between Servers
     Confirm Filters Panel Contains Site  ${site_name}
     Collapse Servers and Sites Tree Node  ${XMC_2_HOSTNAME}
 
-Confirm Duplicate Site Selection Is Specific To Site
+Confirm Duplicate Site Selection Is Specific To Server
     Confirm Filters Panel Visible
     Confirm Servers and Sites Filter Expanded
 
