@@ -10,39 +10,45 @@ Refresh Devices Table
     Click Element  ${list_refresh_icon}
 
 Download CSV Visible Rows
-    Click Element  ${list_download_icon}
+    Open Download Menu
     Element Should Be Visible  ${download_csv_visible_rows_menu}
     Click Element  ${download_csv_visible_rows_menu}
 
 Download CSV All Rows
-    Click Element  ${list_download_icon}
+    Open Download Menu
     Element Should Be Visible  ${download_csv_all_rows_menu}
     Click Element  ${download_csv_all_rows_menu}
 
 Download CSV All Filtered Rows
     ${orig_wait}=  Set Selenium Implicit Wait  1 second
-    Click Element  ${list_download_icon}
+    Open Download Menu
     ${menu_present}=  Run Keyword And Return Status  Element Should Be Visible  ${download_csv_all_filtered_rows_menu}
     Run Keyword If  '${menu_present}'=='True'  Click Element  ${download_csv_all_filtered_rows_menu}
     ...    ELSE    Close Download Menu
     Set Selenium Implicit Wait  ${orig_wait}
 
 Download PDF Visible Rows
-    Click Element  ${list_download_icon}
+    Open Download Menu
     Element Should Be Visible  ${download_pdf_visible_rows_menu}
     Click Element  ${download_pdf_visible_rows_menu}
 
 Download PDF All Rows
-    Click Element  ${list_download_icon}
+    Open Download Menu
     Element Should Be Visible  ${download_pdf_all_rows_menu}
     Click Element  ${download_pdf_all_rows_menu}
 
 Download PDF All Filtered Rows
     ${orig_wait}=  Set Selenium Implicit Wait  1 second
-    Click Element  ${list_download_icon}
+    Open Download Menu
     ${menu_present}=  Run Keyword And Return Status  Element Should Be Visible  ${download_pdf_all_filtered_rows_menu}
     Run Keyword If  '${menu_present}'=='True'  Click Element  ${download_pdf_all_filtered_rows_menu}
     ...    ELSE    Close Download Menu
+    Set Selenium Implicit Wait  ${orig_wait}
+
+Open Download Menu
+    ${orig_wait}=  Set Selenium Implicit Wait  1 second
+    ${menu_closed}=  Run Keyword And Return Status  Element Should Be Visible  ${list_download_icon}
+    Run Keyword If  '${menu_closed}'=='True'  Click Element  ${list_download_icon}
     Set Selenium Implicit Wait  ${orig_wait}
 
 Close Download Menu
