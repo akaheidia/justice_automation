@@ -70,12 +70,12 @@ list_sort_icon = "xpath://mat-icon[@class='mat-icon notranslate ei ei-sort_by_al
 list_columns_icon = "xpath://mat-icon[@class='mat-icon notranslate ei ei-view_column mat-icon-no-color']"
 
 ## Download Menu Elements
-download_csv_visible_rows_menu = "xpath://span[@class='option'][text()='CSV']/..//span[@class='text'][text()='(Visible Rows)']"
-download_csv_all_rows_menu = "xpath://span[@class='option'][text()='CSV']/..//span[@class='text'][text()='(All Rows)']"
-download_csv_all_filtered_rows_menu = "xpath://span[@class='option'][text()='CSV']/..//span[@class='text'][text()='(All Filtered Rows)']"
-download_pdf_visible_rows_menu = "xpath://span[@class='option'][text()='PDF']/..//span[@class='text'][text()='(Visible Rows)']"
-download_pdf_all_rows_menu = "xpath://span[@class='option'][text()='PDF']/..//span[@class='text'][text()='(All Rows)']"
-download_pdf_all_filtered_rows_menu = "xpath://span[@class='option'][text()='PDF']/..//span[@class='text'][text()='(All Filtered Rows)']"
+download_csv_visible_rows_menu = "xpath://span[@class='option'][text()='CSV']/..//span[@class='text'][contains(text(), '(Visible Rows)')]"
+download_csv_all_rows_menu = "xpath://span[@class='option'][text()='CSV']/..//span[@class='text'][contains(text(), '(All Rows)')]"
+download_csv_all_filtered_rows_menu = "xpath://span[@class='option'][text()='CSV']/..//span[@class='text'][contains(text(), '(All Filtered Rows)')]"
+download_pdf_visible_rows_menu = "xpath://span[@class='option'][text()='PDF']/..//span[@class='text'][contains(text(), '(Visible Rows)')]"
+download_pdf_all_rows_menu = "xpath://span[@class='option'][text()='PDF']/..//span[@class='text'][contains(text(), '(All Rows)')]"
+download_pdf_all_filtered_rows_menu = "xpath://span[@class='option'][text()='PDF']/..//span[@class='text'][contains(text(), '(All Filtered Rows)')]"
 
 
 # Reports Page Elements
@@ -149,7 +149,15 @@ reports_analytics_daily_usage_page_title = "xpath://h2[text()='Daily Analytics U
 reports_analytics_monthly_usage_page_title = "xpath://h2[text()='Monthly Analytics Usage']"
 reports_analytics_quarterly_usage_page_title = "xpath://h2[text()='Analytics Quarterly Summary']"
 
+# Reports - Drilldown Elements
+reports_device_availability_drilldown = "xpath://h4[text()='Device Availability']"
+
 # Reports - Network Scorecard Page Elements
+
+# Reports - Network Summary Page Elements
+
+# Reports - General Page Titles
+reports_device_availability_page_title = "xpath://h2[text()='Device Availability']"
 
 # Settings Page Elements
 settings_page_title = "xpath://span[@class='settings-title']"
