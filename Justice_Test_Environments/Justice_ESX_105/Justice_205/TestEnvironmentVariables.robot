@@ -11,3 +11,10 @@ ${XMC_HOSTNAME}        justice-XMC-201
 ${XMC_USERNAME}        root
 ${XMC_PASSWORD}        n7830466
 ${XMC_SERVER_LOG}      /usr/local/Extreme_Networks/NetSight/appdata/logs/server.log
+
+${XMC_2_URL}           https://10.54.143.203:8443
+${XMC_2_HOST_IP}       10.54.143.203
+${XMC_2_HOSTNAME}      Justice-XMC-203
+${XMC_2_USERNAME}      root
+${XMC_2_PASSWORD}      n7830466
+${XMC_2_SERVER_LOG}    /usr/local/Extreme_Networks/NetSight/appdata/logs/server.log
