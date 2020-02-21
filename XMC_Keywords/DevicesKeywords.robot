@@ -71,11 +71,11 @@ XMC Delete Site
 
 XMC Wait For Site Tab To Load
     [Arguments]  ${site_name}
-    Wait Until Page Contains Element  xpath://span[@class='x-tab-inner x-tab-inner-extr-sec-tab-panel'][contains(text(), ${site_name})]
+    Wait Until Page Contains Element  xpath://span[@class='x-tab-inner x-tab-inner-extr-sec-tab-panel'][contains(text(), '${site_name}')]
 
 XMC Delete Site Confirmation Should Contain Site
     [Arguments]  ${site_name}
-    Page Should Contain Element  xpath://div[contains(@class,'x-component x-window-text x-box-item x-component-default')][contains(text(), ${site_name})]
+    Page Should Contain Element  xpath://div[contains(@class,'x-component x-window-text x-box-item x-component-default')][contains(text(), '${site_name}')]
 
 XMC Delete Site Click Yes
     Page Should Contain Element  ${xmc_delete_site_dialog_yes_btn}
