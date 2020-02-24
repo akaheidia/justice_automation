@@ -4,13 +4,8 @@ Resource  ../Resources/AllResources.robot
 
 Documentation   This test suite verifies all expected docker containers are present.
 
-Suite Setup     Open Connection and Log In
-Suite Teardown  Close All Connections
-
-*** Variables ***
-${HOST}         ${JUS_HOST_IP}
-${USERNAME}     ${JUS_USERNAME}
-${PASSWORD}     ${JUS_PASSWORD}
+Suite Setup     Initialize SSH Connection
+Suite Teardown  Close SSH Connection
 
 *** Test Cases ***
 Execute Command and Verify Output
@@ -26,8 +21,6 @@ Execute Command and Verify Output
     Should Contain  ${docker_output}  justice_justice-xmc-messages_1
 
 *** Keywords ***
-Open Connection and Log In
-    Open Connection   ${HOST}
-    ${login_output}=  SSHLibrary.Login   ${USERNAME}  ${PASSWORD}
-    Log               ${login_output}
+Initialize SSH Connection
+    ${login_output}=  Open SSH Connection and Log In  ${JUS_HOST_IP}  ${JUS_USERNAME}  ${JUS_PASSWORD}
     Should Contain    ${login_output}  Justice Server Appliance

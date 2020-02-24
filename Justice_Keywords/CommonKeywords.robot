@@ -1,5 +1,6 @@
 *** Settings ***
 Library    SeleniumLibrary
+Library    SSHLibrary
 Resource   ./LoginKeywords.robot
 Variables  ../Justice_Variables/PageLocators.py
 
@@ -37,3 +38,13 @@ Print Element Count
     [Arguments]  ${element}
     ${count}=  Get Element Count  ${element}
     Log To Console  Number of Elements: ${count}
+
+Open SSH Connection and Log In
+    [Arguments]  ${host}  ${user}  ${pwd}
+    Open Connection   ${host}
+    ${login_output}=  SSHLibrary.Login   ${user}  ${pwd}
+    Log               ${login_output}
+    [return]  ${login_output}
+
+Close SSH Connection
+    Close All Connections
