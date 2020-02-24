@@ -2,33 +2,21 @@
 Library   SeleniumLibrary
 Resource  ../Resources/AllResources.robot
 
-Documentation    Tests the Devices tab of the Monitor List page.
+Documentation    Regression test for JUS-377:  CSV and PDF Download for All Filtered Rows is a no-op.
 
 Suite Setup      Log In and Navigate to Devices Tab
 Suite Teardown   Log Out and Close Browser
 
 *** Test Cases ***
 
-Confirm Download Menus
-    Set Server Filter
-
-    Download CSV Visible Rows
-    Wait Until Page Contains  Download Complete
-
-    Download CSV All Rows
-    Wait Until Page Contains  Download Complete
-
+Confirm CSV All Filtered Rows
     Download CSV All Filtered Rows
     Wait Until Page Contains  Download Complete
 
-    Download PDF Visible Rows
-    Wait Until Page Contains  Download Complete
-
-    Download PDF All Rows
-    Wait Until Page Contains  Download Complete
-
+Confirm PDF All Filtered Rows
     Download PDF All Filtered Rows
     Wait Until Page Contains  Download Complete
+
 
 *** Keywords ***
 Log In and Navigate to Devices Tab
@@ -37,6 +25,7 @@ Log In and Navigate to Devices Tab
     Click List Slider
     Click Devices Tab
     Confirm Devices Tab Selected
+    Set Server Filter
 
 Set Server Filter
     Click Filter Icon
