@@ -9,55 +9,6 @@ Documentation    Keywords specific to the Devices tab on the Monitor List page.
 Refresh Devices Table
     Click Element  ${list_refresh_icon}
 
-Download CSV Visible Rows
-    Open Download Menu
-    Element Should Be Visible  ${download_csv_visible_rows_menu}
-    Click Element  ${download_csv_visible_rows_menu}
-
-Download CSV All Rows
-    Open Download Menu
-    Element Should Be Visible  ${download_csv_all_rows_menu}
-    Click Element  ${download_csv_all_rows_menu}
-
-Download CSV All Filtered Rows
-    ${orig_wait}=  Set Selenium Implicit Wait  1 second
-    Open Download Menu
-    ${menu_present}=  Run Keyword And Return Status  Element Should Be Visible  ${download_csv_all_filtered_rows_menu}
-    Run Keyword If  '${menu_present}'=='True'  Click Element  ${download_csv_all_filtered_rows_menu}
-    ...    ELSE    Close Download Menu
-    Set Selenium Implicit Wait  ${orig_wait}
-
-Download PDF Visible Rows
-    Open Download Menu
-    Element Should Be Visible  ${download_pdf_visible_rows_menu}
-    Click Element  ${download_pdf_visible_rows_menu}
-
-Download PDF All Rows
-    Open Download Menu
-    Element Should Be Visible  ${download_pdf_all_rows_menu}
-    Click Element  ${download_pdf_all_rows_menu}
-
-Download PDF All Filtered Rows
-    ${orig_wait}=  Set Selenium Implicit Wait  1 second
-    Open Download Menu
-    ${menu_present}=  Run Keyword And Return Status  Element Should Be Visible  ${download_pdf_all_filtered_rows_menu}
-    Run Keyword If  '${menu_present}'=='True'  Click Element  ${download_pdf_all_filtered_rows_menu}
-    ...    ELSE    Close Download Menu
-    Set Selenium Implicit Wait  ${orig_wait}
-
-Open Download Menu
-    ${orig_wait}=  Set Selenium Implicit Wait  1 second
-    ${menu_closed}=  Run Keyword And Return Status  Element Should Be Visible  ${list_download_icon}
-    Run Keyword If  '${menu_closed}'=='True'  Click Element  ${list_download_icon}
-    Set Selenium Implicit Wait  ${orig_wait}
-
-Close Download Menu
-    ${orig_wait}=  Set Selenium Implicit Wait  1 second
-    ${menu_open}=  Run Keyword And Return Status  Element Should Be Visible  ${list_download_selected_icon}
-    Run Keyword If  '${menu_open}'=='True'  Click Element  ${list_download_selected_icon}
-    Set Selenium Implicit Wait  ${orig_wait}
-
-
 Confirm Device In Table
     [Arguments]  ${device_ip}
     : FOR  ${index}  IN RANGE  1  10
@@ -74,9 +25,4 @@ Confirm Device Not In Table
     \    ${found_device}=  Run Keyword And Return Status  Table Should Contain  ${list_devices_table}  ${device_ip}
     \    Exit For Loop If  ${found_device} == False
     Element Should Not Contain  ${list_devices_table}  ${device_ip}
-    Set Selenium Implicit Wait  ${orig_wait}
-
-Confirm Download Menu Closed
-    ${orig_wait}=  Set Selenium Implicit Wait  1 second
-    Element Should Not Be Visible  ${list_download_selected_icon}
     Set Selenium Implicit Wait  ${orig_wait}

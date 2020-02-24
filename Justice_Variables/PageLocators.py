@@ -77,6 +77,8 @@ download_pdf_visible_rows_menu = "xpath://span[@class='option'][text()='PDF']/..
 download_pdf_all_rows_menu = "xpath://span[@class='option'][text()='PDF']/..//span[@class='text'][contains(text(), '(All Rows)')]"
 download_pdf_all_filtered_rows_menu = "xpath://span[@class='option'][text()='PDF']/..//span[@class='text'][contains(text(), '(All Filtered Rows)')]"
 
+# Endpoints
+endpoints_table = "xpath://table[@id='endPointsGrid']"
 
 # Reports Page Elements
 reports_page_title = "xpath://h1[text()='Reports']"
