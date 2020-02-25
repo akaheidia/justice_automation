@@ -25,11 +25,22 @@ Confirm Slider Selection Persists For Map
     Click Monitor
     Confirm Map Page Loaded
 
-Confirm Slider Selection Persists On Logout/Login
+Confirm Slider Selection Persists For List On Logout/Login
     Click Monitor
     Click List Slider
     Confirm List Page Loaded
+    sleep  1 second
     Log Out
     Log In  ${JUS_USERNAME}  ${JUS_PASSWORD}
     Click Monitor
     Confirm List Page Loaded
+
+Confirm Slider Selection Persists For Map On Logout/Login
+    Click Monitor
+    Click Map Slider
+    Confirm Map Page Loaded
+    sleep  1 second
+    Log Out
+    Log In  ${JUS_USERNAME}  ${JUS_PASSWORD}
+    Click Monitor
+    Confirm Map Page Loaded
