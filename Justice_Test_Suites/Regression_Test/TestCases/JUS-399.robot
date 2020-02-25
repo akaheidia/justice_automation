@@ -15,7 +15,6 @@ Confirm Slider Selection Persists For List
     Click Reports
     Confirm Reports Page Loaded
     Click Monitor
-    Confirm List Slider Selected
     Confirm List Page Loaded
 
 Confirm Slider Selection Persists For Map
@@ -24,5 +23,13 @@ Confirm Slider Selection Persists For Map
     Click Reports
     Confirm Reports Page Loaded
     Click Monitor
-    Confirm Map Slider Selected
     Confirm Map Page Loaded
+
+Confirm Slider Selection Persists On Logout/Login
+    Click Monitor
+    Click List Slider
+    Confirm List Page Loaded
+    Log Out
+    Log In  ${JUS_USERNAME}  ${JUS_PASSWORD}
+    Click Monitor
+    Confirm List Page Loaded
