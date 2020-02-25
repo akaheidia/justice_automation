@@ -13,6 +13,7 @@ Confirm Slider Selection Persists For List
     Click Monitor
     Click List Slider
     Click Reports
+    Confirm Reports Page Loaded
     Click Monitor
     Confirm List Slider Selected
     Confirm List Page Loaded
@@ -21,6 +22,7 @@ Confirm Slider Selection Persists For Map
     Click Monitor
     Click Map Slider
     Click Reports
+    Confirm Reports Page Loaded
     Click Monitor
     Confirm Map Slider Selected
     Confirm Map Page Loaded
