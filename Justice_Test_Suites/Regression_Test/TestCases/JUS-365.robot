@@ -2,7 +2,7 @@
 Library   SeleniumLibrary
 Resource  ../Resources/AllResources.robot
 
-Documentation    Regression test for JUS-365:  Endpoints: Table is displaying the same row over and over.
+Documentation    Regression test for JUS-365: Endpoints: Table is displaying the same row over and over.
 
 Suite Setup      Log In and Navigate to Endpoints Tab
 Suite Teardown   Log Out and Close Browser

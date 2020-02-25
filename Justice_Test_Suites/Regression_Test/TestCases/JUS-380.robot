@@ -2,7 +2,7 @@
 Library   SeleniumLibrary
 Resource  ../Resources/AllResources.robot
 
-Documentation    Regression test for JUS-380:  Usability: Download menu should close when choice selected.
+Documentation    Regression test for JUS-380: Usability: Download menu should close when choice selected.
 
 Suite Setup      Log In and Navigate to Devices Tab
 Suite Teardown   Log Out and Close Browser

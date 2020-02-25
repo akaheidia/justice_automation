@@ -2,7 +2,7 @@
 Library   SeleniumLibrary
 Resource  ../Resources/AllResources.robot
 
-Documentation    Regression test for JUS-310:  Deleting Device in XMC does not remove it from Justice UI.
+Documentation    Regression test for JUS-310: Deleting Device in XMC does not remove it from Justice UI.
 
 *** Variables ***
 ${device_ip}    10.54.142.12

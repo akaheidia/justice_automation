@@ -2,7 +2,7 @@
 Library   SeleniumLibrary
 Resource  ../Resources/AllResources.robot
 
-Documentation    Regression test for JUS-313:  Cannot log in to Justice UI on Firefox.
+Documentation    Regression test for JUS-313: Cannot log in to Justice UI on Firefox.
 
 Test Teardown    Log Out and Close Browser
 Test Template    Confirm Browser Login Successful

@@ -2,7 +2,7 @@
 Library   SeleniumLibrary
 Resource  ../Resources/AllResources.robot
 
-Documentation    Regression test for JUS-363:  Sites - Filters: Issues with duplicate Site names between servers.
+Documentation    Regression test for JUS-363: Sites - Filters: Issues with duplicate Site names between servers.
 Suite Setup      Initialize Test
 Suite Teardown   Tear Down Test
 

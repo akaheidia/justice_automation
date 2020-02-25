@@ -2,7 +2,7 @@
 Library   SSHLibrary
 Resource  ../Resources/AllResources.robot
 
-Documentation    Regression test for JUS-323:  NullPointerException in server.log (XMC).
+Documentation    Regression test for JUS-323: NullPointerException in server.log (XMC).
 
 Suite Setup     Open Connection and Log In
 Suite Teardown  Close All Connections

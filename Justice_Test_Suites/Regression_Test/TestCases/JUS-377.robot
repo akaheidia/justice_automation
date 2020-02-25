@@ -2,7 +2,7 @@
 Library   SeleniumLibrary
 Resource  ../Resources/AllResources.robot
 
-Documentation    Regression test for JUS-377:  CSV and PDF Download for All Filtered Rows is a no-op.
+Documentation    Regression test for JUS-377: CSV and PDF Download for All Filtered Rows is a no-op.
 
 Suite Setup      Log In and Navigate to Devices Tab
 Suite Teardown   Log Out and Close Browser

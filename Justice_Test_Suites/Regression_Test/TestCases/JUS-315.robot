@@ -2,7 +2,7 @@
 Library   SeleniumLibrary
 Resource  ../Resources/AllResources.robot
 
-Documentation    Regression test for JUS-315:  Deleting Site in XMC does not remove it from Justice UI.
+Documentation    Regression test for JUS-315: Deleting Site in XMC does not remove it from Justice UI.
 
 *** Variables ***
 ${site_name}    My_New_Test_Site

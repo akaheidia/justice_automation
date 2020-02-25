@@ -2,7 +2,7 @@
 Library   SSHLibrary
 Resource  ../Resources/AllResources.robot
 
-Documentation    Regression test for JUS-330:  Docker containers should include elasticsearch image.
+Documentation    Regression test for JUS-330: Docker containers should include elasticsearch image.
 
 Suite Setup     Open Connection and Log In
 Suite Teardown  Close All Connections
