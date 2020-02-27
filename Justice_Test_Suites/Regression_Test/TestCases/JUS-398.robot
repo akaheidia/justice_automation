@@ -12,7 +12,7 @@ Suite Teardown   Log Out and Close Browser
 ${wireless_device}    10.54.142.50
 
 *** Test Cases ***
-Confirm Wireless Controller is Present in Device Availbility Report
+Confirm Wireless Controller is Present in Device Availability Report
     ${device_present}=  Is Wireless Controller Present  ${wireless_device}
     Run Keyword If  ${device_present} == True
     ...             Confirm Wireless Controller Present In Device Availability Report  ${wireless_device}
