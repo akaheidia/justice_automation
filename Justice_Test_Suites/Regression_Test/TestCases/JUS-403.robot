@@ -11,7 +11,7 @@ Suite Teardown   Log Out and Close Browser
 *** Variables ***
 ${device_ip}    10.54.142.32
 ${port_num}     ge.1.8
-${site}         Port Test
+${site}         Port Test Site
 
 *** Test Cases ***
 Confirm Port Overview Loads Without Error
