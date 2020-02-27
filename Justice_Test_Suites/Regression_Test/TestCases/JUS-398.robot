@@ -10,6 +10,7 @@ Suite Teardown   Log Out and Close Browser
 
 *** Variables ***
 ${wireless_device}    10.54.142.50
+${site}               Wireless Site
 
 *** Test Cases ***
 Confirm Wireless Controller is Present in Device Availability Report
@@ -22,6 +23,7 @@ Confirm Wireless Controller is Present in Device Availability Report
 *** Keywords ***
 Confirm Wireless Controller Present In Device Availability Report
     [Arguments]  ${ip}
-    Navigate to Top N Device Availability Report
+    Navigate to Site Availability Report
+    Site Availability Drill Into Site  ${site}
     Confirm Device Availability Report Contains Value  Wireless Controller
     Confirm Device Availability Report Contains Value  ${ip}
