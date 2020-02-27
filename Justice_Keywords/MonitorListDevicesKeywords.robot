@@ -9,6 +9,17 @@ Documentation    Keywords specific to the Devices tab on the Monitor List page.
 Refresh Devices Table
     Click Element  ${list_refresh_icon}
 
+Is Test Device Present
+    [Arguments]  ${ip}
+    Click List Slider
+    Click Filter Icon
+    Confirm Filters Panel Visible
+    Confirm Servers and Sites Filter Expanded
+    Select Servers and Sites Server Tree Node  ${XMC_HOSTNAME}
+    Refresh Devices Table
+    ${device_present}=  Run Keyword And Return Status  Confirm Device In Table  ${ip}
+    [Return]  ${device_present}
+
 Confirm Device In Table
     [Arguments]  ${device_ip}
     : FOR  ${index}  IN RANGE  1  10
