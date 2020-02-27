@@ -16,6 +16,6 @@ Confirm Back Button Works
     Click Network Summary Reports Menu
     Confirm Network Summary Reports Page Title
     Click Device Availability Drilldown
-    Confirm Device Availability Reports Page Title
+    Confirm Device Availability Report Page Title
     Go Back
     Confirm Network Summary Reports Page Title

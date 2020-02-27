@@ -6,7 +6,7 @@ Documentation    Keywords specific to the Device Availability Report page.
 
 *** Keywords ***
 
-Confirm Device Availability Reports Page Title
+Confirm Device Availability Report Page Title
     sleep  1 second
     Select Frame  xpath://iframe
     Select Frame  xpath://iframe[@id='resource']
