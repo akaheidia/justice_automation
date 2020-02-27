@@ -160,6 +160,9 @@ reports_device_availability_drilldown = "xpath://h4[text()='Device Availability'
 
 # Reports - General Page Titles
 reports_device_availability_page_title = "xpath://h2[text()='Device Availability']"
+reports_port_utilization_page_title = "xpath://h2[text()='Port Utilization']"
+reports_port_overview_page_title = "xpath://h2[text()='Port Overview']"
+
 
 # Settings Page Elements
 settings_page_title = "xpath://span[@class='settings-title']"
