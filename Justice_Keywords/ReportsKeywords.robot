@@ -6,6 +6,15 @@ Documentation    Keywords specific to the Reports page.
 
 *** Keywords ***
 
+Navigate to Top N Device Availability Report
+    Click Reports
+    Confirm Reports Page Loaded
+    Open Sidebar Menu
+    Expand Reports Tree Reports Node
+    Expand Reports Tree Top N Node
+    Click Top N Device Availability Reports Menu
+
+
 Open Sidebar Menu
     Select Frame  xpath://iframe
     Wait Until Page Contains Element  ${reports_sidebar_menu_button}

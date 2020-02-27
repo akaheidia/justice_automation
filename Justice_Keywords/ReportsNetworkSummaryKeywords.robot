@@ -15,14 +15,3 @@ Click Device Availability Drilldown
 
     Unselect Frame
     Unselect Frame
-
-
-Confirm Device Availability Reports Page Title
-    sleep  1 second
-    Select Frame  xpath://iframe
-    Select Frame  xpath://iframe[@id='resource']
-
-    Page Should Contain Element  ${reports_device_availability_page_title}
-
-    UnSelect Frame
-    Unselect Frame
