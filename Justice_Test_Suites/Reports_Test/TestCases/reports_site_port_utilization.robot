@@ -10,10 +10,5 @@ Suite Teardown   Log Out and Close Browser
 *** Test Cases ***
 
 Confirm Page Loads
-    Click Reports
-    Confirm Reports Page Loaded
-    Open Sidebar Menu
-    Expand Reports Tree Reports Node
-    Expand Reports Tree Site Node
-    Click Site Port Utilization Reports Menu
+    Navigate to Site Port Utilization Report
     Confirm Site Port Utilization Reports Page Title

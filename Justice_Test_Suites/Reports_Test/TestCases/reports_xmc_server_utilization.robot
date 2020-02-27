@@ -10,9 +10,5 @@ Suite Teardown   Log Out and Close Browser
 *** Test Cases ***
 
 Confirm Page Loads
-    Click Reports
-    Confirm Reports Page Loaded
-    Open Sidebar Menu
-    Expand Reports Tree Reports Node
-    Click XMC Server Utilization Reports Menu
+    Navigate to XMC Server Utilization Report
     Confirm XMC Server Utilization Reports Page Title

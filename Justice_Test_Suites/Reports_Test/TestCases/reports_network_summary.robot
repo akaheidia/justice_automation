@@ -10,9 +10,5 @@ Suite Teardown   Log Out and Close Browser
 *** Test Cases ***
 
 Confirm Page Loads
-    Click Reports
-    Confirm Reports Page Loaded
-    Open Sidebar Menu
-    Expand Reports Tree Reports Node
-    Click Network Summary Reports Menu
+    Navigate to Network Summary Report
     Confirm Network Summary Reports Page Title

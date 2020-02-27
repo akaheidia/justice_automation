@@ -10,10 +10,5 @@ Suite Teardown   Log Out and Close Browser
 *** Test Cases ***
 
 Confirm Page Loads
-    Click Reports
-    Confirm Reports Page Loaded
-    Open Sidebar Menu
-    Expand Reports Tree Reports Node
-    Expand Reports Tree Analytics Node
-    Click Analytics Summary Reports Menu
+    Navigate to Analytics Summary Report
     Confirm Analytics Summary Reports Page Title

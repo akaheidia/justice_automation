@@ -10,10 +10,5 @@ Suite Teardown   Log Out and Close Browser
 *** Test Cases ***
 
 Confirm Page Loads
-    Click Reports
-    Confirm Reports Page Loaded
-    Open Sidebar Menu
-    Expand Reports Tree Reports Node
-    Expand Reports Tree Analytics Node
-    Click Analytics Quarterly Usage Reports Menu
+    Navigate to Analytics Quarterly Usage Report
     Confirm Analytics Quarterly Usage Reports Page Title

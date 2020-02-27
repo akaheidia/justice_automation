@@ -10,10 +10,5 @@ Suite Teardown   Log Out and Close Browser
 *** Test Cases ***
 
 Confirm Page Loads
-    Click Reports
-    Confirm Reports Page Loaded
-    Open Sidebar Menu
-    Expand Reports Tree Reports Node
-    Expand Reports Tree Top N Node
-    Click Top N Top APs By Clients Reports Menu
+    Navigate to Top N Top APs By Clients Report
     Confirm Top N Top APs By Clients Reports Page Title

@@ -10,9 +10,5 @@ Suite Teardown   Log Out and Close Browser
 *** Test Cases ***
 
 Confirm Page Loads
-    Click Reports
-    Confirm Reports Page Loaded
-    Open Sidebar Menu
-    Expand Reports Tree Reports Node
-    Click Network Scorecard Reports Menu
+    Navigate to Network Scorecard Report
     Confirm Network Scorecard Reports Page Title
