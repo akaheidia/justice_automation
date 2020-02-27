@@ -13,7 +13,7 @@ Confirm Device Availability Report Page Title
 
     Page Should Contain Element  ${reports_device_availability_page_title}
 
-    UnSelect Frame
+    Unselect Frame
     Unselect Frame
 
 Confirm Device Availability Report Contains Value
@@ -24,5 +24,5 @@ Confirm Device Availability Report Contains Value
 
     Page Should Contain Element  xpath://span[contains(text(), '${value}')]
 
-    UnSelect Frame
+    Unselect Frame
     Unselect Frame
