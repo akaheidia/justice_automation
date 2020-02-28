@@ -83,6 +83,7 @@ endpoints_table = "xpath://table[@id='endPointsGrid']"
 # Reports Page Elements
 reports_page_title = "xpath://h1[text()='Reports']"
 reports_sidebar_menu_button = "id:actShowSidebar"
+# reports_sidebar_menu_button = "xpath://a[@id='actShowSidebar']"
 reports_add_button = "xpath://span[@class='btn btn-info ti-plus']"
 reports_menu_table = "id:rdMenuTable"
 reports_menu_tree = "id:menuTreeSide"
