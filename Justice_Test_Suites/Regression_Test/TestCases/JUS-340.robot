@@ -10,9 +10,5 @@ Suite Teardown   Log Out and Close Browser
 
 *** Test Cases ***
 Confirm Site Availability Report Has Title
-    Click Reports
-    Open Sidebar Menu
-    Expand Reports Tree Reports Node
-    Expand Reports Tree Site Node
-    Click Site Availability Reports Menu
+    Navigate to Site Availability Report
     Confirm Site Availability Reports Page Title

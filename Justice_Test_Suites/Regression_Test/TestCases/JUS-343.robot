@@ -10,12 +10,9 @@ Suite Teardown   Log Out and Close Browser
 
 *** Test Cases ***
 Confirm Back Button Works
-    Click Reports
-    Open Sidebar Menu
-    Expand Reports Tree Reports Node
-    Click Network Summary Reports Menu
+    Navigate to Network Summary Report
     Confirm Network Summary Reports Page Title
     Click Device Availability Drilldown
-    Confirm Device Availability Report Page Title
+    Confirm Top N Device Availability Report Page Title
     Go Back
     Confirm Network Summary Reports Page Title

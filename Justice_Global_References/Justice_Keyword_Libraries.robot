@@ -11,10 +11,13 @@ Resource   ../Justice_Keywords/MonitorMapKeywords.robot
 Resource   ../Justice_Keywords/ReportsKeywords.robot
 Resource   ../Justice_Keywords/ReportsDeviceAvailabilityKeywords.robot
 Resource   ../Justice_Keywords/ReportsDeviceOverviewKeywords.robot
+Resource   ../Justice_Keywords/ReportsMetricPortUtilizationKeywords.robot
+Resource   ../Justice_Keywords/ReportsMetricRxBandwidthKeywords.robot
+Resource   ../Justice_Keywords/ReportsMetricTotalBandwidthKeywords.robot
+Resource   ../Justice_Keywords/ReportsMetricTxBandwidthKeywords.robot
 Resource   ../Justice_Keywords/ReportsNetworkSummaryKeywords.robot
 Resource   ../Justice_Keywords/ReportsPortOverviewKeywords.robot
 Resource   ../Justice_Keywords/ReportsPortUtilizationKeywords.robot
-Resource   ../Justice_Keywords/ReportsRxBandwidthKeywords.robot
 Resource   ../Justice_Keywords/ReportsSiteAvailabilityKeywords.robot
 Resource   ../Justice_Keywords/ReportsTopNDeviceAvailabilityKeywords.robot
 Resource   ../Justice_Keywords/SettingsSecurityKeywords.robot
