@@ -7,8 +7,11 @@ Documentation    Regression test for JUS-365: Endpoints: Table is displaying the
 Suite Setup      Log In and Navigate to Endpoints Tab
 Suite Teardown   Log Out and Close Browser
 
-*** Test Cases ***
+*** Variables ***
+${xmc}    ${XMC_2_HOSTNAME}
 
+
+*** Test Cases ***
 Confirm Rows Not Duplicated
     ${ip_value_1}=  Get End Point IP Address At Row  2
     ${ip_value_2}=  Get End Point IP Address At Row  3
@@ -20,6 +23,7 @@ Confirm Rows Not Duplicated
 
     Run Keyword If  '${ip_value_1}' == '${ip_value_2}' and '${ip_value_1}' == '${ip_value_3}' and '${mac_value_1}' == '${mac_value_2}' and '${mac_value_1}' == '${mac_value_3}'  fail  Duplicate Rows
     ...       ELSE  Log  Rows Not Duplicated
+
 
 *** Keywords ***
 Log In and Navigate to Endpoints Tab
@@ -33,4 +37,4 @@ Log In and Navigate to Endpoints Tab
 Set Server Filter
     Click Filter Icon
     Confirm Filters Panel Visible
-    Select Servers and Sites Server Tree Node  ${XMC_HOSTNAME}
+    Select Servers and Sites Server Tree Node  ${xmc}
