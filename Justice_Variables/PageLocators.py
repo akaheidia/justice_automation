@@ -88,18 +88,23 @@ reports_menu_table = "id:rdMenuTable"
 reports_menu_tree = "id:menuTreeSide"
 
 # Reports Page Tree Nodes
-reports_tree_reports_node = "xpath://span[@id='rdDmtCaption' and @class='ThemeBold' and text()='Reports']"
-reports_tree_expand_reports_icon = "xpath://img[@id='rdExpando_menuTreeSide_Row1'][contains(@src, 'rdArrowRight')]"
-reports_tree_collapse_reports_icon = "xpath://img[@id='rdExpando_menuTreeSide_Row1'][contains(@src, 'rdArrowDown')]"
-reports_tree_site_node = "xpath://span[@id='rdDmtCaption' and @class='ThemeBold' and text()='Site']"
-reports_tree_expand_site_icon = "xpath://span[@id='rdDmtCaption' and @class='ThemeBold' and text()='Site']/../..//td[@id='rdImage']/img[contains(@src, 'rdArrowRight')]"
-reports_tree_collapse_site_icon = "xpath://span[@id='rdDmtCaption' and @class='ThemeBold' and text()='Site']/../..//td[@id='rdImage']/img[contains(@src, 'rdArrowDown')]"
-reports_tree_topn_node = "xpath://span[@id='rdDmtCaption' and @class='ThemeBold' and text()='Top N']"
-reports_tree_expand_topn_icon = "xpath://span[@id='rdDmtCaption' and @class='ThemeBold' and text()='Top N']/../..//td[@id='rdImage']/img[contains(@src, 'rdArrowRight')]"
-reports_tree_collapse_topn_icon = "xpath://span[@id='rdDmtCaption' and @class='ThemeBold' and text()='Top N']/../..//td[@id='rdImage']/img[contains(@src, 'rdArrowDown')]"
-reports_tree_analytics_node = "xpath://span[@id='rdDmtCaption' and @class='ThemeBold' and text()='Analytics']"
-reports_tree_expand_analytics_icon = "xpath://span[@id='rdDmtCaption' and @class='ThemeBold' and text()='Analytics']/../..//td[@id='rdImage']/img[contains(@src, 'rdArrowRight')]"
-reports_tree_collapse_analytics_icon = "xpath://span[@id='rdDmtCaption' and @class='ThemeBold' and text()='Analytics']/../..//td[@id='rdImage']/img[contains(@src, 'rdArrowDown')]"
+reports_tree_reports_node = "xpath://span[text()='Reports']"
+reports_tree_site_node = "xpath://span[text()='Site']"
+reports_tree_topn_node = "xpath://span[text()='Top N']"
+reports_tree_analytics_node = "xpath://span[text()='Analytics']"
+
+# Reports Page Tree Expand/Collapse Icons
+reports_tree_expand_reports_icon = "xpath://span[text()='Reports']/../../td[@id='rdImage']/img[contains(@src, 'rdArrowRight')]"
+reports_tree_collapse_reports_icon = "xpath://span[text()='Reports']/../../td[@id='rdImage']/img[contains(@src, 'rdArrowDown')]"
+
+reports_tree_expand_site_icon = "xpath://span[text()='Site']/../../td[@id='rdImage']/img[contains(@src, 'rdArrowRight')]"
+reports_tree_collapse_site_icon = "xpath://span[text()='Site']/../../td[@id='rdImage']/img[contains(@src, 'rdArrowDown')]"
+
+reports_tree_expand_topn_icon = "xpath://span[text()='Top N']/../../td[@id='rdImage']/img[contains(@src, 'rdArrowRight')]"
+reports_tree_collapse_topn_icon = "xpath://span[text()='Top N']/../../td[@id='rdImage']/img[contains(@src, 'rdArrowDown')]"
+
+reports_tree_expand_analytics_icon = "xpath://span[text()='Analytics']/../../td[@id='rdImage']/img[contains(@src, 'rdArrowRight')]"
+reports_tree_collapse_analytics_icon = "xpath://span[text()='Analytics']/../../td[@id='rdImage']/img[contains(@src, 'rdArrowDown')]"
 
 # Reports Page Tree Node Menus
 reports_network_scorecard_menu = "xpath://a/span[text()='Scorecard']"
