@@ -8,7 +8,7 @@ Suite Setup      Log In and Navigate to Endpoints Tab
 Suite Teardown   Log Out and Close Browser
 
 *** Variables ***
-${xmc}    ${XMC_2_HOSTNAME}
+${xmc_with_endpoints}    ${XMC_2_HOSTNAME}
 
 
 *** Test Cases ***
@@ -37,4 +37,4 @@ Log In and Navigate to Endpoints Tab
 Set Server Filter
     Click Filter Icon
     Confirm Filters Panel Visible
-    Select Servers and Sites Server Tree Node  ${xmc}
+    Select Servers and Sites Server Tree Node  ${xmc_with_endpoints}
