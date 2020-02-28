@@ -27,6 +27,17 @@ Confirm Site Availability Report Contains Value
     Unselect Frame
     Unselect Frame
 
+Confirm Site Availability Report Table Header Contains Value
+    [Arguments]  ${value}
+    sleep  1 second
+    Select Frame  xpath://iframe
+    Select Frame  xpath://iframe[@id='availability']
+
+    Page Should Contain Element  xpath://a[text()='${value}']
+
+    Unselect Frame
+    Unselect Frame
+
 
 Site Availability Drill Into Site
     [Arguments]  ${site}
