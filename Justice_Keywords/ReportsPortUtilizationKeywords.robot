@@ -33,7 +33,7 @@ Port Utilization Drill Into Device
     Select Frame  xpath://iframe
     Select Frame  xpath://iframe[@id='statistic']
 
-    Click Element  xpath://span[contains(text(), '${ip}')]/..
+    Click Element  xpath://a//span[contains(text(), '${ip}')]
     Unselect Frame
     Unselect Frame
 
@@ -43,6 +43,6 @@ Port Utilization Drill Into Port
     Select Frame  xpath://iframe
     Select Frame  xpath://iframe[@id='statistic']
 
-    Click Element  xpath://span[contains(text(), '${port}')]/..
+    Click Element  xpath://a//span[contains(text(), '${port}')]
     Unselect Frame
     Unselect Frame

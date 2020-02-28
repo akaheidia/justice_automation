@@ -158,11 +158,15 @@ reports_device_availability_drilldown = "xpath://h4[text()='Device Availability'
 
 # Reports - Network Summary Page Elements
 
+# Reports - Site Availability Page Elements
+site_availability_table = "xpath://table[@id='sites']"
+
 # Reports - General Page Titles
 reports_device_availability_page_title = "xpath://h2[text()='Device Availability']"
+reports_device_overview_page_title = "xpath://h2[text()='Device Overview']"
 reports_port_utilization_page_title = "xpath://h2[text()='Port Utilization']"
 reports_port_overview_page_title = "xpath://h2[text()='Port Overview']"
-
+reports_rx_bandwidth_page_title = "xpath://h2[text()='Rx Bandwidth']"
 
 # Settings Page Elements
 settings_page_title = "xpath://span[@class='settings-title']"
