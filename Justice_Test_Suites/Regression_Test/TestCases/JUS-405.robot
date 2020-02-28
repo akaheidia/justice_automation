@@ -7,9 +7,12 @@ Documentation    Regression test for JUS-405: Reports: Inconsistency in Site col
 Suite Setup      Open Browser and Log In  ${JUS_URL}  ${BROWSER}  ${JUS_USERNAME}  ${JUS_PASSWORD}
 Suite Teardown   Log Out and Close Browser
 
+*** Variables ***
+${server_name}  ${XMC_HOSTNAME}
+${site_name}    Parent Site
 
 *** Test Cases ***
 Confirm Site Availability Site Column Contains Server Information
     Navigate to Site Availability Report
     Confirm Site Availability Report Table Header Contains Value  SERVER:SITE
-    Confirm Site Availability Report Table Contains Value  ${XMC_HOSTNAME}
+    Confirm Site Availability Report Table Contains Value  ${server_name}: /${site_name}
