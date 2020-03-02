@@ -25,10 +25,10 @@ ${json_string}
 ...  }
 
 *** Test Cases ***      API
+Post Map               /v1/api/map
 Post Devices           /v1/api/devices
 Post Endpoints         /v1/api/endpoints
 Post Events            /v1/api/events
-Post Map               /v1/api/map
 
 *** Keywords ***
 Post Request Should Have Valid Status Code
