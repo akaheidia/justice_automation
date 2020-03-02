@@ -19,4 +19,4 @@ ${XMC_2_USERNAME}      root
 ${XMC_2_PASSWORD}      n7830466
 ${XMC_2_SERVER_LOG}    /usr/local/Extreme_Networks/NetSight/appdata/logs/server.log
 
-${DOWNLOAD_ROOT}       /home/hwhite/Downloads
+${DOWNLOADS_DIR}       /home/hwhite/Downloads
