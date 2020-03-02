@@ -9,7 +9,7 @@ Suite Setup      Open Browser and Log In  ${JUS_URL}  ${BROWSER}  ${JUS_USERNAME
 Suite Teardown   Log Out and Close Browser
 
 *** Variables ***
-${wireless_device}    10.54.142.50
+${wireless_device}    10.54.142.60
 ${site}               Wireless Site
 
 *** Test Cases ***
@@ -25,5 +25,4 @@ Confirm Wireless Controller Present In Device Availability Report
     [Arguments]  ${ip}
     Navigate to Site Availability Report
     Site Availability Drill Into Site  ${site}
-    Confirm Device Availability Report Contains Value  Wireless Controller
     Confirm Device Availability Report Contains Value  ${ip}
