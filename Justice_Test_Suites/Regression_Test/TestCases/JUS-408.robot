@@ -30,24 +30,24 @@ Confirm CSV All Filtered Rows for Alarms
     Confirm File Contents  Alarms - All Filtered Rows
     Remove File  Alarms - All Filtered Rows
 
-Confirm CSV All Rows for Events
-    Navigate to Events and Set Filter
-    Download CSV All Rows
-    Wait Until Page Contains  Download Complete
-    Confirm File Contents  Events - All Rows
-    Remove File  Events - All Rows
-
-Confirm CSV Visible Rows for Events
-    Download CSV Visible Rows
-    Wait Until Page Contains  Download Complete
-    Confirm File Contents  Events - Visible Rows
-    Remove File  Events - Visible Rows
-
-Confirm CSV All Filtered Rows for Events
-    Download CSV All Filtered Rows
-    Wait Until Page Contains  Download Complete
-    Confirm File Contents  Events - All Filtered Rows
-    Remove File  Events - All Filtered Rows
+#Confirm CSV All Rows for Events
+#    Navigate to Events and Set Filter
+#    Download CSV All Rows
+#    Wait Until Page Contains  Download Complete
+#    Confirm File Contents  Events - All Rows
+#    Remove File  Events - All Rows
+#
+#Confirm CSV Visible Rows for Events
+#    Download CSV Visible Rows
+#    Wait Until Page Contains  Download Complete
+#    Confirm File Contents  Events - Visible Rows
+#    Remove File  Events - Visible Rows
+#
+#Confirm CSV All Filtered Rows for Events
+#    Download CSV All Filtered Rows
+#    Wait Until Page Contains  Download Complete
+#    Confirm File Contents  Events - All Filtered Rows
+#    Remove File  Events - All Filtered Rows
 
 
 *** Keywords ***

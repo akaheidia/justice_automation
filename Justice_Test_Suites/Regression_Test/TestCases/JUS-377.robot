@@ -13,12 +13,14 @@ Suite Teardown   Log Out and Close Browser
 Confirm CSV All Filtered Rows
     Download CSV All Filtered Rows
     Wait Until Page Contains  Download Complete
-    OperatingSystem.File Should Exist   ${DOWNLOADS_DIR}/Devices - All Filtered Rows
+    Confirm File Exists  Devices - All Filtered Rows
+    Remove File  Devices - All Filtered Rows
 
 Confirm PDF All Filtered Rows
     Download PDF All Filtered Rows
     Wait Until Page Contains  Download Complete
-    OperatingSystem.File Should Exist   ${DOWNLOADS_DIR}/Devices - All Filtered Rows.pdf
+    Confirm File Exists  Devices - All Filtered Rows.pdf
+    Remove File  Devices - All Filtered Rows.pdf
 
 
 *** Keywords ***
@@ -34,3 +36,15 @@ Set Server Filter
     Click Filter Icon
     Confirm Filters Panel Visible
     Select Servers and Sites Server Tree Node  ${XMC_HOSTNAME}
+
+Confirm File Exists
+    [Arguments]  ${filename}
+    Wait Until Created  ${DOWNLOADS_DIR}/${filename}
+    OperatingSystem.File Should Exist   ${DOWNLOADS_DIR}/${filename}
+
+Remove File
+    [Arguments]  ${filename}
+    OperatingSystem.File Should Exist      ${DOWNLOADS_DIR}/${filename}
+    OperatingSystem.Remove File            ${DOWNLOADS_DIR}/${filename}
+    Wait Until Removed                     ${DOWNLOADS_DIR}/${filename}
+    OperatingSystem.File Should Not Exist  ${DOWNLOADS_DIR}/${filename}
