@@ -48,7 +48,7 @@ Confirm File Contents
     [Arguments]  ${filename}
     Wait Until Created  ${DOWNLOADS_DIR}/${filename}
     OperatingSystem.File Should Exist   ${DOWNLOADS_DIR}/${filename}
-    ${file_contents}=  OperatingSystem.GetFile  ${DOWNLOADS_DIR}/${filename}
+    ${file_contents}=  OperatingSystem.Get File  ${DOWNLOADS_DIR}/${filename}
     Should Not Contain  ${file_contents}  [object Object]
 
 Remove File
