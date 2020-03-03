@@ -17,22 +17,26 @@ Show Filter Panel
     ${orig_wait}=  Set Selenium Implicit Wait  1 second
     ${need_to_show}=  Run Keyword And Return Status  Element Should Not Be Visible  ${filter_panel_title}
     Run Keyword If  ${need_to_show}  Click Element  ${monitor_filter_icon}
+    ...    ELSE  Log  Filter Panel Already Shown
     Set Selenium Implicit Wait  ${orig_wait}
 
 Hide Filter Panel
     ${need_to_hide}=  Run Keyword And Return Status  Element Should Be Visible  ${filter_panel_title}
     Run Keyword If  ${need_to_hide}  Click Element  ${monitor_filter_icon}
+    ...    ELSE  Log  Filter Panel Already Hidden
 
 
 Show Tags Panel
     ${orig_wait}=  Set Selenium Implicit Wait  1 second
     ${need_to_show}=  Run Keyword And Return Status  Element Should Not Be Visible  ${tags_panel_title}
     Run Keyword If  ${need_to_show}  Click Element  ${monitor_tags_icon}
+    ...    ELSE  Log  Tags Panel Already Shown
     Set Selenium Implicit Wait  ${orig_wait}
 
 Hide Tags Panel
     ${need_to_hide}=  Run Keyword And Return Status  Element Should Be Visible  ${tags_panel_title}
     Run Keyword If  ${need_to_hide}  Click Element  ${monitor_tags_icon}
+    ...    ELSE  Log  Tags Panel Already Hidden
 
 
 Confirm List Slider Selected

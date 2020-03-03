@@ -10,10 +10,10 @@ Suite Teardown   Log Out and Close Browser
 *** Test Cases ***
 
 Tag Test
-    Click Tag Icon
+    Show Tags Panel
     Confirm Tags Panel Visible
     sleep  1 second
-    Click Tag Icon
+    Hide Tags Panel
     Confirm Tags Panel Not Visible
 
 Filter Test
