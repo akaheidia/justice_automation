@@ -13,3 +13,8 @@ XMC Select Options Tree Node
 
 XMC Confirm Options Tab Loaded
     Page Should Contain Element  ${xmc_options_tree_title}
+
+XMC Confirm Domain Node Type Option Value
+    [Arguments]  ${value}
+    ${elem_value}=  Get Element Attribute  xpath://input[@name='domainNodeType']  value
+    Should Be Equal As Integers  ${value}  ${elem_value}  Domain Node Type option does not have expected value
