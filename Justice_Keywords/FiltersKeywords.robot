@@ -30,6 +30,8 @@ Collapse Site Availability Filter
     ${need_to_collapse}=  Run Keyword And Return Status  Element Should Be Visible  ${filters_site_availability_panel_collapse_icon}
     Run Keyword If  ${need_to_collapse}  Click Element  ${filters_site_availability_panel_collapse_icon}
 
+Clear All Filters
+    Click Element  ${filters_clear_all_icon}
 
 Confirm Servers and Sites Filter Expanded
     Element Should Be Visible  ${filters_servers_and_sites_panel_collapse_icon}

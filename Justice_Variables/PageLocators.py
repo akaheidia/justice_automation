@@ -33,6 +33,7 @@ monitor_filter_icon = "xpath://mat-icon[@class='mat-icon notranslate ei ei-filte
 
 # Filters Panel Elements
 filters_panel_title = "xpath://div[@class='filters-header-text']"
+filters_clear_all_icon = "xpath://mat-icon[@class='mat-icon notranslate ei ei-clear_all mat-icon-no-color']"
 filters_servers_and_sites_panel_title = "xpath://div[contains(text(),'Servers & Sites')]"
 filters_servers_and_sites_panel_expand_icon = "xpath://div[contains(text(),'Servers & Sites')]/mat-icon[contains(@class, 'arrow_right')]"
 filters_servers_and_sites_panel_collapse_icon = "xpath://div[contains(text(),'Servers & Sites')]/mat-icon[contains(@class, 'arrow_down')]"

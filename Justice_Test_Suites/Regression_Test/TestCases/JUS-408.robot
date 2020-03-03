@@ -12,7 +12,7 @@ Suite Teardown   Log Out and Close Browser
 *** Test Cases ***
 
 Confirm CSV All Rows for Alarms
-    Navigate to Alarms and Set Filter
+    Navigate to Alarms and Set Filter  ${XMC_HOSTNAME}
     Download CSV All Rows
     Wait Until Page Contains  Download Complete
     Confirm File Contents  Alarms - All Rows
@@ -30,20 +30,22 @@ Confirm CSV All Filtered Rows for Alarms
     Confirm File Contents  Alarms - All Filtered Rows
     Remove File  Alarms - All Filtered Rows
 
-#Confirm CSV All Rows for Events
-#    Navigate to Events and Set Filter
+Confirm CSV All Rows for Events
+    Log to Console  Commented out until JUS-445 is fixed
+    Navigate to Events and Set Filter  ${XMC_HOSTNAME}
 #    Download CSV All Rows
 #    Wait Until Page Contains  Download Complete
 #    Confirm File Contents  Events - All Rows
 #    Remove File  Events - All Rows
-#
-#Confirm CSV Visible Rows for Events
-#    Download CSV Visible Rows
-#    Wait Until Page Contains  Download Complete
-#    Confirm File Contents  Events - Visible Rows
-#    Remove File  Events - Visible Rows
-#
-#Confirm CSV All Filtered Rows for Events
+
+Confirm CSV Visible Rows for Events
+    Download CSV Visible Rows
+    Wait Until Page Contains  Download Complete
+    Confirm File Contents  Events - Visible Rows
+    Remove File  Events - Visible Rows
+
+Confirm CSV All Filtered Rows for Events
+    Log to Console  Commented out until JUS-417 is fixed
 #    Download CSV All Filtered Rows
 #    Wait Until Page Contains  Download Complete
 #    Confirm File Contents  Events - All Filtered Rows
@@ -57,19 +59,25 @@ Log In and Navigate to List View
     Click List Slider
 
 Navigate to Alarms and Set Filter
+    [Arguments]  ${server}
     Click Alarms Tab
     Confirm Alarms Tab Selected
-    Set Server Filter
+    Set Server Filter  ${server}
 
 Navigate to Events and Set Filter
+    [Arguments]  ${server}
     Click Events Tab
     Confirm Events Tab Selected
-    Set Server Filter
+    Log to Console  Clearing Filter and sleeping two seconds until JUS-417 is fixed
+    Clear All Filters
+    sleep  2 seconds
+#    Set Server Filter  ${server}
 
 Set Server Filter
+    [Arguments]  ${server}
     Click Filter Icon
     Confirm Filters Panel Visible
-    Select Servers and Sites Server Tree Node  ${XMC_HOSTNAME}
+    Select Servers and Sites Server Tree Node  ${server}
 
 Confirm File Contents
     [Arguments]  ${filename}
