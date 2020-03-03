@@ -11,19 +11,19 @@ ${site_name}    Duplicate Site
 
 *** Test Cases ***
 Confirm Duplicate Sites Present Between Servers
-    Confirm Filters Panel Visible
+    Confirm Filter Panel Visible
     Confirm Servers and Sites Filter Expanded
 
     Expand Servers and Sites Tree Node  ${XMC_HOSTNAME}
-    Confirm Filters Panel Contains Site  ${site_name}
+    Confirm Filter Panel Contains Site  ${site_name}
     Collapse Servers and Sites Tree Node  ${XMC_HOSTNAME}
 
     Expand Servers and Sites Tree Node  ${XMC_2_HOSTNAME}
-    Confirm Filters Panel Contains Site  ${site_name}
+    Confirm Filter Panel Contains Site  ${site_name}
     Collapse Servers and Sites Tree Node  ${XMC_2_HOSTNAME}
 
 Confirm Duplicate Site Selection Is Specific To Server
-    Confirm Filters Panel Visible
+    Confirm Filter Panel Visible
     Confirm Servers and Sites Filter Expanded
 
     Expand Servers and Sites Tree Node  ${XMC_HOSTNAME}
@@ -40,7 +40,7 @@ Initialize Test
     Set Up XMC Sites
     Open Browser and Log In  ${JUS_URL}  ${BROWSER}  ${JUS_USERNAME}  ${JUS_PASSWORD}
     Show Filter Panel
-    Confirm Filters Panel Visible
+    Confirm Filter Panel Visible
     Confirm Servers and Sites Filter Expanded
 
 Tear Down Test

@@ -12,5 +12,5 @@ Confirm No Unknown Servers In Justice
     Show Filter Panel
     Confirm Filter Panel Visible
     Confirm Servers and Sites Filter Expanded
-    Confirm Filters Panel Contains Server  ${XMC_HOSTNAME}
-    Confirm Filters Panel Does Not Contain Server  unknown
+    Confirm Filter Panel Contains Server  ${XMC_HOSTNAME}
+    Confirm Filter Panel Does Not Contain Server  unknown

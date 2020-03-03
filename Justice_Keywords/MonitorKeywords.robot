@@ -15,12 +15,12 @@ Click Map Slider
 
 Show Filter Panel
     ${orig_wait}=  Set Selenium Implicit Wait  1 second
-    ${need_to_show}=  Run Keyword And Return Status  Element Should Not Be Visible  ${filters_panel_title}
+    ${need_to_show}=  Run Keyword And Return Status  Element Should Not Be Visible  ${filter_panel_title}
     Run Keyword If  ${need_to_show}  Click Element  ${monitor_filter_icon}
     Set Selenium Implicit Wait  ${orig_wait}
 
 Hide Filter Panel
-    ${need_to_hide}=  Run Keyword And Return Status  Element Should Be Visible  ${filters_panel_title}
+    ${need_to_hide}=  Run Keyword And Return Status  Element Should Be Visible  ${filter_panel_title}
     Run Keyword If  ${need_to_hide}  Click Element  ${monitor_filter_icon}
 
 
@@ -44,11 +44,11 @@ Confirm Map Slider Selected
     Should Be Equal As Strings  ${selected_slider}  ${monitor_selected_slider_class}
 
 Confirm Filter Panel Visible
-    Page Should Contain Element  ${filters_panel_title}
+    Page Should Contain Element  ${filter_panel_title}
 
 Confirm Filter Panel Not Visible
     ${orig_wait}=  Set Selenium Implicit Wait  1 second
-    Page Should Not Contain Element  ${filters_panel_title}
+    Page Should Not Contain Element  ${filter_panel_title}
     Set Selenium Implicit Wait  ${orig_wait}
 
 Confirm Tags Panel Visible

@@ -31,18 +31,18 @@ monitor_alarms_icon = "xpath://mat-icon[@class='mat-icon notranslate ei ei-alarm
 monitor_tags_icon = "xpath://mat-icon[@class='mat-icon notranslate ei ei-label_outline mat-icon-no-color']"
 monitor_filter_icon = "xpath://mat-icon[@class='mat-icon notranslate ei ei-filter mat-icon-no-color']"
 
-# Filters Panel Elements
-filters_panel_title = "xpath://div[@class='filters-header-text']"
-filters_clear_all_icon = "xpath://mat-icon[@class='mat-icon notranslate ei ei-clear_all mat-icon-no-color']"
-filters_servers_and_sites_panel_title = "xpath://div[contains(text(),'Servers & Sites')]"
-filters_servers_and_sites_panel_expand_icon = "xpath://div[contains(text(),'Servers & Sites')]/mat-icon[contains(@class, 'arrow_right')]"
-filters_servers_and_sites_panel_collapse_icon = "xpath://div[contains(text(),'Servers & Sites')]/mat-icon[contains(@class, 'arrow_down')]"
-filters_alarm_severity_panel_title = "xpath://div[contains(text(),'Alarm Severity')]"
-filters_alarm_severity_panel_expand_icon = "xpath://div[contains(text(),'Alarm Severity')]/mat-icon[contains(@class, 'arrow_right')]"
-filters_alarm_severity_panel_collapse_icon = "xpath://div[contains(text(),'Alarm Severity')]/mat-icon[contains(@class, 'arrow_down')]"
-filters_site_availability_panel_title = "xpath://div[contains(text(),'Site Availability')]"
-filters_site_availability_panel_expand_icon = "xpath://div[contains(text(),'Site Availability')]/mat-icon[contains(@class, 'arrow_right')]"
-filters_site_availability_panel_collapse_icon = "xpath://div[contains(text(),'Site Availability')]/mat-icon[contains(@class, 'arrow_down')]"
+# Filter Panel Elements
+filter_panel_title = "xpath://div[@class='filters-header-text']"
+filter_clear_all_icon = "xpath://mat-icon[@class='mat-icon notranslate ei ei-clear_all mat-icon-no-color']"
+filter_servers_and_sites_panel_title = "xpath://div[contains(text(),'Servers & Sites')]"
+filter_servers_and_sites_panel_expand_icon = "xpath://div[contains(text(),'Servers & Sites')]/mat-icon[contains(@class, 'arrow_right')]"
+filter_servers_and_sites_panel_collapse_icon = "xpath://div[contains(text(),'Servers & Sites')]/mat-icon[contains(@class, 'arrow_down')]"
+filter_alarm_severity_panel_title = "xpath://div[contains(text(),'Alarm Severity')]"
+filter_alarm_severity_panel_expand_icon = "xpath://div[contains(text(),'Alarm Severity')]/mat-icon[contains(@class, 'arrow_right')]"
+filter_alarm_severity_panel_collapse_icon = "xpath://div[contains(text(),'Alarm Severity')]/mat-icon[contains(@class, 'arrow_down')]"
+filter_site_availability_panel_title = "xpath://div[contains(text(),'Site Availability')]"
+filter_site_availability_panel_expand_icon = "xpath://div[contains(text(),'Site Availability')]/mat-icon[contains(@class, 'arrow_right')]"
+filter_site_availability_panel_collapse_icon = "xpath://div[contains(text(),'Site Availability')]/mat-icon[contains(@class, 'arrow_down')]"
 
 # Tags Panel Elements
 tags_panel_title = "xpath://div[@class='tags-header-text']"

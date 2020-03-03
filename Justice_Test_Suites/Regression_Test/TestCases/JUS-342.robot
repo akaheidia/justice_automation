@@ -18,7 +18,7 @@ Tag Test
 
 Filter Test
     Show Filter Panel
-    Confirm Filters Panel Visible
+    Confirm Filter Panel Visible
     sleep  1 second
     Hide Filter Panel
-    Confirm Filters Panel Not Visible
+    Confirm Filter Panel Not Visible

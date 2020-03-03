@@ -21,7 +21,7 @@ Confirm Device Added To Justice
     Open Browser and Log In  ${JUS_URL}  ${BROWSER}  ${JUS_USERNAME}  ${JUS_PASSWORD}
     Click List Slider
     Show Filter Panel
-    Confirm Filters Panel Visible
+    Confirm Filter Panel Visible
     Confirm Servers and Sites Filter Expanded
     Select Servers and Sites Server Tree Node  ${XMC_HOSTNAME}
     Refresh Devices Table
@@ -44,7 +44,7 @@ Confirm Device Removed From Justice
     Open Browser and Log In  ${JUS_URL}  ${BROWSER}  ${JUS_USERNAME}  ${JUS_PASSWORD}
     Click List Slider
     Show Filter Panel
-    Confirm Filters Panel Visible
+    Confirm Filter Panel Visible
     Confirm Servers and Sites Filter Expanded
     Select Servers and Sites Server Tree Node  ${XMC_HOSTNAME}
     Confirm Device Not In Table  ${device_ip}

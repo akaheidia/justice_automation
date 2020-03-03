@@ -2,7 +2,7 @@
 Library    SeleniumLibrary
 Variables  ../Justice_Variables/PageLocators.py
 
-Documentation    Keywords specific to the Filters Panel.
+Documentation    Keywords specific to the Filter Panel.
 
 *** Keywords ***
 
@@ -13,49 +13,49 @@ Set Server Filter
     Select Servers and Sites Server Tree Node  ${server}
 
 Expand Servers and Sites Filter
-    ${need_to_expand}=  Run Keyword And Return Status  Element Should Be Visible  ${filters_servers_and_sites_panel_expand_icon}
-    Run Keyword If  ${need_to_expand}  Click Element  ${filters_servers_and_sites_panel_expand_icon}
+    ${need_to_expand}=  Run Keyword And Return Status  Element Should Be Visible  ${filter_servers_and_sites_panel_expand_icon}
+    Run Keyword If  ${need_to_expand}  Click Element  ${filter_servers_and_sites_panel_expand_icon}
 
 Collapse Servers and Sites Filter
-    ${need_to_collapse}=  Run Keyword And Return Status  Element Should Be Visible  ${filters_servers_and_sites_panel_collapse_icon}
-    Run Keyword If  ${need_to_collapse}  Click Element  ${filters_servers_and_sites_panel_collapse_icon}
+    ${need_to_collapse}=  Run Keyword And Return Status  Element Should Be Visible  ${filter_servers_and_sites_panel_collapse_icon}
+    Run Keyword If  ${need_to_collapse}  Click Element  ${filter_servers_and_sites_panel_collapse_icon}
 
 Expand Alarm Severity Filter
-    ${need_to_expand}=  Run Keyword And Return Status  Element Should Be Visible  ${filters_alarm_severity_panel_expand_icon}
-    Run Keyword If  ${need_to_expand}  Click Element  ${filters_alarm_severity_panel_expand_icon}
+    ${need_to_expand}=  Run Keyword And Return Status  Element Should Be Visible  ${filter_alarm_severity_panel_expand_icon}
+    Run Keyword If  ${need_to_expand}  Click Element  ${filter_alarm_severity_panel_expand_icon}
 
 Collapse Alarm Severity Filter
-    ${need_to_collapse}=  Run Keyword And Return Status  Element Should Be Visible  ${filters_alarm_severity_panel_collapse_icon}
-    Run Keyword If  ${need_to_collapse}  Click Element  ${filters_alarm_severity_panel_collapse_icon}
+    ${need_to_collapse}=  Run Keyword And Return Status  Element Should Be Visible  ${filter_alarm_severity_panel_collapse_icon}
+    Run Keyword If  ${need_to_collapse}  Click Element  ${filter_alarm_severity_panel_collapse_icon}
 
 Expand Site Availability Filter
-    ${need_to_expand}=  Run Keyword And Return Status  Element Should Be Visible  ${filters_site_availability_panel_expand_icon}
-    Run Keyword If  ${need_to_expand}  Click Element  ${filters_site_availability_panel_expand_icon}
+    ${need_to_expand}=  Run Keyword And Return Status  Element Should Be Visible  ${filter_site_availability_panel_expand_icon}
+    Run Keyword If  ${need_to_expand}  Click Element  ${filter_site_availability_panel_expand_icon}
 
 Collapse Site Availability Filter
-    ${need_to_collapse}=  Run Keyword And Return Status  Element Should Be Visible  ${filters_site_availability_panel_collapse_icon}
-    Run Keyword If  ${need_to_collapse}  Click Element  ${filters_site_availability_panel_collapse_icon}
+    ${need_to_collapse}=  Run Keyword And Return Status  Element Should Be Visible  ${filter_site_availability_panel_collapse_icon}
+    Run Keyword If  ${need_to_collapse}  Click Element  ${filter_site_availability_panel_collapse_icon}
 
 Clear All Filters
-    Click Element  ${filters_clear_all_icon}
+    Click Element  ${filter_clear_all_icon}
 
 Confirm Servers and Sites Filter Expanded
-    Element Should Be Visible  ${filters_servers_and_sites_panel_collapse_icon}
+    Element Should Be Visible  ${filter_servers_and_sites_panel_collapse_icon}
 
 Confirm Servers and Sites Filter Collapsed
-    Element Should Be Visible  ${filters_servers_and_sites_panel_expand_icon}
+    Element Should Be Visible  ${filter_servers_and_sites_panel_expand_icon}
 
 Confirm Alarm Severity Filter Expanded
-    Element Should Be Visible  ${filters_alarm_severity_panel_collapse_icon}
+    Element Should Be Visible  ${filter_alarm_severity_panel_collapse_icon}
 
 Confirm Alarm Severity Filter Collapsed
-    Element Should Be Visible  ${filters_alarm_severity_panel_expand_icon}
+    Element Should Be Visible  ${filter_alarm_severity_panel_expand_icon}
 
 Confirm Site Availability Filter Expanded
-    Element Should Be Visible  ${filters_site_availability_panel_collapse_icon}
+    Element Should Be Visible  ${filter_site_availability_panel_collapse_icon}
 
 Confirm Site Availability Filter Collapsed
-    Element Should Be Visible  ${filters_site_availability_panel_expand_icon}
+    Element Should Be Visible  ${filter_site_availability_panel_expand_icon}
 
 
 Select Servers and Sites Server Tree Node
@@ -88,21 +88,21 @@ Collapse Servers and Sites Tree Node
     Page Should Contain Element  xpath://span[@class='ui-treenode-label ui-corner-all']/span[contains(text(), '${node_name}')]/../../span[contains(@class, 'caret-down')]
     Click Element  xpath://span[@class='ui-treenode-label ui-corner-all']/span[contains(text(), '${noden_ame}')]/../../span[contains(@class, 'caret-down')]
 
-Confirm Filters Panel Contains Site
+Confirm Filter Panel Contains Site
     [Arguments]  ${site_name}
     Page Should Contain Element  xpath://span[@class='ui-treenode-label ui-corner-all']/span[contains(text(), '${site_name}')]
 
-Confirm Filters Panel Does Not Contain Site
+Confirm Filter Panel Does Not Contain Site
     [Arguments]  ${site_name}
     ${orig_wait}=  Set Selenium Implicit Wait  1 second
     Page Should Not Contain Element  xpath://span[@class='ui-treenode-label ui-corner-all']/span[contains(text(), '${site_name}')]
     Set Selenium Implicit Wait  ${orig_wait}
 
-Confirm Filters Panel Contains Server
+Confirm Filter Panel Contains Server
     [Arguments]  ${server_name}
     Page Should Contain Element  xpath://span[@class='ui-treenode-label ui-corner-all']/span[contains(text(), '${server_name}')]
 
-Confirm Filters Panel Does Not Contain Server
+Confirm Filter Panel Does Not Contain Server
     [Arguments]  ${server_name}
     ${orig_wait}=  Set Selenium Implicit Wait  1 second
     Page Should Not Contain Element  xpath://span[@class='ui-treenode-label ui-corner-all']/span[contains(text(), '${server_name}')]
