@@ -26,97 +26,120 @@ Navigate To Analytics Report Menu
 
 
 Navigate to Network Scorecard Report
+    Set Selenium Implicit Wait  2 seconds
     Navigate to Reports and Open Reports Menu
     Click Network Scorecard Report Menu
 
 Navigate to Network Summary Report
+    Set Selenium Implicit Wait  2 seconds
     Navigate to Reports and Open Reports Menu
     Click Network Summary Report Menu
 
 Navigate to XMC Server Utilization Report
+    Set Selenium Implicit Wait  2 seconds
     Navigate to Reports and Open Reports Menu
     Click XMC Server Utilization Report Menu
 
 
 Navigate to Site Availability Report
+    Set Selenium Implicit Wait  2 seconds
     Navigate To Site Report Menu
     Click Site Availability Report Menu
 
 Navigate to Site CPU Utilization Report
+    Set Selenium Implicit Wait  2 seconds
     Navigate To Site Report Menu
     Click Site CPU Utilization Report Menu
 
 Navigate to Site Memory Utilization Report
+    Set Selenium Implicit Wait  2 seconds
     Navigate To Site Report Menu
     Click Site Memory Utilization Report Menu
 
 Navigate to Site Port Utilization Report
+    Set Selenium Implicit Wait  2 seconds
     Navigate To Site Report Menu
     Click Site Port Utilization Report Menu
 
 Navigate to Site Port Error Report
+    Set Selenium Implicit Wait  2 seconds
     Navigate To Site Report Menu
     Click Site Port Error Report Menu
 
 
 Navigate to Top N Device Availability Report
+    Set Selenium Implicit Wait  2 seconds
     Navigate To Top N Report Menu
     Click Top N Device Availability Report Menu
 
 Navigate to Top N Site Availability Report
+    Set Selenium Implicit Wait  2 seconds
     Navigate To Top N Report Menu
     Click Top N Site Availability Report Menu
 
 Navigate to Top N CPU Utilization Report
+    Set Selenium Implicit Wait  2 seconds
     Navigate To Top N Report Menu
     Click Top N CPU Utilization Report Menu
 
 Navigate to Top N Memory Utilization Report
+    Set Selenium Implicit Wait  2 seconds
     Navigate To Top N Report Menu
     Click Top N Memory Utilization Report Menu
 
 Navigate to Top N Port Utilization Report
+    Set Selenium Implicit Wait  2 seconds
     Navigate To Top N Report Menu
     Click Top N Port Utilization Report Menu
 
 Navigate to Top N Port Error Report
+    Set Selenium Implicit Wait  2 seconds
     Navigate To Top N Report Menu
     Click Top N Port Error Report Menu
 
 Navigate to Top N Top APs By Clients Report
+    Set Selenium Implicit Wait  2 seconds
     Navigate To Top N Report Menu
     Click Top N Top APs By Clients Report Menu
 
 Navigate to Top N Top APs By Bandwidth Report
+    Set Selenium Implicit Wait  2 seconds
     Navigate To Top N Report Menu
     Click Top N Top APs By Bandwidth Report Menu
 
 
 Navigate to Analytics Summary Report
+    Set Selenium Implicit Wait  2 seconds
     Navigate To Analytics Report Menu
     Click Analytics Summary Report Menu
 
 Navigate to Analytics Top Applications By Clients Report
+    Set Selenium Implicit Wait  2 seconds
     Navigate To Analytics Report Menu
     Click Analytics Top Applications By Clients Report Menu
 
 Navigate to Analytics Top Applications By Volume Report
+    Set Selenium Implicit Wait  2 seconds
     Navigate To Analytics Report Menu
     Click Analytics Top Applications By Volume Report Menu
 
 Navigate to Analytics Slowest Responding Applications Report
+    Set Selenium Implicit Wait  2 seconds
     Navigate To Analytics Report Menu
     Click Analytics Slowest Responding Applications Report Menu
 
 Navigate to Analytics Daily Usage Report
+    Set Selenium Implicit Wait  2 seconds
     Navigate To Analytics Report Menu
     Click Analytics Daily Usage Report Menu
 
 Navigate to Analytics Monthly Usage Report
+    Set Selenium Implicit Wait  2 seconds
     Navigate To Analytics Report Menu
     Click Analytics Monthly Usage Report Menu
 
 Navigate to Analytics Quarterly Usage Report
+    Set Selenium Implicit Wait  2 seconds
     Navigate To Analytics Report Menu
     Click Analytics Quarterly Usage Report Menu
 
