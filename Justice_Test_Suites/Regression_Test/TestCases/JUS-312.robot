@@ -9,8 +9,8 @@ Suite Teardown   Log Out and Close Browser
 
 *** Test Cases ***
 Confirm No Unknown Servers In Justice
-    Click Filter Icon
-    Confirm Filters Panel Visible
+    Show Filter Panel
+    Confirm Filter Panel Visible
     Confirm Servers and Sites Filter Expanded
     Confirm Filters Panel Contains Server  ${XMC_HOSTNAME}
     Confirm Filters Panel Does Not Contain Server  unknown

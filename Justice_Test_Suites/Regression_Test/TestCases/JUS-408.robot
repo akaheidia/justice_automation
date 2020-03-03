@@ -101,12 +101,6 @@ Navigate to End Points and Set Filter
     Set Server Filter  ${server}
     sleep  2 seconds
 
-Set Server Filter
-    [Arguments]  ${server}
-    Show Filter Panel
-    Confirm Filters Panel Visible
-    Select Servers and Sites Server Tree Node  ${server}
-
 Confirm File Contents
     [Arguments]  ${filename}
     Wait Until Created  ${DOWNLOADS_DIR}/${filename}

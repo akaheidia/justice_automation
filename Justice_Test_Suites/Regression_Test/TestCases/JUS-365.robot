@@ -32,9 +32,5 @@ Log In and Navigate to Endpoints Tab
     Click List Slider
     Click Endpoints Tab
     Confirm Endpoints Tab Selected
-    Set Server Filter
-
-Set Server Filter
-    Click Filter Icon
-    Confirm Filters Panel Visible
-    Select Servers and Sites Server Tree Node  ${xmc_with_endpoints}
+    Set Server Filter  ${xmc_with_endpoints}
+    sleep  2 seconds

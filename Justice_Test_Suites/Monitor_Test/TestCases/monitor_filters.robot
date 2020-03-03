@@ -2,16 +2,22 @@
 Library   SeleniumLibrary
 Resource  ../Resources/AllResources.robot
 
-Documentation    Tests the Filters panel on the Monitor page.
+Documentation    Tests the Filter panel on the Monitor page.
 
 Suite Setup      Open Browser and Log In  ${JUS_URL}  ${BROWSER}  ${JUS_USERNAME}  ${JUS_PASSWORD}
 Suite Teardown   Log Out and Close Browser
 
 *** Test Cases ***
 
+Confirm Filter Panel Show and Hide Functionality
+    Show Filter Panel
+    Confirm Filter Panel Visible
+    Hide Filter Panel
+    Confirm Filter Panel Not Visible
+
 Confirm Filter Panel Expand and Collapse Functionality
-    Click Filter Icon
-    Confirm Filters Panel Visible
+    Show Filter Panel
+    Confirm Filter Panel Visible
     Confirm Servers and Sites Filter Expanded
     Confirm Alarm Severity Filter Expanded
     Confirm Site Availability Filter Expanded

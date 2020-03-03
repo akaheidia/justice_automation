@@ -39,6 +39,6 @@ Log In and Navigate to Devices Tab
     Confirm Devices Tab Selected
 
 Set Server Filter
-    Click Filter Icon
-    Confirm Filters Panel Visible
+    Show Filter Panel
+    Confirm Filter Panel Visible
     Select Servers and Sites Server Tree Node  ${XMC_HOSTNAME}

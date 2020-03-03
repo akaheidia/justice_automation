@@ -6,6 +6,12 @@ Documentation    Keywords specific to the Filters Panel.
 
 *** Keywords ***
 
+Set Server Filter
+    [Arguments]  ${server}
+    Show Filter Panel
+    Confirm Filter Panel Visible
+    Select Servers and Sites Server Tree Node  ${server}
+
 Expand Servers and Sites Filter
     ${need_to_expand}=  Run Keyword And Return Status  Element Should Be Visible  ${filters_servers_and_sites_panel_expand_icon}
     Run Keyword If  ${need_to_expand}  Click Element  ${filters_servers_and_sites_panel_expand_icon}

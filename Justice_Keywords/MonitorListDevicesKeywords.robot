@@ -12,8 +12,8 @@ Refresh Devices Table
 Is Test Device Present
     [Arguments]  ${ip}
     Click List Slider
-    Click Filter Icon
-    Confirm Filters Panel Visible
+    Show Filter Panel
+    Confirm Filter Panel Visible
     Confirm Servers and Sites Filter Expanded
     Select Servers and Sites Server Tree Node  ${XMC_HOSTNAME}
     Refresh Devices Table
