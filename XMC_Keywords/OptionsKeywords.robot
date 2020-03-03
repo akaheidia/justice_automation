@@ -6,8 +6,10 @@ Documentation    Keywords specific to the Administration> Options tab in XMC.
 
 *** Keywords ***
 
-XMC Select Tree Node
+XMC Select Options Tree Node
     [Arguments]  ${nodename}
-    Page Should Contain Element  xpath://span[contains(@class,'x-tree-node-text')]//span[contains(text(),'${nodename}')]
-    Click Element  xpath://span[contains(@class,'x-tree-node-text')]//span[contains(text(),'${nodename}')]
+    Page Should Contain Element  xpath://span[contains(text(),'${nodename}')]
+    Click Element  xpath://span[contains(text(),'${nodename}')]
 
+XMC Confirm Options Tab Loaded
+    Page Should Contain Element  ${xmc_options_tree_title}

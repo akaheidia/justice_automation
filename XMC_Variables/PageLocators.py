@@ -46,6 +46,8 @@ xmc_admin_profiles_tab = "xpath://span[@class='x-tab-inner x-tab-inner-extr-main
 xmc_admin_users_tab = "xpath://span[@class='x-tab-inner x-tab-inner-extr-main-tab-panel'][text()='Users']"
 xmc_admin_options_tab = "xpath://span[@class='x-tab-inner x-tab-inner-extr-main-tab-panel'][text()='Options']"
 
+# Administration> Options Page
+xmc_options_tree_title = "xpath://span[@class='x-column-header-text-inner'][text() = 'Options']"
 
 ## Toolbar Buttons
 xmc_devices_toolbar_add_device = "xpath://span[@class='x-btn-inner x-btn-inner-default-toolbar-small'][text()='Add Device...']"

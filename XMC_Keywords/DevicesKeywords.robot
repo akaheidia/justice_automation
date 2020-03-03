@@ -28,7 +28,7 @@ XMC Click Devices Context Menu
     Click Element  ${xmc_devices_tree_context_icon}
 
 
-XMC Select Tree Node
+XMC Select Device Tree Node
     [Arguments]  ${nodename}
     Page Should Contain Element  xpath://span[contains(@class,'x-tree-node-text')]//span[contains(text(),'${nodename}')]
     Click Element  xpath://span[contains(@class,'x-tree-node-text')]//span[contains(text(),'${nodename}')]
@@ -58,7 +58,7 @@ XMC Create Site Click Cancel
 
 XMC Delete Site
     [Arguments]  ${site_name}
-    XMC Select Tree Node  ${site_name}
+    XMC Select Device Tree Node  ${site_name}
     XMC Wait For Site Tab To Load  ${site_name}
     sleep  1 second
     XMC Click Devices Context Menu
