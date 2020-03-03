@@ -18,7 +18,7 @@ Create Site In XMC
 
 Confirm Site Added To Justice
     Open Browser and Log In  ${JUS_URL}  ${BROWSER}  ${JUS_USERNAME}  ${JUS_PASSWORD}
-    Click Filter Icon
+    Show Filter Panel
     Confirm Filters Panel Visible
     Confirm Servers and Sites Filter Expanded
     Expand Servers and Sites Tree Node  ${XMC_HOSTNAME}
@@ -35,7 +35,7 @@ Delete Site From XMC
 
 Confirm Site Removed From Justice
     Open Browser and Log In  ${JUS_URL}  ${BROWSER}  ${JUS_USERNAME}  ${JUS_PASSWORD}
-    Click Filter Icon
+    Show Filter Panel
     Confirm Filters Panel Visible
     Confirm Servers and Sites Filter Expanded
     Expand Servers and Sites Tree Node  ${XMC_HOSTNAME}

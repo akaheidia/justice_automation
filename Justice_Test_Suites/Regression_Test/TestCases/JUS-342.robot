@@ -17,8 +17,8 @@ Tag Test
     Confirm Tags Panel Not Visible
 
 Filter Test
-    Click Filter Icon
+    Show Filter Panel
     Confirm Filters Panel Visible
     sleep  1 second
-    Click Filter Icon
+    Hide Filter Panel
     Confirm Filters Panel Not Visible

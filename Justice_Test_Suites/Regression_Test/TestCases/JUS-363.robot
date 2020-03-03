@@ -39,7 +39,7 @@ Confirm Duplicate Site Selection Is Specific To Server
 Initialize Test
     Set Up XMC Sites
     Open Browser and Log In  ${JUS_URL}  ${BROWSER}  ${JUS_USERNAME}  ${JUS_PASSWORD}
-    Click Filter Icon
+    Show Filter Panel
     Confirm Filters Panel Visible
     Confirm Servers and Sites Filter Expanded
 

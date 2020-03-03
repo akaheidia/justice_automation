@@ -30,6 +30,7 @@ Confirm CSV All Filtered Rows for Alarms
     Confirm File Contents  Alarms - All Filtered Rows
     Remove File  Alarms - All Filtered Rows
 
+
 Confirm CSV All Rows for Events
     Log to Console  Commented out until JUS-445 is fixed
     Navigate to Events and Set Filter  ${XMC_HOSTNAME}
@@ -50,6 +51,26 @@ Confirm CSV All Filtered Rows for Events
 #    Wait Until Page Contains  Download Complete
 #    Confirm File Contents  Events - All Filtered Rows
 #    Remove File  Events - All Filtered Rows
+
+
+Confirm CSV All Rows for End Points
+    Navigate to End Points and Set Filter  ${XMC_2_HOSTNAME}
+    Download CSV All Rows
+    Wait Until Page Contains  Download Complete
+    Confirm File Contents  Endpoints - All Rows
+    Remove File  Endpoints - All Rows
+
+Confirm CSV Visible Rows for End Points
+    Download CSV Visible Rows
+    Wait Until Page Contains  Download Complete
+    Confirm File Contents  Endpoints - Visible Rows
+    Remove File  Endpoints - Visible Rows
+
+Confirm CSV All Filtered Rows for End Points
+    Download CSV All Filtered Rows
+    Wait Until Page Contains  Download Complete
+    Confirm File Contents  Endpoints - All Filtered Rows
+    Remove File  Endpoints - All Filtered Rows
 
 
 *** Keywords ***
@@ -73,9 +94,16 @@ Navigate to Events and Set Filter
     sleep  2 seconds
 #    Set Server Filter  ${server}
 
+Navigate to End Points and Set Filter
+    [Arguments]  ${server}
+    Click Endpoints Tab
+    Confirm Endpoints Tab Selected
+    Set Server Filter  ${server}
+    sleep  2 seconds
+
 Set Server Filter
     [Arguments]  ${server}
-    Click Filter Icon
+    Show Filter Panel
     Confirm Filters Panel Visible
     Select Servers and Sites Server Tree Node  ${server}
 
