@@ -41,6 +41,12 @@ xmc_devices_tree_context_icon_create_site_menu="xpath://span[text()='Create Site
 xmc_devices_tree_context_icon_delete_site_menu="xpath://span[text()='Delete Site']"
 xmc_devices_table = "xpath://div[contains(@id, 'deviceGrid')][contains(@id, 'bodyWrap')]"
 
+# Administration Page
+xmc_admin_profiles_tab = "xpath://span[@class='x-tab-inner x-tab-inner-extr-main-tab-panel'][text()='Profiles']"
+xmc_admin_users_tab = "xpath://span[@class='x-tab-inner x-tab-inner-extr-main-tab-panel'][text()='Users']"
+xmc_admin_options_tab = "xpath://span[@class='x-tab-inner x-tab-inner-extr-main-tab-panel'][text()='Options']"
+
+
 ## Toolbar Buttons
 xmc_devices_toolbar_add_device = "xpath://span[@class='x-btn-inner x-btn-inner-default-toolbar-small'][text()='Add Device...']"
 
