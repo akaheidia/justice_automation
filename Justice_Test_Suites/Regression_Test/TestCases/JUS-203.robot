@@ -4,16 +4,65 @@ Resource  ../Resources/AllResources.robot
 
 Documentation   Regression test for JUS-203: resync message when justice starts up.
 
-Suite Teardown  Close All Connections
+Suite Teardown  Clean Up Resync Test
+
+*** Variables ***
+${site_name}    NEW SITE
+${device_ip}    10.54.142.12
 
 *** Test Cases ***
-Resync Test
-    Disconnect From RabbitMQ      ${XMC_HOST_IP}
-    sleep  5 seconds
-    Reconnect To RabbitMQ         ${XMC_HOST_IP}
+Disconnect From RabbitMQ
+    SSH To Justice Server  ${JUS_HOST_IP}  ${JUS_USERNAME}  ${JUS_PASSWORD}
+    Execute Command  iptables -I FORWARD -s ${XMC_HOST_IP} -j DROP
+    Close SSH Connection
+
+Create Site and Device in XMC
+    XMC Open Browser and Log In  ${XMC_URL}  ${BROWSER}  ${XMC_USERNAME}  ${XMC_PASSWORD}
+    XMC Navigate To Network Page
+    XMC Click Devices Tab
+    XMC Confirm Devices Tab Loaded
+    XMC Create Site  ${site_name}
+    XMC Click Devices Devices Tab
+    XMC Select Device Tree Node  World
+    XMC Select Device Tree Node  ${site_name}
+    XMC Create Device  ${device_ip}  public_v1_Profile  TestDevice
+    XMC Confirm Device In Table  ${device_ip}
+    XMC Log Out and Close Browser
+
+Confirm Justice Not Updated
+    Open Browser and Log In  ${JUS_URL}  ${BROWSER}  ${JUS_USERNAME}  ${JUS_PASSWORD}
+    Click List Slider
+    Show Filter Panel
+    Confirm Filter Panel Visible
+    Confirm Servers and Sites Filter Expanded
+    Expand Servers and Sites Tree Node  ${XMC_HOSTNAME}
+    Confirm Filter Panel Does Not Contain Site  ${site_name}
+    Select Servers and Sites Server Tree Node  ${XMC_HOSTNAME}
+    Confirm Device Not In Table  ${device_ip}
+    Log Out and Close Browser
+
+Reconnect To RabbitMQ
+    SSH To Justice Server  ${JUS_HOST_IP}  ${JUS_USERNAME}  ${JUS_PASSWORD}
+    Execute Command  iptables -D FORWARD -s ${XMC_HOST_IP} -j DROP
+    Close SSH Connection
     sleep  10 seconds
+
+Confirm Resync Messages
     Confirm XMC Resync Started    ${XMC_HOST_IP}  ${XMC_USERNAME}  ${XMC_PASSWORD}
     Confirm XMC Resync Completed  ${XMC_HOST_IP}  ${XMC_USERNAME}  ${XMC_PASSWORD}
+
+Confirm Justice Updated
+    Open Browser and Log In  ${JUS_URL}  ${BROWSER}  ${JUS_USERNAME}  ${JUS_PASSWORD}
+    Click List Slider
+    Show Filter Panel
+    Confirm Filter Panel Visible
+    Confirm Servers and Sites Filter Expanded
+    Expand Servers and Sites Tree Node  ${XMC_HOSTNAME}
+    Confirm Filter Panel Contains Site  ${site_name}
+    Select Servers and Sites Server Tree Node  ${XMC_HOSTNAME}
+    Confirm Device In Table  ${device_ip}
+    Log Out and Close Browser
+
 
 *** Keywords ***
 SSH To Justice Server
@@ -26,24 +75,13 @@ SSH To XMC Server
     ${login_output}=  Open SSH Connection and Log In  ${host}  ${user}  ${pwd}
     Should Contain    ${login_output}  Management Center
 
-Disconnect From RabbitMQ
-    [Arguments]  ${xmc}
-    SSH To Justice Server  ${JUS_HOST_IP}  ${JUS_USERNAME}  ${JUS_PASSWORD}
-    Execute Command  iptables -I FORWARD -s ${xmc} -j DROP
-    Close SSH Connection
-
-Reconnect To RabbitMQ
-    [Arguments]  ${xmc}
-    SSH To Justice Server  ${JUS_HOST_IP}  ${JUS_USERNAME}  ${JUS_PASSWORD}
-    Execute Command  iptables -D FORWARD -s ${xmc} -j DROP
-    Close SSH Connection
-
 Confirm XMC Resync Started
     [Arguments]  ${xmc_ip}  ${xmc_user}  ${xmc_pwd}
     SSH To XMC Server  ${xmc_ip}  ${xmc_user}  ${xmc_pwd}
 
-    ${command_output}=  Execute Command  grep RESYNC ${XMC_SERVER_LOG} | grep -v RESYNC_END
-    Should Contain  ${command_output}  RESYNC
+    Write  tail -f ${XMC_SERVER_LOG}
+    ${output}=  Read Until  Starting Resync...
+    Should Contain  ${output}  Starting Resync...
 
     Close SSH Connection
 
@@ -51,12 +89,25 @@ Confirm XMC Resync Completed
     [Arguments]  ${xmc_ip}  ${xmc_user}  ${xmc_pwd}
     SSH To XMC Server  ${xmc_ip}  ${xmc_user}  ${xmc_pwd}
 
-    # Give the resync time to finish
-    : FOR  ${index}  IN RANGE  1  1000
-    \    ${command_output}=  Execute Command  grep RESYNC_END ${XMC_SERVER_LOG}
-    \    ${resync_end}=  Run Keyword And Return Status  Should Contain  ${command_output}  RESYNC_END
-    \    Exit For Loop If  ${resync_end} == True
-    ${command_output}=  Execute Command  grep RESYNC_END ${XMC_SERVER_LOG}
-    Should Contain  ${command_output}  RESYNC_END
+    Write  tail -f ${XMC_SERVER_LOG}
+    ${output}=  Read Until   Resync Completed successfully.
+    Should Contain  ${output}  Resync Completed successfully.
 
     Close SSH Connection
+
+Clean Up Resync Test
+    Clean Up XMC
+    Close All Connections
+
+Clean Up XMC
+    XMC Open Browser and Log In  ${XMC_URL}  ${BROWSER}  ${XMC_USERNAME}  ${XMC_PASSWORD}
+    XMC Navigate To Network Page
+    XMC Click Devices Tab
+    XMC Confirm Devices Tab Loaded
+    XMC Click Devices Devices Tab
+    XMC Confirm Device In Table  ${device_ip}
+    XMC Delete Device  ${device_ip}
+    XMC Refresh Devices Table
+    XMC Confirm Device Not In Table  ${device_ip}
+    XMC Delete Site  ${site_name}
+    XMC Log Out and Close Browser
