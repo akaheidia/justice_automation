@@ -15,3 +15,14 @@ Confirm Port Overview Report Page Title
 
     Unselect Frame
     Unselect Frame
+
+Port Overview Drill Into Metric
+    [Arguments]  ${metric}
+    sleep  1 second
+    Select Frame  xpath://iframe
+    Select Frame  xpath://iframe[@id='resource']
+
+    Click Element  xpath://a//span[contains(text(), '${metric}')]
+
+    Unselect Frame
+    Unselect Frame
