@@ -8,19 +8,6 @@ Documentation    Regression test for JUS-407: CSV Download: output is unreadable
 Suite Setup      Log In and Navigate to List View
 Suite Teardown   Log Out and Close Browser
 
-*** Variables ***
-${csv_alarms_all}           Alarms - All Rows.csv
-${csv_alarms_visible}       Alarms - Visible Rows.csv
-${csv_alarms_filtered}      Alarms - All Filtered Rows.csv
-
-${csv_events_all}           Events - All Rows.csv
-${csv_events_visible}       Events - Visible Rows.csv
-${csv_events_filtered}      Events - All Filtered Rows.csv
-
-${csv_endsystems_all}       End-Systems - All Rows.csv
-${csv_endsystems_visible}   End-Systems - Visible Rows.csv
-${csv_endsystems_filtered}  End-Systems - All Filtered Rows.csv
-
 *** Test Cases ***
 
 Confirm CSV All Rows for Alarms
