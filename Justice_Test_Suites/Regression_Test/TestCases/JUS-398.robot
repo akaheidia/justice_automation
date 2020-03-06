@@ -9,7 +9,7 @@ Suite Setup      Open Browser and Log In  ${JUS_URL}  ${BROWSER}  ${JUS_USERNAME
 Suite Teardown   Log Out and Close Browser
 
 *** Variables ***
-${wireless_device}    10.54.142.60
+${wireless_device}    10.54.142.70
 ${site}               Wireless Site
 
 *** Test Cases ***
