@@ -8,23 +8,19 @@ Documentation    Regression test for JUS-377: CSV and PDF Download for All Filte
 Suite Setup      Log In and Navigate to Devices Tab
 Suite Teardown   Log Out and Close Browser
 
-*** Variables ***
-${csv_file}  Devices - All Filtered Rows.csv
-${pdf_file}  Devices - All Filtered Rows.pdf
-
 *** Test Cases ***
 
 Confirm CSV All Filtered Rows
     Download CSV All Filtered Rows
     Wait Until Page Contains  Download Complete
-    Confirm File Exists  ${csv_file}
-    Remove File  ${csv_file}
+    Confirm File Exists  ${csv_devices_filtered}
+    Remove File  ${csv_devices_filtered}
 
 Confirm PDF All Filtered Rows
     Download PDF All Filtered Rows
     Wait Until Page Contains  Download Complete
-    Confirm File Exists  ${pdf_file}
-    Remove File  ${pdf_file}
+    Confirm File Exists  ${pdf_devices_filtered}
+    Remove File  ${pdf_devices_filtered}
 
 
 *** Keywords ***
