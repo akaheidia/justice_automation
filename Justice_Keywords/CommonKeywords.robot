@@ -48,3 +48,9 @@ Open SSH Connection and Log In
 
 Close SSH Connection
     Close All Connections
+
+Confirm Page Does Not Contain Text
+    [Arguments]  ${text}
+    ${orig_wait}=  Set Selenium Implicit Wait  1 second
+    Page Should Not Contain  ${text}
+    Set Selenium Implicit Wait  ${orig_wait}

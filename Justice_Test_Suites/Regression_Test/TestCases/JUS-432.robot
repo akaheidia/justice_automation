@@ -13,7 +13,7 @@ Suite Teardown   Log Out and Close Browser
 Confirm End-Systems Tab
     Click End-Systems Tab
     Confirm End-Systems Tab Selected
-    Confirm Page Does Not Contain End Point Label
+    Confirm Page Does Not Contain Text  End Point
 
 Confirm CSV Download File Name for End-Systems All Rows
     Navigate to End-Systems and Set Filter  ${XMC_2_HOSTNAME}
@@ -67,11 +67,6 @@ Navigate to End-Systems and Set Filter
     Clear All Filters
     Set Server Filter  ${server}
     sleep  2 seconds
-
-Confirm Page Does Not Contain End Point Label
-    ${orig_wait}=  Set Selenium Implicit Wait  1 second
-    Page Should Not Contain  End Point
-    Set Selenium Implicit Wait  ${orig_wait}
 
 Confirm File Exists
     [Arguments]  ${filename}
