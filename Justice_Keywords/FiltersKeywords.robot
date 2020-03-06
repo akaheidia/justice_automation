@@ -37,6 +37,7 @@ Collapse Site Availability Filter
     Run Keyword If  ${need_to_collapse}  Click Element  ${filter_site_availability_panel_collapse_icon}
 
 Clear All Filters
+    Show Filter Panel
     Click Element  ${filter_clear_all_icon}
 
 Confirm Servers and Sites Filter Expanded
@@ -60,13 +61,13 @@ Confirm Site Availability Filter Collapsed
 
 Select Servers and Sites Server Tree Node
     [Arguments]  ${node_name}
-    Page Should Contain Element  xpath://span[@class='ui-treenode-label ui-corner-all']/span[contains(text(), '${node_name}')]/../..//div[contains(@class, 'ui-chkbox-box')]/span[@class='ui-chkbox-icon ui-clickable pi']/..
-    Click Element  xpath://span[@class='ui-treenode-label ui-corner-all']/span[contains(text(), '${node_name}')]/../..//div[contains(@class, 'ui-chkbox-box')]/span[@class='ui-chkbox-icon ui-clickable pi']/..
+    ${need_to_select}=  Run Keyword And Return Status  Element Should Be Visible  xpath://span[@class='ui-treenode-label ui-corner-all']/span[contains(text(), '${node_name}')]/../..//div[contains(@class, 'ui-chkbox-box')]/span[@class='ui-chkbox-icon ui-clickable pi']/..
+    Run Keyword If  ${need_to_select}  Click Element  xpath://span[@class='ui-treenode-label ui-corner-all']/span[contains(text(), '${node_name}')]/../..//div[contains(@class, 'ui-chkbox-box')]/span[@class='ui-chkbox-icon ui-clickable pi']/..
 
 Deselect Servers and Sites Server Tree Node
     [Arguments]  ${node_name}
-    Page Should Contain Element  xpath://span[@class='ui-treenode-label ui-corner-all ui-state-highlight']/span[contains(text(), '${nodename}')]/../..//div[contains(@class, 'ui-chkbox-box')]/span[@class='ui-chkbox-icon ui-clickable pi pi-check']/..
-    Click Element  xpath://span[@class='ui-treenode-label ui-corner-all ui-state-highlight']/span[contains(text(), '${node_name}')]/../..//div[contains(@class, 'ui-chkbox-box')]/span[@class='ui-chkbox-icon ui-clickable pi pi-check']/..
+    ${need_to_select}=  Run Keyword And Return Status  Element Should Be Visible  xpath://span[@class='ui-treenode-label ui-corner-all ui-state-highlight']/span[contains(text(), '${nodename}')]/../..//div[contains(@class, 'ui-chkbox-box')]/span[@class='ui-chkbox-icon ui-clickable pi pi-check']/..
+    Run Keyword If  ${need_to_select}  xpath://span[@class='ui-treenode-label ui-corner-all ui-state-highlight']/span[contains(text(), '${node_name}')]/../..//div[contains(@class, 'ui-chkbox-box')]/span[@class='ui-chkbox-icon ui-clickable pi pi-check']/..
 
 Select Servers and Sites Site Tree Node
     [Arguments]  ${node_name}
