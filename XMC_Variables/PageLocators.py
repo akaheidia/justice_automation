@@ -48,6 +48,10 @@ xmc_admin_options_tab = "xpath://span[@class='x-tab-inner x-tab-inner-extr-main-
 
 # Administration> Options Page
 xmc_options_tree_title = "xpath://span[@class='x-column-header-text-inner'][text() = 'Options']"
+xmc_options_xmcdatapump_domainnodetype = "xpath://input[@name='domainNodeType']"
+xmc_options_xmcdatapump_password = "xpath://input[@name='rabbitmqPassword']"
+xmc_options_xmcdatapump_password_eye_show = "//div[@title='Click to show in clear text']"
+xmc_options_xmcdatapump_password_eye_hide = "//div[@title='Click to hide text']"
 
 ## Toolbar Buttons
 xmc_devices_toolbar_add_device = "xpath://span[@class='x-btn-inner x-btn-inner-default-toolbar-small'][text()='Add Device...']"
