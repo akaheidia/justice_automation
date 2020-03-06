@@ -8,6 +8,18 @@ Documentation    Regression test for JUS-407: CSV Download: output is unreadable
 Suite Setup      Log In and Navigate to List View
 Suite Teardown   Log Out and Close Browser
 
+*** Variables ***
+${csv_alarms_all}           Alarms - All Rows.csv
+${csv_alarms_visible}       Alarms - Visible Rows.csv
+${csv_alarms_filtered}      Alarms - All Filtered Rows.csv
+
+${csv_events_all}           Events - All Rows.csv
+${csv_events_visible}       Events - Visible Rows.csv
+${csv_events_filtered}      Events - All Filtered Rows.csv
+
+${csv_endsystems_all}       End-Systems - All Rows.csv
+${csv_endsystems_visible}   End-Systems - Visible Rows.csv
+${csv_endsystems_filtered}  End-Systems - All Filtered Rows.csv
 
 *** Test Cases ***
 
@@ -15,20 +27,20 @@ Confirm CSV All Rows for Alarms
     Navigate to Alarms and Set Filter  ${XMC_HOSTNAME}
     Download CSV All Rows
     Wait Until Page Contains  Download Complete
-    Confirm File Contents  Alarms - All Rows
-    Remove File  Alarms - All Rows
+    Confirm File Contents  ${csv_alarms_all}
+    Remove File  ${csv_alarms_all}
 
 Confirm CSV Visible Rows for Alarms
     Download CSV Visible Rows
     Wait Until Page Contains  Download Complete
-    Confirm File Contents  Alarms - Visible Rows
-    Remove File  Alarms - Visible Rows
+    Confirm File Contents  ${csv_alarms_visible}
+    Remove File  ${csv_alarms_visible}
 
 Confirm CSV All Filtered Rows for Alarms
     Download CSV All Filtered Rows
     Wait Until Page Contains  Download Complete
-    Confirm File Contents  Alarms - All Filtered Rows
-    Remove File  Alarms - All Filtered Rows
+    Confirm File Contents  ${csv_alarms_filtered}
+    Remove File  ${csv_alarms_filtered}
 
 
 Confirm CSV All Rows for Events
@@ -36,41 +48,41 @@ Confirm CSV All Rows for Events
     Navigate to Events and Set Filter  ${XMC_HOSTNAME}
 #    Download CSV All Rows
 #    Wait Until Page Contains  Download Complete
-#    Confirm File Contents  Events - All Rows
-#    Remove File  Events - All Rows
+#    Confirm File Contents  ${csv_events_all}
+#    Remove File  ${csv_events_all}
 
 Confirm CSV Visible Rows for Events
     Download CSV Visible Rows
     Wait Until Page Contains  Download Complete
-    Confirm File Contents  Events - Visible Rows
-    Remove File  Events - Visible Rows
+    Confirm File Contents  ${csv_events_visible}
+    Remove File  ${csv_events_visible}
 
 Confirm CSV All Filtered Rows for Events
     Log to Console  Commented out until JUS-417 is fixed
 #    Download CSV All Filtered Rows
 #    Wait Until Page Contains  Download Complete
-#    Confirm File Contents  Events - All Filtered Rows
-#    Remove File  Events - All Filtered Rows
+#    Confirm File Contents  ${csv_events_filtered}
+#    Remove File  ${csv_events_filtered}
 
 
 Confirm CSV All Rows for End Points
     Navigate to End Points and Set Filter  ${XMC_2_HOSTNAME}
     Download CSV All Rows
     Wait Until Page Contains  Download Complete
-    Confirm File Contents  Endpoints - All Rows
-    Remove File  Endpoints - All Rows
+    Confirm File Contents  ${csv_endsystems_all}
+    Remove File  ${csv_endsystems_all}
 
 Confirm CSV Visible Rows for End Points
     Download CSV Visible Rows
     Wait Until Page Contains  Download Complete
-    Confirm File Contents  Endpoints - Visible Rows
-    Remove File  Endpoints - Visible Rows
+    Confirm File Contents  ${csv_endsystems_visible}
+    Remove File  ${csv_endsystems_visible}
 
 Confirm CSV All Filtered Rows for End Points
     Download CSV All Filtered Rows
     Wait Until Page Contains  Download Complete
-    Confirm File Contents  Endpoints - All Filtered Rows
-    Remove File  Endpoints - All Filtered Rows
+    Confirm File Contents  ${csv_endsystems_filtered}
+    Remove File  ${csv_endsystems_filtered}
 
 
 *** Keywords ***
