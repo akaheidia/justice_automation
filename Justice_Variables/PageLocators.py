@@ -56,11 +56,11 @@ map_refresh_button = "xpath://mat-icon[@class='mat-icon notranslate ei ei-refres
 
 # List Page Elements
 list_devices_tab = "xpath://a[@href='#/monitoring/lists/devices']"
-list_endpoints_tab = "xpath://a[@href='#/monitoring/lists/endpoints']"
+list_endsystems_tab = "xpath://a[@href='#/monitoring/lists/endpoints']"
 list_alarms_tab = "xpath://a[@href='#/monitoring/lists/alarms']"
 list_events_tab = "xpath://a[@href='#/monitoring/lists/events']"
 list_devices_page_url_suffix = "/#/monitoring/lists/devices"
-list_endpoints_page_url_suffix = "/#/monitoring/lists/endpoints"
+list_endsystems_page_url_suffix = "/#/monitoring/lists/endpoints"
 list_alarms_page_url_suffix = "/#/monitoring/lists/alarms"
 list_events_page_url_suffix = "/#/monitoring/lists/events"
 list_devices_table = "id:devicesGrid"
@@ -78,8 +78,8 @@ download_pdf_visible_rows_menu = "xpath://span[@class='option'][text()='PDF']/..
 download_pdf_all_rows_menu = "xpath://span[@class='option'][text()='PDF']/..//span[@class='text'][contains(text(), '(All Rows)')]"
 download_pdf_all_filtered_rows_menu = "xpath://span[@class='option'][text()='PDF']/..//span[@class='text'][contains(text(), '(All Filtered Rows)')]"
 
-# Endpoints
-endpoints_table = "xpath://table[@id='endPointsGrid']"
+# End-Systems
+endsystems_table = "xpath://table[@id='endPointsGrid']"
 
 # Reports Page Elements
 reports_page_title = "xpath://h1[text()='Reports']"

@@ -67,7 +67,7 @@ Select Servers and Sites Server Tree Node
 Deselect Servers and Sites Server Tree Node
     [Arguments]  ${node_name}
     ${need_to_select}=  Run Keyword And Return Status  Element Should Be Visible  xpath://span[@class='ui-treenode-label ui-corner-all ui-state-highlight']/span[contains(text(), '${nodename}')]/../..//div[contains(@class, 'ui-chkbox-box')]/span[@class='ui-chkbox-icon ui-clickable pi pi-check']/..
-    Run Keyword If  ${need_to_select}  xpath://span[@class='ui-treenode-label ui-corner-all ui-state-highlight']/span[contains(text(), '${node_name}')]/../..//div[contains(@class, 'ui-chkbox-box')]/span[@class='ui-chkbox-icon ui-clickable pi pi-check']/..
+    Run Keyword If  ${need_to_select}  Click Element  xpath://span[@class='ui-treenode-label ui-corner-all ui-state-highlight']/span[contains(text(), '${node_name}')]/../..//div[contains(@class, 'ui-chkbox-box')]/span[@class='ui-chkbox-icon ui-clickable pi pi-check']/..
 
 Select Servers and Sites Site Tree Node
     [Arguments]  ${node_name}

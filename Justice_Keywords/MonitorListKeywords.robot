@@ -9,8 +9,8 @@ Documentation    Keywords specific to the Monitor List page.
 Click Devices Tab
     Click Element  ${list_devices_tab}
 
-Click Endpoints Tab
-    Click Element  ${list_endpoints_tab}
+Click End-Systems Tab
+    Click Element  ${list_endsystems_tab}
 
 Click Alarms Tab
     Click Element  ${list_alarms_tab}
@@ -78,9 +78,9 @@ Confirm Devices Tab Selected
     ${page_url}=  Get Location
     Location Should Contain  ${list_devices_page_url_suffix}
 
-Confirm Endpoints Tab Selected
+Confirm End-Systems Tab Selected
     ${page_url}=  Get Location
-    Location Should Contain  ${list_endpoints_page_url_suffix}
+    Location Should Contain  ${list_endsystems_page_url_suffix}
 
 Confirm Alarms Tab Selected
     ${page_url}=  Get Location

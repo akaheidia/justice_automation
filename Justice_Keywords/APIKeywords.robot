@@ -83,7 +83,7 @@ Get Devices
     ${resp}=  Post Request  justice  /v1/api/devices  json=${body}  headers=${postheader}
     Should Be Equal As Strings  ${resp.status_code}  200
 
-Get Endpoints
+Get End-Systems
     &{postheader}=  Create Dictionary  Content-Type=application/json  Authorization=Bearer ${access_token}
     Create Session  alias=justice  url=${JUS_URL}
     ${json_string}=  catenate

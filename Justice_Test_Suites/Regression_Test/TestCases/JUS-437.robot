@@ -125,8 +125,8 @@ Navigate to Events and Set Filter
 
 Navigate to End Points and Set Filter
     [Arguments]  ${server}
-    Click Endpoints Tab
-    Confirm Endpoints Tab Selected
+    Click End-Systems Tab
+    Confirm End-Systems Tab Selected
     Clear All Filters
     Set Server Filter  ${server}
     sleep  2 seconds

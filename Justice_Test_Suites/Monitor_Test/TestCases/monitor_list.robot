@@ -14,9 +14,9 @@ Confirm List Page Loads
     Click List Slider
     Confirm List Page Loaded
 
-Confirm Endpoints Tab Loads
-    Click Endpoints Tab
-    Confirm Endpoints Tab Selected
+Confirm End-Systems Tab Loads
+    Click End-Systems Tab
+    Confirm End-Systems Tab Selected
 
 Confirm Alarms Tab Loads
     Click Alarms Tab
