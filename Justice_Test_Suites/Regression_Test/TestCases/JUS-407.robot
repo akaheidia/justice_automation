@@ -8,26 +8,30 @@ Documentation    Regression test for JUS-407: CSV Download: output is unreadable
 Suite Setup      Log In and Navigate to Devices Tab
 Suite Teardown   Log Out and Close Browser
 
+*** Variables ***
+${csv_all}       Devices - All Rows.csv
+${csv_visible}   Devices - Visible Rows.csv
+${csv_filtered}  Devices - All Filtered Rows.csv
 
 *** Test Cases ***
 
 Confirm CSV All Rows
     Download CSV All Rows
     Wait Until Page Contains  Download Complete
-    Confirm File Contents  Devices - All Rows
-    Remove File  Devices - All Rows
+    Confirm File Contents  ${csv_all}
+    Remove File  ${csv_all}
 
 Confirm CSV Visible Rows
     Download CSV Visible Rows
     Wait Until Page Contains  Download Complete
-    Confirm File Contents  Devices - Visible Rows
-    Remove File  Devices - Visible Rows
+    Confirm File Contents  ${csv_visible}
+    Remove File  ${csv_visible}
 
 Confirm CSV All Filtered Rows
     Download CSV All Filtered Rows
     Wait Until Page Contains  Download Complete
-    Confirm File Contents  Devices - All Filtered Rows
-    Remove File  Devices - All Filtered Rows
+    Confirm File Contents  ${csv_filtered}
+    Remove File  ${csv_filtered}
 
 
 *** Keywords ***
