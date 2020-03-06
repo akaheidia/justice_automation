@@ -42,5 +42,8 @@ Confirm Missing Credentials
 Confirm Successful Logout
     Wait Until Page Contains Element  ${login_username_text}
     ${page_url}=  Get Location
+    Confirm Login Page Loaded
+
+Confirm Login Page Loaded
     Location Should Contain  ${login_page_url_suffix}
     Page Should Contain Image  ${login_logo_image}

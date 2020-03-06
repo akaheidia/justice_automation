@@ -15,5 +15,5 @@ Confirm Reports Cannot Bypass Authentication
     Close Browser
 
     Open and Maximize Browser  ${JUS_URL}/justice?rdSecureKey=${key}  ${BROWSER}
-    Page Should Contain  Unable to authenticate the user
+    Confirm Login Page Loaded
     Close Browser
