@@ -31,7 +31,7 @@ Confirm CSV File Extension for Devices All Filtered Rows
 
 
 Confirm CSV File Extension for End-Systems All Rows
-    Navigate to End Points and Set Filter  ${XMC_2_HOSTNAME}
+    Navigate to End-Systems and Set Filter  ${XMC_2_HOSTNAME}
     Download CSV All Rows
     Wait Until Page Contains  Download Complete
     Confirm File Exists  ${csv_endsystems_all}
@@ -123,7 +123,7 @@ Navigate to Events and Set Filter
     sleep  2 seconds
 #    Set Server Filter  ${server}
 
-Navigate to End Points and Set Filter
+Navigate to End-Systems and Set Filter
     [Arguments]  ${server}
     Click End-Systems Tab
     Confirm End-Systems Tab Selected

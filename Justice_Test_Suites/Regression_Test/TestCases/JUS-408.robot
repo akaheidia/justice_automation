@@ -52,20 +52,20 @@ Confirm CSV All Filtered Rows for Events
 #    Remove File  ${csv_events_filtered}
 
 
-Confirm CSV All Rows for End Points
-    Navigate to End Points and Set Filter  ${XMC_2_HOSTNAME}
+Confirm CSV All Rows for End-Systems
+    Navigate to End-Systems and Set Filter  ${XMC_2_HOSTNAME}
     Download CSV All Rows
     Wait Until Page Contains  Download Complete
     Confirm File Contents  ${csv_endsystems_all}
     Remove File  ${csv_endsystems_all}
 
-Confirm CSV Visible Rows for End Points
+Confirm CSV Visible Rows for End-Systems
     Download CSV Visible Rows
     Wait Until Page Contains  Download Complete
     Confirm File Contents  ${csv_endsystems_visible}
     Remove File  ${csv_endsystems_visible}
 
-Confirm CSV All Filtered Rows for End Points
+Confirm CSV All Filtered Rows for End-Systems
     Download CSV All Filtered Rows
     Wait Until Page Contains  Download Complete
     Confirm File Contents  ${csv_endsystems_filtered}
@@ -93,7 +93,7 @@ Navigate to Events and Set Filter
     sleep  2 seconds
 #    Set Server Filter  ${server}
 
-Navigate to End Points and Set Filter
+Navigate to End-Systems and Set Filter
     [Arguments]  ${server}
     Click End-Systems Tab
     Confirm End-Systems Tab Selected
