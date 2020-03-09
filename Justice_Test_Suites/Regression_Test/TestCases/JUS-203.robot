@@ -12,15 +12,13 @@ Suite Teardown  Close All Connections
 Run Resync Test
     SSH To Justice Server  ${JUS_HOST_IP}  ${JUS_USERNAME}  ${JUS_PASSWORD}
     ${written}=  Write  /root/scripts/synctest.sh ${XMC_HOST_IP}
-    Log  ${written}
     sleep  60 seconds
     ${stdout}=  Read Until  Expecting reconnect...
-    Log  ${stdout}
     Should Contain  ${stdout}  Expecting reconnect...
     Close SSH Connection
 
 Confirm Resync Messages
-    sleep  60 seconds
+    sleep  30 seconds
     Confirm XMC Resync Started    ${XMC_HOST_IP}  ${XMC_USERNAME}  ${XMC_PASSWORD}
     Confirm XMC Resync Completed  ${XMC_HOST_IP}  ${XMC_USERNAME}  ${XMC_PASSWORD}
 
