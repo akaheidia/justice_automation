@@ -37,6 +37,7 @@ filter_clear_all_icon = "xpath://mat-icon[@class='mat-icon notranslate ei ei-cle
 filter_servers_and_sites_panel_title = "xpath://div[contains(text(),'Servers & Sites')]"
 filter_servers_and_sites_panel_expand_icon = "xpath://div[contains(text(),'Servers & Sites')]/mat-icon[contains(@class, 'arrow_right')]"
 filter_servers_and_sites_panel_collapse_icon = "xpath://div[contains(text(),'Servers & Sites')]/mat-icon[contains(@class, 'arrow_down')]"
+filter_servers_and_sites_panel_refresh_icon = "xpath://div[contains(text(),'Servers & Sites')]/mat-icon[contains(@class, 'refresh-icon')]"
 filter_alarm_severity_panel_title = "xpath://div[contains(text(),'Alarm Severity')]"
 filter_alarm_severity_panel_expand_icon = "xpath://div[contains(text(),'Alarm Severity')]/mat-icon[contains(@class, 'arrow_right')]"
 filter_alarm_severity_panel_collapse_icon = "xpath://div[contains(text(),'Alarm Severity')]/mat-icon[contains(@class, 'arrow_down')]"

@@ -12,6 +12,9 @@ Set Server Filter
     Confirm Filter Panel Visible
     Select Servers and Sites Server Tree Node  ${server}
 
+Refresh Servers and Sites Filter
+    Click Element  ${filter_servers_and_sites_panel_refresh_icon}
+
 Expand Servers and Sites Filter
     ${need_to_expand}=  Run Keyword And Return Status  Element Should Be Visible  ${filter_servers_and_sites_panel_expand_icon}
     Run Keyword If  ${need_to_expand}  Click Element  ${filter_servers_and_sites_panel_expand_icon}
