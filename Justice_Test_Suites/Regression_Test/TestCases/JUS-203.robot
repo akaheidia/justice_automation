@@ -7,33 +7,24 @@ Documentation   Regression test for JUS-203: resync message when justice starts 
 
 Suite Teardown  Close All Connections
 
-*** Variables ***
-${site_name}    NEW SITE
-${device_ip}    10.54.142.12
 
 *** Test Cases ***
-Resync Test
-    Disconnect From RabbitMQ  ${XMC_HOST_IP}
-    sleep  30 seconds
-    Reconnect To RabbitMQ  ${XMC_HOST_IP}
-    sleep  30 seconds
+Run Resync Test
+    SSH To Justice Server  ${JUS_HOST_IP}  ${JUS_USERNAME}  ${JUS_PASSWORD}
+    ${written}=  Write  /root/scripts/synctest.sh ${XMC_HOST_IP}
+    Log  ${written}
+    sleep  60 seconds
+    ${stdout}=  Read Until  Expecting reconnect...
+    Log  ${stdout}
+    Should Contain  ${stdout}  Expecting reconnect...
+    Close SSH Connection
+
+Confirm Resync Messages
+    sleep  60 seconds
     Confirm XMC Resync Started    ${XMC_HOST_IP}  ${XMC_USERNAME}  ${XMC_PASSWORD}
     Confirm XMC Resync Completed  ${XMC_HOST_IP}  ${XMC_USERNAME}  ${XMC_PASSWORD}
 
 *** Keywords ***
-Disconnect From RabbitMQ
-    [Arguments]  ${xmc}
-    SSH To Justice Server  ${JUS_HOST_IP}  ${JUS_USERNAME}  ${JUS_PASSWORD}
-    Execute Command  iptables -I FORWARD -s ${xmc} -j DROP
-    Close SSH Connection
-
-Reconnect To RabbitMQ
-    [Arguments]  ${xmc}
-    SSH To Justice Server  ${JUS_HOST_IP}  ${JUS_USERNAME}  ${JUS_PASSWORD}
-    Execute Command  iptables -D FORWARD -s ${xmc} -j DROP
-    Close SSH Connection
-    sleep  10 seconds
-
 SSH To Justice Server
     [Arguments]  ${host}  ${user}  ${pwd}
     ${login_output}=  Open SSH Connection and Log In  ${host}  ${user}  ${pwd}
