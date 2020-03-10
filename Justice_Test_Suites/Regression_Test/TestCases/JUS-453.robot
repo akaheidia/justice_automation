@@ -2,7 +2,7 @@
 Library   SeleniumLibrary
 Resource  ../Resources/AllResources.robot
 
-Documentation    Regression test for JUS-44=53: Adjust default password for XMC datapump to match default in Justice.
+Documentation    Regression test for JUS-453: Adjust default password for XMC datapump to match default in Justice.
 
 Suite Setup     XMC Open Browser and Log In  ${XMC_URL}  ${BROWSER}  ${XMC_USERNAME}  ${XMC_PASSWORD}
 Suite Teardown  XMC Log Out and Close Browser
