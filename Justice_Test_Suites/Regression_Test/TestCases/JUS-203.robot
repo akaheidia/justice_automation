@@ -9,16 +9,21 @@ Suite Teardown  Close All Connections
 
 
 *** Test Cases ***
-Run Resync Test
+Disconnect From RabbitMQ
     SSH To Justice Server  ${JUS_HOST_IP}  ${JUS_USERNAME}  ${JUS_PASSWORD}
-    ${written}=  Write  /root/scripts/synctest.sh ${XMC_HOST_IP}
+    Write  iptables -I FORWARD -s ${XMC_HOST_IP} -j DROP
+    Write  docker exec -i -t justice_rabbitmq_1 rabbitmqctl close_connection "`docker exec -i -t justice_rabbitmq_1 rabbitmqctl list_connections pid peer_host | grep ${XMC_HOST_IP} | awk '{print ${XMC_HOST_IP}}'`" closing
+    Write  echo "XMC disconnected and IP Tables set to block XMC."
     sleep  60 seconds
-    ${stdout}=  Read Until  Expecting reconnect...
-    Should Contain  ${stdout}  Expecting reconnect...
+    Close SSH Connection
+
+Reconnect To RabbitMQ
+    SSH To Justice Server  ${JUS_HOST_IP}  ${JUS_USERNAME}  ${JUS_PASSWORD}
+    Write  iptables -D FORWARD -s ${XMC_HOST_IP} -j DROP
     Close SSH Connection
 
 Confirm Resync Messages
-    sleep  30 seconds
+    sleep  60 seconds
     Confirm XMC Resync Started    ${XMC_HOST_IP}  ${XMC_USERNAME}  ${XMC_PASSWORD}
     Confirm XMC Resync Completed  ${XMC_HOST_IP}  ${XMC_USERNAME}  ${XMC_PASSWORD}
 
