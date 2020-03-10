@@ -24,6 +24,17 @@ Confirm Monitor Page Loaded
 
 Confirm Reports Page Loaded
     Page Should Contain Element  ${reports_page_title}
+    Select Frame  xpath://iframe
+    Page Should Contain Element  ${reports_sidebar_menu_button}
+    Page Should Contain Element  ${reports_add_button}
+    Unselect Frame
 
 Confirm Settings Page Loaded
     Page Should Contain Element  ${settings_page_title}
+
+Confirm Monitor Page Not Loaded
+    ${orig_wait}=  Set Selenium Implicit Wait  1 second
+    Page Should Not Contain Element  ${monitor_page_title}
+    Page Should Not Contain Element  ${monitor_map_slider}
+    Page Should Not Contain Element  ${monitor_list_slider}
+    Set Selenium Implicit Wait  ${orig_wait}
