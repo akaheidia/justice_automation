@@ -24,6 +24,7 @@ Confirm Monitor Page Loaded
 
 Confirm Reports Page Loaded
     Page Should Contain Element  ${reports_page_title}
+    sleep  1 second
     Select Frame  xpath://iframe
     Page Should Contain Element  ${reports_sidebar_menu_button}
     Page Should Contain Element  ${reports_add_button}
