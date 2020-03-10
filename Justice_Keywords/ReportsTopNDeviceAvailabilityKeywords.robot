@@ -11,7 +11,7 @@ Confirm Top N Device Availability Report Page Title
     Select Frame  xpath://iframe
     Select Frame  xpath://iframe[@id='resource']
 
-    Page Should Contain Element  ${reports_device_availability_page_title}
+    Page Should Contain Element  ${reports_top_device_availability_page_title}
 
     Unselect Frame
     Unselect Frame
