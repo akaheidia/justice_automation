@@ -105,7 +105,9 @@ Confirm File Contents
     Wait Until Created  ${DOWNLOADS_DIR}/${filename}
     OperatingSystem.File Should Exist   ${DOWNLOADS_DIR}/${filename}
     ${file_contents}=  OperatingSystem.Get File  ${DOWNLOADS_DIR}/${filename}
-    Should Contain  ${file_contents}  GMT-0500
+    Should Contain  ${file_contents}  GMT
+    Should Contain  ${file_contents}  (Eastern
+    Should Contain  ${file_contents}  Time)
 
 Remove File
     [Arguments]  ${filename}
