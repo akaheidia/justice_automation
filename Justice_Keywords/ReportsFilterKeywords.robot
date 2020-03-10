@@ -36,3 +36,23 @@ Confirm Reports Filter Panel Not Visible
     Select Frame  xpath://iframe
     Page Should Contain Element  ${reports_filter_panel_hidden}
     Unselect Frame
+
+Set Reports Filter Time Range
+    [Arguments]  ${value}
+    Select Frame  xpath://iframe
+    Page Should Contain Element  ${reports_filter_panel_time_range_field}
+    Select From List By Label  ${reports_filter_panel_time_range_field}  ${value}
+    Unselect Frame
+
+Confirm Reports Filter Time Range Value
+    [Arguments]  ${value}
+    Select Frame  xpath://iframe
+    Page Should Contain Element  ${reports_filter_panel_time_range_field}
+    List Selection Should Be  ${reports_filter_panel_time_range_field}  ${value}
+    Unselect Frame
+
+Apply Reports Filter
+    Select Frame  xpath://iframe
+    Page Should Contain Element  ${reports_filter_panel_apply_button}
+    Click Element  ${reports_filter_panel_apply_button}
+    Unselect Frame

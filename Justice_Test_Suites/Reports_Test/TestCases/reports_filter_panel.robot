@@ -15,6 +15,15 @@ Confirm Filter Panel Show and Hide Functionality
     Hide Reports Filter Panel
     Confirm Reports Filter Panel Not Visible
 
+Change Time Range to Last Hour
+    Show Reports Filter Panel
+    Confirm Reports Filter Panel Visible
+    Confirm Reports Filter Time Range Value  Last 24 Hours
+    Set Reports Filter Time Range  Last Hour
+    Apply Reports Filter
+    Confirm Reports Filter Time Range Value  Last Hour
+    Hide Reports Filter Panel
+
 *** Keywords ***
 Log In and Navigate to Reports
     Open Browser and Log In  ${JUS_URL}  ${BROWSER}  ${JUS_USERNAME}  ${JUS_PASSWORD}

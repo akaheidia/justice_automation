@@ -95,6 +95,8 @@ reports_menu_tree = "id:menuTreeSide"
 reports_filter_icon = "xpath://span[@class='btn btn-filter ti-filter']"
 reports_filter_panel_shown = "xpath://td[@class='master-report-filter'][not(contains(@style, 'display: none'))]"
 reports_filter_panel_hidden = "xpath://td[@class='master-report-filter'][contains(@style, 'display: none')]"
+reports_filter_panel_time_range_field = "id:period"
+reports_filter_panel_apply_button = "xpath://a[@class='btn btn-primary'][text()='Apply']"
 
 # Reports Page Tree Nodes
 reports_tree_reports_node = "xpath://span[text()='Reports']"
