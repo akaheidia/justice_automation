@@ -28,6 +28,7 @@ Confirm Reports Page Loaded
     Select Frame  xpath://iframe
     Page Should Contain Element  ${reports_sidebar_menu_button}
     Page Should Contain Element  ${reports_add_button}
+    Page Should Contain Element  ${reports_filter_icon}
     Unselect Frame
 
 Confirm Settings Page Loaded

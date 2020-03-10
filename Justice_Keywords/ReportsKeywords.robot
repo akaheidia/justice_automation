@@ -6,9 +6,12 @@ Documentation    Keywords specific to the Reports page.
 
 *** Keywords ***
 
-Navigate to Reports and Open Reports Menu
+Navigate to Reports
     Click Reports
     Confirm Reports Page Loaded
+
+Navigate to Reports and Open Reports Menu
+    Navigate to Reports
     Open Reports Sidebar Menu
     Expand Reports Tree Reports Node
 
@@ -163,6 +166,38 @@ Close Reports Sidebar Menu
 Click Add Button
     Select Frame  xpath://iframe
     Click Element  ${reports_add_button}
+    Unselect Frame
+
+
+Click Filter Button
+    Select Frame  xpath://iframe
+    Click Element  ${reports_filter_icon}
+    Unselect Frame
+
+Show Reports Filter Panel
+    ${orig_wait}=  Set Selenium Implicit Wait  1 second
+    Select Frame  xpath://iframe
+    ${need_to_show}=  Run Keyword And Return Status  Element Should Not Be Visible  ${reports_filter_panel_shown}
+    Run Keyword If  ${need_to_show}  Click Element  ${reports_filter_icon}
+    ...    ELSE  Log  Filter Panel Already Shown
+    Unselect Frame
+    Set Selenium Implicit Wait  ${orig_wait}
+
+Hide Reports Filter Panel
+    Select Frame  xpath://iframe
+    ${need_to_hide}=  Run Keyword And Return Status  Element Should Be Visible  ${reports_filter_panel_shown}
+    Run Keyword If  ${need_to_hide}  Click Element  ${reports_filter_icon}
+    ...    ELSE  Log  Filter Panel Already Hidden
+    Unselect Frame
+
+Confirm Reports Filter Panel Visible
+    Select Frame  xpath://iframe
+    Page Should Contain Element  ${reports_filter_panel_shown}
+    Unselect Frame
+
+Confirm Reports Filter Panel Not Visible
+    Select Frame  xpath://iframe
+    Page Should Contain Element  ${reports_filter_panel_hidden}
     Unselect Frame
 
 

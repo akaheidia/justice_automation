@@ -91,6 +91,11 @@ reports_menu_table = "id:rdMenuTable"
 reports_menu_tree = "id:menuTreeSide"
 # reports_menu_tree = "xpath://span[@id='menuTreeSide']"
 
+# Reports Filter Panel
+reports_filter_icon = "xpath://span[@class='btn btn-filter ti-filter']"
+reports_filter_panel_shown = "xpath://td[@class='master-report-filter'][not(contains(@style, 'display: none'))]"
+reports_filter_panel_hidden = "xpath://td[@class='master-report-filter'][contains(@style, 'display: none')]"
+
 # Reports Page Tree Nodes
 reports_tree_reports_node = "xpath://span[text()='Reports']"
 reports_tree_site_node = "xpath://span[text()='Site']"
