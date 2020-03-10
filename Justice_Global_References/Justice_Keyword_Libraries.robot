@@ -11,6 +11,7 @@ Resource   ../Justice_Keywords/MonitorMapKeywords.robot
 Resource   ../Justice_Keywords/ReportsKeywords.robot
 Resource   ../Justice_Keywords/ReportsDeviceAvailabilityKeywords.robot
 Resource   ../Justice_Keywords/ReportsDeviceOverviewKeywords.robot
+Resource   ../Justice_Keywords/ReportsFilterKeywords.robot
 Resource   ../Justice_Keywords/ReportsMetricKeywords.robot
 Resource   ../Justice_Keywords/ReportsMetricPortUtilizationKeywords.robot
 Resource   ../Justice_Keywords/ReportsMetricRxBandwidthKeywords.robot
