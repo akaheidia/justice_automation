@@ -102,7 +102,7 @@ SSH To XMC Server
     Should Contain    ${login_output}  Management Center
 
 Confirm XMC Resync Started
-    [Arguments]  ${ip}  ${user}  ${pwd}
+    [Arguments]  ${ip}  ${user}  ${pwd}  ${server_log}
     SSH To XMC Server  ${ip}  ${user}  ${pwd}  ${server_log}
 
     Write  tail -f ${server_log}
