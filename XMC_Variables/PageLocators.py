@@ -67,7 +67,13 @@ xmc_options_xmcdatapump_user = "xpath://input[@name='rabbitmqUserName']"
 xmc_options_xmcdatapump_password = "xpath://input[@name='rabbitmqPassword']"
 xmc_options_xmcdatapump_password_eye_show = "//div[@title='Click to show in clear text']"
 xmc_options_xmcdatapump_password_eye_hide = "//div[@title='Click to hide text']"
-
+xmc_options_xmcdatapump_action_queue_add_delay = "//input[@name='obActionQueueAddDelay']"
+# xmc_options_xmcdatapump_action_queue_add_delay_units = "//input[@name='obActionQueueAddDelay']"
+xmc_options_xmcdatapump_action_queue_service_period = "//input[@name='obActionQueueServicePeriod']"
+# xmc_options_xmcdatapump_action_queue_service_period_units = "//input[@name='obActionQueueServicePeriod']"
+xmc_options_xmcdatapump_max_action_queue_size = "//input[@name='obMaxActionQueueSize']"
+xmc_options_xmcdatapump_max_actions_queueable = "//input[@name='obMaxActionsQueueableServicePeriod']"
+xmc_options_xmcdatapump_max_actions_serviced = "//input[@name='obMaxActionsServicedPerPeriod']"
 
 ## Toolbar Buttons
 xmc_devices_toolbar_add_device = "xpath://span[@class='x-btn-inner x-btn-inner-default-toolbar-small'][text()='Add Device...']"
