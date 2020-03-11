@@ -8,7 +8,7 @@ Suite Setup     XMC Open Browser and Log In  ${XMC_URL}  ${BROWSER}  ${XMC_USERN
 Suite Teardown  XMC Log Out and Close Browser
 
 *** Test Cases ***
-Confirm XMC Data Pump Options Default Value
+Confirm XMC Data Pump Options Default Values
     XMC Navigate To Administration Page
     XMC Click Options Tab
     XMC Confirm Options Tab Loaded
