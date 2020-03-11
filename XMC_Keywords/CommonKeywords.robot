@@ -29,3 +29,9 @@ XMC Log Out
     Page Should Contain Element  ${xmc_main_context_icon_logout_menu}
     Click Element  ${xmc_main_context_icon_logout_menu}
     XMC Confirm Successful Logout
+
+XMC Confirm Page Does Not Contain Text
+    [Arguments]  ${text}
+    ${orig_wait}=  Set Selenium Implicit Wait  1 second
+    Page Should Not Contain  ${text}
+    Set Selenium Implicit Wait  ${orig_wait}

@@ -48,10 +48,26 @@ xmc_admin_options_tab = "xpath://span[@class='x-tab-inner x-tab-inner-extr-main-
 
 # Administration> Options Page
 xmc_options_tree_title = "xpath://span[@class='x-column-header-text-inner'][text() = 'Options']"
+xmc_options_restore_defaults_btn = "xpath://span[text()='Restore Defaults']"
+xmc_options_reset_btn = "xpath://span[text()='Reset']"
+xmc_options_save_btn = "xpath://span[text()='Save']"
+xmc_options_restore_defaults_btn_disabled = "xpath://span[text()='Restore Defaults']//ancestor::a[contains(@class, 'x-btn-disabled')]"
+xmc_options_restore_defaults_btn_enabled = "xpath://span[text()='Restore Defaults']//ancestor::a[not(contains(@class, 'x-btn-disabled'))]"
+xmc_options_reset_btn_disabled = "xpath://span[text()='Reset']//ancestor::a[contains(@class, 'x-btn-disabled')]"
+xmc_options_reset_btn_enabled = "xpath://span[text()='Reset']//ancestor::a[not(contains(@class, 'x-btn-disabled'))]"
+xmc_options_save_btn_disabled = "xpath://span[text()='Save']//ancestor::a[contains(@class, 'x-btn-disabled')]"
+xmc_options_save_btn_enabled = "xpath://span[text()='Save']//ancestor::a[not(contains(@class, 'x-btn-disabled'))]"
+
+# XMC Data Pump Options
+xmc_options_xmcdatapump_momenabled = "xpath://input[@name='momEnabled']"
 xmc_options_xmcdatapump_domainnodetype = "xpath://input[@name='domainNodeType']"
+xmc_options_xmcdatapump_host = "xpath://input[@name='rabbitmqHost']"
+xmc_options_xmcdatapump_port = "xpath://input[@name='rabbitmqPort']"
+xmc_options_xmcdatapump_user = "xpath://input[@name='rabbitmqUserName']"
 xmc_options_xmcdatapump_password = "xpath://input[@name='rabbitmqPassword']"
 xmc_options_xmcdatapump_password_eye_show = "//div[@title='Click to show in clear text']"
 xmc_options_xmcdatapump_password_eye_hide = "//div[@title='Click to hide text']"
+
 
 ## Toolbar Buttons
 xmc_devices_toolbar_add_device = "xpath://span[@class='x-btn-inner x-btn-inner-default-toolbar-small'][text()='Add Device...']"
