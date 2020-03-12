@@ -39,6 +39,13 @@ Print Element Count
     ${count}=  Get Element Count  ${element}
     Log To Console  Number of Elements: ${count}
 
+Confirm Page Does Not Contain Text
+    [Arguments]  ${text}
+    ${orig_wait}=  Set Selenium Implicit Wait  1 second
+    Page Should Not Contain  ${text}
+    Set Selenium Implicit Wait  ${orig_wait}
+
+
 Open SSH Connection and Log In
     [Arguments]  ${host}  ${user}  ${pwd}
     Open Connection   ${host}
@@ -49,8 +56,9 @@ Open SSH Connection and Log In
 Close SSH Connection
     Close All Connections
 
-Confirm Page Does Not Contain Text
-    [Arguments]  ${text}
-    ${orig_wait}=  Set Selenium Implicit Wait  1 second
-    Page Should Not Contain  ${text}
-    Set Selenium Implicit Wait  ${orig_wait}
+Write Command and Log Output
+    [Arguments]  ${prompt}  ${command}
+    Set Client Configuration  prompt=${prompt}
+    Write  ${command}
+    ${output}=  Read Until Prompt
+    Log To Console  ${output}
