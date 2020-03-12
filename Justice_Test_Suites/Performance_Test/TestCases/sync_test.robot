@@ -1,5 +1,6 @@
 *** Settings ***
 Library   OperatingSystem
+Library   DateTime
 #Library   SSHLibrary
 Library   SeleniumLibrary
 Resource  ../Resources/AllResources.robot
@@ -7,7 +8,6 @@ Resource  ../Resources/AllResources.robot
 Documentation   Performance Test: Resync.
 
 Suite Teardown  Clean Up Resync Test
-#Suite Teardown    Close All Connections
 
 *** Variables ***
 ${prompt}          $
@@ -33,9 +33,9 @@ Copy Docker Metrics Script To Current Directory
     OperatingSystem.File Should Exist  ${DOCKER_METRICS_REQUEST_TEMPLATE}
 
 Gather Baseline Metrics
-    Run  ./${DOCKER_METRICS_SCRIPT} ${JUS_HOST_IP} > baseline.csv
+    Run  ./${DOCKER_METRICS_SCRIPT} ${JUS_HOST_IP} > pretest.csv
     sleep  2 seconds
-    OperatingSystem.File Should Exist  baseline.csv
+    OperatingSystem.File Should Exist  pretest.csv
 
 Disconnect XMC From Justice
     Disconnect From RabbitMQ  ${JUS_HOST_IP}  ${JUS_USERNAME}  ${JUS_PASSWORD}  ${xmc_ip}  ${prompt}
@@ -104,11 +104,21 @@ Gather Post-Test Metrics
     sleep  2 seconds
     OperatingSystem.File Should Exist  posttest.csv
 
+Save Metric Files
+    Create Directory  Metrics
+    ${date}=  Get Current Date  exclude_millis=yes
+    ${convert}=  Convert Date  ${date}  result_format=%m-%d-%Y_%H:%M
+    Log To Console  ${convert}
+    Run  cat pretest.csv > "pretest-${convert}.csv"
+    Run  cat posttest.csv > "posttest-${convert}.csv"
+    Move Files  *-${convert}.csv  Metrics
+    Run  rm *.csv
 
 *** Keywords ***
 Clean Up Resync Test
     Delete Test Device
     Delete Test Site
+    Delete Scripts
     Close All Connections
 
 Delete Test Device
@@ -132,3 +142,11 @@ Delete Test Site
     sleep  2 seconds
     XMC Confirm Site Does Not Exist  ${site_name}
     XMC Log Out and Close Browser
+
+Delete Docker Metrics Scripts
+    Run  rm docker_metrics.py
+    Run  rm request.template
+    Run  rm request.json
+    File Should Not Exist  docker_metrics.py
+    File Should Not Exist  request.template
+    File Should Not Exist  request.json
