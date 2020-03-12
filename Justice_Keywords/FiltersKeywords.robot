@@ -43,6 +43,7 @@ Collapse Site Availability Filter
 Clear All Filters
     Show Filter Panel
     Click Element  ${filter_clear_all_icon}
+    sleep  2 seconds
 
 Confirm Servers and Sites Filter Expanded
     Element Should Be Visible  ${filter_servers_and_sites_panel_collapse_icon}

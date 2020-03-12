@@ -5,7 +5,7 @@ Resource  ../Resources/AllResources.robot
 
 Documentation   Performance Test: Resync.
 
-Suite Teardown  Clean Up Resync Test
+#Suite Teardown  Clean Up Resync Test
 
 
 *** Variables ***
@@ -83,7 +83,7 @@ Confirm Justice Updated
     Refresh Servers and Sites Filter
     Expand Servers and Sites Tree Node  ${xmc_host}
     Confirm Filter Panel Contains Site  ${site_name}
-    Select Servers and Sites Server Tree Node  ${xmc_host}
+    Clear All Filters
     Select Servers and Sites Site Tree Node  ${site_name}
     Confirm Device In Table  ${device_ip}
     Log Out and Close Browser
