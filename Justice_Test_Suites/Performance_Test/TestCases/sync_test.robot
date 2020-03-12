@@ -26,6 +26,9 @@ ${xmc_log}         ${XMC_SERVER_LOG}
 #${xmc_log}         ${XMC_2_SERVER_LOG}
 
 *** Test Cases ***
+Gather Baseline Metrics
+    Log To Console  TO DO: GATHER BASELINE METRICS!
+
 Disconnect XMC From Justice
     Disconnect From RabbitMQ  ${JUS_HOST_IP}  ${JUS_USERNAME}  ${JUS_PASSWORD}  ${xmc_ip}  ${prompt}
     XMC Confirm Server Log Message Output  ${xmc_ip}  ${xmc_user}  ${xmc_pwd}  ${xmc_log}  No connection to the remote server.
@@ -87,6 +90,9 @@ Confirm Justice Updated
     Select Servers and Sites Site Tree Node  ${site_name}
     Confirm Device In Table  ${device_ip}
     Log Out and Close Browser
+
+Gather Post-Test Metrics
+    Log To Console  TO DO: GATHER POST TEST METRICS!
 
 
 *** Keywords ***
