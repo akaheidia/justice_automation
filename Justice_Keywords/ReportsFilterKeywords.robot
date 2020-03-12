@@ -6,6 +6,14 @@ Documentation    Keywords specific to the Filter Panel of the Reports page.
 
 *** Keywords ***
 
+Change Report Time Range to Last Hour
+    Show Reports Filter Panel
+    Confirm Reports Filter Panel Visible
+    Set Reports Filter Time Range  Last Hour
+    Apply Reports Filter
+    Confirm Reports Filter Time Range Value  Last Hour
+    Hide Reports Filter Panel
+
 Click Filter Button
     Select Frame  xpath://iframe
     Click Element  ${reports_filter_icon}

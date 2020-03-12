@@ -29,11 +29,3 @@ Confirm Wireless Controller Present In Device Availability Report
     sleep  2 seconds
     Site Availability Drill Into Site  ${site}
     Confirm Device Availability Report Contains Value  ${ip}
-
-Change Report Time Range to Last Hour
-    Show Reports Filter Panel
-    Confirm Reports Filter Panel Visible
-    Set Reports Filter Time Range  Last Hour
-    Apply Reports Filter
-    Confirm Reports Filter Time Range Value  Last Hour
-    Hide Reports Filter Panel
