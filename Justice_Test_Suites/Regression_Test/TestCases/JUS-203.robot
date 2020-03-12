@@ -7,24 +7,33 @@ Documentation   Regression test for JUS-203: resync message when justice starts 
 
 Suite Teardown  Close All Connections
 
+*** Variables ***
+${prompt}  $
 
 *** Test Cases ***
 Disconnect From RabbitMQ
     SSH To Justice Server  ${JUS_HOST_IP}  ${JUS_USERNAME}  ${JUS_PASSWORD}
-    Write  iptables -I FORWARD -s ${XMC_HOST_IP} -j DROP
-    Write  docker exec -i -t justice_rabbitmq_1 rabbitmqctl close_connection "`docker exec -i -t justice_rabbitmq_1 rabbitmqctl list_connections pid peer_host | grep ${XMC_HOST_IP} | awk '{print ${XMC_HOST_IP}}'`" closing
-    Write  echo "XMC disconnected and IP Tables set to block XMC."
+
+    Write Command and Log Output  ${prompt}  iptables -I FORWARD -s ${XMC_HOST_IP} -j DROP
+    Write Command and Log Output  ${prompt}  iptables --list
+
+    Write Command and Log Output  ${prompt}  docker exec -i -t justice_rabbitmq_1 rabbitmqctl close_connection "`docker exec -i -t justice_rabbitmq_1 rabbitmqctl list_connections pid peer_host | grep ${XMC_HOST_IP} | awk '{print $1}'`" closing
+
+    Write Command and Log Output  ${prompt}  echo "IP Tables set to block XMC, and XMC disconnected from RabbitMQ...  sleeping 60 seconds."
     sleep  60 seconds
+
     Close SSH Connection
 
 Reconnect To RabbitMQ
     SSH To Justice Server  ${JUS_HOST_IP}  ${JUS_USERNAME}  ${JUS_PASSWORD}
-    Write  iptables -D FORWARD -s ${XMC_HOST_IP} -j DROP
+    Write Command and Log Output  ${prompt}  iptables -D FORWARD -s ${XMC_HOST_IP} -j DROP
+    Write Command and Log Output  ${prompt}  iptables --list
     Close SSH Connection
 
 Confirm Resync Messages
-    sleep  60 seconds
+    sleep  30 seconds
     Confirm XMC Resync Started    ${XMC_HOST_IP}  ${XMC_USERNAME}  ${XMC_PASSWORD}
+    sleep  30 seconds
     Confirm XMC Resync Completed  ${XMC_HOST_IP}  ${XMC_USERNAME}  ${XMC_PASSWORD}
 
 *** Keywords ***
