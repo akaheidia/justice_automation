@@ -1,12 +1,13 @@
 *** Settings ***
-Library   SSHLibrary
+Library   OperatingSystem
+#Library   SSHLibrary
 Library   SeleniumLibrary
 Resource  ../Resources/AllResources.robot
 
 Documentation   Performance Test: Resync.
 
-#Suite Teardown  Clean Up Resync Test
-
+Suite Teardown  Clean Up Resync Test
+#Suite Teardown    Close All Connections
 
 *** Variables ***
 ${prompt}          $
@@ -26,8 +27,15 @@ ${xmc_log}         ${XMC_SERVER_LOG}
 #${xmc_log}         ${XMC_2_SERVER_LOG}
 
 *** Test Cases ***
+Copy Docker Metrics Script To Current Directory
+    Copy Files  ${ROBOT_SCRIPT_DIR}/${DOCKER_METRICS_SCRIPT}  ${ROBOT_SCRIPT_DIR}/${DOCKER_METRICS_REQUEST_TEMPLATE}  .
+    OperatingSystem.File Should Exist  ${DOCKER_METRICS_SCRIPT}
+    OperatingSystem.File Should Exist  ${DOCKER_METRICS_REQUEST_TEMPLATE}
+
 Gather Baseline Metrics
-    Log To Console  TO DO: GATHER BASELINE METRICS!
+    Run  ./${DOCKER_METRICS_SCRIPT} ${JUS_HOST_IP} > baseline.csv
+    sleep  2 seconds
+    OperatingSystem.File Should Exist  baseline.csv
 
 Disconnect XMC From Justice
     Disconnect From RabbitMQ  ${JUS_HOST_IP}  ${JUS_USERNAME}  ${JUS_PASSWORD}  ${xmc_ip}  ${prompt}
@@ -92,7 +100,9 @@ Confirm Justice Updated
     Log Out and Close Browser
 
 Gather Post-Test Metrics
-    Log To Console  TO DO: GATHER POST TEST METRICS!
+    Run  ./${DOCKER_METRICS_SCRIPT} ${JUS_HOST_IP} > posttest.csv
+    sleep  2 seconds
+    OperatingSystem.File Should Exist  posttest.csv
 
 
 *** Keywords ***
