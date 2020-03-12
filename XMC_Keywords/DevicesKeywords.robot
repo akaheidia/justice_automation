@@ -86,6 +86,17 @@ XMC Delete Site Click No
     Click Element  ${xmc_delete_site_dialog_no_btn}
 
 
+XMC Confirm Site Exists
+    [Arguments]  ${site}
+    Page Should Contain Element  xpath://span[contains(@class,'x-tree-node-text')]//span[contains(text(),'${site}')]
+
+XMC Confirm Site Does Not Exist
+    [Arguments]  ${site}
+    ${orig_wait}=  Set Selenium Implicit Wait  1 second
+    Page Should Not Contain Element  xpath://span[contains(@class,'x-tree-node-text')]//span[contains(text(),'${site}')]
+    Set Selenium Implicit Wait  ${orig_wait}
+
+
 XMC Create Device
     [Arguments]  ${device_ip}  ${device_profile}  ${device_nickname}
     XMC Click Add Device

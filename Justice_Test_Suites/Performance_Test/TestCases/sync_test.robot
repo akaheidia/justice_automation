@@ -7,7 +7,9 @@ Documentation   Performance Test: Resync.
 
 Suite Teardown  Clean Up Resync Test
 
+
 *** Variables ***
+${prompt}          $
 ${site_name}       SYNC TEST SITE
 ${device_ip}       10.54.142.12
 ${xmc_ip}          ${XMC_HOST_IP}
@@ -24,13 +26,9 @@ ${xmc_log}         ${XMC_SERVER_LOG}
 #${xmc_log}         ${XMC_2_SERVER_LOG}
 
 *** Test Cases ***
-Disconnect From RabbitMQ
-    SSH To Justice Server  ${JUS_HOST_IP}  ${JUS_USERNAME}  ${JUS_PASSWORD}
-    Write  iptables -I FORWARD -s ${xmc_ip} -j DROP
-    Write  docker exec -i -t justice_rabbitmq_1 rabbitmqctl close_connection "`docker exec -i -t justice_rabbitmq_1 rabbitmqctl list_connections pid peer_host | grep ${XMC_HOST_IP} | awk '{print ${XMC_HOST_IP}}'`" closing
-    Write  echo "XMC disconnected and IP Tables set to block XMC."
-    sleep  60 seconds
-    Close SSH Connection
+Disconnect XMC From Justice
+    Disconnect From RabbitMQ  ${JUS_HOST_IP}  ${JUS_USERNAME}  ${JUS_PASSWORD}  ${xmc_ip}  ${prompt}
+    XMC Confirm Server Log Message Output  ${xmc_ip}  ${xmc_user}  ${xmc_pwd}  ${xmc_log}  No connection to the remote server.
 
 Create Site in XMC
     XMC Open Browser and Log In  ${xmc_test_url}  ${BROWSER}  ${xmc_user}  ${xmc_pwd}
@@ -38,6 +36,8 @@ Create Site in XMC
     XMC Click Devices Tab
     XMC Confirm Devices Tab Loaded
     XMC Create Site  ${site_name}
+    sleep  2 seconds
+    XMC Confirm Site Exists  ${site_name}
     XMC Log Out and Close Browser
 
 Create Device in XMC
@@ -65,15 +65,14 @@ Confirm Justice Not Updated
     Confirm Device Not In Table  ${device_ip}
     Log Out and Close Browser
 
-Reconnect To RabbitMQ
-    SSH To Justice Server  ${JUS_HOST_IP}  ${JUS_USERNAME}  ${JUS_PASSWORD}
-    Write  iptables -D FORWARD -s ${xmc_ip} -j DROP
-    Close SSH Connection
-    sleep  10 seconds
+Reconnect XMC To Justice
+    Reconnect To RabbitMQ  ${JUS_HOST_IP}  ${JUS_USERNAME}  ${JUS_PASSWORD}  ${xmc_ip}  ${prompt}
+    sleep  30 seconds
 
-Confirm Resync Messages
-    Confirm XMC Resync Started    ${xmc_ip}  ${xmc_user}  ${xmc_pwd}  ${xmc_log}
-    Confirm XMC Resync Completed  ${xmc_ip}  ${xmc_user}  ${xmc_pwd}  ${xmc_log}
+Confirm XMC Resync Messages
+    XMC Confirm Server Log Message Output  ${xmc_ip}  ${xmc_user}  ${xmc_pwd}  ${xmc_log}  Starting Resync...
+    sleep  30 seconds
+    XMC Confirm Server Log Message Output  ${xmc_ip}  ${xmc_user}  ${xmc_pwd}  ${xmc_log}  Resync Completed successfully.
 
 Confirm Justice Updated
     Open Browser and Log In  ${JUS_URL}  ${BROWSER}  ${JUS_USERNAME}  ${JUS_PASSWORD}
@@ -91,41 +90,12 @@ Confirm Justice Updated
 
 
 *** Keywords ***
-SSH To Justice Server
-    [Arguments]  ${host}  ${user}  ${pwd}
-    ${login_output}=  Open SSH Connection and Log In  ${host}  ${user}  ${pwd}
-    Should Contain    ${login_output}  Justice Server Appliance
-
-SSH To XMC Server
-    [Arguments]  ${host}  ${user}  ${pwd}
-    ${login_output}=  Open SSH Connection and Log In  ${host}  ${user}  ${pwd}
-    Should Contain    ${login_output}  Management Center
-
-Confirm XMC Resync Started
-    [Arguments]  ${ip}  ${user}  ${pwd}  ${server_log}
-    SSH To XMC Server  ${ip}  ${user}  ${pwd}  ${server_log}
-
-    Write  tail -f ${server_log}
-    ${output}=  Read Until  Starting Resync...
-    Should Contain  ${output}  Starting Resync...
-
-    Close SSH Connection
-
-Confirm XMC Resync Completed
-    [Arguments]  ${ip}  ${user}  ${pwd}  ${server_log}
-    SSH To XMC Server  ${ip}  ${user}  ${pwd}
-
-    Write  tail -f ${server_log}
-    ${output}=  Read Until   Resync Completed successfully.
-    Should Contain  ${output}  Resync Completed successfully.
-
-    Close SSH Connection
-
 Clean Up Resync Test
-    Clean Up XMC
+    Delete Test Device
+    Delete Test Site
     Close All Connections
 
-Clean Up XMC
+Delete Test Device
     XMC Open Browser and Log In  ${xmc_test_url}  ${BROWSER}  ${xmc_user}  ${xmc_pwd}
     XMC Navigate To Network Page
     XMC Click Devices Tab
@@ -135,5 +105,14 @@ Clean Up XMC
     XMC Delete Device  ${device_ip}
     XMC Refresh Devices Table
     XMC Confirm Device Not In Table  ${device_ip}
+    XMC Log Out and Close Browser
+
+Delete Test Site
+    XMC Open Browser and Log In  ${xmc_test_url}  ${BROWSER}  ${xmc_user}  ${xmc_pwd}
+    XMC Navigate To Network Page
+    XMC Click Devices Tab
+    XMC Confirm Devices Tab Loaded
     XMC Delete Site  ${site_name}
+    sleep  2 seconds
+    XMC Confirm Site Does Not Exist  ${site_name}
     XMC Log Out and Close Browser
