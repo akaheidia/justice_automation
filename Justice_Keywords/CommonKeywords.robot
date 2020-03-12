@@ -62,3 +62,36 @@ Write Command and Log Output
     Write  ${command}
     ${output}=  Read Until Prompt
     Log To Console  ${output}
+
+
+SSH To Justice Server
+    [Arguments]  ${host}  ${user}  ${pwd}
+    ${login_output}=  Open SSH Connection and Log In  ${host}  ${user}  ${pwd}
+    Should Contain    ${login_output}  Justice Server Appliance
+
+SSH To XMC Server
+    [Arguments]  ${host}  ${user}  ${pwd}
+    ${login_output}=  Open SSH Connection and Log In  ${host}  ${user}  ${pwd}
+    Should Contain    ${login_output}  Management Center
+
+Disconnect From RabbitMQ
+    [Arguments]  ${jus_ip}  ${jus_user}  ${jus_pwd}  ${xmc_ip}  ${prompt}
+    SSH To Justice Server  ${jus_ip}  ${jus_user}  ${jus_pwd}
+
+    Write Command and Log Output  ${prompt}  iptables -I FORWARD -s ${xmc_ip} -j DROP
+    Write Command and Log Output  ${prompt}  iptables --list
+
+    Write Command and Log Output  ${prompt}  docker exec -i -t justice_rabbitmq_1 rabbitmqctl close_connection "`docker exec -i -t justice_rabbitmq_1 rabbitmqctl list_connections pid peer_host | grep ${xmc_ip} | awk '{print $1}'`" closing
+
+    Write Command and Log Output  ${prompt}  echo "IP Tables set to block XMC, and XMC disconnected from RabbitMQ; sleeping 60 seconds."
+    sleep  60 seconds
+    Close SSH Connection
+
+Reconnect To RabbitMQ
+    [Arguments]  ${jus_ip}  ${jus_user}  ${jus_pwd}  ${xmc_ip}  ${prompt}
+    SSH To Justice Server  ${jus_ip}  ${jus_user}  ${jus_pwd}
+
+    Write Command and Log Output  ${prompt}  iptables -D FORWARD -s ${xmc_ip} -j DROP
+    Write Command and Log Output  ${prompt}  iptables --list
+
+    Close SSH Connection
