@@ -8,47 +8,23 @@ Documentation   Regression test for JUS-203: resync message when justice starts 
 Suite Teardown  Close All Connections
 
 *** Variables ***
-${prompt}  $
+${prompt}    $
+${jus_ip}    ${JUS_HOST_IP}
+${jus_user}  ${JUS_USERNAME}
+${jus_pwd}   ${JUS_PASSWORD}
+${xmc_ip}    ${XMC_HOST_IP}
+${xmc_user}  ${XMC_USERNAME}
+${xmc_pwd}   ${XMC_PASSWORD}
+${xmc_log}   ${XMC_SERVER_LOG}
 
 *** Test Cases ***
 Confirm Resync Messages on XMC Reconnect
-    Disconnect From RabbitMQ  ${JUS_HOST_IP}  ${JUS_USERNAME}  ${JUS_PASSWORD}  ${XMC_HOST_IP}  ${prompt}
-    Confirm XMC Not Receiving Messages  ${XMC_HOST_IP}  ${XMC_USERNAME}  ${XMC_PASSWORD}
+    Disconnect From RabbitMQ  ${jus_ip}  ${jus_user}  ${jus_pwd}  ${xmc_ip}  ${prompt}
+    XMC Confirm Server Log Message Output  ${xmc_ip}  ${xmc_user}  ${xmc_pwd}  ${xmc_log}  No connection to the remote server.
 
-    Reconnect To RabbitMQ     ${JUS_HOST_IP}  ${JUS_USERNAME}  ${JUS_PASSWORD}  ${XMC_HOST_IP}  ${prompt}
+    Reconnect To RabbitMQ  ${jus_ip}  ${jus_user}  ${jus_pwd}  ${xmc_ip}  ${prompt}
 
     sleep  30 seconds
-    Confirm XMC Resync Started    ${XMC_HOST_IP}  ${XMC_USERNAME}  ${XMC_PASSWORD}
+    XMC Confirm Server Log Message Output  ${xmc_ip}  ${xmc_user}  ${xmc_pwd}  ${xmc_log}  Starting Resync...
     sleep  30 seconds
-    Confirm XMC Resync Completed  ${XMC_HOST_IP}  ${XMC_USERNAME}  ${XMC_PASSWORD}
-
-*** Keywords ***
-Confirm XMC Not Receiving Messages
-    [Arguments]  ${xmc_ip}  ${xmc_user}  ${xmc_pwd}
-    SSH To XMC Server  ${xmc_ip}  ${xmc_user}  ${xmc_pwd}
-
-    Write  tail -f ${XMC_SERVER_LOG}
-    ${output}=  Read Until  No connection to the remote server.
-    Should Contain  ${output}  No connection to the remote server.
-
-    Close SSH Connection
-
-Confirm XMC Resync Started
-    [Arguments]  ${xmc_ip}  ${xmc_user}  ${xmc_pwd}
-    SSH To XMC Server  ${xmc_ip}  ${xmc_user}  ${xmc_pwd}
-
-    Write  tail -n 50 -f ${XMC_SERVER_LOG}
-    ${output}=  Read Until  Starting Resync...
-    Should Contain  ${output}  Starting Resync...
-
-    Close SSH Connection
-
-Confirm XMC Resync Completed
-    [Arguments]  ${xmc_ip}  ${xmc_user}  ${xmc_pwd}
-    SSH To XMC Server  ${xmc_ip}  ${xmc_user}  ${xmc_pwd}
-
-    Write  tail -f ${XMC_SERVER_LOG}
-    ${output}=  Read Until   Resync Completed successfully.
-    Should Contain  ${output}  Resync Completed successfully.
-
-    Close SSH Connection
+    XMC Confirm Server Log Message Output  ${xmc_ip}  ${xmc_user}  ${xmc_pwd}  ${xmc_log}  Resync Completed successfully.
