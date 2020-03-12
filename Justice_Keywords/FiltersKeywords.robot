@@ -14,6 +14,7 @@ Set Server Filter
 
 Refresh Servers and Sites Filter
     Click Element  ${filter_servers_and_sites_panel_refresh_icon}
+    sleep  2 seconds
 
 Expand Servers and Sites Filter
     ${need_to_expand}=  Run Keyword And Return Status  Element Should Be Visible  ${filter_servers_and_sites_panel_expand_icon}
