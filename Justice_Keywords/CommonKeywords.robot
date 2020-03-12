@@ -69,11 +69,6 @@ SSH To Justice Server
     ${login_output}=  Open SSH Connection and Log In  ${host}  ${user}  ${pwd}
     Should Contain    ${login_output}  Justice Server Appliance
 
-SSH To XMC Server
-    [Arguments]  ${host}  ${user}  ${pwd}
-    ${login_output}=  Open SSH Connection and Log In  ${host}  ${user}  ${pwd}
-    Should Contain    ${login_output}  Management Center
-
 Disconnect From RabbitMQ
     [Arguments]  ${jus_ip}  ${jus_user}  ${jus_pwd}  ${xmc_ip}  ${prompt}
     SSH To Justice Server  ${jus_ip}  ${jus_user}  ${jus_pwd}

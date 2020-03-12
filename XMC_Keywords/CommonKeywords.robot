@@ -1,5 +1,6 @@
 *** Settings ***
 Library    SeleniumLibrary
+Library    SSHLibrary
 Resource   ../Justice_Keywords/CommonKeywords.robot
 Resource   ./LoginKeywords.robot
 Variables  ../XMC_Variables/PageLocators.py
@@ -35,3 +36,39 @@ XMC Confirm Page Does Not Contain Text
     ${orig_wait}=  Set Selenium Implicit Wait  1 second
     Page Should Not Contain  ${text}
     Set Selenium Implicit Wait  ${orig_wait}
+
+
+SSH To XMC Server
+    [Arguments]  ${host}  ${user}  ${pwd}
+    ${login_output}=  Open SSH Connection and Log In  ${host}  ${user}  ${pwd}
+    Should Contain    ${login_output}  Management Center
+
+XMC Confirm Server Log Message Output
+    [Arguments]  ${ip}  ${user}  ${pwd}  ${server_log}  ${message}
+    SSH To XMC Server  ${ip}  ${user}  ${pwd}
+
+    Write  tail -n 50 -f ${server_log}
+    ${output}=  Read Until  ${message}
+    Should Contain  ${output}  ${message}
+
+    Close SSH Connection
+
+XMC Confirm Server Log Contains Message
+    [Arguments]  ${ip}  ${user}  ${pwd}  ${server_log}  ${message}
+    SSH To XMC Server  ${ip}  ${user}  ${pwd}
+
+    ${output}=  Execute Command  grep ${message} ${server_log}
+    Log  ${output}
+    Should Contain  ${output}  ${message}
+
+    Close SSH Connection
+
+XMC Confirm Server Log Does Not Contain Message
+    [Arguments]  ${ip}  ${user}  ${pwd}  ${server_log}  ${message}
+    SSH To XMC Server  ${ip}  ${user}  ${pwd}
+
+    ${output}=  Execute Command  grep ${message} ${server_log}
+    Log  ${output}
+    Should Not Contain  ${output}  ${message}
+
+    Close SSH Connection
