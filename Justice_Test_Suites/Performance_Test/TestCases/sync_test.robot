@@ -118,7 +118,7 @@ Save Metric Files
 Clean Up Resync Test
     Delete Test Device
     Delete Test Site
-    Delete Scripts
+    Delete Docker Metrics Script Files
     Close All Connections
 
 Delete Test Device
@@ -143,7 +143,7 @@ Delete Test Site
     XMC Confirm Site Does Not Exist  ${site_name}
     XMC Log Out and Close Browser
 
-Delete Docker Metrics Scripts
+Delete Docker Metrics Script Files
     Run  rm docker_metrics.py
     Run  rm request.template
     Run  rm request.json
