@@ -2,7 +2,7 @@
 Library   SeleniumLibrary
 Resource  ../Resources/AllResources.robot
 
-Documentation    Regression test for JUS-343: Add New Report: shows ID for user name, clicking ID goes to "Unable to authenticate" error page.
+Documentation    Regression test for JUS-350: Add New Report: shows ID for user name, clicking ID goes to "Unable to authenticate" error page.
 
 Suite Setup      Open Browser and Log In  ${JUS_URL}  ${BROWSER}  ${JUS_USERNAME}  ${JUS_PASSWORD}
 Suite Teardown   Log Out and Close Browser
