@@ -163,9 +163,30 @@ Close Reports Sidebar Menu
     Element Should Not Be Visible  ${reports_menu_tree}
     Unselect Frame
 
-Click Add Button
+Click Reports Add Button
     Select Frame  xpath://iframe
     Click Element  ${reports_add_button}
+    Unselect Frame
+
+Click Add New Report
+    Select Frame  xpath://iframe
+    Click Element  ${reports_add_new_report_menu}
+    Unselect Frame
+
+Click Add New Visual
+    Select Frame  xpath://iframe
+    Click Element  ${reports_add_new_visual_menu}
+    Unselect Frame
+
+Click Add New Category
+    Select Frame  xpath://iframe
+    Click Element  ${reports_add_new_category_menu}
+    Unselect Frame
+
+Click Go To Reports Button
+    Select Frame  xpath://iframe
+    Click Element  ${reports_add_go_to_reports_button}
+    Wait Until Page Contains Element  ${reports_add_button}
     Unselect Frame
 
 
