@@ -15,4 +15,3 @@ Confirm Reports Page Does Not Time Out
     sleep  35 minutes
     Click Device Availability Drilldown
     Confirm Top N Device Availability Reports Page Title
-
