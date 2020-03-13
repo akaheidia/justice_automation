@@ -7,8 +7,43 @@ Documentation    Tests the Reports Network Summary page.
 Suite Setup      Open Browser and Log In  ${JUS_URL}  ${BROWSER}  ${JUS_USERNAME}  ${JUS_PASSWORD}
 Suite Teardown   Log Out and Close Browser
 
-*** Test Cases ***
+Test Setup       Navigate to Network Summary Report
 
+*** Test Cases ***
 Confirm Page Loads
-    Navigate to Network Summary Report
     Confirm Network Summary Reports Page Title
+
+Confirm Device Availability Drilldown
+    Click Device Availability Drilldown
+    Confirm Top N Device Availability Reports Page Title
+
+Confirm Site Availability Drilldown
+    Click Site Availability Drilldown
+    Confirm Top N Site Availability Reports Page Title
+
+# JUS-428
+#Confirm Top APs By Clients Drilldown
+#    Click Top APs By Clients Drilldown
+##    Confirm Top N Top APs By Clients Reports Page Title
+
+# JUS-428
+#Confirm Top APs By Bandwidth Drilldown
+#    Click Top APs By Bandwidth Drilldown
+##    Confirm Top N Top APs By Bandwidth Reports Page Title
+
+Confirm Port Utilization Drilldown
+    Click Port Utilization Drilldown
+    Confirm Top N Port Utilization Reports Page Title
+
+# JUS-507
+#Confirm Port Error Drilldown
+#    Click Port Error Drilldown
+#    Confirm Top N Port Error Reports Page Title
+
+Confirm CPU Utilization Drilldown
+    Click CPU Utilization Drilldown
+    Confirm Top N CPU Utilization Reports Page Title
+
+Confirm Memory Utilization Drilldown
+    Click Memory Utilization Drilldown
+    Confirm Top N Memory Utilization Reports Page Title
