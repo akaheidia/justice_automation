@@ -13,5 +13,6 @@ Confirm Reports Page Does Not Time Out
     Navigate to Network Summary Report
     Confirm Network Summary Reports Page Title
     sleep  35 minutes
-    Navigate to Site Availability Report
-    Confirm Site Availability Reports Page Title
+    Click Device Availability Drilldown
+    Confirm Top N Device Availability Reports Page Title
+
