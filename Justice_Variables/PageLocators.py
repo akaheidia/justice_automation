@@ -176,6 +176,13 @@ reports_analytics_quarterly_usage_page_title = "xpath://h2[text()='Analytics Qua
 
 # Reports - Drilldown Elements
 reports_device_availability_drilldown = "xpath://h4[text()='Device Availability']"
+reports_site_availability_drilldown = "xpath://h4[text()='Site Availability']"
+reports_tops_aps_by_clients_drilldown = "xpath://h4[text()='Top APs By Clients']"
+reports_tops_aps_by_bandwidth_drilldown = "xpath://h4[text()='Top APs By Bandwidth']"
+reports_port_utilization_drilldown = "xpath://h4[text()='Port Utilization']"
+reports_port_error_drilldown = "xpath://h4[text()='Port Error']"
+reports_cpu_utilization_drilldown = "xpath://h4[text()='CPU Utilization']"
+reports_memory_utilization_drilldown = "xpath://h4[text()='Memory Utilization']"
 
 # Reports - Network Scorecard Page Elements
 
