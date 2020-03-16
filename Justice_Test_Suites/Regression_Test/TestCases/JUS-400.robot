@@ -20,6 +20,9 @@ ${device}    10.54.142.55
 Confirm Multi-Level Site Drilldowns Function
     Log To Console  TO DO
     Navigate to Site Availability Report
+    sleep  2 seconds
+    Change Report Time Range to Last Hour
+    sleep  2 seconds
     Site Availability Drill Into Site  ${site_1}
     Site Availability Drill Into Site  ${site_2}
     Site Availability Drill Into Site  ${site_3}

@@ -54,6 +54,9 @@ Log In and Navigate to Device Overview Report Page
     Open Browser and Log In  ${JUS_URL}  ${BROWSER}  ${JUS_USERNAME}  ${JUS_PASSWORD}
     Navigate to Site Port Utilization Report
     Confirm Port Utilization Report Page Title
+    sleep  2 seconds
+    Change Report Time Range to Last Hour
+    sleep  2 seconds
     Port Utilization Drill Into Site  ${site}
     Port Utilization Drill Into Device  ${device_ip}
     Confirm Device Overview Report Page Title

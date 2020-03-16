@@ -14,6 +14,9 @@ ${site_name}    Parent Site
 *** Test Cases ***
 Confirm Site Availability Does Not Have Duplicated Sites
     Navigate to Site Availability Report
+    sleep  2 seconds
+    Change Report Time Range to Last Hour
+    sleep  2 seconds
     Confirm Site Availability Report Table Contains Value  ${server_name}: /${site_name}
     ${site_count}=  Get Site Availability Report Table Value Count  ${server_name}: /${site_name}
     Log  Number of rows with ${server_name}: /${site_name} is ${site_count}

@@ -14,5 +14,8 @@ ${site_name}    Parent Site
 *** Test Cases ***
 Confirm Site Availability Site Column Contains Server Information
     Navigate to Site Availability Report
+    sleep  2 seconds
+    Change Report Time Range to Last Hour
+    sleep  2 seconds
     Confirm Site Availability Report Table Header Contains Value  SERVER:SITE
     Confirm Site Availability Report Table Contains Value  ${server_name}: /${site_name}
