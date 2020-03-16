@@ -85,7 +85,7 @@ Confirm CSV File Extension for Events Visible Rows
     Remove File  ${csv_events_visible}
 
 Confirm CSV File Extension for Events All Filtered Rows
-    Log to Console  Commented out until JUS-417 is fixed
+    Log to Console  Commented out until JUS-512 is fixed
 #    Download CSV All Filtered Rows
 #    Wait Until Page Contains  Download Complete
 #    Confirm File Exists  ${csv_events_filtered}
@@ -118,10 +118,7 @@ Navigate to Events and Set Filter
     [Arguments]  ${server}
     Click Events Tab
     Confirm Events Tab Selected
-    Log to Console  Clearing Filter and sleeping two seconds until JUS-417 is fixed
-    Clear All Filters
-    sleep  2 seconds
-#    Set Server Filter  ${server}
+    Set Server Filter  ${server}
 
 Navigate to End-Systems and Set Filter
     [Arguments]  ${server}
