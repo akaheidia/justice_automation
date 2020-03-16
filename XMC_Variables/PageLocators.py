@@ -120,5 +120,11 @@ xmc_collect_device_statistics_dialog_disable = "xpath://label[contains(text(),'D
 xmc_collect_device_statistics_dialog_ok = "xpath://span[contains(@class,'x-btn-inner x-btn-inner-blue-small')][text()='OK']"
 xmc_collect_device_statistics_dialog_cancel = "xpath://span[contains(@class,'x-btn-inner x-btn-inner-default-small')][text()='Cancel']"
 
+## Collect Controller Statistics Dialog
+xmc_collect_controller_statistics_dialog = "xpath://div[text()='Collect Controller Statistics']"
+xmc_collect_controller_statistics_dialog_checkbox = "xpath://label[contains(text(),'Wireless Controller, WLAN, Topology, AP Wired and')]/..//input[@type='checkbox']"
+xmc_collect_controller_statistics_dialog_ok = "xpath://span[contains(@class,'x-btn-inner x-btn-inner-blue-small')][text()='OK']"
+xmc_collect_controller_statistics_dialog_cancel = "xpath://span[contains(@class,'x-btn-inner x-btn-inner-default-small')][text()='Cancel']"
+
 ## Table Icons
 xmc_devices_table_refresh_icon = "xpath://*[@data-qtip='Refresh']"

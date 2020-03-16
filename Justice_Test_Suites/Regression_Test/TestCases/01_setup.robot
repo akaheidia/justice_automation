@@ -94,8 +94,8 @@ Suite Teardown   XMC Log Out and Close Browser
 
 Collect Device Statistics
     Navigate to Devices Tab
-    XMC Select Device In Table  ${device_up_site_device_down}
     XMC Collect Device Statistics  ${device_up_site_device_down}  Historical
+    XMC Collect Controller Statistics  ${device_4_site_wireless}  true
 
 *** Keywords ***
 Navigate to Options Tab

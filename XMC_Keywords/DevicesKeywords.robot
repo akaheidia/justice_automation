@@ -198,7 +198,18 @@ XMC Collect Device Statistics
     ...    ELSE IF  '${stat}' == 'Disable'     Set Disable Collection Mode
     ...    ELSE     Handle Invalid Collection Mode  ${stat}
 
-*** Keywords ***
+XMC Collect Controller Statistics
+    [Arguments]  ${device_ip}  ${enable}
+    XMC Right Click Device In Table  ${device_ip}
+    Click Element  ${xmc_devices_context_more_actions_menu}
+    Click Element  ${xmc_devices_context_collect_device_statistics_menu}
+    Page Should Contain Element  ${xmc_collect_controller_statistics_dialog}
+    Run Keyword If  '${enable}' == 'true'   Enable Controller Collection
+    ...    ELSE IF  '${enable}' == 'false'  Disable Controller Collection
+    ...    ELSE     Handle Invalid Controller Collection Mode  ${enable}
+
+
+# COLLECT DEVICE STATISTICS DIALOG
 Set Historical Collection Mode
     Click Element  ${xmc_collect_device_statistics_dialog_historical}
     Click Element  ${xmc_collect_device_statistics_dialog_ok}
@@ -215,3 +226,17 @@ Handle Invalid Collection Mode
     [Arguments]  ${mode}
     Click Element  ${xmc_collect_device_statistics_dialog_cancel}
     Fail  Could Not Set Collection Mode to '${mode}' - Invalid type
+
+# COLLECT CONTROLLER STATISTICS DIALOG
+Enable Controller Collection
+    Select Checkbox  ${xmc_collect_controller_statistics_dialog_checkbox}
+    Click Element  ${xmc_collect_controller_statistics_dialog_ok}
+
+Disable Controller Collection
+    Unselect Checkbox  ${xmc_collect_controller_statistics_dialog_checkbox}
+    Click Element  ${xmc_collect_device_statistics_dialog_ok}
+
+Handle Invalid Controller Collection Mode
+    [Arguments]  ${mode}
+    Click Element  ${xmc_collect_device_statistics_dialog_cancel}
+    Fail  Could Not Set Controller Collection Mode - Invalid value '${mode}'; please specify 'true' or 'false'

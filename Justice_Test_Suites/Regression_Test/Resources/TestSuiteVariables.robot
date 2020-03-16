@@ -18,10 +18,11 @@ ${site_port}                     Port Test Site
 ${site_wireless}                 Wireless Site
 
 # Devices
+${device_site_world}             10.54.142.14
 ${device_up_site_device_down}    10.54.142.31
 ${device_down_site_device_down}  10.54.142.53
 ${device_site_level_5}           10.54.142.55
-${device_site_parent}            10.54.142.14
+${device_site_parent}            10.54.142.10
 ${device_site_child_1}           10.54.142.18
 ${device_site_child_2}           10.54.142.17
 ${device_1_site_test}            10.54.142.11
@@ -31,6 +32,41 @@ ${device_1_site_wireless}        10.54.142.50
 ${device_2_site_wireless}        10.54.142.60
 ${device_3_site_wireless}        10.54.142.70
 ${device_4_site_wireless}        10.54.147.111
+
+# Profiles/Credentials
+${bad_profile}                           Bad Profile
+${wireless_profile}                      Wireless Profile
+${wireless_cli}                          Wireless CLI
+${device_site_world_profile}             public_v1_Profile
+${device_up_site_device_down_profile}    public_v1_Profile
+${device_down_site_device_down_profile}  public_v1_Profile
+${device_site_level_5_profile}           public_v1_Profile
+${device_site_parent_profile}            public_v1_Profile
+${device_site_child_1_profile}           public_v1_Profile
+${device_site_child_2_profile}           public_v1_Profile
+${device_1_site_test_profile}            public_v1_Profile
+${device_2_site_test_profile}            public_v1_Profile
+${device_site_port_profile}              public_v1_Profile
+${device_1_site_wireless_profile}        ${wireless_profile}
+${device_2_site_wireless_profile}        ${wireless_profile}
+${device_3_site_wireless_profile}        ${wireless_profile}
+${device_4_site_wireless_profile}        ${wireless_profile}
+
+# Device Nicknames
+${device_site_world_nickname}             7100
+${device_up_site_device_down_nickname}    B5
+${device_down_site_device_down_nickname}  B5_2
+${device_site_level_5_nickname}           SSA_2
+${device_site_parent_nickname}            C5
+${device_site_child_1_nickname}           X460_2
+${device_site_child_2_nickname}           X460
+${device_1_site_test_nickname}            C5_2
+${device_2_site_test_nickname}            C5_3
+${device_site_port_nickname}              public_v1_Profile
+${device_1_site_wireless_nickname}        ${wireless_profile}
+${device_2_site_wireless_nickname}        ${wireless_profile}
+${device_3_site_wireless_nickname}        ${wireless_profile}
+${device_4_site_wireless_nickname}        ${wireless_profile}
 
 # Ports
 ${port_1}                        ge.1.1
