@@ -88,10 +88,7 @@ Navigate to Events and Set Filter
     [Arguments]  ${server}
     Click Events Tab
     Confirm Events Tab Selected
-    Log to Console  Clearing Filter and sleeping two seconds until JUS-417 is fixed
-    Clear All Filters
-    sleep  2 seconds
-#    Set Server Filter  ${server}
+    Set Server Filter  ${server}
 
 Navigate to End-Systems and Set Filter
     [Arguments]  ${server}
