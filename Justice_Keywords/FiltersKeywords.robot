@@ -12,6 +12,12 @@ Set Server Filter
     Confirm Filter Panel Visible
     Select Servers and Sites Server Tree Node  ${server}
 
+Set Site Filter
+    [Arguments]  ${site}
+    Show Filter Panel
+    Confirm Filter Panel Visible
+    Select Servers and Sites Site Tree Node  ${site}
+
 Refresh Servers and Sites Filter
     Click Element  ${filter_servers_and_sites_panel_refresh_icon}
     sleep  2 seconds
