@@ -185,3 +185,33 @@ XMC Delete Device
     Page Should Contain Element  ${xmc_delete_device_dialog}
     Click Element  ${xmc_delete_device_dialog_delete_data_check_btn}
     Click Element  ${xmc_delete_device_dialog_yes_btn}
+
+
+XMC Collect Device Statistics
+    [Arguments]  ${device_ip}  ${stat}
+    XMC Right Click Device In Table  ${device_ip}
+    Click Element  ${xmc_devices_context_more_actions_menu}
+    Click Element  ${xmc_devices_context_collect_device_statistics_menu}
+    Page Should Contain Element  ${xmc_collect_device_statistics_dialog}
+    Run Keyword If  '${stat}' == 'Historical'  Set Historical Collection Mode
+    ...    ELSE IF  '${stat}' == 'Monitor'     Set Monitor Collection Mode
+    ...    ELSE IF  '${stat}' == 'Disable'     Set Disable Collection Mode
+    ...    ELSE     Handle Invalid Collection Mode  ${stat}
+
+*** Keywords ***
+Set Historical Collection Mode
+    Click Element  ${xmc_collect_device_statistics_dialog_historical}
+    Click Element  ${xmc_collect_device_statistics_dialog_ok}
+
+Set Monitor Collection Mode
+    Click Element  ${xmc_collect_device_statistics_dialog_monitor}
+    Click Element  ${xmc_collect_device_statistics_dialog_ok}
+
+Set Disable Collection Mode
+    Click Element  ${xmc_collect_device_statistics_dialog_disable}
+    Click Element  ${xmc_collect_device_statistics_dialog_ok}
+
+Handle Invalid Collection Mode
+    [Arguments]  ${mode}
+    Click Element  ${xmc_collect_device_statistics_dialog_cancel}
+    Fail  Could Not Set Collection Mode to '${mode}' - Invalid type

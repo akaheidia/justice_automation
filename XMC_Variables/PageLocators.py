@@ -81,6 +81,7 @@ xmc_devices_toolbar_add_device = "xpath://span[@class='x-btn-inner x-btn-inner-d
 ## Menus
 xmc_devices_context_more_actions_menu = "xpath://span[text()='More Actions']"
 xmc_devices_context_delete_device_menu = "xpath://span[text()='Delete Device']"
+xmc_devices_context_collect_device_statistics_menu = "xpath://span[text()='Collect Device Statistics...']"
 
 ## Create Site Dialog
 xmc_create_site_dialog = "xpath://div[text()='Create Site']"
@@ -110,6 +111,14 @@ xmc_delete_device_dialog = "xpath://div[text()='Confirm Delete']"
 xmc_delete_device_dialog_delete_data_check_btn = "xpath://label[text()='Delete Extreme Management Center Data']"
 xmc_delete_device_dialog_yes_btn = "xpath://span[contains(@class,'x-btn-inner x-btn-inner-blue-small')][contains(text(),'Yes')]"
 xmc_delete_device_dialog_no_btn = "xpath://span[contains(@class,'x-btn-inner x-btn-inner-default-small')][contains(text(),'No')]"
+
+## Collect Device Statistics Dialog
+xmc_collect_device_statistics_dialog = "xpath://div[text()='Collect Device Statistics']"
+xmc_collect_device_statistics_dialog_historical = "xpath://label[contains(text(),'Historical')]"
+xmc_collect_device_statistics_dialog_monitor = "xpath://label[contains(text(),'Monitor')]"
+xmc_collect_device_statistics_dialog_disable = "xpath://label[contains(text(),'Disable')]"
+xmc_collect_device_statistics_dialog_ok = "xpath://span[contains(@class,'x-btn-inner x-btn-inner-blue-small')][text()='OK']"
+xmc_collect_device_statistics_dialog_cancel = "xpath://span[contains(@class,'x-btn-inner x-btn-inner-default-small')][text()='Cancel']"
 
 ## Table Icons
 xmc_devices_table_refresh_icon = "xpath://*[@data-qtip='Refresh']"
