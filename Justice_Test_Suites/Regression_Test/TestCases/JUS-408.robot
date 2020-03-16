@@ -45,7 +45,7 @@ Confirm CSV Visible Rows for Events
     Remove File  ${csv_events_visible}
 
 Confirm CSV All Filtered Rows for Events
-    Log to Console  Commented out until JUS-417 is fixed
+    Log to Console  Commented out until JUS-512 is fixed
 #    Download CSV All Filtered Rows
 #    Wait Until Page Contains  Download Complete
 #    Confirm File Contents  ${csv_events_filtered}
