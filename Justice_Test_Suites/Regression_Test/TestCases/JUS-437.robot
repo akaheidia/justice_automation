@@ -3,7 +3,7 @@ Library   SeleniumLibrary
 Library   OperatingSystem
 Resource  ../Resources/AllResources.robot
 
-Documentation    Regression test for JUS-407: CSV Download: output is unreadable for Device:Alarms data.
+Documentation    Regression test for JUS-437: CSV Download: created file does not include .csv extension.
 
 Suite Setup      Log In and Navigate to List View
 Suite Teardown   Log Out and Close Browser
