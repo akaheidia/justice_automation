@@ -2,7 +2,7 @@
 Library   SeleniumLibrary
 Resource  ../Resources/AllResources.robot
 
-Documentation    Regression test for JUS-421: Reports - Analytics Summary: Label incorrect for Top Site By Clients panel
+Documentation    Regression test for JUS-421: Reports - Analytics Summary: Label incorrect for Top Site By Clients panel.
 
 Suite Setup      Open Browser and Log In  ${JUS_URL}  ${BROWSER}  ${JUS_USERNAME}  ${JUS_PASSWORD}
 Suite Teardown   Log Out and Close Browser
