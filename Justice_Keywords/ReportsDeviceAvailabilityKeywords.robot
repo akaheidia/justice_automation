@@ -26,3 +26,15 @@ Confirm Device Availability Report Contains Value
 
     Unselect Frame
     Unselect Frame
+
+
+Device Availability Drill Into Device
+    [Arguments]  ${ip}
+    sleep  1 second
+    Select Frame  xpath://iframe
+    Select Frame  xpath://iframe[@id='availability']
+
+    Click Element  xpath://span[contains(text(), '${ip}')]
+
+    Unselect Frame
+    Unselect Frame

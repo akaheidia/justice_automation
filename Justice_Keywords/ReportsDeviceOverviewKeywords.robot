@@ -16,6 +16,17 @@ Confirm Device Overview Report Page Title
     Unselect Frame
     Unselect Frame
 
+Confirm Device Overview Report Contains Value
+    [Arguments]  ${value}
+    sleep  1 second
+    Select Frame  xpath://iframe
+    Select Frame  xpath://iframe[@id='resource']
+
+    Page Should Contain Element  xpath://h4[contains(text(), '${value}')]
+
+    Unselect Frame
+    Unselect Frame
+
 Device Overview Drill Into Metric
     [Arguments]  ${metric}
     sleep  1 second
