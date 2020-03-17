@@ -8,7 +8,7 @@ Suite Setup      Log In and Navigate to End-Systems Tab
 Suite Teardown   Log Out and Close Browser
 
 *** Variables ***
-${xmc_with_endpoints}    ${XMC_2_HOSTNAME}
+${xmc_with_endsystems}    ${XMC_2_HOSTNAME}
 
 
 *** Test Cases ***
@@ -32,5 +32,5 @@ Log In and Navigate to End-Systems Tab
     Click List Slider
     Click End-Systems Tab
     Confirm End-Systems Tab Selected
-    Set Server Filter  ${xmc_with_endpoints}
+    Set Server Filter  ${xmc_with_endsystems}
     sleep  2 seconds
