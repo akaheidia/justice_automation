@@ -10,6 +10,7 @@ Resource   ../Justice_Keywords/MonitorListEventsKeywords.robot
 Resource   ../Justice_Keywords/MonitorListEndSystemsKeywords.robot
 Resource   ../Justice_Keywords/MonitorMapKeywords.robot
 Resource   ../Justice_Keywords/ReportsKeywords.robot
+Resource   ../Justice_Keywords/ReportsAnalyticsSummaryKeywords.robot
 Resource   ../Justice_Keywords/ReportsDeviceAvailabilityKeywords.robot
 Resource   ../Justice_Keywords/ReportsDeviceOverviewKeywords.robot
 Resource   ../Justice_Keywords/ReportsFilterKeywords.robot

@@ -201,6 +201,8 @@ reports_rx_bandwidth_page_title = "xpath://h2[text()='Rx Bandwidth']"
 reports_total_bandwidth_page_title = "xpath://h2[text()='Total Bandwidth']"
 reports_tx_bandwidth_page_title = "xpath://h2[text()='Tx Bandwidth']"
 
+# Reports - General Panel Titles
+reports_top_sites_by_clients = "xpath://h4[contains(text(),'Top Sites By Clients')]"
 
 # Settings Page Elements
 settings_page_title = "xpath://span[@class='settings-title']"
