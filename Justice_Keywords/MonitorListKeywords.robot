@@ -6,6 +6,39 @@ Documentation    Keywords specific to the Monitor List page.
 
 *** Keywords ***
 
+Log In and Navigate to Devices Tab
+    [Arguments]  ${url}  ${browser}  ${user}  ${pwd}
+    Open Browser and Log In  ${url}  ${browser}  ${user}  ${pwd}
+    Click Monitor
+    Click List Slider
+    Click Devices Tab
+    Confirm Devices Tab Selected
+
+Log In and Navigate to End-Systems Tab
+    [Arguments]  ${url}  ${browser}  ${user}  ${pwd}
+    Open Browser and Log In  ${url}  ${browser}  ${user}  ${pwd}
+    Click Monitor
+    Click List Slider
+    Click End-Systems Tab
+    Confirm End-Systems Tab Selected
+
+Log In and Navigate to Alarms Tab
+    [Arguments]  ${url}  ${browser}  ${user}  ${pwd}
+    Open Browser and Log In  ${url}  ${browser}  ${user}  ${pwd}
+    Click Monitor
+    Click List Slider
+    Click Alarms Tab
+    Confirm Alarms Tab Selected
+
+Log In and Navigate to Events Tab
+    [Arguments]  ${url}  ${browser}  ${user}  ${pwd}
+    Open Browser and Log In  ${url}  ${browser}  ${user}  ${pwd}
+    Click Monitor
+    Click List Slider
+    Click Events Tab
+    Confirm Events Tab Selected
+
+
 Click Devices Tab
     Click Element  ${list_devices_tab}
 
