@@ -37,3 +37,15 @@ Confirm Device Not In Table
     \    Exit For Loop If  ${found_device} == False
     Element Should Not Contain  ${list_devices_table}  ${device_ip}
     Set Selenium Implicit Wait  ${orig_wait}
+
+Confirm Device In Table No Wait
+    [Arguments]  ${device_ip}
+    Refresh Devices Table
+    Table Should Contain  ${list_devices_table}  ${device_ip}
+
+Confirm Device Not In Table No Wait
+    [Arguments]  ${device_ip}
+    ${orig_wait}=  Set Selenium Implicit Wait  1 second
+    Refresh Devices Table
+    Element Should Not Contain  ${list_devices_table}  ${device_ip}
+    Set Selenium Implicit Wait  ${orig_wait}
