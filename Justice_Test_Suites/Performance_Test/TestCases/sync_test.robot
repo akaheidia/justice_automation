@@ -143,6 +143,6 @@ Delete Docker Metrics Script Files
     Run  rm docker_metrics.py
     Run  rm request.template
     Run  rm request.json
-    File Should Not Exist  docker_metrics.py
-    File Should Not Exist  request.template
-    File Should Not Exist  request.json
+    OperatingSystem.File Should Not Exist  docker_metrics.py
+    OperatingSystem.File Should Not Exist  request.template
+    OperatingSystem.File Should Not Exist  request.json
