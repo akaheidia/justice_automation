@@ -9,7 +9,6 @@ Suite Setup      Log In and Navigate to List View
 Suite Teardown   Log Out and Close Browser
 
 *** Test Cases ***
-
 Confirm End-Systems Tab
     Click End-Systems Tab
     Confirm End-Systems Tab Selected

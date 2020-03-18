@@ -5,11 +5,10 @@ Resource  ../Resources/AllResources.robot
 
 Documentation    Regression test for JUS-380: Usability: Download menu should close when choice selected.
 
-Suite Setup      Log In and Navigate to Devices Tab
+Suite Setup      Log In and Navigate to Filtered Devices Tab
 Suite Teardown   Log Out and Close Browser
 
 *** Test Cases ***
-
 Confirm Download Menu Closes After CSV Visible Rows
     Download CSV Visible Rows
     Confirm Download Menu Closed
@@ -46,12 +45,7 @@ Confirm Download Menu Closes After PDF All Filtered Rows
     Confirm File Exists  ${DOWNLOADS_DIR}  ${pdf_devices_filtered}
     Remove File  ${DOWNLOADS_DIR}  ${pdf_devices_filtered}
 
-
 *** Keywords ***
-Log In and Navigate to Devices Tab
-    Open Browser and Log In  ${JUS_URL}  ${BROWSER}  ${JUS_USERNAME}  ${JUS_PASSWORD}
-    Click Monitor
-    Click List Slider
-    Click Devices Tab
-    Confirm Devices Tab Selected
+Log In and Navigate to Filtered Devices Tab
+    Log In and Navigate to Devices Tab  ${JUS_URL}  ${BROWSER}  ${JUS_USERNAME}  ${JUS_PASSWORD}
     Set Server Filter  ${XMC_HOSTNAME}

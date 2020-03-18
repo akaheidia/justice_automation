@@ -5,7 +5,7 @@ Resource  ../Resources/AllResources.robot
 
 Documentation    Regression test for JUS-417: Events: Applying Server & Site Filter Removes All Events.
 
-Suite Setup      Log In and Navigate to Events
+Suite Setup      Log In and Navigate to Events Tab  ${JUS_URL}  ${BROWSER}  ${JUS_USERNAME}  ${JUS_PASSWORD}
 Suite Teardown   Log Out and Close Browser
 
 *** Test Cases ***
@@ -20,11 +20,3 @@ Set Filter to Empty Site and Confirm No Events Present
     Set Site Filter  Empty Site
     sleep  2 seconds
     Confirm No Events Present
-
-*** Keywords ***
-Log In and Navigate to Events
-    Open Browser and Log In  ${JUS_URL}  ${BROWSER}  ${JUS_USERNAME}  ${JUS_PASSWORD}
-    Click Monitor
-    Click List Slider
-    Click Events Tab
-    Confirm Events Tab Selected

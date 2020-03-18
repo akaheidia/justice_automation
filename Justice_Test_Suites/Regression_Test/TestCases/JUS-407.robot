@@ -5,11 +5,11 @@ Resource  ../Resources/AllResources.robot
 
 Documentation    Regression test for JUS-407: CSV Download: output is unreadable for Device:Alarms data.
 
-Suite Setup      Log In and Navigate to Devices Tab
+Suite Setup      Log In and Navigate to Filtered Devices Tab
 Suite Teardown   Log Out and Close Browser
 
-*** Test Cases ***
 
+*** Test Cases ***
 Confirm CSV All Rows
     Download CSV All Rows
     Wait Until Page Contains  Download Complete
@@ -30,24 +30,6 @@ Confirm CSV All Filtered Rows
 
 
 *** Keywords ***
-Log In and Navigate to Devices Tab
-    Open Browser and Log In  ${JUS_URL}  ${BROWSER}  ${JUS_USERNAME}  ${JUS_PASSWORD}
-    Click Monitor
-    Click List Slider
-    Click Devices Tab
-    Confirm Devices Tab Selected
+Log In and Navigate to Filtered Devices Tab
+    Log In and Navigate to Devices Tab  ${JUS_URL}  ${BROWSER}  ${JUS_USERNAME}  ${JUS_PASSWORD}
     Set Server Filter  ${XMC_HOSTNAME}
-
-Confirm File Contents
-    [Arguments]  ${filename}
-    Wait Until Created  ${DOWNLOADS_DIR}/${filename}
-    OperatingSystem.File Should Exist   ${DOWNLOADS_DIR}/${filename}
-    ${file_contents}=  OperatingSystem.Get File  ${DOWNLOADS_DIR}/${filename}
-    Should Not Contain  ${file_contents}  [object Object]
-
-Remove File
-    [Arguments]  ${filename}
-    OperatingSystem.File Should Exist      ${DOWNLOADS_DIR}/${filename}
-    OperatingSystem.Remove File            ${DOWNLOADS_DIR}/${filename}
-    Wait Until Removed                     ${DOWNLOADS_DIR}/${filename}
-    OperatingSystem.File Should Not Exist  ${DOWNLOADS_DIR}/${filename}
