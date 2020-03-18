@@ -14,7 +14,7 @@ nav_logo_image = "xpath://img[@class='extr-toolbar-logo']"
 nav_monitor_icon = "xpath://mat-icon[contains(text(),'show_chart')]"
 nav_reports_icon = "xpath://mat-icon[contains(text(),'bar_chart')]"
 nav_settings_icon = "xpath://mat-icon[@class='mat-icon notranslate mat-list-icon extr-nav-item-icon ei ei-settings mat-icon-no-color ng-star-inserted']"
-nav_user_icon = "xpath://mat-icon[@class='extr-nav-item-icon mat-list-icon mat-icon notranslate material-icons mat-icon-no-color']"
+nav_user_icon = "xpath://mat-icon[@class='mat-icon notranslate mat-list-icon extr-nav-item-icon material-icons mat-icon-no-color']"
 nav_user_signout_menu = "xpath://div[@class='account-footer-text']"
 nav_close_btn = "xpath://mat-icon[@class='mat-icon notranslate material-icons mat-icon-no-color']"
 nav_open_btn = "xpath://mat-icon[@class='mat-icon notranslate ei ei-apps mat-icon-no-color']"
@@ -210,7 +210,7 @@ settings_usergroups_menu = "xpath://div[text()='User Groups']"
 settings_security_menu = "xpath://div[text()='Security']"
 
 # Settings - User Groups Page Elements
-usergroups_page_title = "xpath://span[@class='user-groups-title']"
+usergroups_page_title = "xpath://span[@class='user-groups-title'][text()='User Groups']"
 
 # Settings - Security Page Elements
-security_page_title = "xpath://span[@class='security-title']"
+security_page_title = "xpath://span[@class='security-title'][text()='Security']"
