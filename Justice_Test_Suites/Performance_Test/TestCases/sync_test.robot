@@ -19,12 +19,8 @@ ${xmc_user}        ${XMC_USERNAME}
 ${xmc_pwd}         ${XMC_PASSWORD}
 ${xmc_host}        ${XMC_HOSTNAME}
 ${xmc_log}         ${XMC_SERVER_LOG}
-#${xmc_ip}          ${XMC_2_HOST_IP}
-#${xmc_test_url}    ${XMC_2_URL}
-#${xmc_user}        ${XMC_2_USERNAME}
-#${xmc_pwd}         ${XMC_2_PASSWORD}
-#${xmc_host}        ${XMC_2_HOSTNAME}
-#${xmc_log}         ${XMC_2_SERVER_LOG}
+${pre_filename}    resync_pretest
+${post_filename}   resync_posttest
 
 *** Test Cases ***
 Copy Docker Metrics Script To Current Directory
@@ -33,9 +29,9 @@ Copy Docker Metrics Script To Current Directory
     OperatingSystem.File Should Exist  ${DOCKER_METRICS_REQUEST_TEMPLATE}
 
 Gather Baseline Metrics
-    Run  ./${DOCKER_METRICS_SCRIPT} ${JUS_HOST_IP} > pretest.csv
+    Run  ./${DOCKER_METRICS_SCRIPT} ${JUS_HOST_IP} > ${pre_filename}.csv
     sleep  2 seconds
-    OperatingSystem.File Should Exist  pretest.csv
+    OperatingSystem.File Should Exist  ${pre_filename}.csv
 
 Disconnect XMC From Justice
     Disconnect From RabbitMQ  ${JUS_HOST_IP}  ${JUS_USERNAME}  ${JUS_PASSWORD}  ${xmc_ip}  ${prompt}
@@ -100,17 +96,17 @@ Confirm Justice Updated
     Log Out and Close Browser
 
 Gather Post-Test Metrics
-    Run  ./${DOCKER_METRICS_SCRIPT} ${JUS_HOST_IP} > posttest.csv
+    Run  ./${DOCKER_METRICS_SCRIPT} ${JUS_HOST_IP} > ${post_filename}.csv
     sleep  2 seconds
-    OperatingSystem.File Should Exist  posttest.csv
+    OperatingSystem.File Should Exist  ${post_filename}.csv
 
 Save Metric Files
     Create Directory  Metrics
     ${date}=  Get Current Date  exclude_millis=yes
     ${convert}=  Convert Date  ${date}  result_format=%m-%d-%Y_%H:%M
     Log To Console  ${convert}
-    Run  cat pretest.csv > "pretest-${convert}.csv"
-    Run  cat posttest.csv > "posttest-${convert}.csv"
+    Run  cat ${pre_filename}.csv > "${pre_filename}-${convert}.csv"
+    Run  cat ${post_filename}.csv > "${post_filename}-${convert}.csv"
     Move Files  *-${convert}.csv  Metrics
     Run  rm *.csv
 
