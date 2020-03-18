@@ -13,7 +13,7 @@ nav_side_bar = "xpath://div[@class='extr-compact-sidemenu extr-hide-scrollbars']
 nav_logo_image = "xpath://img[@class='extr-toolbar-logo']"
 nav_monitor_icon = "xpath://mat-icon[contains(text(),'show_chart')]"
 nav_reports_icon = "xpath://mat-icon[contains(text(),'bar_chart')]"
-nav_settings_icon = "xpath://mat-icon[@class='extr-nav-item-icon mat-list-icon mat-icon notranslate ei ei-settings mat-icon-no-color ng-star-inserted']"
+nav_settings_icon = "xpath://mat-icon[@class='mat-icon notranslate mat-list-icon extr-nav-item-icon ei ei-settings mat-icon-no-color ng-star-inserted']"
 nav_user_icon = "xpath://mat-icon[@class='extr-nav-item-icon mat-list-icon mat-icon notranslate material-icons mat-icon-no-color']"
 nav_user_signout_menu = "xpath://div[@class='account-footer-text']"
 nav_close_btn = "xpath://mat-icon[@class='mat-icon notranslate material-icons mat-icon-no-color']"
