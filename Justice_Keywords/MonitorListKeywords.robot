@@ -80,6 +80,28 @@ Close Sort Menu
     Run Keyword If  '${menu_open}'=='True'  Click Element  ${list_sort_selected_icon}
     Set Selenium Implicit Wait  ${orig_wait}
 
+Open Add Sort Menu
+    Click Element  ${sort_add_icon}
+
+Select Sort Choice
+    [Arguments]  ${sort}
+    Click Element  xpath://span[contains(text(), '${sort}')]
+
+Close Add Sort Menu
+    ${orig_wait}=  Set Selenium Implicit Wait  1 second
+    ${menu_open}=  Run Keyword And Return Status  Element Should Be Visible  ${sort_add_menu_panel}
+    Run Keyword If  '${menu_open}'=='True'  Click Element  ${sort_add_icon_open}
+    Set Selenium Implicit Wait  ${orig_wait}
+
+Add Sort
+    [Arguments]  ${sort}  ${direction}
+    Open Sort Menu
+    Open Add Sort Menu
+    Select Sort Choice  ${sort}
+    sleep  2 seconds
+    Close Add Sort Menu
+    Log To Console   TO DO - add direction: ${direction}
+    Close Sort Menu
 
 Confirm List Page Loaded
     Page Should Contain Element  ${monitor_page_title}
@@ -106,4 +128,17 @@ Confirm Events Tab Selected
 Confirm Download Menu Closed
     ${orig_wait}=  Set Selenium Implicit Wait  1 second
     Element Should Not Be Visible  ${list_download_selected_icon}
+    Set Selenium Implicit Wait  ${orig_wait}
+
+Confirm Sort Menu Closed
+    ${orig_wait}=  Set Selenium Implicit Wait  1 second
+    Element Should Not Be Visible  ${list_sort_selected_icon}
+    Set Selenium Implicit Wait  ${orig_wait}
+
+Confirm Sort Applied
+    Element Should Be Visible  ${sort_applied_indicator}
+
+Confirm Sort Not Applied
+    ${orig_wait}=  Set Selenium Implicit Wait  1 second
+    Element Should Not Be Visible  ${sort_applied_indicator}
     Set Selenium Implicit Wait  ${orig_wait}

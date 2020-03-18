@@ -42,10 +42,9 @@ Suite Teardown   Log Out and Close Browser
 #    Remove File  ${DOWNLOADS_DIR}  ${pdf_devices_filtered}
 
 Confirm Table Sort
-    Open Sort Menu
-    sleep  2 seconds
-    Close Sort Menu
-
+    Confirm Sort Not Applied
+    Add Sort  IP Address  Ascending
+    Confirm Sort Applied
 
 *** Keywords ***
 Log In and Navigate to Devices Tab
