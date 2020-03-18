@@ -41,7 +41,7 @@ Confirm Download Menus
     Confirm File Exists  ${DOWNLOADS_DIR}  ${pdf_devices_filtered}
     Remove File  ${DOWNLOADS_DIR}  ${pdf_devices_filtered}
 
-Confirm Table Sort
+Confirm Table Data Sorting
     Confirm Sort Not Applied
     Add Sort  IP Address
     Add Sort  Name
