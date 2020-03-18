@@ -45,6 +45,7 @@ Confirm Table Sort
     Confirm Sort Not Applied
     Add Sort  IP Address  Ascending
     Confirm Sort Applied
+    Remove Sort  IP Address
 
 *** Keywords ***
 Log In and Navigate to Devices Tab

@@ -98,10 +98,16 @@ Add Sort
     Open Sort Menu
     Open Add Sort Menu
     Select Sort Choice  ${sort}
-    sleep  2 seconds
     Close Add Sort Menu
     Log To Console   TO DO - add direction: ${direction}
     Close Sort Menu
+
+Remove Sort
+    [Arguments]  ${sort}
+    Open Sort Menu
+    Click Element  xpath://span[text()='${sort}']/..${sort_remove_icon_xpath_value}
+    Close Sort Menu
+
 
 Confirm List Page Loaded
     Page Should Contain Element  ${monitor_page_title}
