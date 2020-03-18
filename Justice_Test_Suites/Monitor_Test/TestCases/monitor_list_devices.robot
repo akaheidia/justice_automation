@@ -8,38 +8,38 @@ Suite Setup      Log In and Navigate to Devices Tab
 Suite Teardown   Log Out and Close Browser
 
 *** Test Cases ***
-#Confirm Download Menus
-#    Set Server Filter
-#
-#    Download CSV Visible Rows
-#    Wait Until Page Contains  Download Complete
-#    Confirm File Exists  ${DOWNLOADS_DIR}  ${csv_devices_visible}
-#    Remove File  ${DOWNLOADS_DIR}  ${csv_devices_visible}
-#
-#    Download CSV All Rows
-#    Wait Until Page Contains  Download Complete
-#    Confirm File Exists  ${DOWNLOADS_DIR}  ${csv_devices_all}
-#    Remove File  ${DOWNLOADS_DIR}  ${csv_devices_all}
-#
-#    Download CSV All Filtered Rows
-#    Wait Until Page Contains  Download Complete
-#    Confirm File Exists  ${DOWNLOADS_DIR}  ${csv_devices_filtered}
-#    Remove File  ${DOWNLOADS_DIR}  ${csv_devices_filtered}
-#
-#    Download PDF Visible Rows
-#    Wait Until Page Contains  Download Complete
-#    Confirm File Exists  ${DOWNLOADS_DIR}  ${pdf_devices_visible}
-#    Remove File  ${DOWNLOADS_DIR}  ${pdf_devices_visible}
-#
-#    Download PDF All Rows
-#    Wait Until Page Contains  Download Complete
-#    Confirm File Exists  ${DOWNLOADS_DIR}  ${pdf_devices_all}
-#    Remove File  ${DOWNLOADS_DIR}  ${pdf_devices_all}
-#
-#    Download PDF All Filtered Rows
-#    Wait Until Page Contains  Download Complete
-#    Confirm File Exists  ${DOWNLOADS_DIR}  ${pdf_devices_filtered}
-#    Remove File  ${DOWNLOADS_DIR}  ${pdf_devices_filtered}
+Confirm Download Menus
+    Set Server Filter
+
+    Download CSV Visible Rows
+    Wait Until Page Contains  Download Complete
+    Confirm File Exists  ${DOWNLOADS_DIR}  ${csv_devices_visible}
+    Remove File  ${DOWNLOADS_DIR}  ${csv_devices_visible}
+
+    Download CSV All Rows
+    Wait Until Page Contains  Download Complete
+    Confirm File Exists  ${DOWNLOADS_DIR}  ${csv_devices_all}
+    Remove File  ${DOWNLOADS_DIR}  ${csv_devices_all}
+
+    Download CSV All Filtered Rows
+    Wait Until Page Contains  Download Complete
+    Confirm File Exists  ${DOWNLOADS_DIR}  ${csv_devices_filtered}
+    Remove File  ${DOWNLOADS_DIR}  ${csv_devices_filtered}
+
+    Download PDF Visible Rows
+    Wait Until Page Contains  Download Complete
+    Confirm File Exists  ${DOWNLOADS_DIR}  ${pdf_devices_visible}
+    Remove File  ${DOWNLOADS_DIR}  ${pdf_devices_visible}
+
+    Download PDF All Rows
+    Wait Until Page Contains  Download Complete
+    Confirm File Exists  ${DOWNLOADS_DIR}  ${pdf_devices_all}
+    Remove File  ${DOWNLOADS_DIR}  ${pdf_devices_all}
+
+    Download PDF All Filtered Rows
+    Wait Until Page Contains  Download Complete
+    Confirm File Exists  ${DOWNLOADS_DIR}  ${pdf_devices_filtered}
+    Remove File  ${DOWNLOADS_DIR}  ${pdf_devices_filtered}
 
 Confirm Table Sort
     Confirm Sort Not Applied
