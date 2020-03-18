@@ -13,14 +13,14 @@ Suite Teardown   Log Out and Close Browser
 Confirm CSV All Filtered Rows
     Download CSV All Filtered Rows
     Wait Until Page Contains  Download Complete
-    Confirm File Exists  ${csv_devices_filtered}
-    Remove File  ${csv_devices_filtered}
+    Confirm File Exists  ${DOWNLOADS_DIR}  ${csv_devices_filtered}
+    Remove File  ${DOWNLOADS_DIR}  ${csv_devices_filtered}
 
 Confirm PDF All Filtered Rows
     Download PDF All Filtered Rows
     Wait Until Page Contains  Download Complete
-    Confirm File Exists  ${pdf_devices_filtered}
-    Remove File  ${pdf_devices_filtered}
+    Confirm File Exists  ${DOWNLOADS_DIR}  ${pdf_devices_filtered}
+    Remove File  ${DOWNLOADS_DIR}  ${pdf_devices_filtered}
 
 
 *** Keywords ***
@@ -31,15 +31,15 @@ Log In and Navigate to Devices Tab
     Click Devices Tab
     Confirm Devices Tab Selected
     Set Server Filter  ${XMC_HOSTNAME}
-
-Confirm File Exists
-    [Arguments]  ${filename}
-    Wait Until Created  ${DOWNLOADS_DIR}/${filename}
-    OperatingSystem.File Should Exist   ${DOWNLOADS_DIR}/${filename}
-
-Remove File
-    [Arguments]  ${filename}
-    OperatingSystem.File Should Exist      ${DOWNLOADS_DIR}/${filename}
-    OperatingSystem.Remove File            ${DOWNLOADS_DIR}/${filename}
-    Wait Until Removed                     ${DOWNLOADS_DIR}/${filename}
-    OperatingSystem.File Should Not Exist  ${DOWNLOADS_DIR}/${filename}
+#
+#Confirm File Exists
+#    [Arguments]  ${filename}
+#    Wait Until Created  ${DOWNLOADS_DIR}/${filename}
+#    OperatingSystem.File Should Exist   ${DOWNLOADS_DIR}/${filename}
+#
+#Remove File
+#    [Arguments]  ${filename}
+#    OperatingSystem.File Should Exist      ${DOWNLOADS_DIR}/${filename}
+#    OperatingSystem.Remove File            ${DOWNLOADS_DIR}/${filename}
+#    Wait Until Removed                     ${DOWNLOADS_DIR}/${filename}
+#    OperatingSystem.File Should Not Exist  ${DOWNLOADS_DIR}/${filename}

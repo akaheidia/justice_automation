@@ -1,6 +1,7 @@
 *** Settings ***
 Library    SeleniumLibrary
 Library    SSHLibrary
+Library    OperatingSystem
 Resource   ./LoginKeywords.robot
 Variables  ../Justice_Variables/PageLocators.py
 
@@ -90,3 +91,16 @@ Reconnect To RabbitMQ
     Write Command and Log Output  ${prompt}  iptables --list
 
     Close SSH Connection
+
+
+Confirm File Exists
+    [Arguments]  ${dir}  ${filename}
+    Wait Until Created  ${dir}/${filename}
+    OperatingSystem.File Should Exist   ${dir}/${filename}
+
+Remove File
+    [Arguments]  ${dir}  ${filename}
+    OperatingSystem.File Should Exist      ${dir}/${filename}
+    OperatingSystem.Remove File            ${dir}/${filename}
+    Wait Until Removed                     ${dir}/${filename}
+    OperatingSystem.File Should Not Exist  ${dir}/${filename}
