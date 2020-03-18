@@ -26,7 +26,7 @@ Confirm Table Data Sorting
     Confirm Sort Not Applied
 
 Confirm Download Menus
-    Set Server Filter
+    Set Server Filter  ${XMC_HOSTNAME}
 
     Download CSV Visible Rows
     Wait Until Page Contains  Download Complete
@@ -57,10 +57,3 @@ Confirm Download Menus
     Wait Until Page Contains  Download Complete
     Confirm File Exists  ${DOWNLOADS_DIR}  ${pdf_devices_filtered}
     Remove File  ${DOWNLOADS_DIR}  ${pdf_devices_filtered}
-
-
-*** Keywords ***
-Set Server Filter
-    Show Filter Panel
-    Confirm Filter Panel Visible
-    Select Servers and Sites Server Tree Node  ${XMC_HOSTNAME}
