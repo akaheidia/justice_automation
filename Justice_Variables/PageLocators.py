@@ -69,6 +69,7 @@ list_refresh_icon = "xpath://mat-icon[@class='mat-icon notranslate ei ei-refresh
 list_download_icon = "xpath://mat-icon[@class='mat-icon notranslate ei ei-download mat-icon-no-color']"
 list_download_selected_icon = "xpath://div[@class='cdk-overlay-backdrop app-overlays cdk-overlay-backdrop-showing']"
 list_sort_icon = "xpath://mat-icon[@class='mat-icon notranslate ei ei-sort_by_alpha mat-icon-no-color']"
+list_sort_selected_icon = "xpath://div[@class='cdk-overlay-backdrop app-overlays cdk-overlay-backdrop-showing']"
 list_columns_icon = "xpath://mat-icon[@class='mat-icon notranslate ei ei-view_column mat-icon-no-color']"
 
 ## Download Menu Elements
@@ -78,6 +79,15 @@ download_csv_all_filtered_rows_menu = "xpath://span[@class='option'][text()='CSV
 download_pdf_visible_rows_menu = "xpath://span[@class='option'][text()='PDF']/..//span[@class='text'][contains(text(), '(Visible Rows)')]"
 download_pdf_all_rows_menu = "xpath://span[@class='option'][text()='PDF']/..//span[@class='text'][contains(text(), '(All Rows)')]"
 download_pdf_all_filtered_rows_menu = "xpath://span[@class='option'][text()='PDF']/..//span[@class='text'][contains(text(), '(All Filtered Rows)')]"
+
+## Sort Menu Elements
+sort_applied_indicator = "xpath://span[@class='active-sort']"
+sort_menu_panel = "xpath://div[@class='tables-sorting-header-text']"
+sort_add_icon = "xpath://mat-icon[@class='mat-icon notranslate ei ei-add_circle mat-icon-no-color']"
+sort_remove_icon = "xpath://mat-icon[@class='mat-icon notranslate remove-icon ei ei-remove_circle_outline mat-icon-no-color']"
+sort_ascending_menu = "xpath://span[contains(text(),'Ascending')]"
+sort_descending_menu = "xpath://span[contains(text(),'Descending')]"
+
 
 # End-Systems
 endsystems_table = "xpath://table[@id='endSystemsGrid']"

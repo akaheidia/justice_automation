@@ -68,6 +68,19 @@ Close Download Menu
     Set Selenium Implicit Wait  ${orig_wait}
 
 
+Open Sort Menu
+    ${orig_wait}=  Set Selenium Implicit Wait  1 second
+    ${menu_closed}=  Run Keyword And Return Status  Element Should Not Be Visible  ${sort_menu_panel}
+    Run Keyword If  '${menu_closed}'=='True'  Click Element  ${list_sort_icon}
+    Set Selenium Implicit Wait  ${orig_wait}
+
+Close Sort Menu
+    ${orig_wait}=  Set Selenium Implicit Wait  1 second
+    ${menu_open}=  Run Keyword And Return Status  Element Should Be Visible  ${sort_menu_panel}
+    Run Keyword If  '${menu_open}'=='True'  Click Element  ${list_sort_selected_icon}
+    Set Selenium Implicit Wait  ${orig_wait}
+
+
 Confirm List Page Loaded
     Page Should Contain Element  ${monitor_page_title}
     Page Should Contain Element  ${monitor_map_slider}
