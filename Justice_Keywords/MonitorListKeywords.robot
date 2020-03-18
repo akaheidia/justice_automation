@@ -81,11 +81,10 @@ Close Sort Menu
     Set Selenium Implicit Wait  ${orig_wait}
 
 Open Add Sort Menu
-    Click Element  ${sort_add_icon}
-
-Select Sort Choice
-    [Arguments]  ${sort}
-    Click Element  xpath://span[contains(text(), '${sort}')]
+    ${orig_wait}=  Set Selenium Implicit Wait  1 second
+    ${menu_closed}=  Run Keyword And Return Status  Element Should Not Be Visible  ${sort_add_menu_panel}
+    Run Keyword If  '${menu_closed}'=='True'  Click Element  ${sort_add_icon}
+    Set Selenium Implicit Wait  ${orig_wait}
 
 Close Add Sort Menu
     ${orig_wait}=  Set Selenium Implicit Wait  1 second
@@ -93,19 +92,35 @@ Close Add Sort Menu
     Run Keyword If  '${menu_open}'=='True'  Click Element  ${sort_add_icon_open}
     Set Selenium Implicit Wait  ${orig_wait}
 
+Select Sort Choice
+    [Arguments]  ${sort}
+    Element Should Be Visible  ${sort_add_menu_panel}
+    Click Element  xpath://span[contains(text(), '${sort}')]
+
+Click Remove Sort Icon
+    [Arguments]  ${sort}
+    Click Element  xpath://span[text()='${sort}']/..${sort_remove_icon_xpath_value}
+
 Add Sort
-    [Arguments]  ${sort}  ${direction}
+    [Arguments]  ${sort}
     Open Sort Menu
     Open Add Sort Menu
     Select Sort Choice  ${sort}
     Close Add Sort Menu
-    Log To Console   TO DO - add direction: ${direction}
     Close Sort Menu
 
 Remove Sort
     [Arguments]  ${sort}
     Open Sort Menu
-    Click Element  xpath://span[text()='${sort}']/..${sort_remove_icon_xpath_value}
+    Click Remove Sort Icon  ${sort}
+    Close Sort Menu
+
+Set Sort Direction
+    [Arguments]  ${sort}  ${direction}
+    Open Sort Menu
+    Run Keyword If  '${direction}'=='Ascending'  Click Element  xpath://span[text()='${sort}']/..${sort_ascending_menu_xpath_value}
+    ...    ELSE IF  '${direction}' == 'Descending'  Click Element  xpath://span[text()='${sort}']/..${sort_descending_menu_xpath_value}
+    ...    ELSE     Fail  Invalid Sort Direction: ${direction}
     Close Sort Menu
 
 

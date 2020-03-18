@@ -87,8 +87,8 @@ sort_add_menu_panel = "xpath://div[contains(text(),'Add a Sort')]"
 sort_add_icon = "xpath://mat-icon[@class='mat-icon notranslate ei ei-add_circle mat-icon-no-color']"
 sort_add_icon_open = "xpath://body[@class='mat-typography']/div[@class='cdk-overlay-container extr-sidenav-theme']/div[3]"
 sort_remove_icon_xpath_value = "//mat-icon[@fonticon='ei-remove_circle_outline']"
-sort_ascending_menu = "xpath://span[contains(text(),'Ascending')]"
-sort_descending_menu = "xpath://span[contains(text(),'Descending')]"
+sort_ascending_menu_xpath_value = "//span[contains(text(),'Ascending')]"
+sort_descending_menu_xpath_value = "//span[contains(text(),'Descending')]"
 
 
 # End-Systems

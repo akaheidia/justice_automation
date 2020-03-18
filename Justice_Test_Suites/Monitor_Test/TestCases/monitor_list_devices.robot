@@ -43,9 +43,21 @@ Confirm Download Menus
 
 Confirm Table Sort
     Confirm Sort Not Applied
-    Add Sort  IP Address  Ascending
+    Add Sort  IP Address
+    Add Sort  Name
+    Add Sort  Server:Site
     Confirm Sort Applied
+    Set Sort Direction  IP Address  Ascending
+    Set Sort Direction  IP Address  Descending
+    Set Sort Direction  Name  Ascending
+    Set Sort Direction  Server:Site  Descending
     Remove Sort  IP Address
+    Confirm Sort Applied
+    Remove Sort  Server:Site
+    Confirm Sort Applied
+    Remove Sort  Name
+    Confirm Sort Not Applied
+
 
 *** Keywords ***
 Log In and Navigate to Devices Tab
