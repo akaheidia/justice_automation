@@ -150,18 +150,18 @@ Navigate to Analytics Quarterly Usage Report
 
 Open Reports Sidebar Menu
     Select Frame  xpath://iframe
-    Wait Until Page Contains Element  ${reports_sidebar_menu_button}
+    Wait Until Page Contains Element  ${reports_sidebar_menu_button}  timeout=10 seconds
     ${need_to_open}=  Run Keyword And Return Status  Element Should Not Be Visible  ${reports_menu_tree}
     Run Keyword If  ${need_to_open} == True  Click Element  ${reports_sidebar_menu_button}
-    Element Should Be Visible  ${reports_menu_tree}
+    Wait Until Page Contains Element  ${reports_menu_tree}  timeout=10 seconds
     Unselect Frame
 
 Close Reports Sidebar Menu
     Select Frame  xpath://iframe
-    Wait Until Page Contains Element  ${reports_sidebar_menu_button}
+    Wait Until Page Contains Element  ${reports_sidebar_menu_button}  timeout=10 seconds
     ${need_to_close}=  Run Keyword And Return Status  Element Should Be Visible  ${reports_menu_tree}
     Run Keyword If  ${need_to_close} == True  Click Element  ${reports_sidebar_menu_button}
-    Element Should Not Be Visible  ${reports_menu_tree}
+    Wait Until Page Does Not Contain Element  ${reports_menu_tree}  timeout=10 seconds
     Unselect Frame
 
 Click Reports Add Button
@@ -187,7 +187,7 @@ Click Add New Category
 Click Go To Reports Button
     Select Frame  xpath://iframe
     Click Element  ${reports_add_go_to_reports_button}
-    Wait Until Page Contains Element  ${reports_add_button}
+    Wait Until Page Contains Element  ${reports_add_button}  timeout=10 seconds
     Unselect Frame
 
 
