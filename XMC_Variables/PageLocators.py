@@ -44,7 +44,15 @@ xmc_devices_table = "xpath://div[contains(@id, 'deviceGrid')][contains(@id, 'bod
 # Administration Page
 xmc_admin_profiles_tab = "xpath://span[@class='x-tab-inner x-tab-inner-extr-main-tab-panel'][text()='Profiles']"
 xmc_admin_users_tab = "xpath://span[@class='x-tab-inner x-tab-inner-extr-main-tab-panel'][text()='Users']"
+xmc_admin_server_info_tab = "xpath://span[@class='x-tab-inner x-tab-inner-extr-main-tab-panel'][text()='Server Information']"
+xmc_admin_certificates_tab = "xpath://span[@class='x-tab-inner x-tab-inner-extr-main-tab-panel'][text()='Certificates']"
 xmc_admin_options_tab = "xpath://span[@class='x-tab-inner x-tab-inner-extr-main-tab-panel'][text()='Options']"
+xmc_admin_device_types_tab = "xpath://span[@class='x-tab-inner x-tab-inner-extr-main-tab-panel'][text()='Device Types']"
+xmc_admin_backup_restore_tab = "xpath://span[@class='x-tab-inner x-tab-inner-extr-main-tab-panel'][text()='Backup/Restore']"
+xmc_admin_diagnostics_tab = "xpath://span[@class='x-tab-inner x-tab-inner-extr-main-tab-panel'][text()='Diagnostics']"
+xmc_admin_client_api_access_tab = "xpath://span[@class='x-tab-inner x-tab-inner-extr-main-tab-panel'][text()='Client API Access']"
+xmc_tab_selected_xpath_value = "/ancestor::a[@aria-selected='true']"
+xmc_tab_not_selected_xpath_value = "/ancestor::a[not(@aria-selected='true')]"
 
 # Administration> Options Page
 xmc_options_tree_title = "xpath://span[@class='x-column-header-text-inner'][text() = 'Options']"
@@ -57,6 +65,12 @@ xmc_options_reset_btn_disabled = "xpath://span[text()='Reset']//ancestor::a[cont
 xmc_options_reset_btn_enabled = "xpath://span[text()='Reset']//ancestor::a[not(contains(@class, 'x-btn-disabled'))]"
 xmc_options_save_btn_disabled = "xpath://span[text()='Save']//ancestor::a[contains(@class, 'x-btn-disabled')]"
 xmc_options_save_btn_enabled = "xpath://span[text()='Save']//ancestor::a[not(contains(@class, 'x-btn-disabled'))]"
+
+# Administration> Diagnostics Page
+xmc_diagnostics_level_selector = "xpath://span[contains(text(),'Level:')]"
+# //table[contains(@class,'x-grid-item x-grid-item-selected')]//div[contains(@class,'x-tree-elbow-img x-tree-elbow-plus x-tree-expander')]
+# //table[contains(@class,'x-grid-item x-grid-item-selected')]//div[contains(@class,'x-tree-elbow-img x-tree-elbow-plus x-tree-expander')]
+# //td[contains(@class,'x-grid-cell x-grid-td x-grid-cell-treecolumn-1217 enterasys-treeNode x-grid-cell-treecolumn x-grid-cell-first x-grid-cell-last x-unselectable x-tree-expander-over')]//div[contains(@class,'x-tree-elbow-img x-tree-elbow-plus x-tree-expander')]
 
 # XMC Data Pump Options
 xmc_options_xmcdatapump_momenabled = "xpath://input[@name='momEnabled']"
