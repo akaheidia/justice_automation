@@ -37,6 +37,7 @@ Navigate to Network Summary Report
     Set Selenium Implicit Wait  2 seconds
     Navigate to Reports and Open Reports Menu
     Click Network Summary Report Menu
+    Wait For Network Summary Report Page To Load
 
 Navigate to XMC Server Utilization Report
     Set Selenium Implicit Wait  2 seconds

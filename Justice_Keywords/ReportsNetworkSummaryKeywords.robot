@@ -6,6 +6,15 @@ Documentation    Keywords specific to the Network Summary Report page.
 
 *** Keywords ***
 
+Wait For Network Summary Report Page To Load
+    Select Frame  xpath://iframe
+    Select Frame  xpath://iframe[@id='device_availability']
+
+    Wait Until Page Contains Element  ${reports_device_availability_drilldown}  timeout=10 seconds
+
+    Unselect Frame
+    Unselect Frame
+
 Click Device Availability Drilldown
     Select Frame  xpath://iframe
     Select Frame  xpath://iframe[@id='device_availability']
