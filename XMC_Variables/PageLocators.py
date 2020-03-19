@@ -68,9 +68,6 @@ xmc_options_save_btn_enabled = "xpath://span[text()='Save']//ancestor::a[not(con
 
 # Administration> Diagnostics Page
 xmc_diagnostics_level_selector = "xpath://span[contains(text(),'Level:')]"
-# //table[contains(@class,'x-grid-item x-grid-item-selected')]//div[contains(@class,'x-tree-elbow-img x-tree-elbow-plus x-tree-expander')]
-# //table[contains(@class,'x-grid-item x-grid-item-selected')]//div[contains(@class,'x-tree-elbow-img x-tree-elbow-plus x-tree-expander')]
-# //td[contains(@class,'x-grid-cell x-grid-td x-grid-cell-treecolumn-1217 enterasys-treeNode x-grid-cell-treecolumn x-grid-cell-first x-grid-cell-last x-unselectable x-tree-expander-over')]//div[contains(@class,'x-tree-elbow-img x-tree-elbow-plus x-tree-expander')]
 
 # XMC Data Pump Options
 xmc_options_xmcdatapump_momenabled = "xpath://input[@name='momEnabled']"
