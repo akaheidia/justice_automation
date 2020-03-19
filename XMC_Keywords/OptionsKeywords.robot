@@ -93,6 +93,18 @@ XMC Set Option Value XMC Data Pump Max Actions Serviced
     Input Text  ${xmc_options_xmcdatapump_max_actions_serviced}  ${value}
 
 
+XMC Confirm Options Save Warnings Dialog Present
+    Page Should Contain Element  ${xmc_options_save_warning_dialog}
+
+XMC Options Save Warnings Dialog Click Yes
+    Page Should Contain Element  ${xmc_options_save_warning_dialog}
+    Click Element  ${xmc_options_save_warning_dialog_yes_btn}
+
+XMC Options Save Warnings Dialog Click No
+    Page Should Contain Element  ${xmc_options_save_warning_dialog}
+    Click Element  ${xmc_options_save_warning_dialog_no_btn}
+
+
 XMC Confirm Option Value XMC Data Pump Domain Node Type
     [Arguments]  ${value}
     ${elem_value}=  Get Element Attribute  ${xmc_options_xmcdatapump_domainnodetype}  value
@@ -150,3 +162,7 @@ XMC Confirm Option Value XMC Data Pump Max Actions Serviced
     [Arguments]  ${value}
     ${elem_value}=  Get Element Attribute  ${xmc_options_xmcdatapump_max_actions_serviced}  value
     Should Be Equal  ${value}  ${elem_value}  XMC Data Pump: Max Actions Serviced option does not have expected value
+
+
+XMC Wait For Save Button To Be Enabled
+    Wait Until Page Contains Element  ${xmc_options_save_btn_enabled}  timeout=5 seconds

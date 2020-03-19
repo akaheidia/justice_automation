@@ -86,6 +86,10 @@ xmc_options_xmcdatapump_max_action_queue_size = "//input[@name='obMaxActionQueue
 xmc_options_xmcdatapump_max_actions_queueable = "//input[@name='obMaxActionsQueueableServicePeriod']"
 xmc_options_xmcdatapump_max_actions_serviced = "//input[@name='obMaxActionsServicedPerPeriod']"
 
+xmc_options_save_warning_dialog = "xpath://div[contains(text(),'Options - Save Warning(s)')]"
+xmc_options_save_warning_dialog_yes_btn = "xpath://span[contains(@class,'x-btn-blue-small')][contains(text(),'Yes')]"
+xmc_options_save_warning_dialog_no_btn = "xpath://span[contains(@class,'x-btn-inner x-btn-inner-default-small')][contains(text(),'No')]"
+
 ## Toolbar Buttons
 xmc_devices_toolbar_add_device = "xpath://span[@class='x-btn-inner x-btn-inner-default-toolbar-small'][text()='Add Device...']"
 
