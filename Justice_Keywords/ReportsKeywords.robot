@@ -116,6 +116,7 @@ Navigate to Analytics Summary Report
     Set Selenium Implicit Wait  2 seconds
     Navigate To Analytics Report Menu
     Click Analytics Summary Report Menu
+    Wait For Analytics Summary Report Page To Load
 
 Navigate to Analytics Top Applications By Clients Report
     Set Selenium Implicit Wait  2 seconds

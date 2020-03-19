@@ -5,6 +5,15 @@ Variables  ../Justice_Variables/PageLocators.py
 Documentation    Keywords specific to the Analytics Summary Report page.
 
 *** Keywords ***
+Wait For Analytics Summary Report Page To Load
+    Select Frame  xpath://iframe
+    Select Frame  xpath://iframe[@id='top_n']
+
+    Wait Until Page Contains Element  ${reports_top_applications_by_clients_drilldown}  timeout=10 seconds
+
+    Unselect Frame
+    Unselect Frame
+
 Confirm Analytics Summary Report Page Contains KPI Panel
     [Arguments]  ${title}
     sleep  1 second
