@@ -21,6 +21,6 @@ Diagnostics Test
     XMC Set XMC Data Pump Diagnostic Level  Informational
     XMC Set XMC Data Pump Diagnostic Level  Verbose
     XMC Set XMC Data Pump Diagnostic Level  Default emc.xml Value
-    XMC Diagnostics Click OK
     XMC Set XMC Data Pump Diagnostic Level  Verbose
+    XMC Diagnostics Click OK
     XMC Diagnostics Click Reset Defaults
