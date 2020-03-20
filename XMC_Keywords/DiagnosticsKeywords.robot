@@ -11,14 +11,28 @@ XMC Confirm Diagnostics Tab Loaded
 
 XMC Expand Diagnostics Tree Node
     [Arguments]  ${nodename}
-#
-#    ${need_to_expand}=  Run Keyword And Return Status  Element Should Be Visible  ${filter_servers_and_sites_panel_expand_icon}
-#    Run Keyword If  ${need_to_expand}  Click Element  ${filter_servers_and_sites_panel_expand_icon}
-#
-    Page Should Contain Element  xpath://span[contains(@class,'x-tree-node-text')][text()='${nodename}']
-    Click Element  xpath://span[contains(@class,'x-tree-node-text')][text()='${nodename}']
+    ${need_to_expand}=  Run Keyword And Return Status  Element Should Be Visible  xpath://span[contains(@class,'x-tree-node-text')][text()='${nodename}']${xmc_diagnostics_tree_collapsed_icon_xpath_value}
+    Run Keyword If  ${need_to_expand}  XMC Select Diagnostics Tree Node  ${nodename}
+    sleep  2 seconds
 
 XMC Select Diagnostics Tree Node
     [Arguments]  ${nodename}
     Page Should Contain Element  xpath://span[contains(@class,'x-tree-node-text')][text()='${nodename}']
     Click Element  xpath://span[contains(@class,'x-tree-node-text')][text()='${nodename}']
+
+XMC Set XMC Data Pump Diagnostic Level
+    [Arguments]  ${value}
+    Page Should Contain Element  ${xmc_diagnostics_xmc_data_pump_selector}
+    Click Element  ${xmc_diagnostics_xmc_data_pump_selector}
+    Page Should Contain Element  xpath://li[text()='${value}']
+    Click Element  xpath://li[text()='${value}']
+
+XMC Diagnostics Click OK
+    Page Should Contain Element  ${xmc_diagnostics_ok_button}
+    Click Element  ${xmc_diagnostics_ok_button}
+
+XMC Diagnostics Click Reset Defaults
+    Page Should Contain Element  ${xmc_diagnostics_reset_defaults_button}
+    Click Element  ${xmc_diagnostics_reset_defaults_button}
+    Wait Until Page Contains Element  ${xmc_diagnostics_reset_defaults_success_dialog}  timeout=5 seconds
+    Click Element  ${xmc_diagnostics_reset_defaults_success_dialog_ok_btn}
