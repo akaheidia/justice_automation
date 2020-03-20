@@ -94,6 +94,7 @@ xmc_options_xmcdatapump_action_queue_service_period = "//input[@name='obActionQu
 xmc_options_xmcdatapump_max_action_queue_size = "//input[@name='obMaxActionQueueSize']"
 xmc_options_xmcdatapump_max_actions_queueable = "//input[@name='obMaxActionsQueueableServicePeriod']"
 xmc_options_xmcdatapump_max_actions_serviced = "//input[@name='obMaxActionsServicedPerPeriod']"
+xmc_options_xmcdatapump_disabled_xpath_value = "[@disabled]"
 
 xmc_options_save_warning_dialog = "xpath://div[contains(text(),'Options - Save Warning(s)')]"
 xmc_options_save_warning_dialog_yes_btn = "xpath://span[contains(@class,'x-btn-blue-small')][contains(text(),'Yes')]"

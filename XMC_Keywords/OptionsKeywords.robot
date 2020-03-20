@@ -164,5 +164,95 @@ XMC Confirm Option Value XMC Data Pump Max Actions Serviced
     Should Be Equal  ${value}  ${elem_value}  XMC Data Pump: Max Actions Serviced option does not have expected value
 
 
+XMC Confirm Option Enabled XMC Data Pump Domain Node Type
+    ${orig_wait}=  Set Selenium Implicit Wait  1 second
+    Page Should Not Contain Element  ${xmc_options_xmcdatapump_domainnodetype}${xmc_options_xmcdatapump_disabled_xpath_value}
+    Set Selenium Implicit Wait  ${orig_wait}
+
+XMC Confirm Option Disabled XMC Data Pump Domain Node Type
+    Page Should Contain Element  ${xmc_options_xmcdatapump_domainnodetype}${xmc_options_xmcdatapump_disabled_xpath_value}
+
+
+XMC Confirm Option Enabled XMC Data Pump Host
+    ${orig_wait}=  Set Selenium Implicit Wait  1 second
+    Page Should Not Contain Element  ${xmc_options_xmcdatapump_host}${xmc_options_xmcdatapump_disabled_xpath_value}
+    Set Selenium Implicit Wait  ${orig_wait}
+
+XMC Confirm Option Disabled XMC Data Pump Host
+    Page Should Contain Element  ${xmc_options_xmcdatapump_host}${xmc_options_xmcdatapump_disabled_xpath_value}
+
+
+XMC Confirm Option Enabled XMC Data Pump Port
+    ${orig_wait}=  Set Selenium Implicit Wait  1 second
+    Page Should Not Contain Element  ${xmc_options_xmcdatapump_port}${xmc_options_xmcdatapump_disabled_xpath_value}
+    Set Selenium Implicit Wait  ${orig_wait}
+
+XMC Confirm Option Disabled XMC Data Pump Port
+    Page Should Contain Element  ${xmc_options_xmcdatapump_port}${xmc_options_xmcdatapump_disabled_xpath_value}
+
+
+XMC Confirm Option Enabled XMC Data Pump User
+    ${orig_wait}=  Set Selenium Implicit Wait  1 second
+    Page Should Not Contain Element  ${xmc_options_xmcdatapump_user}${xmc_options_xmcdatapump_disabled_xpath_value}
+    Set Selenium Implicit Wait  ${orig_wait}
+
+XMC Confirm Option Disabled XMC Data Pump User
+    Page Should Contain Element  ${xmc_options_xmcdatapump_user}${xmc_options_xmcdatapump_disabled_xpath_value}
+
+
+XMC Confirm Option Enabled XMC Data Pump Password
+    ${orig_wait}=  Set Selenium Implicit Wait  1 second
+    Page Should Not Contain Element  ${xmc_options_xmcdatapump_password}${xmc_options_xmcdatapump_disabled_xpath_value}
+    Set Selenium Implicit Wait  ${orig_wait}
+
+XMC Confirm Option Disabled XMC Data Pump Password
+    Page Should Contain Element  ${xmc_options_xmcdatapump_password}${xmc_options_xmcdatapump_disabled_xpath_value}
+
+
+XMC Confirm Option Enabled XMC Data Pump Queue Add Delay
+    ${orig_wait}=  Set Selenium Implicit Wait  1 second
+    Page Should Not Contain Element  ${xmc_options_xmcdatapump_action_queue_add_delay}${xmc_options_xmcdatapump_disabled_xpath_value}
+    Set Selenium Implicit Wait  ${orig_wait}
+
+XMC Confirm Option Disabled XMC Data Pump Queue Add Delay
+    Page Should Contain Element  ${xmc_options_xmcdatapump_action_queue_add_delay}${xmc_options_xmcdatapump_disabled_xpath_value}
+
+
+XMC Confirm Option Enabled XMC Data Pump Queue Add Service Period
+    ${orig_wait}=  Set Selenium Implicit Wait  1 second
+    Page Should Not Contain Element  ${xmc_options_xmcdatapump_action_queue_service_period}${xmc_options_xmcdatapump_disabled_xpath_value}
+    Set Selenium Implicit Wait  ${orig_wait}
+
+XMC Confirm Option Disabled XMC Data Pump Queue Add Service Period
+    Page Should Contain Element  ${xmc_options_xmcdatapump_action_queue_service_period}${xmc_options_xmcdatapump_disabled_xpath_value}
+
+
+XMC Confirm Option Enabled XMC Data Pump Max Action Queue Size
+    ${orig_wait}=  Set Selenium Implicit Wait  1 second
+    Page Should Not Contain Element  ${xmc_options_xmcdatapump_max_action_queue_size}${xmc_options_xmcdatapump_disabled_xpath_value}
+    Set Selenium Implicit Wait  ${orig_wait}
+
+XMC Confirm Option Disabled XMC Data Pump Max Action Queue Size
+    Page Should Contain Element  ${xmc_options_xmcdatapump_max_action_queue_size}${xmc_options_xmcdatapump_disabled_xpath_value}
+
+
+XMC Confirm Option Enabled XMC Data Pump Max Actions Queueable
+    ${orig_wait}=  Set Selenium Implicit Wait  1 second
+    Page Should Not Contain Element  ${xmc_options_xmcdatapump_max_actions_queueable}${xmc_options_xmcdatapump_disabled_xpath_value}
+    Set Selenium Implicit Wait  ${orig_wait}
+
+XMC Confirm Option Disabled XMC Data Pump Max Actions Queueable
+    Page Should Contain Element  ${xmc_options_xmcdatapump_max_actions_queueable}${xmc_options_xmcdatapump_disabled_xpath_value}
+
+
+XMC Confirm Option Enabled XMC Data Pump Max Actions Serviced
+    ${orig_wait}=  Set Selenium Implicit Wait  1 second
+    Page Should Not Contain Element  ${xmc_options_xmcdatapump_max_actions_serviced}${xmc_options_xmcdatapump_disabled_xpath_value}
+    Set Selenium Implicit Wait  ${orig_wait}
+
+XMC Confirm Option Disabled XMC Data Pump Max Actions Serviced
+    Page Should Contain Element  ${xmc_options_xmcdatapump_max_actions_serviced}${xmc_options_xmcdatapump_disabled_xpath_value}
+
+
 XMC Wait For Save Button To Be Enabled
     Wait Until Page Contains Element  ${xmc_options_save_btn_enabled}  timeout=5 seconds
