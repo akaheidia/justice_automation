@@ -128,11 +128,11 @@ XMC Create Device Enter Nickname
 
 XMC Create Device Click OK
     # Give the button a chance to become enabled
-    : FOR  ${index}  IN RANGE  1  1000
-    \    ${ok_enabled}=  Run Keyword And Return Status  Page Should Contain Element  ${xmc_create_device_dialog_ok_btn_enabled}
+    : FOR  ${index}  IN RANGE  1  100
+    \    ${ok_enabled}=  Run Keyword And Return Status  Page Should Contain Element  ${xmc_create_device_dialog_ok_btn}${xmc_btn_enabled_xpath_value}
     \    Exit For Loop If  ${ok_enabled} == True
-    Page Should Contain Element  ${xmc_create_device_dialog_ok_btn_enabled}
-    Click Element  ${xmc_create_device_dialog_ok_btn_enabled}
+    Page Should Contain Element  ${xmc_create_device_dialog_ok_btn}${xmc_btn_enabled_xpath_value}
+    Click Element  ${xmc_create_device_dialog_ok_btn}${xmc_btn_enabled_xpath_value}
 
 XMC Create Device Click Apply
     Wait Until Page Contains Element  ${xmc_create_device_dialog_apply_btn}
@@ -180,7 +180,9 @@ XMC Right Click Device In Table
 XMC Delete Device
     [Arguments]  ${device_ip}
     XMC Right Click Device In Table  ${device_ip}
+    Wait Until Page Contains Element  ${xmc_devices_context_more_actions_menu}
     Click Element  ${xmc_devices_context_more_actions_menu}
+    Wait Until Page Contains Element  ${xmc_devices_context_delete_device_menu}
     Click Element  ${xmc_devices_context_delete_device_menu}
     Page Should Contain Element  ${xmc_delete_device_dialog}
     Click Element  ${xmc_delete_device_dialog_delete_data_check_btn}

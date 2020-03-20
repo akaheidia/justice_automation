@@ -127,6 +127,8 @@ xmc_create_device_dialog_nickname_text = "xpath://input[@name='nickname']"
 xmc_create_device_dialog_ok_btn_enabled = "xpath://a[not(contains(@class, 'disabled'))]//*[text()='OK']"
 xmc_create_device_dialog_ok_btn_disabled = "xpath://a[contains(@class, 'disabled')]//*[text()='OK']"
 xmc_create_device_dialog_ok_btn = "xpath://span[contains(@class,'x-btn-inner x-btn-inner-blue-small')][text()='OK']"
+xmc_btn_enabled_xpath_value = "/ancestor::a[not(contains(@class, 'disabled'))]"
+xmc_btn_disabled_xpath_value = "/ancestor::a[contains(@class, 'disabled')]"
 xmc_create_device_dialog_apply_btn = "xpath://span[contains(@class,'x-btn-inner x-btn-inner-default-small')][text()='Apply']"
 xmc_create_device_dialog_close_btn = "xpath://span[contains(@class,'x-btn-inner x-btn-inner-default-small')][text()='Close']"
 
