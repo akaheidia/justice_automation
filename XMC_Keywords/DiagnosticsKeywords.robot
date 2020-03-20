@@ -30,9 +30,11 @@ XMC Set XMC Data Pump Diagnostic Level
 XMC Diagnostics Click OK
     Page Should Contain Element  ${xmc_diagnostics_ok_button}
     Click Element  ${xmc_diagnostics_ok_button}
+    ${ok_success_dlg}=  Run Keyword And Return Status  Wait Until Page Contains Element  ${xmc_diagnostics_ok_success_dialog}  timeout=5 seconds
+    Run Keyword If  ${ok_success_dlg}  Click Element  ${xmc_diagnostics_ok_success_dialog_ok_btn}
 
 XMC Diagnostics Click Reset Defaults
     Page Should Contain Element  ${xmc_diagnostics_reset_defaults_button}
     Click Element  ${xmc_diagnostics_reset_defaults_button}
-    Wait Until Page Contains Element  ${xmc_diagnostics_reset_defaults_success_dialog}  timeout=5 seconds
-    Click Element  ${xmc_diagnostics_reset_defaults_success_dialog_ok_btn}
+    ${reset_success_dlg}=  Run Keyword And Return Status  Wait Until Page Contains Element  ${xmc_diagnostics_reset_defaults_success_dialog}  timeout=5 seconds
+    Run Keyword If  ${reset_success_dlg}  Click Element  ${xmc_diagnostics_reset_defaults_success_dialog_ok_btn}

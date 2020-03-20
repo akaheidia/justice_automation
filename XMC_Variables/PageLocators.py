@@ -74,6 +74,8 @@ xmc_diagnostics_ok_button = "xpath://span[text()='OK']"
 xmc_diagnostics_reset_defaults_button = "xpath://span[text()='Reset Defaults']"
 xmc_diagnostics_reset_defaults_success_dialog = "xpath://div[contains(text(),'Server Diagnostic Settings Reset')]"
 xmc_diagnostics_reset_defaults_success_dialog_ok_btn = "xpath://span[contains(@class,'x-btn-inner x-btn-inner-blue-small')][contains(text(),'OK')]"
+xmc_diagnostics_ok_success_dialog = "xpath://div[contains(text(),'Server Diagnostic Settings Updated')]"
+xmc_diagnostics_ok_success_dialog_ok_btn = "xpath://span[contains(@class,'x-btn-inner x-btn-inner-blue-small')][contains(text(),'OK')]"
 xmc_diagnostics_xmc_data_pump_selector = "xpath://input[contains(@name,'XMC Data Pump')]"
 
 # XMC Data Pump Options
