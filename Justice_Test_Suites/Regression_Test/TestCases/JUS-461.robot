@@ -12,8 +12,15 @@ Diagnostics Test
     XMC Navigate To Administration Page
     XMC Click Diagnostics Tab
     XMC Confirm Diagnostics Tab Loaded
-    XMC Click Diagnostics Tab
     XMC Expand Diagnostics Tree Node  Server
     XMC Select Diagnostics Tree Node  Server Diagnostics
-    sleep  2 seconds
-    Page Should Contain  XMC Data Pump
+    Wait Until Page Contains  XMC Data Pump  timeout=5 seconds
+    XMC Set XMC Data Pump Diagnostic Level  Off
+    XMC Set XMC Data Pump Diagnostic Level  Critical
+    XMC Set XMC Data Pump Diagnostic Level  Warning
+    XMC Set XMC Data Pump Diagnostic Level  Informational
+    XMC Set XMC Data Pump Diagnostic Level  Verbose
+    XMC Set XMC Data Pump Diagnostic Level  Default emc.xml Value
+    XMC Diagnostics Click OK
+    XMC Set XMC Data Pump Diagnostic Level  Verbose
+    XMC Diagnostics Click Reset Defaults
