@@ -34,7 +34,7 @@ Log In and Navigate to Filtered Events View
     Set Server Filter  ${XMC_HOSTNAME}
     sleep  2 seconds
     Confirm Events Present
-    Confirm Minum Number of Events Present  10000
+    Confirm Minimum Number of Events Present  10000
 
 Confirm File Exists
     [Arguments]  ${filename}

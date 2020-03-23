@@ -17,7 +17,7 @@ Confirm Events Present
 Confirm No Events Present
     Page Should Contain  No Events Found
 
-Confirm Minum Number of Events Present
+Confirm Minimum Number of Events Present
     [Arguments]  ${count}
     ${string}=  Get Text  ${list_count_label}
     ${value}=  Convert To Integer  ${string}

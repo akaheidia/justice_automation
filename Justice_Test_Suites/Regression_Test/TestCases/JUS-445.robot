@@ -31,7 +31,7 @@ Log In and Navigate to Events View
     Confirm Events Tab Selected
     Clear All Filters
     Confirm Events Present
-    Confirm Minum Number of Events Present  10000
+    Confirm Minimum Number of Events Present  10000
 
 Confirm File Exists
     [Arguments]  ${filename}
