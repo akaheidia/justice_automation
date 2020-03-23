@@ -59,6 +59,19 @@ Confirm Reports Filter Time Range Value
     List Selection Should Be  ${reports_filter_panel_time_range_field}  ${value}
     Unselect Frame
 
+Set Reports Filter Custom Start Date
+    [Arguments]  ${date}
+    Select Frame  xpath://iframe
+    Input Text  ${reports_filter_panel_custom_start_date}  ${date}
+    Unselect Frame
+
+Set Reports Filter Custom End Date
+    [Arguments]  ${date}
+    Select Frame  xpath://iframe
+    Input Text  ${reports_filter_panel_custom_end_date}  ${date}
+    Unselect Frame
+
+
 Apply Reports Filter
     Select Frame  xpath://iframe
     Page Should Contain Element  ${reports_filter_panel_apply_button}

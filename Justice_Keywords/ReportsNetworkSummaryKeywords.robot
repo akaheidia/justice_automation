@@ -75,6 +75,29 @@ Click Port Error Drilldown
     Unselect Frame
     Unselect Frame
 
+Click End System Types Drilldown
+    Select Frame  xpath://iframe
+    Select Frame  xpath://iframe[@id='endsystems']
+
+    Page Should Contain Element  ${reports_endsystem_types_drilldown}
+    Click Element  ${reports_endsystem_types_drilldown}
+
+    Unselect Frame
+    Unselect Frame
+
+Click End System Pie Slice Drilldown
+    [Arguments]  ${value}
+    Select Frame  xpath://iframe
+    Select Frame  xpath://iframe[@id='endsystems']
+
+    Page Should Contain Element  xpath://*[name()='tspan' and text()='${value}']
+#    Scroll Element Into View  xpath://*[name()='tspan' and text()='${value}']
+#    Wait Until Element Is Visible  xpath://*[name()='tspan' and text()='${value}']  timeout=5 seconds
+    Click Element  xpath://*[name()='tspan' and text()='${value}']
+
+    Unselect Frame
+    Unselect Frame
+
 Click CPU Utilization Drilldown
     Select Frame  xpath://iframe
     Select Frame  xpath://iframe[@id='cpu_utilization']
