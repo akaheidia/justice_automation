@@ -23,3 +23,9 @@ Confirm Minimum Number of Events Present
     ${value}=  Convert To Integer  ${string}
     Log  Checking if ${value} >= ${count}
     Should Be True  ${value} >= ${count}
+
+Confirm Events Table Not Empty
+    Should Not Be Empty  ${list_events_table}
+
+Confirm Events Table Empty
+    Should Be Empty  ${list_events_table}
