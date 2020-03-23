@@ -11,6 +11,12 @@ Suite Teardown   Log Out and Close Browser
 ${xmc_with_endsystems}    ${XMC_2_HOSTNAME}
 
 *** Test Cases ***
+Confirm Table Paging
+    Go To Last Page
+    Go To First Page
+    Go To Next Page
+    Go To Previous Page
+
 Confirm Table Data Sorting
     Confirm Sort Not Applied
     Add Sort  IP Address

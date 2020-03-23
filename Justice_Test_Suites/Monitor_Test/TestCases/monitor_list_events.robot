@@ -8,6 +8,12 @@ Suite Setup      Log In and Navigate to Events Tab  ${JUS_URL}  ${BROWSER}  ${JU
 Suite Teardown   Log Out and Close Browser
 
 *** Test Cases ***
+Confirm Table Paging
+    Go To Last Page
+    Go To First Page
+    Go To Next Page
+    Go To Previous Page
+
 Confirm Table Data Sorting
     Confirm Sort Not Applied
     Add Sort  Severity

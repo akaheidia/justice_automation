@@ -1,3 +1,7 @@
+# General
+disabled_xpath_value = "[@disabled='true']"
+enabled_xpath_value = "[not(@disabled='true')]"
+
 # Login Page Elements
 login_page_url_suffix = "/#/auth"
 home_page_url_suffix = "/#/monitoring"
@@ -72,6 +76,10 @@ list_sort_icon = "xpath://mat-icon[@class='mat-icon notranslate ei ei-sort_by_al
 list_sort_selected_icon = "xpath://div[@class='cdk-overlay-backdrop app-overlays cdk-overlay-backdrop-showing']"
 list_columns_icon = "xpath://mat-icon[@class='mat-icon notranslate ei ei-view_column mat-icon-no-color']"
 list_count_label = "xpath://div[@class='end']"
+list_last_page_icon = "xpath://button[contains(@class,'mat-paginator-navigation-last')]"
+list_first_page_icon = "xpath://button[contains(@class,'mat-paginator-navigation-first')]"
+list_next_page_icon = "xpath://button[contains(@class,'mat-paginator-navigation-next')]"
+list_prev_page_icon = "xpath://button[contains(@class,'mat-paginator-navigation-prev')]"
 
 ## Download Menu Elements
 download_csv_visible_rows_menu = "xpath://span[@class='option'][text()='CSV']/..//span[@class='text'][contains(text(), '(Visible Rows)')]"

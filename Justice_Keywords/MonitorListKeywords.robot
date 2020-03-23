@@ -52,6 +52,35 @@ Click Events Tab
     Click Element  ${list_events_tab}
 
 
+Go To Last Page
+    ${orig_wait}=  Set Selenium Implicit Wait  1 second
+    ${enabled}=  Run Keyword And Return Status  Element Should Be Visible  ${list_last_page_icon}${enabled_xpath_value}
+    Run Keyword If  '${enabled}'=='True'  Click Element  ${list_last_page_icon}
+    ...    ELSE    Log  Last Page Icon Is Disabled
+    Set Selenium Implicit Wait  ${orig_wait}
+
+Go To First Page
+    ${orig_wait}=  Set Selenium Implicit Wait  1 second
+    ${enabled}=  Run Keyword And Return Status  Element Should Be Visible  ${list_first_page_icon}${enabled_xpath_value}
+    Run Keyword If  '${enabled}'=='True'  Click Element  ${list_first_page_icon}
+    ...    ELSE    Log  First Page Icon Is Disabled
+    Set Selenium Implicit Wait  ${orig_wait}
+
+Go To Next Page
+    ${orig_wait}=  Set Selenium Implicit Wait  1 second
+    ${enabled}=  Run Keyword And Return Status  Element Should Be Visible  ${list_next_page_icon}${enabled_xpath_value}
+    Run Keyword If  '${enabled}'=='True'  Click Element  ${list_next_page_icon}
+    ...    ELSE    Log  Next Page Icon Is Disabled
+    Set Selenium Implicit Wait  ${orig_wait}
+
+Go To Previous Page
+    ${orig_wait}=  Set Selenium Implicit Wait  1 second
+    ${enabled}=  Run Keyword And Return Status  Element Should Be Visible  ${list_prev_page_icon}${enabled_xpath_value}
+    Run Keyword If  '${enabled}'=='True'  Click Element  ${list_prev_page_icon}
+    ...    ELSE    Log  Previous Page Icon Is Disabled
+    Set Selenium Implicit Wait  ${orig_wait}
+
+
 Download CSV Visible Rows
     Open Download Menu
     Element Should Be Visible  ${download_csv_visible_rows_menu}
