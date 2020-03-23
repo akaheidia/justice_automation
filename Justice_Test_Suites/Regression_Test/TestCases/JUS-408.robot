@@ -33,10 +33,10 @@ Confirm CSV All Filtered Rows for Alarms
 Confirm CSV All Rows for Events
     Log to Console  Commented out until JUS-445 is fixed
     Navigate to Events and Set Filter  ${XMC_HOSTNAME}
-#    Download CSV All Rows
-#    Wait Until Page Contains  Download Complete
-#    Confirm File Contents  ${csv_events_all}
-#    Remove File  ${csv_events_all}
+    Download CSV All Rows
+    Wait Until Page Contains  Download Complete  timeout=1 minute
+    Confirm File Contents  ${csv_events_all}
+    Remove File  ${csv_events_all}
 
 Confirm CSV Visible Rows for Events
     Download CSV Visible Rows
@@ -46,10 +46,10 @@ Confirm CSV Visible Rows for Events
 
 Confirm CSV All Filtered Rows for Events
     Log to Console  Commented out until JUS-512 is fixed
-#    Download CSV All Filtered Rows
-#    Wait Until Page Contains  Download Complete
-#    Confirm File Contents  ${csv_events_filtered}
-#    Remove File  ${csv_events_filtered}
+    Download CSV All Filtered Rows
+    Wait Until Page Contains  Download Complete  timeout=1 minute
+    Confirm File Contents  ${csv_events_filtered}
+    Remove File  ${csv_events_filtered}
 
 
 Confirm CSV All Rows for End-Systems
