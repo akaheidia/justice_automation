@@ -71,6 +71,7 @@ list_download_selected_icon = "xpath://div[@class='cdk-overlay-backdrop app-over
 list_sort_icon = "xpath://mat-icon[@class='mat-icon notranslate ei ei-sort_by_alpha mat-icon-no-color']"
 list_sort_selected_icon = "xpath://div[@class='cdk-overlay-backdrop app-overlays cdk-overlay-backdrop-showing']"
 list_columns_icon = "xpath://mat-icon[@class='mat-icon notranslate ei ei-view_column mat-icon-no-color']"
+list_count_label = "xpath://div[@class='end']"
 
 ## Download Menu Elements
 download_csv_visible_rows_menu = "xpath://span[@class='option'][text()='CSV']/..//span[@class='text'][contains(text(), '(Visible Rows)')]"
