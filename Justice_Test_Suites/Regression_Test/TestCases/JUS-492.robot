@@ -3,7 +3,7 @@ Library   SSHLibrary
 Library   SeleniumLibrary
 Resource  ../Resources/AllResources.robot
 
-Documentation   Regression test for JUS-203: resync message when justice starts up.
+Documentation   Regression test for JUS-492: Resync: Error during resync test: "Action Rate Limit Exceeded[5000]. Queue cleared.".
 
 Suite Teardown  Close All Connections
 
