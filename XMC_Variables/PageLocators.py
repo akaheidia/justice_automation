@@ -1,3 +1,7 @@
+# General
+xmc_tab_selected_xpath_value = "/ancestor::a[@aria-selected='true']"
+xmc_tab_not_selected_xpath_value = "/ancestor::a[not(@aria-selected='true')]"
+
 # Login Page Elements
 xmc_login_username_text="name:j_username"
 xmc_login_password_text="name:j_password"
@@ -51,8 +55,6 @@ xmc_admin_device_types_tab = "xpath://span[@class='x-tab-inner x-tab-inner-extr-
 xmc_admin_backup_restore_tab = "xpath://span[@class='x-tab-inner x-tab-inner-extr-main-tab-panel'][text()='Backup/Restore']"
 xmc_admin_diagnostics_tab = "xpath://span[@class='x-tab-inner x-tab-inner-extr-main-tab-panel'][text()='Diagnostics']"
 xmc_admin_client_api_access_tab = "xpath://span[@class='x-tab-inner x-tab-inner-extr-main-tab-panel'][text()='Client API Access']"
-xmc_tab_selected_xpath_value = "/ancestor::a[@aria-selected='true']"
-xmc_tab_not_selected_xpath_value = "/ancestor::a[not(@aria-selected='true')]"
 
 # Administration> Options Page
 xmc_options_tree_title = "xpath://span[@class='x-column-header-text-inner'][text() = 'Options']"
@@ -77,6 +79,15 @@ xmc_diagnostics_reset_defaults_success_dialog_ok_btn = "xpath://span[contains(@c
 xmc_diagnostics_ok_success_dialog = "xpath://div[contains(text(),'Server Diagnostic Settings Updated')]"
 xmc_diagnostics_ok_success_dialog_ok_btn = "xpath://span[contains(@class,'x-btn-inner x-btn-inner-blue-small')][contains(text(),'OK')]"
 xmc_diagnostics_xmc_data_pump_selector = "xpath://input[contains(@name,'XMC Data Pump')]"
+
+# Analytics Page
+xmc_analytics_dashboard_tab = "xpath://span[@class='x-tab-inner x-tab-inner-extr-main-tab-panel'][text()='Dashboard']"
+xmc_analytics_browser_tab = "xpath://span[@class='x-tab-inner x-tab-inner-extr-main-tab-panel'][text()='Browser']"
+xmc_analytics_app_flows_tab = "xpath://span[@class='x-tab-inner x-tab-inner-extr-main-tab-panel'][text()='Application Flows']"
+xmc_analytics_fingerprints_tab = "xpath://span[@class='x-tab-inner x-tab-inner-extr-main-tab-panel'][text()='Fingerprints']"
+xmc_analytics_packet_captures_tab = "xpath://span[@class='x-tab-inner x-tab-inner-extr-main-tab-panel'][text()='Packet Captures']"
+xmc_analytics_config_tab = "xpath://span[@class='x-tab-inner x-tab-inner-extr-main-tab-panel'][text()='Configuration']"
+xmc_analytics_reports_tab = "xpath://span[@class='x-tab-inner x-tab-inner-extr-main-tab-panel'][text()='Reports']"
 
 # XMC Data Pump Options
 xmc_options_xmcdatapump_momenabled = "xpath://input[@name='momEnabled']"
