@@ -27,7 +27,7 @@ ${json_string}
 *** Test Cases ***      API
 Post Map               /v1/api/map
 Post Devices           /v1/api/devices
-Post End-Systems       /v1/api/endpoints
+Post End-Systems       /v1/api/endSystems
 Post Events            /v1/api/events
 
 *** Keywords ***
