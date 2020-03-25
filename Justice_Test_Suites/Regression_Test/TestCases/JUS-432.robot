@@ -1,12 +1,23 @@
 *** Settings ***
 Library   SeleniumLibrary
 Library   OperatingSystem
+Library   Collections
+Library   RequestsLibrary
 Resource  ../Resources/AllResources.robot
 
 Documentation    Regression test for JUS-432: Usability: inconsistent terminolog between Justice and XMC: End Points vs End-Systems.
 
 Suite Setup      Log In and Navigate to List View
 Suite Teardown   Log Out and Close Browser
+
+*** Variables ***
+${json_string}
+...  {
+...    "paginator": {
+...      "size": 20,
+...      "page": 0
+...    }
+...  }
 
 *** Test Cases ***
 Confirm End-Systems Tab
@@ -51,6 +62,11 @@ Confirm PDF Download File Name for End-Systems All Filtered Rows
     Wait Until Page Contains  Download Complete
     Confirm File Exists  ${pdf_endsystems_filtered}
     Remove File  ${pdf_endsystems_filtered}
+
+
+Confirm API For End-Systems
+    Set Access Token
+    Confirm Post Request Successful  /v1/api/endSystems  ${json_string}
 
 
 *** Keywords ***
