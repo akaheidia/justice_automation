@@ -10,8 +10,9 @@ Suite Teardown   Log Out and Close Browser
 
 *** Test Cases ***
 Confirm Reports Page Does Not Time Out
-    Navigate to Network Summary Report
-    Confirm Network Summary Reports Page Title
-    sleep  35 minutes
-    Click Device Availability Drilldown
-    Confirm Top N Device Availability Reports Page Title
+    Log To Console  Commented Out By Default Due To Long Time Requirement
+#    Navigate to Network Summary Report
+#    Confirm Network Summary Reports Page Title
+#    sleep  35 minutes
+#    Click Device Availability Drilldown
+#    Confirm Top N Device Availability Reports Page Title
