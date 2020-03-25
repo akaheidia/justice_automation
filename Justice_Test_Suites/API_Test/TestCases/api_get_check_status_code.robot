@@ -20,6 +20,7 @@ Get All Sites           /v1/api/allSites
 Get Alarms Summary      /v1/api/alarms/summary
 Get All Domain Nodes    /v1/api/domainNodes
 Get Database Password   /v1/api/settings/security
+Get User Groups         /v1/api/settings/userGroups
 Get All Tags            /v1/api/tags
 
 *** Keywords ***
