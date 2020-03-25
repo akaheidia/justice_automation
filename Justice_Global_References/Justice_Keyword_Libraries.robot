@@ -1,6 +1,7 @@
 *** Settings ***
 Resource   ../Justice_Keywords/APIKeywords.robot
 Resource   ../Justice_Keywords/CommonKeywords.robot
+Resource   ../Justice_Keywords/EventFiltersKeywords.robot
 Resource   ../Justice_Keywords/ListFiltersKeywords.robot
 Resource   ../Justice_Keywords/LoginKeywords.robot
 Resource   ../Justice_Keywords/MonitorKeywords.robot

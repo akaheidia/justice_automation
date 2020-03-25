@@ -71,6 +71,15 @@ Set Reports Filter Custom End Date
     Input Text  ${reports_filter_panel_custom_end_date}  ${date}
     Unselect Frame
 
+Deselect Reports Filter Server
+    [Arguments]  ${server}
+#    "xpath://div[@class='server-site-filter']//li[1]//label[1]//input[1]"
+
+Confirm Reports Filter Contains Server
+    [Arguments]  ${server}
+    Select Frame  xpath://iframe
+    Page Should Contain Element  xpath://span[contains(text(), '${server}')]
+    Unselect Frame
 
 Apply Reports Filter
     Select Frame  xpath://iframe
