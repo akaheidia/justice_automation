@@ -2,7 +2,7 @@
 Library    SeleniumLibrary
 Variables  ../Justice_Variables/PageLocators.py
 
-Documentation    Keywords specific to the Filter Panel.
+Documentation    Keywords specific to the Filter Panel related to all list views.
 
 *** Keywords ***
 
