@@ -501,3 +501,11 @@ Confirm Breadcrumb Contains Text
     Select Frame  xpath://iframe
     Page Should Contain Element  xpath://table//div//span[contains(text(),'${value}')]
     Unselect Frame
+
+Confirm Breadcrumb Does Not Contain Text
+    [Arguments]  ${value}
+    ${orig_wait}=  Set Selenium Implicit Wait  1 second
+    Select Frame  xpath://iframe
+    Page Should Not Contain Element  xpath://table//div//span[contains(text(),'${value}')]
+    Unselect Frame
+    Set Selenium Implicit Wait  ${orig_wait}
