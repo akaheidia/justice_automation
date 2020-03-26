@@ -28,6 +28,6 @@ Confirm XMC Data Pump Options Default Values
 
     XMC Confirm Option Value XMC Data Pump Queue Add Delay  3
     XMC Confirm Option Value XMC Data Pump Queue Add Service Period  2
-    XMC Confirm Option Value XMC Data Pump Max Action Queue Size  10000
-    XMC Confirm Option Value XMC Data Pump Max Actions Queueable  5000
+    XMC Confirm Option Value XMC Data Pump Max Action Queue Size  80000
+    XMC Confirm Option Value XMC Data Pump Max Actions Queueable  75000
     XMC Confirm Option Value XMC Data Pump Max Actions Serviced  500
