@@ -301,6 +301,14 @@ Click Analytics Quarterly Usage Report Menu
     Click Report Menu  ${reports_analytics_quarterly_usage_menu}
 
 
+Click Breadcrumb
+    [Arguments]  ${value}
+    Select Frame  xpath://iframe
+    Page Should Contain Element  xpath://table//div//span[contains(text(),'${value}')]
+    Click Element  xpath://table//div//span[contains(text(),'${value}')]
+    Unselect Frame
+
+
 Confirm Network Scorecard Reports Page Title
     Select Frame  xpath://iframe
     Page Should Contain Element  ${reports_network_scorecard_page_title}
@@ -486,4 +494,10 @@ Confirm Analytics Monthly Usage Reports Page Title
 Confirm Analytics Quarterly Usage Reports Page Title
     Select Frame  xpath://iframe
     Page Should Contain Element  ${reports_analytics_quarterly_usage_page_title}
+    Unselect Frame
+
+Confirm Breadcrumb Contains Text
+    [Arguments]  ${value}
+    Select Frame  xpath://iframe
+    Page Should Contain Element  xpath://table//div//span[contains(text(),'${value}')]
     Unselect Frame
