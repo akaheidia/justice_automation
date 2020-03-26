@@ -9,7 +9,8 @@ login_logo_image = "xpath://img[@class='login-logo']"
 login_username_text="xpath://input[@placeholder='Username']"
 login_password_text="xpath://input[@placeholder='Password']"
 login_login_btn="xpath://*[text()='Login']/.."
-login_unauthorized_message="xpath://span[contains(text(),'Unauthorized')]"
+# login_unauthorized_message="xpath://span[contains(text(),'Unauthorized')]"
+login_unauthorized_message="xpath://span[contains(text(),'Failed to authenticate')]"
 login_failed_ok="xpath://span[text()='OK']"
 
 # Navigation Bar Elements
