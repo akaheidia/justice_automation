@@ -149,11 +149,11 @@ reports_tree_expand_analytics_icon = "xpath://span[text()='Analytics']/../../td[
 reports_tree_collapse_analytics_icon = "xpath://span[text()='Analytics']/../../td[@id='rdImage']/img[contains(@src, 'rdArrowDown')]"
 
 # Reports Page Tree Node Menus
-reports_network_scorecard_menu = "xpath://table[@id='rdMenuTable']//span[text()='Scorecard']"
+reports_network_scorecard_menu = "xpath://table[@id='rdMenuTable']//span[text()='Network Scorecard']"
 reports_network_summary_menu = "xpath://table[@id='rdMenuTable']//span[text()='Network Summary']"
 reports_xmc_server_utilization_menu = "xpath://table[@id='rdMenuTable']//span[text()='XMC Server Utilization']"
 
-reports_site_availability_menu = "xpath://table[@id='rdMenuTable']//span[text()='Availability']"
+reports_site_availability_menu = "xpath://table[@id='rdMenuTable']//span[text()='Site Availability']"
 reports_site_port_utilization_menu = "xpath://table[@id='rdMenuTable']//span[text()='Site']//following::span[text()='Port Utilization']"
 reports_site_port_error_menu = "xpath://table[@id='rdMenuTable']//span[text()='Site']//following::span[text()='Port Error']"
 reports_site_cpu_utilization_menu = "xpath://table[@id='rdMenuTable']//span[text()='Site']//following::span[text()='CPU Utilization']"
