@@ -11,7 +11,7 @@ Confirm Port Utilization Report Page Title
     Select Frame  xpath://iframe
     Select Frame  xpath://iframe[@id='statistic']
 
-    Page Should Contain Element  ${reports_port_utilization_page_title}
+    Page Should Contain Element  ${reports_site_port_utilization_page_title}
 
     Unselect Frame
     Unselect Frame
