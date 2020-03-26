@@ -12,4 +12,4 @@ Suite Teardown   Log Out and Close Browser
 Confirm Analytics Summary Top Sites By Clients Title
     Navigate to Analytics Summary Report
     Confirm Analytics Summary Reports Page Title
-    Confirm Analytics Summary Report Page Contains Top N Panel  Top Sites By Clients
+    Confirm Analytics Summary Report Page Contains Top N Panel  Top Sites by Clients
