@@ -37,7 +37,7 @@ monitor_tags_icon = "xpath://mat-icon[@class='mat-icon notranslate ei ei-label_o
 monitor_filter_icon = "xpath://mat-icon[@class='mat-icon notranslate ei ei-filter mat-icon-no-color']"
 
 # Filter Panel Elements
-filter_panel_title = "xpath://div[@class='filters-header-text']"
+filter_panel_title = "xpath://div[text()='Filters']"
 filter_clear_all_icon = "xpath://mat-icon[@class='mat-icon notranslate ei ei-clear_all mat-icon-no-color']"
 filter_servers_and_sites_panel_title = "xpath://div[contains(text(),'Servers & Sites')]"
 filter_servers_and_sites_panel_expand_icon = "xpath://div[contains(text(),'Servers & Sites')]/mat-icon[contains(@class, 'arrow_right')]"
