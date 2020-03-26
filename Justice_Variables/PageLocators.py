@@ -228,6 +228,7 @@ reports_device_availability_page_title = "xpath://h2[text()='Device Availability
 reports_top_device_availability_page_title = "xpath://h2[text()='Top Device Availability']"
 reports_device_overview_page_title = "xpath://h2[text()='Device Overview']"
 reports_site_port_utilization_page_title = "xpath://h2[text()='Site Port Utilization']"
+reports_port_utilization_page_title = "xpath://h2[text()='Port Utilization']"
 reports_port_overview_page_title = "xpath://h2[text()='Port Overview']"
 reports_rx_bandwidth_page_title = "xpath://h2[text()='Rx Bandwidth']"
 reports_total_bandwidth_page_title = "xpath://h2[text()='Total Bandwidth']"
