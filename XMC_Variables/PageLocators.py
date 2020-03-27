@@ -1,6 +1,8 @@
 # General
 xmc_tab_selected_xpath_value = "/ancestor::a[@aria-selected='true']"
 xmc_tab_not_selected_xpath_value = "/ancestor::a[not(@aria-selected='true')]"
+xmc_btn_enabled_xpath_value = "/ancestor::a[not(contains(@class, 'disabled'))]"
+xmc_btn_disabled_xpath_value = "/ancestor::a[contains(@class, 'disabled')]"
 
 # Login Page Elements
 xmc_login_username_text="name:j_username"
@@ -89,6 +91,22 @@ xmc_analytics_packet_captures_tab = "xpath://span[@class='x-tab-inner x-tab-inne
 xmc_analytics_config_tab = "xpath://span[@class='x-tab-inner x-tab-inner-extr-main-tab-panel'][text()='Configuration']"
 xmc_analytics_reports_tab = "xpath://span[@class='x-tab-inner x-tab-inner-extr-main-tab-panel'][text()='Reports']"
 
+## Analytics> Configuration Page
+xmc_analytics_config_toolbar_button_add = "xpath://span[contains(text(),'Add...')]"
+xmc_analytics_config_toolbar_button_delete = "xpath://span[contains(text(),'Delete')]"
+xmc_analytics_config_toolbar_button_enforce = "xpath://span[contains(text(),'Enforce')]"
+xmc_analytics_config_toolbar_button_enforce_all = "xpath://span[contains(text(),'Enforce All')]"
+xmc_analytics_config_toolbar_button_poll = "xpath://span[contains(text(),'Poll')]"
+xmc_analytics_config_toolbar_button_restart_collector = "xpath://span[contains(text(),'Restart Collector')]"
+
+### Analytics> Configuration: Add Engine Dialog
+xmc_analytics_add_engine_dialog = "xpath://div[contains(text(),'Add Application Analytics Engine')]"
+xmc_analytics_add_engine_dialog_ip_field = "xpath://input[@name='ip']"
+xmc_analytics_add_engine_dialog_name_field = "xpath://input[@name='name']"
+xmc_analytics_add_engine_dialog_profile_field = "xpath://input[@name='profileId']"
+xmc_analytics_add_engine_dialog_ok_btn = "xpath://span[contains(@class,'x-btn-inner x-btn-inner-blue-small')][text()='OK']"
+xmc_analytics_add_engine_dialog_cancel_btn = "xpath://span[contains(@class,'x-btn-inner x-btn-inner-default-small')][text()='Cancel']"
+
 # XMC Data Pump Options
 xmc_options_xmcdatapump_momenabled = "xpath://input[@name='momEnabled']"
 xmc_options_xmcdatapump_domainnodetype = "xpath://input[@name='domainNodeType']"
@@ -139,8 +157,6 @@ xmc_create_device_dialog_nickname_text = "xpath://input[@name='nickname']"
 xmc_create_device_dialog_ok_btn_enabled = "xpath://a[not(contains(@class, 'disabled'))]//*[text()='OK']"
 xmc_create_device_dialog_ok_btn_disabled = "xpath://a[contains(@class, 'disabled')]//*[text()='OK']"
 xmc_create_device_dialog_ok_btn = "xpath://span[contains(@class,'x-btn-inner x-btn-inner-blue-small')][text()='OK']"
-xmc_btn_enabled_xpath_value = "/ancestor::a[not(contains(@class, 'disabled'))]"
-xmc_btn_disabled_xpath_value = "/ancestor::a[contains(@class, 'disabled')]"
 xmc_create_device_dialog_apply_btn = "xpath://span[contains(@class,'x-btn-inner x-btn-inner-default-small')][text()='Apply']"
 xmc_create_device_dialog_close_btn = "xpath://span[contains(@class,'x-btn-inner x-btn-inner-default-small')][text()='Close']"
 
