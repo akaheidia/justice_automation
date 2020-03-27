@@ -159,8 +159,8 @@ reports_site_port_error_menu = "xpath://table[@id='rdMenuTable']//span[text()='S
 reports_site_cpu_utilization_menu = "xpath://table[@id='rdMenuTable']//span[text()='Site CPU Utilization']"
 reports_site_memory_utilization_menu = "xpath://table[@id='rdMenuTable']//span[text()='Site Memory Utilization']"
 
-reports_topn_device_availability_menu = "xpath://table[@id='rdMenuTable']//span[text()='Device Availability']"
-reports_topn_site_availability_menu = "xpath://table[@id='rdMenuTable']//span[text()='Site Availability']"
+reports_topn_device_availability_menu = "xpath://table[@id='rdMenuTable']//span[text()='Top Device Availability']"
+reports_topn_site_availability_menu = "xpath://table[@id='rdMenuTable']//span[text()='Top Site Availability']"
 reports_topn_cpu_utilization_menu = "xpath://table[@id='rdMenuTable']//span[text()='Top CPU Utilization']"
 reports_topn_memory_utilization_menu = "xpath://table[@id='rdMenuTable']//span[text()='Top Memory Utilization']"
 reports_topn_port_utilization_menu = "xpath://table[@id='rdMenuTable']//span[text()='Top Port Utilization']"
