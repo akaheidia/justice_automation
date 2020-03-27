@@ -74,11 +74,11 @@ Confirm Justice Not Updated
 
 Reconnect XMC To Justice
     Reconnect To RabbitMQ  ${JUS_HOST_IP}  ${JUS_USERNAME}  ${JUS_PASSWORD}  ${xmc_ip}  ${prompt}
-    sleep  30 seconds
+    sleep  60 seconds
 
 Confirm XMC Resync Messages
     XMC Confirm Server Log Message Output  ${xmc_ip}  ${xmc_user}  ${xmc_pwd}  ${xmc_log}  Starting Resync...
-    sleep  45 seconds
+    sleep  60 seconds
     XMC Confirm Server Log Message Output  ${xmc_ip}  ${xmc_user}  ${xmc_pwd}  ${xmc_log}  Resync Completed successfully.
 
 Confirm Justice Updated
