@@ -157,7 +157,7 @@ Close Add Sort Menu
 Select Sort Choice
     [Arguments]  ${sort}
     Element Should Be Visible  ${sort_add_menu_panel}
-    Click Element  xpath://span[contains(text(), '${sort}')]
+    Click Element  xpath://span[text()='${sort}']
 
 Click Remove Sort Icon
     [Arguments]  ${sort}
