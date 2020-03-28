@@ -16,7 +16,6 @@ Confirm XMC Data Pump Option Enabled State
     XMC Select Options Tree Node  XMC Data Pump
 
     XMC Set Option Value XMC Data Pump MoM Disabled
-    XMC Confirm Option Disabled XMC Data Pump Domain Node Type
     XMC Confirm Option Disabled XMC Data Pump Host
     XMC Confirm Option Disabled XMC Data Pump Port
     XMC Confirm Option Disabled XMC Data Pump User
@@ -28,7 +27,6 @@ Confirm XMC Data Pump Option Enabled State
     XMC Confirm Option Disabled XMC Data Pump Max Actions Serviced
 
     XMC Set Option Value XMC Data Pump MoM Enabled
-    XMC Confirm Option Enabled XMC Data Pump Domain Node Type
     XMC Confirm Option Enabled XMC Data Pump Host
     XMC Confirm Option Enabled XMC Data Pump Port
     XMC Confirm Option Enabled XMC Data Pump User
