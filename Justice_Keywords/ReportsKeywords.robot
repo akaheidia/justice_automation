@@ -440,7 +440,7 @@ Confirm Top N Port Error Reports Page Title
     UnSelect Frame
     Unselect Frame
 
-Confirm Top N Top APs By Clients Reports Page Title
+Confirm Top N Top APs by Clients Reports Page Title
     sleep  1 second
     Select Frame  xpath://iframe
     Select Frame  xpath://iframe[@id='resource']
@@ -450,7 +450,7 @@ Confirm Top N Top APs By Clients Reports Page Title
     UnSelect Frame
     Unselect Frame
 
-Confirm Top N Top APs By Bandwidth Reports Page Title
+Confirm Top N Top APs by Bandwidth Reports Page Title
     sleep  1 second
     Select Frame  xpath://iframe
     Select Frame  xpath://iframe[@id='resource']
@@ -466,12 +466,12 @@ Confirm Analytics Summary Reports Page Title
     Page Should Contain Element  ${reports_analytics_analytics_summary_page_title}
     Unselect Frame
 
-Confirm Analytics Top Applications By Clients Reports Page Title
+Confirm Analytics Top Applications by Clients Reports Page Title
     Select Frame  xpath://iframe
     Page Should Contain Element  ${reports_analytics_top_applications_by_clients_page_title}
     Unselect Frame
 
-Confirm Analytics Top Applications By Volume Reports Page Title
+Confirm Analytics Top Applications by Volume Reports Page Title
     Select Frame  xpath://iframe
     Page Should Contain Element  ${reports_analytics_top_applications_by_volume_page_title}
     Unselect Frame

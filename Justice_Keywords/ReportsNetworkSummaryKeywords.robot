@@ -35,7 +35,7 @@ Click Site Availability Drilldown
     Unselect Frame
     Unselect Frame
 
-Click Top APs By Clients Drilldown
+Click Top APs by Clients Drilldown
     Select Frame  xpath://iframe
     Select Frame  xpath://iframe[@id='ap_clients']
 
@@ -45,7 +45,7 @@ Click Top APs By Clients Drilldown
     Unselect Frame
     Unselect Frame
 
-Click Top APs By Bandwidth Drilldown
+Click Top APs by Bandwidth Drilldown
     Select Frame  xpath://iframe
     Select Frame  xpath://iframe[@id='ap_bandwidth']
 
