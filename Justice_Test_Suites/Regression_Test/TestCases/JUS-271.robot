@@ -10,8 +10,8 @@ Suite Teardown   Close Browser
 
 *** Test Cases ***
 Confirm Session Timeout Returns to Login Page
-#    Log To Console  Commented Out By Default Due To Long Time Requirement
-    Confirm Devices Tab Selected
-    sleep  8 hours
-    Reload Page
-    Confirm Login Page Loaded
+    Log To Console  Commented Out By Default Due To Long Time Requirement
+#    Confirm Devices Tab Selected
+#    sleep  8 hours
+#    Reload Page
+#    Confirm Login Page Loaded
