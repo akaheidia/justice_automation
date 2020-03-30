@@ -204,6 +204,13 @@ reports_analytics_quarterly_usage_page_title = "xpath://h2[text()='Quarterly Ana
 # Reports - Drilldown Elements
 reports_device_availability_drilldown = "xpath://h4[text()='Device Availability']"
 reports_site_availability_drilldown = "xpath://h4[text()='Site Availability']"
+reports_site_cpu_util_drilldown = "xpath://h4[text()='Site CPU Utilization']"
+reports_site_memory_util_drilldown = "xpath://h4[text()='Site Memory Utilization']"
+reports_total_clients_drilldown = "xpath://h4[text()='Total Clients']"
+reports_site_port_util_drilldown = "xpath://h4[text()='Site Port Utilization']"
+reports_site_port_error_drilldown = "xpath://h4[text()='Site Port Error']"
+reports_site_wireless_volume_drilldown = "xpath://h4[text()='Site Wireless Volume']"
+reports_tracked_app_resp_time_drilldown = "xpath://h4[text()='Tracked Application Response Time']"
 reports_top_aps_by_clients_drilldown = "xpath://h4[text()='Top APs by Clients']"
 reports_top_aps_by_bandwidth_drilldown = "xpath://h4[text()='Top APs by Bandwidth']"
 reports_port_utilization_drilldown = "xpath://h4[text()='Port Utilization']"
@@ -215,6 +222,16 @@ reports_top_applications_by_clients_drilldown = "xpath://h4[text()='Top Applicat
 reports_top_applications_by_volume_drilldown = "xpath://h4[text()='Top Applications by Volume']"
 reports_slowest_responding_applications_drilldown = "xpath://h4[text()='Slowest Responding Applications']"
 reports_slowest_responding_network_services_drilldown = "xpath://h4[text()='Slowest Responding Network Services']"
+
+# Reports Donuts
+reports_site_availability_donut = "xpath://*[contains(@class,'highcharts')]//*[name()='path' and contains(@fill,'rgba')]"
+reports_site_cpu_util_donut = "xpath://h4[text()='Site CPU Utilization']"
+reports_site_memory_util_donut = "xpath://h4[text()='Site Memory Utilization']"
+reports_total_clients_donut = "xpath://h4[text()='Total Clients']"
+reports_site_port_util_donut = "xpath://h4[text()='Site Port Utilization']"
+reports_site_port_error_donut = "xpath://h4[text()='Site Port Error']"
+reports_site_wireless_volume_donut = "xpath://h4[text()='Site Wireless Volume']"
+reports_tracked_app_resp_time_donut = "xpath://h4[text()='Tracked Application Response Time']"
 
 # Reports - Network Scorecard Page Elements
 
