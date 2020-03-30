@@ -139,7 +139,6 @@ XMC Analytics Configuration Confirm Delete
     Element Should Be Visible  ${xmc_analytics_confirm_delete_engine_dialog}
     Page Should Contain Element  xpath://div[contains(text(),'${engine_ip}')]
     Run Keyword If  '${check_value}'=='true'  Click Element  ${xmc_analytics_confirm_delete_engine_dialog_checkbox}
-    sleep  3 seconds
     XMC Analytics Configuration Confirm Delete Click Yes
 
 XMC Analytics Configuration Confirm Delete Click Yes
