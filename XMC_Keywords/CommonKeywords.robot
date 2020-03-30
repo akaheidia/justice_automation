@@ -61,7 +61,7 @@ XMC Wait For Server Restart
     sleep  60 seconds
     sleep  60 seconds
     Open and Maximize Browser  ${url}  ${browser}
-    Wait Until Element Is Visible  ${xmc_login_logo_image}
+    Wait Until Element Is Visible  ${xmc_login_logo_image}  timeout=3 minutes
     Close Browser
 
 XMC Confirm Server Log Message Output
