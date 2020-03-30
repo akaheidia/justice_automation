@@ -63,6 +63,16 @@ XMC Click Analytics Reports Tab
     Set Selenium Implicit Wait  ${orig_wait}
 
 
+# The Add Engine dialog will be automatically displayed when the user enters the Configuration tab if no engines are currently created.
+# This method will close the dialog if it is displayed, and should be called before interacting with the Configuration tab.
+XMC Analytics Configuration Close Add Engine Dialog If Displayed
+    ${orig_wait}=  Set Selenium Implicit Wait  1 second
+    ${need_to_close}=  Run Keyword And Return Status  Element Should Be Visible  ${xmc_analytics_add_engine_dialog}
+    Run Keyword If  ${need_to_close}  Click Element  ${xmc_analytics_add_engine_dialog_cancel_btn}
+    ...       ELSE  Log  Add Engine Dialog Not Displayed
+    Set Selenium Implicit Wait  ${orig_wait}
+
+
 # Add Engine
 XMC Analytics Configuration Click Add
     ${orig_wait}=  Set Selenium Implicit Wait  1 second
@@ -94,7 +104,7 @@ XMC Analytics Configuration Add Engine Select Profile
     [Arguments]   ${value}
     Page Should Contain Element  ${xmc_analytics_add_engine_dialog_profile_field}
     Click Element  ${xmc_analytics_add_engine_dialog_profile_field}
-    Click Element  xpath://div[contains(text(),'${value}')]
+    Click Element  xpath://li[contains(text(),'${value}')]
 
 XMC Analytics Configuration Add Engine Click OK
     # Give the button a chance to become enabled
@@ -108,3 +118,36 @@ XMC Analytics Configuration Add Engine Click Cancel
     Page Should Contain Element  ${xmc_analytics_add_engine_dialog_cancel_btn}
     Click Element  ${xmc_analytics_add_engine_dialog_cancel_btn}
 
+# Select Engine
+XMC Analytics Configuration Select Tree Node
+    [Arguments]  ${value}
+    Page Should Contain Element  xpath://span[contains(@class,'x-tree-node-text')][contains(text(),'${value}')]
+    Click Element  xpath://span[contains(@class,'x-tree-node-text')][contains(text(),'${value}')]
+
+XMC Analytics Configuration Select Engine In Table
+    [Arguments]  ${value}
+    Page Should Contain Element  xpath://td[contains(text(),'${value}')]
+    Click Element  xpath://td[contains(text(),'${value}')]
+
+# Delete Engine
+XMC Analytics Configuration Click Delete
+    Page Should Contain Element  ${xmc_analytics_config_toolbar_button_delete}${xmc_btn_enabled_xpath_value}
+    Click Element  ${xmc_analytics_config_toolbar_button_delete}
+
+XMC Analytics Configuration Confirm Delete
+    [Arguments]  ${engine_ip}  ${check_value}
+    Element Should Be Visible  ${xmc_analytics_confirm_delete_engine_dialog}
+    Page Should Contain Element  xpath://div[contains(text(),'${engine_ip}')]
+    Run Keyword If  '${check_value}'=='true'  Click Element  ${xmc_analytics_confirm_delete_engine_dialog_checkbox}
+    sleep  3 seconds
+    XMC Analytics Configuration Confirm Delete Click Yes
+
+XMC Analytics Configuration Confirm Delete Click Yes
+    Element Should Be Visible  ${xmc_analytics_confirm_delete_engine_dialog}
+    Page Should Contain Element  ${xmc_analytics_confirm_delete_engine_dialog_yes_btn}
+    Click Element  ${xmc_analytics_confirm_delete_engine_dialog_yes_btn}
+
+XMC Analytics Configuration Confirm Delete Click No
+    Element Should Be Visible  ${xmc_analytics_confirm_delete_engine_dialog}
+    Page Should Contain Element  ${xmc_analytics_confirm_delete_engine_dialog_no_btn}
+    Click Element  ${xmc_analytics_confirm_delete_engine_dialog_no_btn}

@@ -107,6 +107,13 @@ xmc_analytics_add_engine_dialog_profile_field = "xpath://input[@name='profileId'
 xmc_analytics_add_engine_dialog_ok_btn = "xpath://span[contains(@class,'x-btn-inner x-btn-inner-blue-small')][text()='OK']"
 xmc_analytics_add_engine_dialog_cancel_btn = "xpath://span[contains(@class,'x-btn-inner x-btn-inner-default-small')][text()='Cancel']"
 
+### Analytics> Configuration: Confirm Delete Engine Dialog
+xmc_analytics_confirm_delete_engine_dialog = "xpath://div[contains(text(),'Confirm Delete')]"
+xmc_analytics_confirm_delete_engine_dialog_checkbox = "xpath://label[contains(text(),'Delete Engine from Management Center if it exists')]"
+xmc_analytics_confirm_delete_engine_dialog_yes_btn = "xpath://span[contains(@class,'x-btn-inner x-btn-inner-blue-small')][text()='Yes']"
+xmc_analytics_confirm_delete_engine_dialog_no_btn = "xpath://span[contains(@class,'x-btn-inner x-btn-inner-default-small')][text()='No']"
+
+
 # XMC Data Pump Options
 xmc_options_xmcdatapump_momenabled = "xpath://input[@name='momEnabled']"
 xmc_options_xmcdatapump_domainnodetype = "xpath://input[@name='domainNodeType']"
