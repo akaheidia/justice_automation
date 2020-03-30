@@ -57,11 +57,13 @@ XMC Restart Server
 
 XMC Wait For Server Restart
     [Arguments]  ${url}  ${browser}
-    sleep  60 seconds
-    sleep  60 seconds
-    sleep  60 seconds
     Open and Maximize Browser  ${url}  ${browser}
-    Wait Until Element Is Visible  ${xmc_login_logo_image}  timeout=3 minutes
+    : FOR  ${index}  IN RANGE  1  10000
+    \    Reload Page
+    \    ${page_loaded}=  Run Keyword And Return Status  Element Should Be Visible  ${xmc_login_logo_image}
+    \    Exit For Loop If  ${page_loaded} == True
+    \    sleep  2 seconds
+    Element Should Be Visible  ${xmc_login_logo_image}
     Close Browser
 
 XMC Confirm Server Log Message Output
