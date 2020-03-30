@@ -22,14 +22,14 @@ Confirm Site Availability Drilldown
     Confirm Top N Site Availability Reports Page Title
 
 # JUS-428
-#Confirm Top APs By Clients Drilldown
-#    Click Top APs By Clients Drilldown
-##    Confirm Top N Top APs By Clients Reports Page Title
+#Confirm Top APs by Clients Drilldown
+#    Click Top APs by Clients Drilldown
+##    Confirm Top N Top APs by Clients Reports Page Title
 
 # JUS-428
-#Confirm Top APs By Bandwidth Drilldown
-#    Click Top APs By Bandwidth Drilldown
-##    Confirm Top N Top APs By Bandwidth Reports Page Title
+#Confirm Top APs by Bandwidth Drilldown
+#    Click Top APs by Bandwidth Drilldown
+##    Confirm Top N Top APs by Bandwidth Reports Page Title
 
 Confirm Port Utilization Drilldown
     Click Port Utilization Drilldown
