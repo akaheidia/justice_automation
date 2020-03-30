@@ -21,6 +21,7 @@ Resource   ../Justice_Keywords/ReportsMetricPortUtilizationKeywords.robot
 Resource   ../Justice_Keywords/ReportsMetricRxBandwidthKeywords.robot
 Resource   ../Justice_Keywords/ReportsMetricTotalBandwidthKeywords.robot
 Resource   ../Justice_Keywords/ReportsMetricTxBandwidthKeywords.robot
+Resource   ../Justice_Keywords/ReportsNetworkScorecardKeywords.robot
 Resource   ../Justice_Keywords/ReportsNetworkSummaryKeywords.robot
 Resource   ../Justice_Keywords/ReportsPortOverviewKeywords.robot
 Resource   ../Justice_Keywords/ReportsPortUtilizationKeywords.robot
