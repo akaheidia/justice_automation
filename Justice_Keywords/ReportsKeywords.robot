@@ -359,6 +359,34 @@ Confirm Site Memory Utilization Reports Page Title
     UnSelect Frame
     Unselect Frame
 
+Confirm Total Clients Reports Page Title
+    sleep  1 second
+    Select Frame  xpath://iframe
+    Select Frame  xpath://iframe[@id='resource']
+
+    Page Should Contain Element  ${reports_total_clients_page_title}
+
+    UnSelect Frame
+    Unselect Frame
+
+Confirm Site Wireless Volume Reports Page Title
+    sleep  1 second
+    Select Frame  xpath://iframe
+    Select Frame  xpath://iframe[@id='statistic']
+
+    Page Should Contain Element  ${reports_site_wireless_volume_page_title}
+
+    UnSelect Frame
+    Unselect Frame
+
+Confirm Tracked Application Response Time Reports Page Title
+    sleep  1 second
+    Select Frame  xpath://iframe
+
+    Page Should Contain Element  ${reports_tracked_app_resp_time_page_title}
+
+    UnSelect Frame
+
 Confirm Site Port Utilization Reports Page Title
     sleep  1 second
     Select Frame  xpath://iframe
