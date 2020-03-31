@@ -32,6 +32,7 @@ Log In and Navigate to Filtered Events View
     Confirm Events Tab Selected
     Clear All Filters
     Set Server Filter  ${XMC_HOSTNAME}
+    Set Server Filter  ${XMC_2_HOSTNAME}
     sleep  2 seconds
     Confirm Events Present
     Confirm Minimum Number of Events Present  10000
