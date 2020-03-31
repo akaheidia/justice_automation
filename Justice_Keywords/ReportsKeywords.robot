@@ -192,6 +192,12 @@ Click Go To Reports Button
     Unselect Frame
 
 
+Confirm Reports Tree Node Expanded State
+    [Arguments]  ${icon_element}
+    Select Frame  xpath://iframe
+    Element Should Be Visible  ${icon_element}
+    Unselect Frame
+
 Click Expand Collapse Reports Tree Node Icon
     [Arguments]  ${icon_element}
     Select Frame  xpath://iframe
@@ -199,11 +205,25 @@ Click Expand Collapse Reports Tree Node Icon
     Run Keyword If  ${need_to_click} == True  Click Element  ${icon_element}
     Unselect Frame
 
+
+Confirm Reports Tree Reports Node Is Expanded
+    Confirm Reports Tree Node Expanded State  ${reports_tree_collapse_reports_icon}
+
+Confirm Reports Tree Reports Node Is Collapsed
+    Confirm Reports Tree Node Expanded State  ${reports_tree_expand_reports_icon}
+
 Expand Reports Tree Reports Node
     Click Expand Collapse Reports Tree Node Icon  ${reports_tree_expand_reports_icon}
 
 Collapse Reports Tree Reports Node
     Click Expand Collapse Reports Tree Node Icon  ${reports_tree_collapse_reports_icon}
+
+
+Confirm Reports Tree Site Node Is Expanded
+    Confirm Reports Tree Node Expanded State  ${reports_tree_collapse_site_icon}
+
+Confirm Reports Tree Site Node Is Collapsed
+    Confirm Reports Tree Node Expanded State  ${reports_tree_expand_site_icon}
 
 Expand Reports Tree Site Node
     Click Expand Collapse Reports Tree Node Icon  ${reports_tree_expand_site_icon}
@@ -211,11 +231,25 @@ Expand Reports Tree Site Node
 Collapse Reports Tree Site Node
     Click Expand Collapse Reports Tree Node Icon  ${reports_tree_collapse_site_icon}
 
+
+Confirm Reports Tree Top N Node Is Expanded
+    Confirm Reports Tree Node Expanded State  ${reports_tree_collapse_topn_icon}
+
+Confirm Reports Tree Top N Node Is Collapsed
+    Confirm Reports Tree Node Expanded State  ${reports_tree_expand_topn_icon}
+
 Expand Reports Tree Top N Node
     Click Expand Collapse Reports Tree Node Icon  ${reports_tree_expand_topn_icon}
 
 Collapse Reports Tree Top N Node
     Click Expand Collapse Reports Tree Node Icon  ${reports_tree_collapse_topn_icon}
+
+
+Confirm Reports Tree Analytics Node Is Expanded
+    Confirm Reports Tree Node Expanded State  ${reports_tree_collapse_analytics_icon}
+
+Confirm Reports Tree Analytics Node Is Collapsed
+    Confirm Reports Tree Node Expanded State  ${reports_tree_expand_analytics_icon}
 
 Expand Reports Tree Analytics Node
     Click Expand Collapse Reports Tree Node Icon  ${reports_tree_expand_analytics_icon}
