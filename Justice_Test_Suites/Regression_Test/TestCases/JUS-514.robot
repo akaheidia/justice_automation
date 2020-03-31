@@ -9,7 +9,7 @@ Suite Teardown   Log Out and Close Browser
 Test Setup       Navigate To Network Scorecard Report
 
 *** Test Cases ***
-Confirm Total Clients Label Drilldown
+Confirm Total Clients Drilldown Resulting Page Title
     Confirm Network Scorecard Reports Page Title
     Click Network Scorecard Total Clients Drilldown
     Confirm Total Clients Reports Page Title
