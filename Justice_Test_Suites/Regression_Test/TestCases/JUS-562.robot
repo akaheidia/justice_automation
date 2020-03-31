@@ -24,8 +24,9 @@ Disconnect XMC From Justice
     XMC Confirm Server Log Message Output  ${xmc_ip}  ${xmc_user}  ${xmc_pwd}  ${xmc_log}  No connection to the remote server.
 
 Restart XMC Server After Creating Devices
-    XMC Restart Server  ${xmc_ip}  ${xmc_user}  ${xmc_pwd}
-    XMC Wait For Server Restart  ${url_for_xmc}  ${BROWSER}
+    Log To Console  Commenting out this step until JUS-562 is addressed
+#    XMC Restart Server  ${xmc_ip}  ${xmc_user}  ${xmc_pwd}
+#    XMC Wait For Server Restart  ${url_for_xmc}  ${BROWSER}
 
 Connect XMC To Justice
     Reconnect To RabbitMQ  ${jus_ip}  ${jus_user}  ${jus_pwd}  ${xmc_ip}  ${prompt}
