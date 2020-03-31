@@ -18,13 +18,21 @@ ${site_5}    Level 5 Site
 Confirm Multi-Level Site Drilldowns Function
     Navigate to Site Availability Report
     sleep  2 seconds
-    Change Report Time Range to Last Hour
+#    Change Report Time Range to Last Hour
     sleep  2 seconds
+    Hide Reports Filter Panel
     Site Availability Drill Into Site  ${site_1}
+    Hide Reports Filter Panel
     Site Availability Drill Into Site  ${site_2}
+    Hide Reports Filter Panel
     Site Availability Drill Into Site  ${site_3}
+    Hide Reports Filter Panel
     Site Availability Drill Into Site  ${site_4}
+    sleep  1 second
+    Hide Reports Filter Panel
+    sleep  2 seconds
     Site Availability Drill Into Site  ${site_5}
+    Hide Reports Filter Panel
     Confirm Breadcrumb Contains Text  ${site_1}
     Confirm Breadcrumb Contains Text  ${site_2}
     Confirm Breadcrumb Contains Text  ${site_3}
