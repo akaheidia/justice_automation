@@ -340,6 +340,17 @@ Confirm Site Availability Reports Page Title
     UnSelect Frame
     Unselect Frame
 
+Confirm Site Availability Reports Page Context Title
+    [Arguments]  ${value}
+    sleep  2 seconds
+    Select Frame  xpath://iframe
+    Select Frame  xpath://iframe[@id='availability']
+
+    Page Should Contain Element  xpath://h4[contains(text(),'${value}')]
+
+    UnSelect Frame
+    Unselect Frame
+
 Confirm Site CPU Utilization Reports Page Title
     sleep  2 seconds
     Select Frame  xpath://iframe

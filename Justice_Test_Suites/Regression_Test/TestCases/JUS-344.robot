@@ -13,7 +13,7 @@ ${site_2}    Level 2 Site
 ${site_3}    Level 3 Site
 
 *** Test Cases ***
-Confirm Breadcrumb functionality
+Confirm Breadcrumb Functionality
     Navigate to Site Availability Report
     sleep  2 seconds
     Change Report Time Range to Last Hour
