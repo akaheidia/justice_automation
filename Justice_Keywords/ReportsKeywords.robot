@@ -320,6 +320,7 @@ Confirm Network Summary Reports Page Title
     Unselect Frame
 
 Confirm XMC Server Utilization Reports Page Title
+    sleep  2 seconds
     Select Frame  xpath://iframe
     Select Frame  xpath://iframe[@id='server_usage']
 
@@ -330,7 +331,7 @@ Confirm XMC Server Utilization Reports Page Title
 
 
 Confirm Site Availability Reports Page Title
-    sleep  1 second
+    sleep  2 seconds
     Select Frame  xpath://iframe
     Select Frame  xpath://iframe[@id='availability']
 
@@ -340,7 +341,7 @@ Confirm Site Availability Reports Page Title
     Unselect Frame
 
 Confirm Site CPU Utilization Reports Page Title
-    sleep  1 second
+    sleep  2 seconds
     Select Frame  xpath://iframe
     Select Frame  xpath://iframe[@id='statistic']
 
@@ -350,7 +351,7 @@ Confirm Site CPU Utilization Reports Page Title
     Unselect Frame
 
 Confirm Site Memory Utilization Reports Page Title
-    sleep  1 second
+    sleep  2 seconds
     Select Frame  xpath://iframe
     Select Frame  xpath://iframe[@id='statistic']
 
@@ -360,7 +361,7 @@ Confirm Site Memory Utilization Reports Page Title
     Unselect Frame
 
 Confirm Total Clients Reports Page Title
-    sleep  1 second
+    sleep  2 seconds
     Select Frame  xpath://iframe
     Select Frame  xpath://iframe[@id='resource']
 
@@ -370,7 +371,7 @@ Confirm Total Clients Reports Page Title
     Unselect Frame
 
 Confirm Site Wireless Volume Reports Page Title
-    sleep  1 second
+    sleep  2 seconds
     Select Frame  xpath://iframe
     Select Frame  xpath://iframe[@id='statistic']
 
@@ -380,7 +381,7 @@ Confirm Site Wireless Volume Reports Page Title
     Unselect Frame
 
 Confirm Tracked Application Response Time Reports Page Title
-    sleep  1 second
+    sleep  2 seconds
     Select Frame  xpath://iframe
 
     Page Should Contain Element  ${reports_tracked_app_resp_time_page_title}
@@ -388,7 +389,7 @@ Confirm Tracked Application Response Time Reports Page Title
     UnSelect Frame
 
 Confirm Site Port Utilization Reports Page Title
-    sleep  1 second
+    sleep  2 seconds
     Select Frame  xpath://iframe
     Select Frame  xpath://iframe[@id='statistic']
 
@@ -398,7 +399,7 @@ Confirm Site Port Utilization Reports Page Title
     Unselect Frame
 
 Confirm Site Port Error Reports Page Title
-    sleep  1 second
+    sleep  2 seconds
     Select Frame  xpath://iframe
     Select Frame  xpath://iframe[@id='statistic']
 
@@ -409,7 +410,7 @@ Confirm Site Port Error Reports Page Title
 
 
 Confirm Top N Device Availability Reports Page Title
-    sleep  1 second
+    sleep  2 seconds
     Select Frame  xpath://iframe
     Select Frame  xpath://iframe[@id='resource']
 
@@ -419,7 +420,7 @@ Confirm Top N Device Availability Reports Page Title
     Unselect Frame
 
 Confirm Top N Site Availability Reports Page Title
-    sleep  1 second
+    sleep  2 seconds
     Select Frame  xpath://iframe
     Select Frame  xpath://iframe[@id='resource']
 
@@ -429,7 +430,7 @@ Confirm Top N Site Availability Reports Page Title
     Unselect Frame
 
 Confirm Top N CPU Utilization Reports Page Title
-    sleep  1 second
+    sleep  2 seconds
     Select Frame  xpath://iframe
     Select Frame  xpath://iframe[@id='resource']
 
@@ -439,7 +440,7 @@ Confirm Top N CPU Utilization Reports Page Title
     Unselect Frame
 
 Confirm Top N Memory Utilization Reports Page Title
-    sleep  1 second
+    sleep  2 seconds
     Select Frame  xpath://iframe
     Select Frame  xpath://iframe[@id='resource']
 
@@ -449,7 +450,7 @@ Confirm Top N Memory Utilization Reports Page Title
     Unselect Frame
 
 Confirm Top N Port Utilization Reports Page Title
-    sleep  1 second
+    sleep  2 seconds
     Select Frame  xpath://iframe
     Select Frame  xpath://iframe[@id='resource']
 
@@ -459,7 +460,7 @@ Confirm Top N Port Utilization Reports Page Title
     Unselect Frame
 
 Confirm Top N Port Error Reports Page Title
-    sleep  1 second
+    sleep  2 seconds
     Select Frame  xpath://iframe
     Select Frame  xpath://iframe[@id='resource']
 
@@ -469,7 +470,7 @@ Confirm Top N Port Error Reports Page Title
     Unselect Frame
 
 Confirm Top N Top APs by Clients Reports Page Title
-    sleep  1 second
+    sleep  2 seconds
     Select Frame  xpath://iframe
     Select Frame  xpath://iframe[@id='resource']
 
@@ -479,7 +480,7 @@ Confirm Top N Top APs by Clients Reports Page Title
     Unselect Frame
 
 Confirm Top N Top APs by Bandwidth Reports Page Title
-    sleep  1 second
+    sleep  2 seconds
     Select Frame  xpath://iframe
     Select Frame  xpath://iframe[@id='resource']
 
