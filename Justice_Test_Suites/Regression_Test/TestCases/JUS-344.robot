@@ -22,8 +22,8 @@ Confirm Breadcrumb functionality
     Site Availability Drill Into Site  ${site_2}
     Site Availability Drill Into Site  ${site_3}
     Click Breadcrumb  ${site_1}
-    sleep  1 second
+    sleep  2 seconds
     Site Availability Drill Into Site  ${site_2}
     Click Breadcrumb  Site Availability
-    sleep  1 second
+    sleep  2 seconds
     Confirm Site Availability Reports Page Title
