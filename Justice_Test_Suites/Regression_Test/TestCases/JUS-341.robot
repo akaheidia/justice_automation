@@ -12,31 +12,39 @@ Suite Teardown   Log Out and Close Browser
 Confirm Network Scorecard Menu and Title
     Navigate to Network Scorecard Report
     Confirm Network Scorecard Reports Page Title
+    Confirm Breadcrumb Contains Text  Home
 
 Confirm Site Availability Menu and Title
     Navigate to Site Availability Report
     Confirm Site Availability Reports Page Title
+    Confirm Breadcrumb Contains Text  Site Availability
 
 Confirm Top APs By Clients Menu and Title
     Navigate to Top N Top APs By Clients Report
     Confirm Top N Top APs by Clients Reports Page Title
+    Confirm Breadcrumb Contains Text  Top APs by Clients
 
 Confirm Top APs By Bandwidth Menu and Title
     Navigate to Top N Top APs By Bandwidth Report
     Confirm Top N Top APs by Bandwidth Reports Page Title
+    Confirm Breadcrumb Contains Text  Top APs by Bandwidth
 
-Confirm Analytics Top Applications By Clients Menu and Title
+Confirm Top Applications By Clients Menu and Title
     Navigate to Analytics Top Applications By Clients Report
     Confirm Analytics Top Applications by Clients Reports Page Title
+    Confirm Breadcrumb Contains Text  Top Applications By Clients
 
-Confirm Analytics Daily Usage Menu and Title
-    Navigate to Analytics Daily Usage Report
+Confirm Daily Analytics Usage Menu and Title
+    Navigate to Analytics Daily Analytics Usage Report
     Confirm Analytics Daily Usage Reports Page Title
+    Confirm Breadcrumb Contains Text  Daily Analytics Usage
 
-Confirm Analytics Monthly Usage Menu and Title
-    Navigate to Analytics Monthly Usage Report
+Confirm Monthly Analytics Usage Menu and Title
+    Navigate to Analytics Monthly Analytics Usage Report
     Confirm Analytics Monthly Usage Reports Page Title
+    Confirm Breadcrumb Contains Text  Monthly Analytics Usage
 
 Confirm Analytics Quarterly Summary Menu and Title
     Navigate to Analytics Quarterly Summary Report
     Confirm Analytics Quarterly Summary Reports Page Title
+    Confirm Breadcrumb Contains Text  Analytics Quarterly Summary

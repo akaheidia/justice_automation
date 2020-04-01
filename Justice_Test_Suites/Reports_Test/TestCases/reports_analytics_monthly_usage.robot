@@ -10,5 +10,5 @@ Suite Teardown   Log Out and Close Browser
 *** Test Cases ***
 
 Confirm Page Loads
-    Navigate to Analytics Monthly Usage Report
-    Confirm Analytics Monthly Usage Reports Page Title
+    Navigate to Analytics Monthly Analytics Usage Report
+    Confirm Analytics Monthly Analytics Usage Reports Page Title

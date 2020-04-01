@@ -47,7 +47,7 @@ Confirm Report Labels Are Correct for Analytics: Analytics Summary
     Confirm Analytics Summary Report Page Contains Top N Panel  Top Sites by Volume
 
 Confirm Report Labels Are Correct for Analytics: Quarterly Analytics Summary
-    Navigate to Analytics Quarterly Usage Report
+    Navigate to Analytics Quarterly Summary Report
     Confirm Analytics Quarterly Summary Report Page Contains Top N Panel Quarter 1  Top Applications by Clients
     Confirm Analytics Quarterly Summary Report Page Contains Top N Panel Quarter 1  Top Applications by Volume
     Confirm Analytics Quarterly Summary Report Page Contains Top N Panel Quarter 1  Top Application Groups by Volume

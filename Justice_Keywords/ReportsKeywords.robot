@@ -133,15 +133,15 @@ Navigate to Analytics Slowest Responding Applications Report
     Navigate To Analytics Report Menu
     Click Analytics Slowest Responding Applications Report Menu
 
-Navigate to Analytics Daily Usage Report
+Navigate to Analytics Daily Analytics Usage Report
     Set Selenium Implicit Wait  2 seconds
     Navigate To Analytics Report Menu
-    Click Analytics Daily Usage Report Menu
+    Click Analytics Daily Analytics Usage Report Menu
 
-Navigate to Analytics Monthly Usage Report
+Navigate to Analytics Monthly Analytics Usage Report
     Set Selenium Implicit Wait  2 seconds
     Navigate To Analytics Report Menu
-    Click Analytics Monthly Usage Report Menu
+    Click Analytics Monthly Analytics Usage Report Menu
 
 Navigate to Analytics Quarterly Summary Report
     Set Selenium Implicit Wait  2 seconds
@@ -325,10 +325,10 @@ Click Analytics Top Applications By Volume Report Menu
 Click Analytics Slowest Responding Applications Report Menu
     Click Report Menu  ${reports_analytics_slowest_responding_applications_menu}
 
-Click Analytics Daily Usage Report Menu
+Click Analytics Daily Analytics Usage Report Menu
     Click Report Menu  ${reports_analytics_daily_usage_menu}
 
-Click Analytics Monthly Usage Report Menu
+Click Analytics Monthly Analytics Usage Report Menu
     Click Report Menu  ${reports_analytics_monthly_usage_menu}
 
 Click Analytics Quarterly Summary Report Menu
@@ -555,12 +555,12 @@ Confirm Analytics Slowest Responding Applications Reports Page Title
     Page Should Contain Element  ${reports_analytics_slowest_responding_applications_page_title}
     Unselect Frame
 
-Confirm Analytics Daily Usage Reports Page Title
+Confirm Analytics Daily Analytics Usage Reports Page Title
     Select Frame  xpath://iframe
     Page Should Contain Element  ${reports_analytics_daily_usage_page_title}
     Unselect Frame
 
-Confirm Analytics Monthly Usage Reports Page Title
+Confirm Analytics Monthly Analytics Usage Reports Page Title
     Select Frame  xpath://iframe
     Page Should Contain Element  ${reports_analytics_monthly_usage_page_title}
     Unselect Frame

@@ -10,5 +10,5 @@ Suite Teardown   Log Out and Close Browser
 *** Test Cases ***
 
 Confirm Page Loads
-    Navigate to Analytics Daily Usage Report
-    Confirm Analytics Daily Usage Reports Page Title
+    Navigate to Analytics Daily Analytics Usage Report
+    Confirm Analytics Daily Analytics Usage Reports Page Title
