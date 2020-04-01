@@ -174,7 +174,7 @@ reports_analytics_top_applications_by_volume_menu = "xpath://table[@id='rdMenuTa
 reports_analytics_slowest_responding_applications_menu = "xpath://table[@id='rdMenuTable']//span[text()='Slowest Responding Applications']"
 reports_analytics_daily_usage_menu = "xpath://table[@id='rdMenuTable']//span[text()='Daily Analytics Usage']"
 reports_analytics_monthly_usage_menu = "xpath://table[@id='rdMenuTable']//span[text()='Monthly Analytics Usage']"
-reports_analytics_quarterly_usage_menu = "xpath://table[@id='rdMenuTable']//span[text()='Quarterly Analytics Summary']"
+reports_analytics_quarterly_summary_menu = "xpath://table[@id='rdMenuTable']//span[text()='Quarterly Analytics Summary']"
 
 # Reports Page Titles
 reports_network_scorecard_page_title = "xpath://h2[text()='Network Scorecard']"
@@ -202,7 +202,7 @@ reports_analytics_top_applications_by_volume_page_title = "xpath://h2[text()='To
 reports_analytics_slowest_responding_applications_page_title = "xpath://h2[text()='Slowest Responding Applications']"
 reports_analytics_daily_usage_page_title = "xpath://h2[text()='Daily Analytics Usage']"
 reports_analytics_monthly_usage_page_title = "xpath://h2[text()='Monthly Analytics Usage']"
-reports_analytics_quarterly_usage_page_title = "xpath://h2[text()='Quarterly Analytics Summary']"
+reports_analytics_quarterly_summary_page_title = "xpath://h2[text()='Quarterly Analytics Summary']"
 
 # Reports - Drilldown Elements
 reports_device_availability_drilldown = "xpath://h4[text()='Device Availability']"
