@@ -8,7 +8,6 @@ Suite Setup      Open Browser and Log In  ${JUS_URL}  ${BROWSER}  ${JUS_USERNAME
 Suite Teardown   Log Out and Close Browser
 
 *** Test Cases ***
-
 Confirm Report Labels Are Correct for Top N: Top APs by Clients
     Navigate to Top N Top APs by Clients Report
     Confirm Top N Top APs by Clients Reports Page Title
@@ -47,20 +46,20 @@ Confirm Report Labels Are Correct for Analytics: Analytics Summary
     Confirm Analytics Summary Report Page Contains Top N Panel  Top Sites by Volume
 
 Confirm Report Labels Are Correct for Analytics: Quarterly Analytics Summary
-    Navigate to Analytics Quarterly Summary Report
-    Confirm Analytics Quarterly Summary Report Page Contains Top N Panel Quarter 1  Top Applications by Clients
-    Confirm Analytics Quarterly Summary Report Page Contains Top N Panel Quarter 1  Top Applications by Volume
-    Confirm Analytics Quarterly Summary Report Page Contains Top N Panel Quarter 1  Top Application Groups by Volume
-    Confirm Analytics Quarterly Summary Report Page Contains Top N Panel Quarter 1  Total Volume by Day
-    Confirm Analytics Quarterly Summary Report Page Contains Top N Panel Quarter 2  Top Applications by Clients
-    Confirm Analytics Quarterly Summary Report Page Contains Top N Panel Quarter 2  Top Applications by Volume
-    Confirm Analytics Quarterly Summary Report Page Contains Top N Panel Quarter 2  Top Application Groups by Volume
-    Confirm Analytics Quarterly Summary Report Page Contains Top N Panel Quarter 2  Total Volume by Day
-    Confirm Analytics Quarterly Summary Report Page Contains Top N Panel Quarter 3  Top Applications by Clients
-    Confirm Analytics Quarterly Summary Report Page Contains Top N Panel Quarter 3  Top Applications by Volume
-    Confirm Analytics Quarterly Summary Report Page Contains Top N Panel Quarter 3  Top Application Groups by Volume
-    Confirm Analytics Quarterly Summary Report Page Contains Top N Panel Quarter 3  Total Volume by Day
-    Confirm Analytics Quarterly Summary Report Page Contains Top N Panel Quarter 4  Top Applications by Clients
-    Confirm Analytics Quarterly Summary Report Page Contains Top N Panel Quarter 4  Top Applications by Volume
-    Confirm Analytics Quarterly Summary Report Page Contains Top N Panel Quarter 4  Top Application Groups by Volume
-    Confirm Analytics Quarterly Summary Report Page Contains Top N Panel Quarter 4  Total Volume by Day
+    Navigate to Analytics Quarterly Analytics Summary Report
+    Confirm Analytics Quarterly Analytics Summary Report Page Contains Top N Panel Quarter 1  Top Applications by Clients
+    Confirm Analytics Quarterly Analytics Summary Report Page Contains Top N Panel Quarter 1  Top Applications by Volume
+    Confirm Analytics Quarterly Analytics Summary Report Page Contains Top N Panel Quarter 1  Top Application Groups by Volume
+    Confirm Analytics Quarterly Analytics Summary Report Page Contains Top N Panel Quarter 1  Total Volume by Day
+    Confirm Analytics Quarterly Analytics Summary Report Page Contains Top N Panel Quarter 2  Top Applications by Clients
+    Confirm Analytics Quarterly Analytics Summary Report Page Contains Top N Panel Quarter 2  Top Applications by Volume
+    Confirm Analytics Quarterly Analytics Summary Report Page Contains Top N Panel Quarter 2  Top Application Groups by Volume
+    Confirm Analytics Quarterly Analytics Summary Report Page Contains Top N Panel Quarter 2  Total Volume by Day
+    Confirm Analytics Quarterly Analytics Summary Report Page Contains Top N Panel Quarter 3  Top Applications by Clients
+    Confirm Analytics Quarterly Analytics Summary Report Page Contains Top N Panel Quarter 3  Top Applications by Volume
+    Confirm Analytics Quarterly Analytics Summary Report Page Contains Top N Panel Quarter 3  Top Application Groups by Volume
+    Confirm Analytics Quarterly Analytics Summary Report Page Contains Top N Panel Quarter 3  Total Volume by Day
+    Confirm Analytics Quarterly Analytics Summary Report Page Contains Top N Panel Quarter 4  Top Applications by Clients
+    Confirm Analytics Quarterly Analytics Summary Report Page Contains Top N Panel Quarter 4  Top Applications by Volume
+    Confirm Analytics Quarterly Analytics Summary Report Page Contains Top N Panel Quarter 4  Top Application Groups by Volume
+    Confirm Analytics Quarterly Analytics Summary Report Page Contains Top N Panel Quarter 4  Total Volume by Day

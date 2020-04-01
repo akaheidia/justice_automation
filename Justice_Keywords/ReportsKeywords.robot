@@ -143,10 +143,10 @@ Navigate to Analytics Monthly Analytics Usage Report
     Navigate To Analytics Report Menu
     Click Analytics Monthly Analytics Usage Report Menu
 
-Navigate to Analytics Quarterly Summary Report
+Navigate to Analytics Quarterly Analytics Summary Report
     Set Selenium Implicit Wait  2 seconds
     Navigate To Analytics Report Menu
-    Click Analytics Quarterly Summary Report Menu
+    Click Analytics Quarterly Analytics Summary Report Menu
 
 
 Open Reports Sidebar Menu
@@ -331,7 +331,7 @@ Click Analytics Daily Analytics Usage Report Menu
 Click Analytics Monthly Analytics Usage Report Menu
     Click Report Menu  ${reports_analytics_monthly_usage_menu}
 
-Click Analytics Quarterly Summary Report Menu
+Click Analytics Quarterly Analytics Summary Report Menu
     Click Report Menu  ${reports_analytics_quarterly_summary_menu}
 
 
@@ -565,7 +565,7 @@ Confirm Analytics Monthly Analytics Usage Reports Page Title
     Page Should Contain Element  ${reports_analytics_monthly_usage_page_title}
     Unselect Frame
 
-Confirm Analytics Quarterly Summary Reports Page Title
+Confirm Analytics Quarterly Analytics Summary Reports Page Title
     Select Frame  xpath://iframe
     Page Should Contain Element  ${reports_analytics_quarterly_summary_page_title}
     Unselect Frame

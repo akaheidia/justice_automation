@@ -32,19 +32,19 @@ Confirm Top APs By Bandwidth Menu and Title
 Confirm Top Applications By Clients Menu and Title
     Navigate to Analytics Top Applications By Clients Report
     Confirm Analytics Top Applications by Clients Reports Page Title
-    Confirm Breadcrumb Contains Text  Top Applications By Clients
+    Confirm Breadcrumb Contains Text  Top Applications by Clients
 
 Confirm Daily Analytics Usage Menu and Title
     Navigate to Analytics Daily Analytics Usage Report
-    Confirm Analytics Daily Usage Reports Page Title
+    Confirm Analytics Daily Analytics Usage Reports Page Title
     Confirm Breadcrumb Contains Text  Daily Analytics Usage
 
 Confirm Monthly Analytics Usage Menu and Title
     Navigate to Analytics Monthly Analytics Usage Report
-    Confirm Analytics Monthly Usage Reports Page Title
+    Confirm Analytics Monthly Analytics Usage Reports Page Title
     Confirm Breadcrumb Contains Text  Monthly Analytics Usage
 
-Confirm Analytics Quarterly Summary Menu and Title
-    Navigate to Analytics Quarterly Summary Report
-    Confirm Analytics Quarterly Summary Reports Page Title
-    Confirm Breadcrumb Contains Text  Analytics Quarterly Summary
+Confirm Quarterly Analytics Summary Menu and Title
+    Navigate to Analytics Quarterly Analytics Summary Report
+    Confirm Analytics Quarterly Analytics Summary Reports Page Title
+    Confirm Breadcrumb Contains Text  Quarterly Analytics Summary
