@@ -45,6 +45,7 @@ Confirm Resync Messages Not Seen After Resync Complete
     ${output}=  Read Until  Resync Completed successfully
     Should Contain  ${output}  Resync Completed successfully
     ${output}=  Read
+    Should Contain  ${output}  Resync Finished timer canceled
     Should Not Contain  ${output}  RESYNC message sent for type = EVENT
 
     Close SSH Connection
