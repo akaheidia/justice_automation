@@ -71,35 +71,35 @@ Navigate to Site Port Error Report
     Click Site Port Error Report Menu
 
 
-Navigate to Top N Device Availability Report
+Navigate to Top N Top Device Availability Report
     Set Selenium Implicit Wait  2 seconds
     Navigate To Top N Report Menu
-    Click Top N Device Availability Report Menu
+    Click Top N Top Device Availability Report Menu
 
-Navigate to Top N Site Availability Report
+Navigate to Top N Top Site Availability Report
     Set Selenium Implicit Wait  2 seconds
     Navigate To Top N Report Menu
-    Click Top N Site Availability Report Menu
+    Click Top N Top Site Availability Report Menu
 
-Navigate to Top N CPU Utilization Report
+Navigate to Top N Top CPU Utilization Report
     Set Selenium Implicit Wait  2 seconds
     Navigate To Top N Report Menu
-    Click Top N CPU Utilization Report Menu
+    Click Top N Top CPU Utilization Report Menu
 
-Navigate to Top N Memory Utilization Report
+Navigate to Top N Top Memory Utilization Report
     Set Selenium Implicit Wait  2 seconds
     Navigate To Top N Report Menu
-    Click Top N Memory Utilization Report Menu
+    Click Top N Top Memory Utilization Report Menu
 
-Navigate to Top N Port Utilization Report
+Navigate to Top N Top Port Utilization Report
     Set Selenium Implicit Wait  2 seconds
     Navigate To Top N Report Menu
-    Click Top N Port Utilization Report Menu
+    Click Top N Top Port Utilization Report Menu
 
-Navigate to Top N Port Error Report
+Navigate to Top N Top Port Error Report
     Set Selenium Implicit Wait  2 seconds
     Navigate To Top N Report Menu
-    Click Top N Port Error Report Menu
+    Click Top N Top Port Error Report Menu
 
 Navigate to Top N Top APs By Clients Report
     Set Selenium Implicit Wait  2 seconds
@@ -289,23 +289,23 @@ Click Site Port Utilization Report Menu
 Click Site Port Error Report Menu
     Click Report Menu  ${reports_site_port_error_menu}
 
-Click Top N Device Availability Report Menu
-    Click Report Menu  ${reports_topn_device_availability_menu}
+Click Top N Top Device Availability Report Menu
+    Click Report Menu  ${reports_topn_top_device_availability_menu}
 
-Click Top N Site Availability Report Menu
-    Click Report Menu  ${reports_topn_site_availability_menu}
+Click Top N Top Site Availability Report Menu
+    Click Report Menu  ${reports_topn_top_site_availability_menu}
 
-Click Top N CPU Utilization Report Menu
-    Click Report Menu  ${reports_topn_cpu_utilization_menu}
+Click Top N Top CPU Utilization Report Menu
+    Click Report Menu  ${reports_topn_top_cpu_utilization_menu}
 
-Click Top N Memory Utilization Report Menu
-    Click Report Menu  ${reports_topn_memory_utilization_menu}
+Click Top N Top Memory Utilization Report Menu
+    Click Report Menu  ${reports_topn_top_memory_utilization_menu}
 
-Click Top N Port Utilization Report Menu
-    Click Report Menu  ${reports_topn_port_utilization_menu}
+Click Top N Top Port Utilization Report Menu
+    Click Report Menu  ${reports_topn_top_port_utilization_menu}
 
-Click Top N Port Error Report Menu
-    Click Report Menu  ${reports_topn_port_error_menu}
+Click Top N Top Port Error Report Menu
+    Click Report Menu  ${reports_topn_top_port_error_menu}
 
 Click Top N Top APs By Clients Report Menu
     Click Report Menu  ${reports_topn_top_aps_by_clients_menu}
@@ -454,62 +454,62 @@ Confirm Site Port Error Reports Page Title
     Unselect Frame
 
 
-Confirm Top N Device Availability Reports Page Title
+Confirm Top N Top Device Availability Reports Page Title
     sleep  2 seconds
     Select Frame  xpath://iframe
     Select Frame  xpath://iframe[@id='resource']
 
-    Page Should Contain Element  ${reports_topn_device_availability_page_title}
+    Page Should Contain Element  ${reports_topn_top_device_availability_page_title}
 
     UnSelect Frame
     Unselect Frame
 
-Confirm Top N Site Availability Reports Page Title
+Confirm Top N Top Site Availability Reports Page Title
     sleep  2 seconds
     Select Frame  xpath://iframe
     Select Frame  xpath://iframe[@id='resource']
 
-    Page Should Contain Element  ${reports_topn_site_availability_page_title}
+    Page Should Contain Element  ${reports_topn_top_site_availability_page_title}
 
     UnSelect Frame
     Unselect Frame
 
-Confirm Top N CPU Utilization Reports Page Title
+Confirm Top N Top CPU Utilization Reports Page Title
     sleep  2 seconds
     Select Frame  xpath://iframe
     Select Frame  xpath://iframe[@id='resource']
 
-    Page Should Contain Element  ${reports_topn_cpu_utilization_page_title}
+    Page Should Contain Element  ${reports_topn_top_cpu_utilization_page_title}
 
     UnSelect Frame
     Unselect Frame
 
-Confirm Top N Memory Utilization Reports Page Title
+Confirm Top N Top Memory Utilization Reports Page Title
     sleep  2 seconds
     Select Frame  xpath://iframe
     Select Frame  xpath://iframe[@id='resource']
 
-    Page Should Contain Element  ${reports_topn_memory_utilization_page_title}
+    Page Should Contain Element  ${reports_topn_top_memory_utilization_page_title}
 
     UnSelect Frame
     Unselect Frame
 
-Confirm Top N Port Utilization Reports Page Title
+Confirm Top N Top Port Utilization Reports Page Title
     sleep  2 seconds
     Select Frame  xpath://iframe
     Select Frame  xpath://iframe[@id='resource']
 
-    Page Should Contain Element  ${reports_topn_port_utilization_page_title}
+    Page Should Contain Element  ${reports_topn_top_port_utilization_page_title}
 
     UnSelect Frame
     Unselect Frame
 
-Confirm Top N Port Error Reports Page Title
+Confirm Top N Top Port Error Reports Page Title
     sleep  2 seconds
     Select Frame  xpath://iframe
     Select Frame  xpath://iframe[@id='resource']
 
-    Page Should Contain Element  ${reports_topn_port_error_page_title}
+    Page Should Contain Element  ${reports_topn_top_port_error_page_title}
 
     UnSelect Frame
     Unselect Frame
