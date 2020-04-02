@@ -13,4 +13,4 @@ Confirm Browser Back Button From Add New Report Page
     Navigate to Network Summary Report
     Confirm Network Summary Reports Page Title
     Click Port Error Drilldown
-    Confirm Top N Port Error Reports Page Title
+    Confirm Top N Top Port Error Reports Page Title
