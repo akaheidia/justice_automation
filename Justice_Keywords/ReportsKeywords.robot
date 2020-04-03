@@ -365,7 +365,7 @@ Confirm XMC Server Utilization Reports Page Title
 
 
 Confirm Site Availability Reports Page Title
-    sleep  2 seconds
+    sleep  4 seconds
     Select Frame  xpath://iframe
     Select Frame  xpath://iframe[@id='availability']
 
