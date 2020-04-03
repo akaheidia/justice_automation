@@ -8,14 +8,16 @@ Documentation   Regression test for JUS-532: Resync: Log is flooded with message
 Suite Teardown  Close All Connections
 
 *** Variables ***
-${prompt}    $
-${jus_ip}    ${JUS_HOST_IP}
-${jus_user}  ${JUS_USERNAME}
-${jus_pwd}   ${JUS_PASSWORD}
-${xmc_ip}    ${XMC_HOST_IP}
-${xmc_user}  ${XMC_USERNAME}
-${xmc_pwd}   ${XMC_PASSWORD}
-${xmc_log}   ${XMC_SERVER_LOG}
+${prompt}         $
+${jus_ip}         ${JUS_HOST_IP}
+${jus_user}       ${JUS_USERNAME}
+${jus_pwd}        ${JUS_PASSWORD}
+${xmc_ip}         ${XMC_HOST_IP}
+${xmc_user}       ${XMC_USERNAME}
+${xmc_pwd}        ${XMC_PASSWORD}
+${xmc_log}        ${XMC_SERVER_LOG}
+${info_msg}       INFO [com.extreme.outboundmessage.OutboundMessageEngine] RESYNC message sent for type = EVENT
+${debug_msg}      DEBUG [com.extreme.outboundmessage.OutboundMessageEngine] RESYNC message sent for type = EVENT
 
 *** Test Cases ***
 Confirm Extraneous Resync Messages Not Seen
@@ -28,7 +30,7 @@ Confirm Extraneous Resync Messages Not Seen
     sleep  60 seconds
     XMC Confirm Server Log Contains Message  ${xmc_ip}  ${xmc_user}  ${xmc_pwd}  ${xmc_log}  Resync Completed successfully
     sleep  10 seconds
-    XMC Confirm Server Log Does Not Contain Message  ${xmc_ip}  ${xmc_user}  ${xmc_pwd}  ${xmc_log}  RESYNC message sent for type = EVENT
+    XMC Confirm Server Log Does Not Contain Message  ${xmc_ip}  ${xmc_user}  ${xmc_pwd}  ${xmc_log}  ${info_msg}
 
 Change XMC Data Pump Diagnostic Level To Verbose
     XMC Open Browser and Log In  ${XMC_URL}  ${BROWSER}  ${XMC_USERNAME}  ${XMC_PASSWORD}
@@ -52,7 +54,7 @@ Confirm Verbose Resync Messages Seen
     sleep  60 seconds
     XMC Confirm Server Log Contains Message  ${xmc_ip}  ${xmc_user}  ${xmc_pwd}  ${xmc_log}  Resync Completed successfully
     sleep  10 seconds
-    XMC Confirm Server Log Contains Message  ${xmc_ip}  ${xmc_user}  ${xmc_pwd}  ${xmc_log}  RESYNC message sent for type = EVENT
+    XMC Confirm Server Log Contains Message  ${xmc_ip}  ${xmc_user}  ${xmc_pwd}  ${xmc_log}  ${debug_msg}
 
 Reset XMC Data Pump Diagnostic Level
     XMC Open Browser and Log In  ${XMC_URL}  ${BROWSER}  ${XMC_USERNAME}  ${XMC_PASSWORD}
