@@ -239,6 +239,7 @@ reports_tracked_app_resp_time_donut = "xpath://h4[text()='Tracked Application Re
 # Reports - Network Scorecard Page Elements
 
 # Reports - Network Summary Page Elements
+reports_chart_no_data = "xpath://*[@class='highcharts-no-data']"
 
 # Reports - Site Availability Page Elements
 site_availability_table = "xpath://table[@id='sites']"

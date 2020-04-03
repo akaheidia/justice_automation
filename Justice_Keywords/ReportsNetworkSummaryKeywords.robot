@@ -117,3 +117,37 @@ Click Memory Utilization Drilldown
 
     Unselect Frame
     Unselect Frame
+
+
+Confirm Top APs by Clients Panel Has Data
+    ${orig_wait}=  Set Selenium Implicit Wait  1 second
+    Select Frame  xpath://iframe
+    Select Frame  xpath://iframe[@id='ap_clients']
+
+    Page Should Not Contain Element  ${reports_chart_no_data}
+
+    Unselect Frame
+    Unselect Frame
+    Set Selenium Implicit Wait  ${orig_wait}
+
+Confirm Top APs by Bandwidth Panel Has Data
+    ${orig_wait}=  Set Selenium Implicit Wait  1 second
+    Select Frame  xpath://iframe
+    Select Frame  xpath://iframe[@id='ap_bandwidth']
+
+    Page Should Not Contain Element  ${reports_chart_no_data}
+
+    Unselect Frame
+    Unselect Frame
+    Set Selenium Implicit Wait  ${orig_wait}
+
+Confirm End Systems Panel Has Data
+    ${orig_wait}=  Set Selenium Implicit Wait  1 second
+    Select Frame  xpath://iframe
+    Select Frame  xpath://iframe[@id='endsystems']
+
+    Page Should Not Contain Element  ${reports_chart_no_data}
+
+    Unselect Frame
+    Unselect Frame
+    Set Selenium Implicit Wait  ${orig_wait}
