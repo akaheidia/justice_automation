@@ -10,7 +10,7 @@ Suite Teardown   Log Out and Close Browser
 *** Test Cases ***
 Confirm Reports Menus Are Expanded By Default
     Navigate To Reports
-    Open Reports Sidebar Menu
+    Show Reports Sidebar Menu
     Confirm Reports Tree Reports Node Is Expanded
     Confirm Reports Tree Site Node Is Expanded
     Confirm Reports Tree Top N Node Is Expanded

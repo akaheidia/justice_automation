@@ -10,38 +10,38 @@ Navigate to Reports
     Click Reports
     Confirm Reports Page Loaded
 
-Navigate to Reports and Open Reports Menu
+Navigate to Reports and Show Reports Menu
     Navigate to Reports
-    Open Reports Sidebar Menu
+    Show Reports Sidebar Menu
     Expand Reports Tree Reports Node
 
 Navigate To Site Report Menu
-    Navigate to Reports and Open Reports Menu
+    Navigate to Reports and Show Reports Menu
     Expand Reports Tree Site Node
 
 Navigate To Top N Report Menu
-    Navigate to Reports and Open Reports Menu
+    Navigate to Reports and Show Reports Menu
     Expand Reports Tree Top N Node
 
 Navigate To Analytics Report Menu
-    Navigate to Reports and Open Reports Menu
+    Navigate to Reports and Show Reports Menu
     Expand Reports Tree Analytics Node
 
 
 Navigate to Network Scorecard Report
     Set Selenium Implicit Wait  2 seconds
-    Navigate to Reports and Open Reports Menu
+    Navigate to Reports and Show Reports Menu
     Click Network Scorecard Report Menu
 
 Navigate to Network Summary Report
     Set Selenium Implicit Wait  2 seconds
-    Navigate to Reports and Open Reports Menu
+    Navigate to Reports and Show Reports Menu
     Click Network Summary Report Menu
     Wait For Network Summary Report Page To Load
 
 Navigate to XMC Server Utilization Report
     Set Selenium Implicit Wait  2 seconds
-    Navigate to Reports and Open Reports Menu
+    Navigate to Reports and Show Reports Menu
     Click XMC Server Utilization Report Menu
 
 
@@ -149,7 +149,7 @@ Navigate to Analytics Quarterly Analytics Summary Report
     Click Analytics Quarterly Analytics Summary Report Menu
 
 
-Open Reports Sidebar Menu
+Show Reports Sidebar Menu
     Select Frame  xpath://iframe
     Wait Until Page Contains Element  ${reports_sidebar_menu_button}  timeout=10 seconds
     ${need_to_open}=  Run Keyword And Return Status  Element Should Not Be Visible  ${reports_menu_tree}
@@ -157,13 +157,27 @@ Open Reports Sidebar Menu
     Wait Until Page Contains Element  ${reports_menu_tree}  timeout=10 seconds
     Unselect Frame
 
-Close Reports Sidebar Menu
+Hide Reports Sidebar Menu
     Select Frame  xpath://iframe
     Wait Until Page Contains Element  ${reports_sidebar_menu_button}  timeout=10 seconds
     ${need_to_close}=  Run Keyword And Return Status  Element Should Be Visible  ${reports_menu_tree}
     Run Keyword If  ${need_to_close} == True  Click Element  ${reports_sidebar_menu_button}
     Wait Until Page Does Not Contain Element  ${reports_menu_tree}  timeout=10 seconds
     Unselect Frame
+
+Confirm Reports Sidebar Menu Visible
+    Select Frame  xpath://iframe
+    Wait Until Page Contains Element  ${reports_sidebar_menu_button}  timeout=10 seconds
+    Element Should Be Visible  ${reports_menu_tree}
+    Unselect Frame
+
+Confirm Reports Sidebar Menu Not Visible
+    ${orig_wait}=  Set Selenium Implicit Wait  1 second
+    Select Frame  xpath://iframe
+    Wait Until Page Contains Element  ${reports_sidebar_menu_button}  timeout=10 seconds
+    Element Should Not Be Visible  ${reports_menu_tree}
+    Unselect Frame
+    Set Selenium Implicit Wait  ${orig_wait}
 
 Click Reports Add Button
     Select Frame  xpath://iframe
