@@ -59,5 +59,6 @@ Log In and Navigate to Port Overview Report Page
     Change Report Time Range to Last Hour
     sleep  2 seconds
     Port Utilization Drill Into Site  ${site}
+    sleep  1 second
     Port Utilization Drill Into Port  ${port}
     Confirm Port Overview Report Page Title

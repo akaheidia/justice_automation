@@ -39,7 +39,7 @@ Port Utilization Drill Into Device
 
 Port Utilization Drill Into Port
     [Arguments]  ${port}
-    sleep  1 second
+    sleep  2 seconds
     Select Frame  xpath://iframe
     Select Frame  xpath://iframe[@id='statistic']
 
