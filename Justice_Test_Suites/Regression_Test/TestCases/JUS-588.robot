@@ -18,5 +18,9 @@ Log In To XMC
     XMC Open Browser and Log In  ${XMC_URL}  ${BROWSER}  ${XMC_USERNAME}  ${XMC_PASSWORD}
     XMC Log Out and Close Browser
 
+Log In To Justice
+    Open Browser and Log In  ${JUS_URL}  ${BROWSER}  ${JUS_USERNAME}  ${JUS_PASSWORD}
+    Log Out and Close Browser
+
 Confirm Verbose Log In Message Not Seen
     XMC Confirm Server Log Does Not Contain Message  ${xmc_ip}  ${xmc_user}  ${xmc_pwd}  ${xmc_log}  Name:${xmc_user}
