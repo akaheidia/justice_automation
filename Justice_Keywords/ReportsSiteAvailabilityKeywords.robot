@@ -48,7 +48,7 @@ Confirm Site Availability Report Table Contains Value
     Select Frame  xpath://iframe
     Select Frame  xpath://iframe[@id='availability']
 
-    Page Should Contain Element  xpath://td[*]/span[text() = '${value}']
+    Page Should Contain Element  xpath://td[*]/span[contains(text(),'${value}')]
 
     Unselect Frame
     Unselect Frame
@@ -59,7 +59,7 @@ Get Site Availability Report Table Value Count
     Select Frame  xpath://iframe
     Select Frame  xpath://iframe[@id='availability']
 
-    ${count}=  Get Element Count  xpath://td[*]/span[text() = '${value}']
+    ${count}=  Get Element Count  xpath://td[*]/span[contains(text(), '${value}')]
 
     Unselect Frame
     Unselect Frame
