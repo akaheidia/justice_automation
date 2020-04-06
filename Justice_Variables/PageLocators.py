@@ -265,6 +265,10 @@ settings_security_menu = "xpath://div[text()='Security']"
 
 # Settings - User Groups Page Elements
 usergroups_page_title = "xpath://span[@class='user-groups-title'][text()='User Groups']"
+usergroups_edit_button = "xpath://extr-custom-button//p[text()='Edit']"
+usergroups_close_button = "xpath://extr-custom-button//p[text()='Close']"
+usergroups_cancel_button = "xpath://extr-custom-button//p[text()='Cancel']"
+usergroups_save_button = "xpath://extr-custom-button//p[text()='Save']"
 
 # Settings - Security Page Elements
 security_page_title = "xpath://span[@class='security-title'][text()='Security']"
