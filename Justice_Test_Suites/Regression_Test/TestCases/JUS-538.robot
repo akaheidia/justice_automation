@@ -35,3 +35,4 @@ Confirm Report Data Is Present In Justice
     Navigate to Site Availability Report
     Confirm Site Availability Report Table Contains Value  ${site_device_down}
     Site Availability Drill Into Site  ${site_device_down}
+    Log Out and Close Browser
