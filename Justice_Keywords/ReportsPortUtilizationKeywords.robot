@@ -41,7 +41,7 @@ Port Utilization Drill Into Port
     [Arguments]  ${port}
     sleep  2 seconds
     Select Frame  xpath://iframe
-    Select Frame  xpath://iframe[@id='statistic']
+    Select Frame  xpath://iframe[@id='resource']
 
     Click Element  xpath://a//span[contains(text(), '${port}')]
     Unselect Frame
