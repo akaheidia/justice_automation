@@ -10,6 +10,7 @@ Suite Teardown   Log Out and Close Browser
 *** Test Cases ***
 Confirm Netsight Administrator Group Cannot Be Edited
     Settings Select User Group  ${XMC_HOSTNAME}  NetSight Administrator
+    sleep  2 seconds
     Confirm Edit Button Not Present
 
 Confirm Other Groups Can Be Edited
