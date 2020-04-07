@@ -26,7 +26,9 @@ Resource   ../Justice_Keywords/ReportsNetworkSummaryKeywords.robot
 Resource   ../Justice_Keywords/ReportsPortOverviewKeywords.robot
 Resource   ../Justice_Keywords/ReportsPortUtilizationKeywords.robot
 Resource   ../Justice_Keywords/ReportsSiteAvailabilityKeywords.robot
+Resource   ../Justice_Keywords/ReportsSitePortUtilizationKeywords.robot
 Resource   ../Justice_Keywords/ReportsTopNDeviceAvailabilityKeywords.robot
+Resource   ../Justice_Keywords/ReportsTopPortUtilizationKeywords.robot
 Resource   ../Justice_Keywords/SettingsSecurityKeywords.robot
 Resource   ../Justice_Keywords/SettingsUserGroupsKeywords.robot
 Resource   ../Justice_Keywords/SidebarKeywords.robot

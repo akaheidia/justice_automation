@@ -2,11 +2,11 @@
 Library    SeleniumLibrary
 Variables  ../Justice_Variables/PageLocators.py
 
-Documentation    Keywords specific to the Port Utilization Report page.
+Documentation    Keywords specific to the Site Port Utilization Report page.
 
 *** Keywords ***
 
-Confirm Port Utilization Report Page Title
+Confirm Site Port Utilization Report Page Title
     sleep  1 second
     Select Frame  xpath://iframe
     Select Frame  xpath://iframe[@id='statistic']
@@ -16,7 +16,7 @@ Confirm Port Utilization Report Page Title
     Unselect Frame
     Unselect Frame
 
-Port Utilization Drill Into Site
+Site Port Utilization Drill Into Site
     [Arguments]  ${site}
     sleep  1 second
     Select Frame  xpath://iframe
@@ -27,7 +27,7 @@ Port Utilization Drill Into Site
     Unselect Frame
     Unselect Frame
 
-Port Utilization Drill Into Device
+Site Port Utilization Drill Into Device
     [Arguments]  ${ip}
     sleep  1 second
     Select Frame  xpath://iframe
@@ -37,7 +37,7 @@ Port Utilization Drill Into Device
     Unselect Frame
     Unselect Frame
 
-Port Utilization Drill Into Port
+Site Port Utilization Drill Into Port
     [Arguments]  ${port}
     sleep  2 seconds
     Select Frame  xpath://iframe

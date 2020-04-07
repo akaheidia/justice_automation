@@ -18,10 +18,10 @@ Confirm Port Overview Loads Without Error
     ${device_present}=  Is Test Device Present  ${device_ip}
     Run Keyword If  ${device_present} == False  Fail  Test Device Is Not Present
     Navigate to Site Port Utilization Report
-    Confirm Port Utilization Report Page Title
+    Confirm Site Port Utilization Report Page Title
     sleep  2 seconds
     Change Report Time Range to Last Hour
     sleep  2 seconds
-    Port Utilization Drill Into Site  ${site}
-    Port Utilization Drill Into Port  ${port_num}
+    Site Port Utilization Drill Into Site  ${site}
+    Site Port Utilization Drill Into Port  ${port_num}
     Confirm Port Overview Report Page Title
