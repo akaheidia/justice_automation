@@ -54,11 +54,11 @@ Confirm Prerequisites
 Log In and Navigate to Port Overview Report Page
     Open Browser and Log In  ${JUS_URL}  ${BROWSER}  ${JUS_USERNAME}  ${JUS_PASSWORD}
     Navigate to Site Port Utilization Report
-    Confirm Port Utilization Report Page Title
+    Confirm Site Port Utilization Report Page Title
     sleep  2 seconds
     Change Report Time Range to Last Hour
     sleep  2 seconds
-    Port Utilization Drill Into Site  ${site}
+    Site Port Utilization Drill Into Site  ${site}
     sleep  1 second
-    Port Utilization Drill Into Port  ${port}
+    Site Port Utilization Drill Into Port  ${port}
     Confirm Port Overview Report Page Title
