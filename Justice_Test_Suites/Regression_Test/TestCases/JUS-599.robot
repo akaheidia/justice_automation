@@ -25,7 +25,8 @@ Confirm Port Overview Loads Without Error
     Site Availability Drill Into Site  ${site}
     Device Availability Drill Into Device  ${device_ip}
     Device Overview Drill Into Metric  Port Utilization
-    Port Utilization Drill Into Port  ${port_num}
+    Confirm Port Utilization Metric Report Page Title
+    Port Utilization Metric Drill Into Port  ${port_num}
     Confirm Port Overview Report Page Title
     Show Reports Filter Panel
     Confirm Port Overview Report Page Title

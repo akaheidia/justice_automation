@@ -15,3 +15,13 @@ Confirm Port Utilization Metric Report Page Title
 
     Unselect Frame
     Unselect Frame
+
+Port Utilization Metric Drill Into Port
+    [Arguments]  ${port}
+    sleep  2 seconds
+    Select Frame  xpath://iframe
+    Select Frame  xpath://iframe[@id='resource']
+
+    Click Element  xpath://a//span[contains(text(), '${port}')]
+    Unselect Frame
+    Unselect Frame
