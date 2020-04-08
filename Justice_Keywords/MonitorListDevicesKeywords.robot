@@ -62,3 +62,46 @@ Confirm Device Not In Table No Wait
     Refresh Devices Table
     Element Should Not Contain  ${list_devices_table}  ${device_ip}
     Set Selenium Implicit Wait  ${orig_wait}
+
+
+Click Add Devices To Tag
+    Wait Until Element Is Visible  ${tags_add_devices_to_tag_button}
+    ${btn_enabled}=  Run Keyword And Return Status  Element Should Be Visible  ${tags_add_devices_to_tag_button}${enabled_xpath_value}
+    Run Keyword If  ${btn_enabled} == True  Click Element  ${tags_add_devices_to_tag_button}
+    ...       ELSE  Fail  Add Devices To Tag button is disabled - please select one or more devices first
+
+Add Devices To Tag Select Tag
+    [Arguments]  ${value}
+    Wait Until Element Is Visible  xpath://span[text()='${value}']
+    ${need_to_click}=  Run Keyword And Return Status  Element Should Be Visible  xpath://span[text()='${value}']/..//input[@type='checkbox'][@aria-checked='false']
+    Run Keyword If  ${need_to_click} == True  Click Element  xpath://span[text()='${value}']/..//input[@type='checkbox']
+    ...       ELSE  Log  ${value} is already selected
+
+Add Devices To Tag Deselect Tag
+    [Arguments]  ${value}
+    Wait Until Element Is Visible  xpath://span[text()='${value}']
+    ${need_to_click}=  Run Keyword And Return Status  Element Should Be Visible  xpath://span[text()='${value}']/..//input[@type='checkbox'][@aria-checked='false']
+    Run Keyword If  ${need_to_click} == True  Click Element  xpath://span[text()='${value}']/..//input[@type='checkbox']
+    ...       ELSE  Log  ${value} is already deselected
+
+Add Devices To Tag Click Save
+    Wait Until Element Is Visible  ${tags_add_devices_to_tag_panel_save}
+    ${btn_enabled}=  Run Keyword And Return Status  Element Should Be Visible  ${tags_add_devices_to_tag_panel_save}${enabled_xpath_value}
+    Run Keyword If  ${btn_enabled} == True  Click Element  ${tags_add_devices_to_tag_panel_save}
+    ...       ELSE  Fail  Save button is disabled - please select one or more tags first
+
+Add Devices To Tag Click Close
+    Wait Until Element Is Visible  ${tags_add_devices_to_tag_panel_close}
+    Click Element  ${tags_add_devices_to_tag_panel_close}
+
+Add Devices To Tag Click Add
+    Wait Until Element Is Visible  ${tags_add_devices_to_tag_panel_add}
+    Click Element  ${tags_add_devices_to_tag_panel_add}
+
+Add Devices To Tag Click Manage
+    Wait Until Element Is Visible  ${tags_add_devices_to_tag_panel_manage}
+    Click Element  ${tags_add_devices_to_tag_panel_manage}
+
+Add Devices To Tag Click Refresh
+    Wait Until Element Is Visible  ${tags_add_devices_to_tag_panel_refresh}
+    Click Element  ${tags_add_devices_to_tag_panel_refresh}

@@ -79,6 +79,15 @@ tags_confirm_delete_tags_dialog = "xpath://h1[text()='Delete Tags']"
 tags_confirm_delete_tags_dialog_ok = "xpath://span[text()='OK']"
 tags_confirm_delete_tags_dialog_cancel = "xpath://span[text()='Cancel']"
 
+# Add Devices To Tag Elements
+tags_add_devices_to_tag_button = "xpath://button[@aria-label='Add device to a Tag']"
+tags_add_devices_to_tag_panel = "xpath://span[contains(text(),'ADD DEVICES TO TAGS')]"
+tags_add_devices_to_tag_panel_close = "xpath://mat-icon[contains(text(),'close')]"
+tags_add_devices_to_tag_panel_add_tag = "xpath://app-add-to-tag-dialog//mat-icon[@fonticon='ei-add_circle']"
+tags_add_devices_to_tag_panel_manage_tags = "xpath://app-add-to-tag-dialog//mat-icon[@fonticon='ei-settings']"
+tags_add_devices_to_tag_panel_refresh = "xpath://app-add-to-tag-dialog//mat-icon[@fonticon='ei-refresh']"
+tags_add_devices_to_tag_panel_save = "xpath://span[text()='Save']"
+
 # Map Page Elements
 map_zoom_in_enabled_button = "xpath://a[@class='leaflet-control-zoom-in']"
 map_zoom_in_disabled_button = "xpath://a[@class='leaflet-control-zoom-in leaflet-disabled']"
@@ -110,10 +119,6 @@ list_last_page_icon = "xpath://button[contains(@class,'mat-paginator-navigation-
 list_first_page_icon = "xpath://button[contains(@class,'mat-paginator-navigation-first')]"
 list_next_page_icon = "xpath://button[contains(@class,'mat-paginator-navigation-next')]"
 list_prev_page_icon = "xpath://button[contains(@class,'mat-paginator-navigation-prev')]"
-
-# Device Page Elements
-device_add_to_tag_button = "xpath://button[@aria-label='Add device to a Tag']"
-add_device_to_tag_panel = "xpath://span[contains(text(),'ADD DEVICES TO TAGS')]"
 
 ## Download Menu Elements
 download_csv_visible_rows_menu = "xpath://span[@class='option'][text()='CSV']/..//span[@class='text'][contains(text(), '(Visible Rows)')]"

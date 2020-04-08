@@ -100,8 +100,10 @@ Manage Tags Deselect Tag
     ...       ELSE  Log  ${value} is already deselected
 
 Manage Tags Click Delete
-    Wait Until Element Is Visible  ${tags_manage_tags_panel_delete_btn}${enabled_xpath_value}
-    Click Element  ${tags_manage_tags_panel_delete_btn}
+    Wait Until Element Is Visible  ${tags_manage_tags_panel_delete_btn}
+    ${btn_enabled}=  Run Keyword And Return Status  Element Should Be Visible  ${tags_manage_tags_panel_delete_btn}${enabled_xpath_value}
+    Run Keyword If  ${btn_enabled} == True  Click Element  ${tags_manage_tags_panel_delete_btn}
+    ...       ELSE  Fail  Delete Tag button is disabled - please select one or more tags first
 
 Manage Tags Click Refresh
     Wait Until Element Is Visible  ${tags_manage_tags_panel_refresh_btn}
