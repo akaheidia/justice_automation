@@ -43,6 +43,30 @@ Hide Tags Panel
     Wait Until Element Is Not Visible  ${tags_panel_title}
 
 
+Show Search Field
+    ${orig_wait}=  Set Selenium Implicit Wait  1 second
+    ${need_to_show}=  Run Keyword And Return Status  Element Should Not Be Visible  ${search_field_text}
+    Run Keyword If  ${need_to_show}  Click Element  ${monitor_search_icon}
+    ...    ELSE  Log  Search Field Already Shown
+    Set Selenium Implicit Wait  ${orig_wait}
+    Wait Until Element Is Visible  ${search_field_text}
+
+Hide Search Field
+    ${need_to_hide}=  Run Keyword And Return Status  Element Should Be Visible  ${search_field_text}
+    Run Keyword If  ${need_to_hide}  Click Element  ${monitor_search_icon}
+    ...    ELSE  Log  Tags Panel Already Hidden
+    Wait Until Element Is Not Visible  ${search_field_text}
+
+Search Field Enter Text
+    [Arguments]  ${value}
+    Show Search Field
+    Input Text  ${search_field_text}  ${value}  clear=True
+
+Search Field Clear Text
+    Show Search Field
+    Input Text  ${search_field_text}  ${empty}  clear=True
+
+
 Confirm List Slider Selected
     ${selected_slider}=  Get Element Attribute  ${monitor_list_slider}  class
     Should Be Equal As Strings  ${selected_slider}  ${monitor_selected_slider_class}
@@ -65,4 +89,12 @@ Confirm Tags Panel Visible
 Confirm Tags Panel Not Visible
     ${orig_wait}=  Set Selenium Implicit Wait  1 second
     Page Should Not Contain Element  ${tags_panel_title}
+    Set Selenium Implicit Wait  ${orig_wait}
+
+Confirm Search Field Visible
+    Page Should Contain Element  ${search_field_text}
+
+Confirm Search Field Not Visible
+    ${orig_wait}=  Set Selenium Implicit Wait  1 second
+    Page Should Not Contain Element  ${search_field_text}
     Set Selenium Implicit Wait  ${orig_wait}

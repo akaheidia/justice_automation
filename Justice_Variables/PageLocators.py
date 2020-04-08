@@ -36,6 +36,9 @@ monitor_alarms_icon = "xpath://mat-icon[@class='mat-icon notranslate ei ei-alarm
 monitor_tags_icon = "xpath://mat-icon[@class='mat-icon notranslate ei ei-label_outline mat-icon-no-color']"
 monitor_filter_icon = "xpath://mat-icon[@class='mat-icon notranslate ei ei-filter mat-icon-no-color']"
 
+# Search Field Elements
+search_field_text = "xpath://input[@placeholder='Search...']"
+
 # Filter Panel Elements
 filter_panel_title = "xpath://div[text()='Filters']"
 filter_clear_all_icon = "xpath://mat-icon[@class='mat-icon notranslate ei ei-clear_all mat-icon-no-color']"
