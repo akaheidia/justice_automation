@@ -25,15 +25,24 @@ Tags Panel Close Functionality
 
 Tags Panel Add Tag Functionality
     Show Tags Panel
+    Confirm Tags Panel Is Empty
     Tags Click Add
     Add Tag Set Name  ${tag_name}
     Add Tag Set Description  ${tag_desc}
     Add Tag Select Star
     Add Tag Click Save
+    Confirm Tags Panel Is Not Empty
 
 Tags Panel Manage Tags Functionality
     Tags Click Manage
+    Confirm Manage Tags Dialog Is Not Empty
+    Confirm Manage Tags Dialog Contains Tag  ${tag_name}
     Manage Tags Select Tag  ${tag_name}
-    sleep  3 seconds
+    Manage Tags Click Delete
+    Tag Confirm Delete Click Cancel
+    Confirm Manage Tags Dialog Contains Tag  ${tag_name}
+    Manage Tags Select Tag  ${tag_name}
+    Manage Tags Click Delete
+    Tag Confirm Delete Click OK
+    Confirm Manage Tags Dialog Does Not Contain Tag  ${tag_name}
     Manage Tags Click Close
-#    Manage Tags Click Delete

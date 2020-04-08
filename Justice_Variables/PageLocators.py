@@ -72,6 +72,9 @@ tags_manage_tags_dialog_add_btn = "xpath://app-manage-tags-dialog//button[@aria-
 tags_manage_tags_dialog_delete_btn = "xpath://app-manage-tags-dialog//button[@aria-label='Delete Tags']"
 tags_manage_tags_dialog_refresh_btn = "xpath://app-manage-tags-dialog//button[@mattooltip='Refresh']"
 tags_manage_tags_dialog_close_btn = "xpath://mat-icon[contains(text(),'close')]"
+tags_confirm_delete_tags_dialog = "xpath://h1[text()='Delete Tags']"
+tags_confirm_delete_tags_dialog_ok = "xpath://span[text()='OK']"
+tags_confirm_delete_tags_dialog_cancel = "xpath://span[text()='Cancel']"
 
 # Map Page Elements
 map_zoom_in_enabled_button = "xpath://a[@class='leaflet-control-zoom-in']"

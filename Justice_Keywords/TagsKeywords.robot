@@ -27,6 +27,14 @@ Tags Click Close
     Wait Until Element Is Visible  ${tags_panel_close_btn}
     Click Element  ${tags_panel_close_btn}
 
+Confirm Tags Panel Is Empty
+    Wait Until Element Is Visible  ${tags_panel_no_tags_msg}
+
+Confirm Tags Panel Is Not Empty
+    ${orig_wait}=  Set Selenium Implicit Wait  1 second
+    Wait Until Element Is Not Visible  ${tags_panel_no_tags_msg}
+    Set Selenium Implicit Wait  ${orig_wait}
+
 
 # Add Tag Dialog
 Add Tag Set Name
@@ -59,12 +67,56 @@ Add Tag Click Cancel
 
 
 # Manage Tags Dialog
+Confirm Manage Tags Dialog Contains Tag
+    [Arguments]  ${value}
+    Wait Until Element Is Visible  xpath://div[text()='${value}']
+
+Confirm Manage Tags Dialog Does Not Contain Tag
+    [Arguments]  ${value}
+    ${orig_wait}=  Set Selenium Implicit Wait  1 second
+    Wait Until Element Is Not Visible  xpath://div[text()='${value}']
+    Set Selenium Implicit Wait  ${orig_wait}
+
+Confirm Manage Tags Dialog Is Empty
+    Wait Until Element Is Visible  ${tags_manage_tags_dialog_no_tags_msg}
+
+Confirm Manage Tags Dialog Is Not Empty
+    ${orig_wait}=  Set Selenium Implicit Wait  1 second
+    Wait Until Element Is Not Visible  ${tags_manage_tags_dialog_no_tags_msg}
+    Set Selenium Implicit Wait  ${orig_wait}
+
 Manage Tags Select Tag
     [Arguments]  ${value}
     Wait Until Element Is Visible  xpath://div[text()='${value}']
-    Click Element  xpath://div[text()='${value}']/../..//div[contains(@class,'center-checkboxes')]
+    ${need_to_click}=  Run Keyword And Return Status  Element Should Be Visible  xpath://div[text()='${value}']/../..//div[contains(@class,'center-checkboxes')]//input[@aria-checked='false']
+    Run Keyword If  ${need_to_click} == True  Click Element  xpath://div[text()='${value}']/../..//div[contains(@class,'center-checkboxes')]
+    ...       ELSE  Log  ${value} is already selected
 
+Manage Tags Deselect Tag
+    [Arguments]  ${value}
+    Wait Until Element Is Visible  xpath://div[text()='${value}']
+    ${need_to_click}=  Run Keyword And Return Status  Element Should Be Visible  xpath://div[text()='${value}']/../..//div[contains(@class,'center-checkboxes')]//input[@aria-checked='true']
+    Run Keyword If  ${need_to_click} == True  Click Element  xpath://div[text()='${value}']/../..//div[contains(@class,'center-checkboxes')]
+    ...       ELSE  Log  ${value} is already deselected
+
+Manage Tags Click Delete
+    Wait Until Element Is Visible  ${tags_manage_tags_dialog_delete_btn}${enabled_xpath_value}
+    Click Element  ${tags_manage_tags_dialog_delete_btn}
+
+Manage Tags Click Refresh
+    Wait Until Element Is Visible  ${tags_manage_tags_dialog_refresh_btn}
+    Click Element  ${tags_manage_tags_dialog_refresh_btn}
 
 Manage Tags Click Close
     Wait Until Element Is Visible  ${tags_manage_tags_dialog_close_btn}
     Click Element  ${tags_manage_tags_dialog_close_btn}
+
+
+# Confirm Delete Tag Dialog
+Tag Confirm Delete Click OK
+    Wait Until Element Is Visible  ${tags_confirm_delete_tags_dialog}
+    Click Element  ${tags_confirm_delete_tags_dialog_ok}
+
+Tag Confirm Delete Click Cancel
+    Wait Until Element Is Visible  ${tags_confirm_delete_tags_dialog}
+    Click Element  ${tags_confirm_delete_tags_dialog_cancel}
