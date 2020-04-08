@@ -5,7 +5,6 @@ Variables  ../Justice_Variables/PageLocators.py
 Documentation    Keywords specific to the Devices tab on the Monitor List page.
 
 *** Keywords ***
-
 Refresh Devices Table
     Click Element  ${list_refresh_icon}
 
@@ -19,6 +18,20 @@ Is Test Device Present
     Refresh Devices Table
     ${device_present}=  Run Keyword And Return Status  Confirm Device In Table  ${ip}
     [Return]  ${device_present}
+
+Select Device In Table
+    [Arguments]  ${device_ip}
+    Wait Until Element Is Visible  xpath://div[text()='${device_ip}']
+    ${need_to_click}=  Run Keyword And Return Status  Element Should Be Visible  xpath://div[text()='${device_ip}']/../..//div[contains(@class,'center-checkboxes')]/mat-checkbox[not(contains(@class, 'checkbox-checked'))]
+    Run Keyword If  ${need_to_click} == True  Click Element  xpath://div[text()='${device_ip}']/../..//div[contains(@class,'center-checkboxes')]
+    ...       ELSE  Log  ${device_ip} is already selected
+
+Deselect Device In Table
+    [Arguments]  ${device_ip}
+    Wait Until Element Is Visible  xpath://div[text()='${device_ip}']
+    ${need_to_click}=  Run Keyword And Return Status  Element Should Be Visible  xpath://div[text()='${device_ip}']/../..//div[contains(@class,'center-checkboxes')]/mat-checkbox[contains(@class, 'checkbox-checked')]
+    Run Keyword If  ${need_to_click} == True  Click Element  xpath://div[text()='${device_ip}']/../..//div[contains(@class,'center-checkboxes')]
+    ...       ELSE  Log  ${device_ip} is already deselected
 
 Confirm Device In Table
     [Arguments]  ${device_ip}

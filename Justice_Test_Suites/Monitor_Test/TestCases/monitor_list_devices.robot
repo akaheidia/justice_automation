@@ -63,3 +63,9 @@ Confirm Download Menus
     Wait Until Page Contains  Download Complete
     Confirm File Exists  ${DOWNLOADS_DIR}  ${pdf_devices_filtered}
     Remove File  ${DOWNLOADS_DIR}  ${pdf_devices_filtered}
+
+Select Device
+    Confirm Device In Table  10.54.142.10
+    Select Device In Table  10.54.142.10
+    sleep  3 seconds
+    Deselect Device In Table  10.54.142.10
