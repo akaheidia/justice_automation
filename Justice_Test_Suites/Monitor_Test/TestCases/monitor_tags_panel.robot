@@ -35,14 +35,14 @@ Tags Panel Add Tag Functionality
 
 Tags Panel Manage Tags Functionality
     Tags Click Manage
-    Confirm Manage Tags Dialog Is Not Empty
-    Confirm Manage Tags Dialog Contains Tag  ${tag_name}
+    Confirm Manage Tags Panel Is Not Empty
+    Confirm Manage Tags Panel Contains Tag  ${tag_name}
     Manage Tags Select Tag  ${tag_name}
     Manage Tags Click Delete
     Tag Confirm Delete Click Cancel
-    Confirm Manage Tags Dialog Contains Tag  ${tag_name}
+    Confirm Manage Tags Panel Contains Tag  ${tag_name}
     Manage Tags Select Tag  ${tag_name}
     Manage Tags Click Delete
     Tag Confirm Delete Click OK
-    Confirm Manage Tags Dialog Does Not Contain Tag  ${tag_name}
+    Confirm Manage Tags Panel Does Not Contain Tag  ${tag_name}
     Manage Tags Click Close

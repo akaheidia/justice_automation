@@ -66,23 +66,23 @@ Add Tag Click Cancel
     Click Element  ${tags_add_tag_dialog_cancel}
 
 
-# Manage Tags Dialog
-Confirm Manage Tags Dialog Contains Tag
+# Manage Tags Panel
+Confirm Manage Tags Panel Contains Tag
     [Arguments]  ${value}
     Wait Until Element Is Visible  xpath://div[text()='${value}']
 
-Confirm Manage Tags Dialog Does Not Contain Tag
+Confirm Manage Tags Panel Does Not Contain Tag
     [Arguments]  ${value}
     ${orig_wait}=  Set Selenium Implicit Wait  1 second
     Wait Until Element Is Not Visible  xpath://div[text()='${value}']
     Set Selenium Implicit Wait  ${orig_wait}
 
-Confirm Manage Tags Dialog Is Empty
-    Wait Until Element Is Visible  ${tags_manage_tags_dialog_no_tags_msg}
+Confirm Manage Tags Panel Is Empty
+    Wait Until Element Is Visible  ${tags_manage_tags_panel_no_tags_msg}
 
-Confirm Manage Tags Dialog Is Not Empty
+Confirm Manage Tags Panel Is Not Empty
     ${orig_wait}=  Set Selenium Implicit Wait  1 second
-    Wait Until Element Is Not Visible  ${tags_manage_tags_dialog_no_tags_msg}
+    Wait Until Element Is Not Visible  ${tags_manage_tags_panel_no_tags_msg}
     Set Selenium Implicit Wait  ${orig_wait}
 
 Manage Tags Select Tag
@@ -100,16 +100,16 @@ Manage Tags Deselect Tag
     ...       ELSE  Log  ${value} is already deselected
 
 Manage Tags Click Delete
-    Wait Until Element Is Visible  ${tags_manage_tags_dialog_delete_btn}${enabled_xpath_value}
-    Click Element  ${tags_manage_tags_dialog_delete_btn}
+    Wait Until Element Is Visible  ${tags_manage_tags_panel_delete_btn}${enabled_xpath_value}
+    Click Element  ${tags_manage_tags_panel_delete_btn}
 
 Manage Tags Click Refresh
-    Wait Until Element Is Visible  ${tags_manage_tags_dialog_refresh_btn}
-    Click Element  ${tags_manage_tags_dialog_refresh_btn}
+    Wait Until Element Is Visible  ${tags_manage_tags_panel_refresh_btn}
+    Click Element  ${tags_manage_tags_panel_refresh_btn}
 
 Manage Tags Click Close
-    Wait Until Element Is Visible  ${tags_manage_tags_dialog_close_btn}
-    Click Element  ${tags_manage_tags_dialog_close_btn}
+    Wait Until Element Is Visible  ${tags_manage_tags_panel_close_btn}
+    Click Element  ${tags_manage_tags_panel_close_btn}
 
 
 # Confirm Delete Tag Dialog
