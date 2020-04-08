@@ -19,11 +19,13 @@ Show Filter Panel
     Run Keyword If  ${need_to_show}  Click Element  ${monitor_filter_icon}
     ...    ELSE  Log  Filter Panel Already Shown
     Set Selenium Implicit Wait  ${orig_wait}
+    Wait Until Element Is Visible  ${filter_panel_title}
 
 Hide Filter Panel
     ${need_to_hide}=  Run Keyword And Return Status  Element Should Be Visible  ${filter_panel_title}
     Run Keyword If  ${need_to_hide}  Click Element  ${monitor_filter_icon}
     ...    ELSE  Log  Filter Panel Already Hidden
+    Wait Until Element Is Not Visible  ${filter_panel_title}
 
 
 Show Tags Panel
@@ -32,11 +34,13 @@ Show Tags Panel
     Run Keyword If  ${need_to_show}  Click Element  ${monitor_tags_icon}
     ...    ELSE  Log  Tags Panel Already Shown
     Set Selenium Implicit Wait  ${orig_wait}
+    Wait Until Element Is Visible  ${tags_panel_title}
 
 Hide Tags Panel
     ${need_to_hide}=  Run Keyword And Return Status  Element Should Be Visible  ${tags_panel_title}
     Run Keyword If  ${need_to_hide}  Click Element  ${monitor_tags_icon}
     ...    ELSE  Log  Tags Panel Already Hidden
+    Wait Until Element Is Not Visible  ${tags_panel_title}
 
 
 Confirm List Slider Selected

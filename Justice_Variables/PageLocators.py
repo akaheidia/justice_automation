@@ -52,6 +52,25 @@ filter_site_availability_panel_collapse_icon = "xpath://div[contains(text(),'Sit
 
 # Tags Panel Elements
 tags_panel_title = "xpath://div[@class='tags-header-text']"
+tags_panel_no_tags_msg = "xpath://div[text()='No Tags Found']"
+tags_panel_add_btn = "xpath://mat-icon[@fonticon='ei-add_circle']"
+tags_panel_manage_btn = "xpath://mat-icon[@fonticon='ei-settings']"
+tags_panel_refresh_btn = "xpath://mat-icon[@fonticon='ei-refresh']"
+tags_panel_close_btn = "xpath://mat-icon[@fonticon='ei-close']"
+tags_add_tag_dialog_title = "xpath://h1[@class='mat-dialog-title dialog-header-text'][text()='Add Tag']"
+tags_add_tag_dialog_name = "xpath://input[@placeholder='Tag Name']"
+tags_add_tag_dialog_star_unselected = "xpath://mat-icon[@fonticon='ei-star_border']//ancestor::button"
+tags_add_tag_dialog_star_selected = "xpath://mat-icon[@fonticon='ei-star']//ancestor::button"
+tags_add_tag_dialog_description = "xpath://textarea[@placeholder='Tag Description']"
+tags_add_tag_dialog_cancel = "xpath://span[contains(text(),'Cancel')]"
+tags_add_tag_dialog_save = "xpath://span[contains(text(),'Save')]"
+tags_add_tag_dialog_save_enabled = "xpath://span[contains(text(),'Save')]//ancestor::button[not(@disabled='true')]"
+tags_add_tag_dialog_save_disabled = "xpath://span[contains(text(),'Save')]//ancestor::button[@disabled='true']"
+tags_manage_tags_dialog_title = "xpath://app-manage-tags-dialog//span[text()='MANAGE TAGS']"
+tags_manage_tags_dialog_no_tags_msg = "xpath://app-manage-tags-dialog//div[text()='No Tags Found']"
+tags_manage_tags_dialog_add_btn = "xpath://app-manage-tags-dialog//button[@aria-label='Add Tag']"
+tags_manage_tags_dialog_delete_btn = "xpath://app-manage-tags-dialog//button[@aria-label='Delete Tags']"
+tags_manage_tags_dialog_refresh_btn = "xpath://app-manage-tags-dialog//button[@mattooltip='Refresh']"
 
 # Map Page Elements
 map_zoom_in_enabled_button = "xpath://a[@class='leaflet-control-zoom-in']"
