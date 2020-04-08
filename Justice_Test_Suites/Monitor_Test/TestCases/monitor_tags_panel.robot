@@ -7,23 +7,33 @@ Documentation    Tests the Tags panel on the Monitor page.
 Suite Setup      Open Browser and Log In  ${JUS_URL}  ${BROWSER}  ${JUS_USERNAME}  ${JUS_PASSWORD}
 Suite Teardown   Log Out and Close Browser
 
-*** Test Cases ***
+*** Variables ***
+${tag_name}  Test Tag 1
+${tag_desc}  Description for test tag
 
-Confirm Tags Panel Show and Hide Functionality
+*** Test Cases ***
+Tags Panel Show and Hide Functionality
     Show Tags Panel
     Confirm Tags Panel Visible
     Hide Tags Panel
     Confirm Tags Panel Not Visible
 
-Confirm Tags Panel Close Functionality
+Tags Panel Close Functionality
     Show Tags Panel
     Tags Click Close
     Confirm Tags Panel Not Visible
 
-Confirm Tags Panel Add Functionality
+Tags Panel Add Tag Functionality
     Show Tags Panel
     Tags Click Add
-    Add Tag Set Name  Test Tag 1
-    Add Tag Set Description  Just a test
+    Add Tag Set Name  ${tag_name}
+    Add Tag Set Description  ${tag_desc}
     Add Tag Select Star
     Add Tag Click Save
+
+Tags Panel Manage Tags Functionality
+    Tags Click Manage
+    Manage Tags Select Tag  ${tag_name}
+    sleep  3 seconds
+    Manage Tags Click Close
+#    Manage Tags Click Delete

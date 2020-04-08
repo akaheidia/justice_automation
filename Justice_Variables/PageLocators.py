@@ -71,6 +71,7 @@ tags_manage_tags_dialog_no_tags_msg = "xpath://app-manage-tags-dialog//div[text(
 tags_manage_tags_dialog_add_btn = "xpath://app-manage-tags-dialog//button[@aria-label='Add Tag']"
 tags_manage_tags_dialog_delete_btn = "xpath://app-manage-tags-dialog//button[@aria-label='Delete Tags']"
 tags_manage_tags_dialog_refresh_btn = "xpath://app-manage-tags-dialog//button[@mattooltip='Refresh']"
+tags_manage_tags_dialog_close_btn = "xpath://mat-icon[contains(text(),'close')]"
 
 # Map Page Elements
 map_zoom_in_enabled_button = "xpath://a[@class='leaflet-control-zoom-in']"

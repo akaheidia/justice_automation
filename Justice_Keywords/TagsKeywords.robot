@@ -27,7 +27,8 @@ Tags Click Close
     Wait Until Element Is Visible  ${tags_panel_close_btn}
     Click Element  ${tags_panel_close_btn}
 
-# Add Dialog
+
+# Add Tag Dialog
 Add Tag Set Name
     [Arguments]  ${value}
     Element Should Be Visible  ${tags_add_tag_dialog_name}
@@ -55,3 +56,15 @@ Add Tag Click Save
 Add Tag Click Cancel
     Element Should Be Visible  ${tags_add_tag_dialog_cancel}
     Click Element  ${tags_add_tag_dialog_cancel}
+
+
+# Manage Tags Dialog
+Manage Tags Select Tag
+    [Arguments]  ${value}
+    Wait Until Element Is Visible  xpath://div[text()='${value}']
+    Click Element  xpath://div[text()='${value}']/../..//div[contains(@class,'center-checkboxes')]
+
+
+Manage Tags Click Close
+    Wait Until Element Is Visible  ${tags_manage_tags_dialog_close_btn}
+    Click Element  ${tags_manage_tags_dialog_close_btn}
