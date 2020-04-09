@@ -91,7 +91,7 @@ Add Device To Tag
     Add Devices To Tag Click Save
     Confirm Add Devices To Tag Panel Not Visible
     Show Tags Panel
-    Tags Click Manage
+    Tags Panel Click Manage
     Manage Tags Expand Row  ${test_tag}
     Confirm Manage Tags Device Assigned To Tag  ${test_tag}  ${test_device}
 
@@ -100,7 +100,7 @@ Remove Device From Tag and Delete Tag
     Manage Tags Device Details Click Delete  ${test_device}
     Manage Tags Device Details Click Save
     Manage Tags Click Close
-    Tags Click Manage
+    Tags Panel Click Manage
     Manage Tags Expand Row  ${test_tag}
     Confirm Manage Tags Device Not Assigned To Tag  ${test_tag}  ${test_device}
     Manage Tags Collapse Row  ${test_tag}

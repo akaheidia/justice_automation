@@ -5,27 +5,52 @@ Variables  ../Justice_Variables/PageLocators.py
 Documentation    Keywords specific to the Tags Panel.
 
 *** Keywords ***
-Tags Click Add
+Tags Panel Create Tag
+    [Arguments]  ${tag_name}
+    Show Tags Panel
+    Tags Panel Click Add
+    Add Tag Set Name  ${tag_name}
+    Add Tag Click Save
+    Confirm Tags Panel Contains Tag  ${tag_name}
+
+Tags Panel Click Add
     Confirm Tags Panel Visible
     Wait Until Element Is Visible  ${tags_panel_add_btn}
     Click Element  ${tags_panel_add_btn}
     Wait Until Element Is Visible  ${tags_add_tag_dialog_title}
 
-Tags Click Manage
+Tags Panel Click Manage
     Confirm Tags Panel Visible
     Wait Until Element Is Visible  ${tags_panel_manage_btn}
     Click Element  ${tags_panel_manage_btn}
     Wait Until Element Is Visible  ${tags_manage_tags_panel_title}
 
-Tags Click Refresh
+Tags Panel Click Refresh
     Confirm Tags Panel Visible
     Wait Until Element Is Visible  ${tags_panel_refresh_btn}
     Click Element  ${tags_panel_refresh_btn}
 
-Tags Click Close
+Tags Panel Click Close
     Confirm Tags Panel Visible
     Wait Until Element Is Visible  ${tags_panel_close_btn}
     Click Element  ${tags_panel_close_btn}
+
+Tags Panel Select Tag
+    [Arguments]  ${value}
+    Wait Until Element Is Visible  xpath://h3[text()='${value}']
+    Click Element  xpath://h3[text()='${value}']
+
+
+Confirm Tags Panel Contains Tag
+    [Arguments]  ${value}
+    Wait Until Element Is Visible  xpath://h3[text()='${value}']
+
+Confirm Tags Panel Does Not Contain Tag
+    [Arguments]  ${value}
+    ${orig_wait}=  Set Selenium Implicit Wait  1 second
+    Wait Until Element Is Not Visible  xpath://h3[text()='${value}']
+    Set Selenium Implicit Wait  ${orig_wait}
+
 
 Confirm Tags Panel Is Empty
     Wait Until Element Is Visible  ${tags_panel_no_tags_msg}
