@@ -16,6 +16,7 @@ Confirm Netsight Administrator Group Cannot Be Edited
 
 Confirm Other Groups Can Be Edited
     Settings Select User Group  ${XMC_HOSTNAME}  Custom Group
+    sleep  1 second
     Confirm Settings User Group Close Button Present
     Confirm Settings User Group Edit Button Present
     Settings User Group Click Edit

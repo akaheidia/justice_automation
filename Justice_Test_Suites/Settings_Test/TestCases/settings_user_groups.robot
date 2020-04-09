@@ -14,3 +14,20 @@ Confirm Page Loads
     Confirm Settings Page Loaded
     Click User Groups
     Confirm User Groups Page Loaded
+
+Select NetSight Administrator User Group
+    Settings Select User Group  ${XMC_HOSTNAME}  NetSight Administrator
+    Confirm Settings User Group Close Button Present
+    Confirm Settings User Group Edit Button Not Present
+    Settings User Group Click Close
+
+Select Custom User Group
+    Settings Select User Group  ${XMC_HOSTNAME}  Custom Group
+    sleep  1 second
+    Confirm Settings User Group Close Button Present
+    Confirm Settings User Group Edit Button Present
+    Settings User Group Click Edit
+    Confirm Settings User Group Save Button Present
+    Confirm Settings User Group Cancel Button Present
+    Settings User Group Click Cancel
+    Settings User Group Click Close

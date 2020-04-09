@@ -66,9 +66,9 @@ tags_add_tag_dialog_star_unselected = "xpath://mat-icon[@fonticon='ei-star_borde
 tags_add_tag_dialog_star_selected = "xpath://mat-icon[@fonticon='ei-star']//ancestor::button"
 tags_add_tag_dialog_description = "xpath://textarea[@placeholder='Tag Description']"
 tags_add_tag_dialog_cancel = "xpath://span[contains(text(),'Cancel')]"
-tags_add_tag_dialog_save = "xpath://span[contains(text(),'Save')]"
-tags_add_tag_dialog_save_enabled = "xpath://span[contains(text(),'Save')]//ancestor::button[not(@disabled='true')]"
-tags_add_tag_dialog_save_disabled = "xpath://span[contains(text(),'Save')]//ancestor::button[@disabled='true']"
+tags_add_tag_dialog_save = "xpath://app-add-tag-dialog//span[contains(text(),'Save')]"
+tags_add_tag_dialog_save_enabled = "xpath://app-add-tag-dialog//span[contains(text(),'Save')]//ancestor::button[not(@disabled='true')]"
+tags_add_tag_dialog_save_disabled = "xpath://app-add-tag-dialog//span[contains(text(),'Save')]//ancestor::button[@disabled='true']"
 tags_manage_tags_panel_title = "xpath://app-manage-tags-dialog//span[text()='MANAGE TAGS']"
 tags_manage_tags_panel_no_tags_msg = "xpath://app-manage-tags-dialog//div[text()='No Tags Found']"
 tags_manage_tags_panel_add_btn = "xpath://app-manage-tags-dialog//button[@aria-label='Add Tag']"
@@ -82,11 +82,11 @@ tags_confirm_delete_tags_dialog_cancel = "xpath://span[text()='Cancel']"
 # Add Devices To Tag Elements
 tags_add_devices_to_tag_button = "xpath://button[@aria-label='Add device to a Tag']"
 tags_add_devices_to_tag_panel = "xpath://span[contains(text(),'ADD DEVICES TO TAGS')]"
-tags_add_devices_to_tag_panel_close = "xpath://mat-icon[contains(text(),'close')]"
+tags_add_devices_to_tag_panel_close = "xpath://app-add-to-tag-dialog//mat-icon[contains(text(),'close')]"
 tags_add_devices_to_tag_panel_add_tag = "xpath://app-add-to-tag-dialog//mat-icon[@fonticon='ei-add_circle']"
 tags_add_devices_to_tag_panel_manage_tags = "xpath://app-add-to-tag-dialog//mat-icon[@fonticon='ei-settings']"
 tags_add_devices_to_tag_panel_refresh = "xpath://app-add-to-tag-dialog//mat-icon[@fonticon='ei-refresh']"
-tags_add_devices_to_tag_panel_save = "xpath://span[text()='Save']"
+tags_add_devices_to_tag_panel_save = "xpath://app-add-to-tag-dialog//span[text()='Save']"
 
 # Map Page Elements
 map_zoom_in_enabled_button = "xpath://a[@class='leaflet-control-zoom-in']"
@@ -300,10 +300,11 @@ settings_security_menu = "xpath://div[text()='Security']"
 
 # Settings - User Groups Page Elements
 usergroups_page_title = "xpath://span[@class='user-groups-title'][text()='User Groups']"
-usergroups_edit_button = "xpath://extr-custom-button//p[text()='Edit']"
-usergroups_close_button = "xpath://extr-custom-button//p[text()='Close']"
-usergroups_cancel_button = "xpath://extr-custom-button//p[text()='Cancel']"
-usergroups_save_button = "xpath://extr-custom-button//p[text()='Save']"
+usergroups_edit_button = "xpath://p[text()='Edit']//ancestor::extr-custom-button"
+usergroups_close_button = "xpath://p[text()='Close']//ancestor::extr-custom-button"
+usergroups_cancel_button = "xpath://p[text()='Cancel']//ancestor::extr-custom-button"
+usergroups_save_button = "xpath://p[text()='Save']//ancestor::extr-custom-button"
+usergroups_details_server_label = "xpath://div[@class='user-group-server-info']//div[@class='section-description'][contains(text(),'Server')]"
 
 # Settings - Security Page Elements
 security_page_title = "xpath://span[@class='security-title'][text()='Security']"
