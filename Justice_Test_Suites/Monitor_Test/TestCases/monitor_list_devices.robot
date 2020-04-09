@@ -106,7 +106,7 @@ Remove Device From Tag and Delete Tag
     Manage Tags Collapse Row  ${test_tag}
     Manage Tags Select Tag  ${test_tag}
     Manage Tags Click Delete
-    Tag Confirm Delete Click OK
+    Manage Tags Confirm Delete Tags Click OK
     Confirm Manage Tags Panel Does Not Contain Tag  ${test_tag}
     Manage Tags Click Close
     Hide Tags Panel

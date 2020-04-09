@@ -61,7 +61,23 @@ tags_panel_manage_btn = "xpath://mat-icon[@fonticon='ei-settings']"
 tags_panel_refresh_btn = "xpath://mat-icon[@fonticon='ei-refresh']"
 tags_panel_close_btn = "xpath://mat-icon[@fonticon='ei-close']"
 
+# Edit Tag Dialog Elements
+tags_panel_edit_tag_dialog = "xpath://app-manage-tag-dialog"
+tags_panel_edit_tag_dialog_name = "xpath://app-manage-tag-dialog//input[@placeholder='Tag Name']"
+tags_panel_edit_tag_dialog_star_unselected = "xpath://app-manage-tag-dialog//mat-icon[@fonticon='ei-star_border']//ancestor::button"
+tags_panel_edit_tag_dialog_star_selected = "xpath://app-manage-tag-dialog//mat-icon[@fonticon='ei-star']//ancestor::button"
+tags_panel_edit_tag_dialog_description = "xpath://app-manage-tag-dialog//input[@placeholder='Tag Description']"
+tags_panel_edit_tag_dialog_delete = "xpath://app-manage-tag-dialog//span[contains(text(),'Delete')]"
+tags_panel_edit_tag_dialog_cancel = "xpath://app-manage-tag-dialog//span[contains(text(),'Cancel')]"
+tags_panel_edit_tag_dialog_save = "xpath://app-manage-tag-dialog//span[contains(text(),'Save')]"
+
+# Confirm Delete Tag Dialog Elements
+tags_confirm_delete_tag_dialog = "xpath://app-confirm-dialog//h1[text()='Delete Tag']"
+tags_confirm_delete_tag_dialog_ok = "xpath://app-confirm-dialog//span[text()='OK']"
+tags_confirm_delete_tag_dialog_cancel = "xpath://app-confirm-dialog//span[text()='Cancel']"
+
 # Add Tag Dialog Elements
+tags_add_tag_dialog = "xpath://app-add-tag-dialog"
 tags_add_tag_dialog_title = "xpath://app-add-tag-dialog//h1[@class='mat-dialog-title dialog-header-text'][text()='Add Tag']"
 tags_add_tag_dialog_name = "xpath://app-add-tag-dialog//input[@placeholder='Tag Name']"
 tags_add_tag_dialog_star_unselected = "xpath://app-add-tag-dialog//mat-icon[@fonticon='ei-star_border']//ancestor::button"
@@ -73,6 +89,7 @@ tags_add_tag_dialog_save_enabled = "xpath://app-add-tag-dialog//span[contains(te
 tags_add_tag_dialog_save_disabled = "xpath://app-add-tag-dialog//span[contains(text(),'Save')]//ancestor::button[@disabled='true']"
 
 # Manage Tags Dialog Elements
+tags_manage_tags_panel = "xpath://app-manage-tags-dialog"
 tags_manage_tags_panel_title = "xpath://app-manage-tags-dialog//span[text()='MANAGE TAGS']"
 tags_manage_tags_panel_no_tags_msg = "xpath://app-manage-tags-dialog//div[text()='No Tags Found']"
 tags_manage_tags_panel_add_btn = "xpath://app-manage-tags-dialog//button[@aria-label='Add Tag']"
@@ -87,14 +104,15 @@ tags_manage_tags_panel_device_details_save = "xpath://app-manage-tags-dialog//sp
 tags_manage_tags_panel_device_details_save_enabled = "xpath://app-manage-tags-dialog//span[contains(text(),'Save')]//ancestor::button[not(@disabled='true')]"
 tags_manage_tags_panel_device_details_save_disabled = "xpath://app-manage-tags-dialog//span[contains(text(),'Save')]//ancestor::button[@disabled='true']"
 
-# Confirm Delete Tag Dialog Elements
-tags_confirm_delete_tags_dialog = "xpath://h1[text()='Delete Tags']"
-tags_confirm_delete_tags_dialog_ok = "xpath://span[text()='OK']"
-tags_confirm_delete_tags_dialog_cancel = "xpath://span[text()='Cancel']"
+# Confirm Delete Tags Dialog Elements
+tags_confirm_delete_tags_dialog = "xpath://app-confirm-dialog//h1[text()='Delete Tags']"
+tags_confirm_delete_tags_dialog_ok = "xpath://app-confirm-dialog//span[text()='OK']"
+tags_confirm_delete_tags_dialog_cancel = "xpath://app-confirm-dialog//span[text()='Cancel']"
 
 # Add Devices To Tag Elements
 tags_add_devices_to_tag_button = "xpath://button[@aria-label='Add device to a Tag']"
-tags_add_devices_to_tag_panel = "xpath://app-add-to-tag-dialog//span[contains(text(),'ADD DEVICES TO TAGS')]"
+tags_add_devices_to_tag_panel = "xpath://app-add-to-tag-dialog"
+tags_add_devices_to_tag_panel_title = "xpath://app-add-to-tag-dialog//span[contains(text(),'ADD DEVICES TO TAGS')]"
 tags_add_devices_to_tag_panel_close = "xpath://app-add-to-tag-dialog//mat-icon[contains(text(),'close')]"
 tags_add_devices_to_tag_panel_add_tag = "xpath://app-add-to-tag-dialog//mat-icon[@fonticon='ei-add_circle']"
 tags_add_devices_to_tag_panel_manage_tags = "xpath://app-add-to-tag-dialog//mat-icon[@fonticon='ei-settings']"

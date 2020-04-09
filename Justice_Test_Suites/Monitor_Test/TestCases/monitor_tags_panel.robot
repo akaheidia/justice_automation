@@ -39,13 +39,13 @@ Tags Panel Manage Tags Functionality
     Confirm Manage Tags Panel Contains Tag  ${tag_name}
     Manage Tags Select Tag  ${tag_name}
     Manage Tags Click Delete
-    Tag Confirm Delete Click Cancel
+    Manage Tags Confirm Delete Tags Click Cancel
     Confirm Manage Tags Panel Contains Tag  ${tag_name}
     Manage Tags Expand Row  ${tag_name}
     sleep  1 second
     Manage Tags Collapse Row  ${tag_name}
     Manage Tags Select Tag  ${tag_name}
     Manage Tags Click Delete
-    Tag Confirm Delete Click OK
+    Manage Tags Confirm Delete Tags Click OK
     Confirm Manage Tags Panel Does Not Contain Tag  ${tag_name}
     Manage Tags Click Close

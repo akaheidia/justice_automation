@@ -51,7 +51,6 @@ Confirm Tags Panel Does Not Contain Tag
     Wait Until Element Is Not Visible  xpath://h3[text()='${value}']
     Set Selenium Implicit Wait  ${orig_wait}
 
-
 Confirm Tags Panel Is Empty
     Wait Until Element Is Visible  ${tags_panel_no_tags_msg}
 
@@ -59,6 +58,22 @@ Confirm Tags Panel Is Not Empty
     ${orig_wait}=  Set Selenium Implicit Wait  1 second
     Wait Until Element Is Not Visible  ${tags_panel_no_tags_msg}
     Set Selenium Implicit Wait  ${orig_wait}
+
+Confirm Edit Tag Dialog Visible
+    Wait Until Element Is Visible  ${tags_panel_edit_tag_dialog}
+
+# Edit Tag Dialog
+Edit Tag Click Delete
+    Element Should Be Visible  ${tags_panel_edit_tag_dialog_delete}
+    Click Element  ${tags_panel_edit_tag_dialog_delete}
+
+Edit Tag Click Cancel
+    Element Should Be Visible  ${tags_panel_edit_tag_dialog_cancel}
+    Click Element  ${tags_panel_edit_tag_dialog_cancel}
+
+Edit Tag Click Save
+    Element Should Be Visible  ${tags_panel_edit_tag_dialog_save}
+    Click Element  ${tags_panel_edit_tag_dialog_save}
 
 
 # Add Tag Dialog
@@ -174,11 +189,21 @@ Manage Tags Click Close
     Click Element  ${tags_manage_tags_panel_close_btn}
 
 
-# Confirm Delete Tag Dialog
-Tag Confirm Delete Click OK
+# Confirm Delete Tags Dialog (this is the Delete from the Manage Tags panel)
+Manage Tags Confirm Delete Tags Click OK
     Wait Until Element Is Visible  ${tags_confirm_delete_tags_dialog}
     Click Element  ${tags_confirm_delete_tags_dialog_ok}
 
-Tag Confirm Delete Click Cancel
+Manage Tags Confirm Delete Tags Click Cancel
     Wait Until Element Is Visible  ${tags_confirm_delete_tags_dialog}
     Click Element  ${tags_confirm_delete_tags_dialog_cancel}
+
+
+# Confirm Delete Tag Dialog (this is the Delete from the Edit Tag dialog)
+Edit Tag Confirm Delete Tag Click OK
+    Wait Until Element Is Visible  ${tags_confirm_delete_tag_dialog}
+    Click Element  ${tags_confirm_delete_tag_dialog_ok}
+
+Edit Tag Confirm Delete Tag Click Cancel
+    Wait Until Element Is Visible  ${tags_confirm_delete_tag_dialog}
+    Click Element  ${tags_confirm_delete_tag_dialog_cancel}
