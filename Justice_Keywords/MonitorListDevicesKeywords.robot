@@ -107,6 +107,14 @@ Add Devices To Tag Click Refresh
     Click Element  ${tags_add_devices_to_tag_panel_refresh}
 
 
+Confirm Add Devices To Tag Panel Visible
+    Page Should Contain Element  ${tags_add_devices_to_tag_panel}
+
+Confirm Add Devices To Tag Panel Not Visible
+    ${orig_wait}=  Set Selenium Implicit Wait  1 second
+    Page Should Not Contain Element  ${tags_add_devices_to_tag_panel}
+    Set Selenium Implicit Wait  ${orig_wait}
+
 Confirm Add Devices To Tag Panel Contains Tag
     [Arguments]  ${value}
     Wait Until Element Is Visible  xpath://span[text()='${value}']

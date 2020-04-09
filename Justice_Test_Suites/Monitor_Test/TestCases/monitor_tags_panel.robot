@@ -41,6 +41,9 @@ Tags Panel Manage Tags Functionality
     Manage Tags Click Delete
     Tag Confirm Delete Click Cancel
     Confirm Manage Tags Panel Contains Tag  ${tag_name}
+    Manage Tags Expand Row  ${tag_name}
+    sleep  1 second
+    Manage Tags Collapse Row  ${tag_name}
     Manage Tags Select Tag  ${tag_name}
     Manage Tags Click Delete
     Tag Confirm Delete Click OK

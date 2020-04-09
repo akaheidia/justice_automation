@@ -60,6 +60,8 @@ tags_panel_add_btn = "xpath://mat-icon[@fonticon='ei-add_circle']"
 tags_panel_manage_btn = "xpath://mat-icon[@fonticon='ei-settings']"
 tags_panel_refresh_btn = "xpath://mat-icon[@fonticon='ei-refresh']"
 tags_panel_close_btn = "xpath://mat-icon[@fonticon='ei-close']"
+
+# Add Tag Dialog Elements
 tags_add_tag_dialog_title = "xpath://h1[@class='mat-dialog-title dialog-header-text'][text()='Add Tag']"
 tags_add_tag_dialog_name = "xpath://input[@placeholder='Tag Name']"
 tags_add_tag_dialog_star_unselected = "xpath://mat-icon[@fonticon='ei-star_border']//ancestor::button"
@@ -69,12 +71,23 @@ tags_add_tag_dialog_cancel = "xpath://span[contains(text(),'Cancel')]"
 tags_add_tag_dialog_save = "xpath://app-add-tag-dialog//span[contains(text(),'Save')]"
 tags_add_tag_dialog_save_enabled = "xpath://app-add-tag-dialog//span[contains(text(),'Save')]//ancestor::button[not(@disabled='true')]"
 tags_add_tag_dialog_save_disabled = "xpath://app-add-tag-dialog//span[contains(text(),'Save')]//ancestor::button[@disabled='true']"
+
+# Manage Tags Dialog Elements
 tags_manage_tags_panel_title = "xpath://app-manage-tags-dialog//span[text()='MANAGE TAGS']"
 tags_manage_tags_panel_no_tags_msg = "xpath://app-manage-tags-dialog//div[text()='No Tags Found']"
 tags_manage_tags_panel_add_btn = "xpath://app-manage-tags-dialog//button[@aria-label='Add Tag']"
 tags_manage_tags_panel_delete_btn = "xpath://app-manage-tags-dialog//button[@aria-label='Delete Tags']"
 tags_manage_tags_panel_refresh_btn = "xpath://app-manage-tags-dialog//button[@mattooltip='Refresh']"
 tags_manage_tags_panel_close_btn = "xpath://mat-icon[contains(text(),'close')]"
+tags_manage_tags_panel_collapsed_btn_xpath_value = "/ancestor::tr//mat-icon[contains(@class,'expansion-arrow')][text()='keyboard_arrow_right']"
+tags_manage_tags_panel_expanded_btn_xpath_value = "/ancestor::tr//mat-icon[contains(@class,'expansion-arrow')][text()='keyboard_arrow_down']"
+tags_manage_tags_panel_delete_device_icon_xpath_value = "/ancestor::a//mat-icon[@fonticon='ei-delete']"
+tags_manage_tags_panel_device_details_clear_all = "xpath://mat-icon[@fonticon='ei-clear_all']"
+tags_manage_tags_panel_device_details_save = "xpath://span[contains(text(),'Save')]"
+tags_manage_tags_panel_device_details_save_enabled = "xpath://span[contains(text(),'Save')]//ancestor::button[not(@disabled='true')]"
+tags_manage_tags_panel_device_details_save_disabled = "xpath://span[contains(text(),'Save')]//ancestor::button[@disabled='true']"
+
+# Confirm Delete Tag Dialog Elements
 tags_confirm_delete_tags_dialog = "xpath://h1[text()='Delete Tags']"
 tags_confirm_delete_tags_dialog_ok = "xpath://span[text()='OK']"
 tags_confirm_delete_tags_dialog_cancel = "xpath://span[text()='Cancel']"

@@ -85,6 +85,18 @@ Confirm Manage Tags Panel Is Not Empty
     Wait Until Element Is Not Visible  ${tags_manage_tags_panel_no_tags_msg}
     Set Selenium Implicit Wait  ${orig_wait}
 
+Confirm Manage Tags Device Assigned To Tag
+    [Arguments]  ${tag}  ${ip}
+    Manage Tags Expand Row  ${tag}
+    Page Should Contain Element  xpath://app-manage-tags-dialog//div[text()='${ip}']
+
+Confirm Manage Tags Device Not Assigned To Tag
+    [Arguments]  ${tag}  ${ip}
+    ${orig_wait}=  Set Selenium Implicit Wait  1 second
+    Manage Tags Expand Row  ${tag}
+    Page Should Not Contain Element  xpath://app-manage-tags-dialog//div[text()='${ip}']
+    Set Selenium Implicit Wait  ${orig_wait}
+
 Manage Tags Select Tag
     [Arguments]  ${value}
     Wait Until Element Is Visible  xpath://div[text()='${value}']
@@ -98,6 +110,29 @@ Manage Tags Deselect Tag
     ${need_to_click}=  Run Keyword And Return Status  Element Should Be Visible  xpath://div[text()='${value}']/../..//div[contains(@class,'center-checkboxes')]//input[@aria-checked='true']
     Run Keyword If  ${need_to_click} == True  Click Element  xpath://div[text()='${value}']/../..//div[contains(@class,'center-checkboxes')]
     ...       ELSE  Log  ${value} is already deselected
+
+Manage Tags Expand Row
+    [Arguments]  ${value}
+    Wait Until Element Is Visible  xpath://div[text()='${value}']
+    ${need_to_click}=  Run Keyword And Return Status  Element Should Be Visible  xpath://div[text()='${value}']${tags_manage_tags_panel_collapsed_btn_xpath_value}
+    Run Keyword If  ${need_to_click} == True  Click Element  xpath://div[text()='${value}']${tags_manage_tags_panel_collapsed_btn_xpath_value}
+    ...       ELSE  Log  ${value} is already expanded
+
+Manage Tags Collapse Row
+    [Arguments]  ${value}
+    Wait Until Element Is Visible  xpath://div[text()='${value}']
+    ${need_to_click}=  Run Keyword And Return Status  Element Should Be Visible  xpath://div[text()='${value}']${tags_manage_tags_panel_expanded_btn_xpath_value}
+    Run Keyword If  ${need_to_click} == True  Click Element  xpath://div[text()='${value}']${tags_manage_tags_panel_expanded_btn_xpath_value}
+    ...       ELSE  Log  ${value} is already collapsed
+
+Manage Tags Device Details Click Delete
+    [Arguments]  ${value}
+    Wait Until Element Is Visible  xpath://div[text()='${value}']
+    Click Element  xpath://div[text()='${value}']${tags_manage_tags_panel_delete_device_icon_xpath_value}
+
+Manage Tags Device Details Click Save
+    Wait Until Element Is Visible  ${tags_manage_tags_panel_device_details_save_enabled}
+    Click Element  ${tags_manage_tags_panel_device_details_save_enabled}
 
 Manage Tags Click Delete
     Wait Until Element Is Visible  ${tags_manage_tags_panel_delete_btn}
