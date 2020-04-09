@@ -73,15 +73,15 @@ Click Add Devices To Tag
 Add Devices To Tag Select Tag
     [Arguments]  ${value}
     Wait Until Element Is Visible  xpath://span[text()='${value}']
-    ${need_to_click}=  Run Keyword And Return Status  Element Should Be Visible  xpath://label[@class='mat-checkbox-layout']/span[text()='${value}']/..//input[@type='checkbox'][@aria-checked='false']
-    Run Keyword If  ${need_to_click} == True  Click Element  xpath://label[@class='mat-checkbox-layout']/span[text()='${value}']
+    ${need_to_click}=  Run Keyword And Return Status  Element Should Be Visible  xpath://app-add-to-tag-dialog//label[@class='mat-checkbox-layout']/span[text()='${value}']/..//input[@type='checkbox'][@aria-checked='false']
+    Run Keyword If  ${need_to_click} == True  Click Element  xpath://app-add-to-tag-dialog//label[@class='mat-checkbox-layout']/span[text()='${value}']
     ...       ELSE  Log  ${value} is already selected
 
 Add Devices To Tag Deselect Tag
     [Arguments]  ${value}
     Wait Until Element Is Visible  xpath://span[text()='${value}']
-    ${need_to_click}=  Run Keyword And Return Status  Element Should Be Visible  xpath://label[@class='mat-checkbox-layout']/span[text()='${value}']/..//input[@type='checkbox'][@aria-checked='true']
-    Run Keyword If  ${need_to_click} == True  Click Element  xpath://label[@class='mat-checkbox-layout']/span[text()='${value}']
+    ${need_to_click}=  Run Keyword And Return Status  Element Should Be Visible  xpath://app-add-to-tag-dialog//label[@class='mat-checkbox-layout']/span[text()='${value}']/..//input[@type='checkbox'][@aria-checked='true']
+    Run Keyword If  ${need_to_click} == True  Click Element  xpath://app-add-to-tag-dialog//label[@class='mat-checkbox-layout']/span[text()='${value}']
     ...       ELSE  Log  ${value} is already deselected
 
 Add Devices To Tag Click Save
@@ -108,19 +108,19 @@ Add Devices To Tag Click Refresh
 
 
 Confirm Add Devices To Tag Panel Visible
-    Page Should Contain Element  ${tags_add_devices_to_tag_panel}
+    Wait Until Element Is Visible  ${tags_add_devices_to_tag_panel}
 
 Confirm Add Devices To Tag Panel Not Visible
     ${orig_wait}=  Set Selenium Implicit Wait  1 second
-    Page Should Not Contain Element  ${tags_add_devices_to_tag_panel}
+    Wait Until Element Is Not Visible  ${tags_add_devices_to_tag_panel}
     Set Selenium Implicit Wait  ${orig_wait}
 
 Confirm Add Devices To Tag Panel Contains Tag
     [Arguments]  ${value}
-    Wait Until Element Is Visible  xpath://span[text()='${value}']
+    Wait Until Element Is Visible  xpath://app-add-to-tag-dialog//span[text()='${value}']
 
 Confirm Add Devices To Tag Panel Does Not Contain Tag
     [Arguments]  ${value}
     ${orig_wait}=  Set Selenium Implicit Wait  1 second
-    Wait Until Element Is Not Visible  xpath://span[text()='${value}']
+    Wait Until Element Is Not Visible  xpath://app-add-to-tag-dialog//span[text()='${value}']
     Set Selenium Implicit Wait  ${orig_wait}
