@@ -15,7 +15,7 @@ Tags Click Manage
     Confirm Tags Panel Visible
     Wait Until Element Is Visible  ${tags_panel_manage_btn}
     Click Element  ${tags_panel_manage_btn}
-    Wait Until Element Is Visible  ${tags_manage_tags_dialog_title}
+    Wait Until Element Is Visible  ${tags_manage_tags_panel_title}
 
 Tags Click Refresh
     Confirm Tags Panel Visible
