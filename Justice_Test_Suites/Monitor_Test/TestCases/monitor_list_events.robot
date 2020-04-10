@@ -39,31 +39,27 @@ Confirm Download Menus
     Confirm File Exists  ${DOWNLOADS_DIR}  ${csv_events_visible}
     Remove File  ${DOWNLOADS_DIR}  ${csv_events_visible}
 
-    Log To Console  Download CSV All Rows Fails - JUS-445
-#    Download CSV All Rows
-#    Wait Until Page Contains  Download Complete
-#    Confirm File Exists  ${DOWNLOADS_DIR}  ${csv_events_all}
-#    Remove File  ${DOWNLOADS_DIR}  ${csv_events_all}
+    Download CSV All Rows
+    Wait Until Page Contains  Download Complete
+    Confirm File Exists  ${DOWNLOADS_DIR}  ${csv_events_all}
+    Remove File  ${DOWNLOADS_DIR}  ${csv_events_all}
 
-    Log To Console  Download CSV All Filtered Rows Fails - JUS-512
-#    Download CSV All Filtered Rows
-#    Wait Until Page Contains  Download Complete
-#    Confirm File Exists  ${DOWNLOADS_DIR}  ${csv_events_filtered}
-#    Remove File  ${DOWNLOADS_DIR}  ${csv_events_filtered}
+    Download CSV All Filtered Rows
+    Wait Until Page Contains  Download Complete
+    Confirm File Exists  ${DOWNLOADS_DIR}  ${csv_events_filtered}
+    Remove File  ${DOWNLOADS_DIR}  ${csv_events_filtered}
 
     Download PDF Visible Rows
     Wait Until Page Contains  Download Complete
     Confirm File Exists  ${DOWNLOADS_DIR}  ${pdf_events_visible}
     Remove File  ${DOWNLOADS_DIR}  ${pdf_events_visible}
 
-    Log To Console  Download PDF All Rows Fails - JUS-445
-#    Download PDF All Rows
-#    Wait Until Page Contains  Download Complete
-#    Confirm File Exists  ${DOWNLOADS_DIR}  ${pdf_events_all}
-#    Remove File  ${DOWNLOADS_DIR}  ${pdf_events_all}
+    Download PDF All Rows
+    Wait Until Page Contains  Download Complete
+    Confirm File Exists  ${DOWNLOADS_DIR}  ${pdf_events_all}
+    Remove File  ${DOWNLOADS_DIR}  ${pdf_events_all}
 
-    Log To Console  Download PDF All Filtered Rows Fails - JUS-512
-#    Download PDF All Filtered Rows
-#    Wait Until Page Contains  Download Complete
-#    Confirm File Exists  ${DOWNLOADS_DIR}  ${pdf_events_filtered}
-#    Remove File  ${DOWNLOADS_DIR}  ${pdf_events_filtered}
+    Download PDF All Filtered Rows
+    Wait Until Page Contains  Download Complete
+    Confirm File Exists  ${DOWNLOADS_DIR}  ${pdf_events_filtered}
+    Remove File  ${DOWNLOADS_DIR}  ${pdf_events_filtered}
