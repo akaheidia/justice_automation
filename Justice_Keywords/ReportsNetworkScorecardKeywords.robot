@@ -106,3 +106,15 @@ Click Network Scorecard Site Availability Donut
 
     Unselect Frame
     Unselect Frame
+
+
+
+Confirm Network Scorecard Tracked Application Response Time Has Value
+    Select Frame  xpath://iframe
+    Select Frame  xpath://iframe[@id='app_response']
+
+    Page Should Contain Element  ${reports_donut_value}
+    Element Text Should Not Be  ${reports_donut_value}  ${EMPTY}
+
+    Unselect Frame
+    Unselect Frame

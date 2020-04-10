@@ -303,6 +303,7 @@ reports_site_wireless_volume_donut = "xpath://h4[text()='Site Wireless Volume']"
 reports_tracked_app_resp_time_donut = "xpath://h4[text()='Tracked Application Response Time']"
 
 # Reports - Network Scorecard Page Elements
+reports_donut_value = "xpath://div[@class='chart-percent']"
 
 # Reports - Network Summary Page Elements
 reports_chart_no_data = "xpath://*[@class='highcharts-no-data']"
