@@ -1,5 +1,7 @@
 *** Settings ***
 Library    SeleniumLibrary
+Library    String
+Library    Collections
 Variables  ../Justice_Variables/PageLocators.py
 
 Documentation    Keywords specific to the Filter Panel of the Reports page.
@@ -74,6 +76,68 @@ Set Reports Filter Custom End Date
 Deselect Reports Filter Server
     [Arguments]  ${server}
 #    "xpath://div[@class='server-site-filter']//li[1]//label[1]//input[1]"
+
+Set Reports Filter Device Types
+    [Arguments]  ${value}
+    Select Frame  xpath://iframe
+
+    # Open the Device Type selector
+    ${closed}=  Run Keyword And Return Status  Element Should Be Visible  ${reports_filter_panel_device_type_choice_list_closed}
+    Run Keyword If  '${closed}'  Click Element  ${reports_filter_panel_device_type_field}
+    ...      ELSE  Log To Console  Device Type Selector Already Open
+
+    # Deselect the "Check All" choice so the specified device types can be selected individually
+    ${checked}=  Run Keyword And Return Status  Checkbox Should Be Selected  ${reports_filter_panel_device_type_check_all}
+    Run Keyword If  '${checked}'  Click Element   ${reports_filter_panel_device_type_check_all}
+
+    # Loop over the list of device types to select
+    @{device_types}=  Split String  ${value}  ,
+    :FOR  ${item}  IN  @{device_types}
+    \    Page Should Contain Element  xpath://span[contains(text(),'${item}')]
+    \    Click Element  xpath://span[contains(text(),'${item}')]
+
+    # Close the Device Type selector
+        ${open}=  Run Keyword And Return Status  Element Should Be Visible  ${reports_filter_panel_device_type_choice_list_open}
+    Run Keyword If  '${open}'  Click Element  ${reports_filter_panel_device_type_field}
+    ...      ELSE  Log To Console  Device Type Selector Already Closed
+
+    Unselect Frame
+
+Confirm Reports Filter Contains All Device Types
+    Select Frame  xpath://iframe
+
+    # Open the Device Type selector
+    ${closed}=  Run Keyword And Return Status  Element Should Be Visible  ${reports_filter_panel_device_type_choice_list_closed}
+    Run Keyword If  '${closed}'  Click Element  ${reports_filter_panel_device_type_field}
+    ...      ELSE  Log To Console  Device Type Selector Already Open
+
+    # Confirm the "Check All" choice is selected
+    Checkbox Should Be Selected  ${reports_filter_panel_device_type_check_all}
+
+    # Close the Device Type selector
+    ${open}=  Run Keyword And Return Status  Element Should Be Visible  ${reports_filter_panel_device_type_choice_list_open}
+    Run Keyword If  '${open}'  Click Element  ${reports_filter_panel_device_type_field}
+    ...      ELSE  Log To Console  Device Type Selector Already Closed
+
+    Unselect Frame
+
+Confirm Reports Filter Does Not Contain All Device Types
+    Select Frame  xpath://iframe
+
+    # Open the Device Type selector
+    ${closed}=  Run Keyword And Return Status  Element Should Be Visible  ${reports_filter_panel_device_type_choice_list_closed}
+    Run Keyword If  '${closed}'  Click Element  ${reports_filter_panel_device_type_field}
+    ...      ELSE  Log To Console  Device Type Selector Already Open
+
+    # Confirm the "Check All" choice is selected
+    Checkbox Should Not Be Selected  ${reports_filter_panel_device_type_check_all}
+
+    # Close the Device Type selector
+    ${open}=  Run Keyword And Return Status  Element Should Be Visible  ${reports_filter_panel_device_type_choice_list_open}
+    Run Keyword If  '${open}'  Click Element  ${reports_filter_panel_device_type_field}
+    ...      ELSE  Log To Console  Device Type Selector Already Closed
+
+    Unselect Frame
 
 Confirm Reports Filter Contains Server
     [Arguments]  ${server}
