@@ -70,9 +70,13 @@ Get Site Availability Report Table Value Count
 Site Availability Drill Into Site
     [Arguments]  ${site}
     sleep  1 second
+    Wait Until Page Contains Element  xpath://iframe
     Select Frame  xpath://iframe
+    Wait Until Page Contains Element  xpath://iframe[@id='availability']
     Select Frame  xpath://iframe[@id='availability']
 
+    sleep  1 second
+    Wait Until Page Contains Element  xpath://span[contains(text(), '${site}')]/..
     Click Element  xpath://span[contains(text(), '${site}')]/..
 
     Unselect Frame
