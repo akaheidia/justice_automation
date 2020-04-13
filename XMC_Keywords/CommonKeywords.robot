@@ -95,3 +95,13 @@ XMC Confirm Server Log Does Not Contain Message
     Should Not Contain  ${output}  ${message}
 
     Close SSH Connection
+
+XMC Confirm File Contains Value
+    [Arguments]  ${ip}  ${user}  ${pwd}  ${file}  ${value}
+    SSH To XMC Server  ${ip}  ${user}  ${pwd}
+
+    ${output}=  Execute Command  grep ${value} ${file}
+    Log  ${output}
+    Should Contain  ${output}  ${value}
+
+    Close SSH Connection
