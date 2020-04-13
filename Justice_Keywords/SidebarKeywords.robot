@@ -27,6 +27,7 @@ Confirm Monitor Page Loaded
     Wait Until Page Contains Element  ${monitor_list_slider}
 
 Confirm Reports Page Loaded
+    sleep  2 seconds
     Wait Until Page Contains Element  ${reports_page_title}
     sleep  1 second
     Wait Until Page Contains Element  xpath://iframe
