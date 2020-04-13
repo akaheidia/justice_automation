@@ -29,7 +29,7 @@ Copy Docker Metrics Script To Current Directory
     OperatingSystem.File Should Exist  ${DOCKER_METRICS_REQUEST_TEMPLATE}
 
 Gather Baseline Metrics
-    Run  ./${DOCKER_METRICS_SCRIPT} ${JUS_HOST_IP} > ${pre_filename}.csv
+    Run  ./${DOCKER_METRICS_SCRIPT} ${JUS_HOST_IP} ${JUS_USERNAME} ${JUS_PASSWORD} > ${pre_filename}.csv
     sleep  2 seconds
     OperatingSystem.File Should Exist  ${pre_filename}.csv
 
