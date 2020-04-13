@@ -174,9 +174,9 @@ sort_descending_menu_xpath_value = "//span[contains(text(),'Descending')]"
 endsystems_table = "xpath://table[@id='endSystemsGrid']"
 
 # Reports Page Elements
+reports_loading_icon = "xpath://extr-loaders-spinner[@class='center-reports-spinner']"
 reports_page_title = "xpath://h1[text()='Reports']"
-reports_sidebar_menu_button = "id:actShowSidebar"
-# reports_sidebar_menu_button = "xpath://a[@id='actShowSidebar']"
+reports_sidebar_menu_button = "xpath://img[@id='rightMenuBtn']"
 reports_add_button = "xpath://span[@class='btn btn-info ti-plus']"
 reports_add_new_report_menu = "xpath://h4[contains(text(),'New Report')]"
 reports_add_new_visual_menu = "xpath://h4[contains(text(),'New Visual')]"
@@ -184,10 +184,9 @@ reports_add_new_category_menu = "xpath://h4[contains(text(),'New Category')]"
 reports_add_go_to_reports_button = "xpath://img[@id='imgLogo']"
 reports_menu_table = "id:rdMenuTable"
 reports_menu_tree = "id:menuTreeSide"
-# reports_menu_tree = "xpath://span[@id='menuTreeSide']"
 
 # Reports Filter Panel
-reports_filter_icon = "xpath://span[@class='btn btn-filter ti-filter']"
+reports_filter_icon = "xpath://span[@id='filterbtn']"
 reports_filter_panel_shown = "xpath://td[@class='master-report-filter'][not(contains(@style, 'display: none'))]"
 reports_filter_panel_hidden = "xpath://td[@class='master-report-filter'][contains(@style, 'display: none')]"
 reports_filter_panel_device_type_field = "xpath://button[@id='device_type_handler']"
