@@ -27,20 +27,20 @@ Clear Credentials
     Reload Page
 
 Confirm Successful Login
-    Wait Until Page Contains Element  ${nav_side_bar}
+    Wait Until Element Is Visible  ${nav_side_bar}
     ${page_url}=  Get Location
     Location Should Contain  ${home_page_url_suffix}
     Page Should Contain Image  ${nav_logo_image}
 
 Confirm Unauthorized Login
-    Wait Until Page Contains Element  ${login_failed_ok}
+    Wait Until Element Is Visible  ${login_failed_ok}
     Page Should Contain Element  ${login_unauthorized_message}
 
 Confirm Missing Credentials
     Element Should Be Disabled  ${login_login_btn}
 
 Confirm Successful Logout
-    Wait Until Page Contains Element  ${login_username_text}
+    Wait Until Element Is Visible  ${login_username_text}
     ${page_url}=  Get Location
     Confirm Login Page Loaded
 
