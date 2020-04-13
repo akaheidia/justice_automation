@@ -3,7 +3,7 @@ Library   SSHLibrary
 Library   SeleniumLibrary
 Resource  ../Resources/AllResources.robot
 
-Documentation   Regression test for JUS-583: Tags - Usability: Ability to create tag from Add Devices/Ports To Tags panel.
+Documentation   Regression test for JUS-644: Tags - Manage Tags: No Cancel Button in Device Details.
 
 #Suite Setup     Log In and Navigate To Devices Page
 #Suite Teardown  Log Out and Close Browser
