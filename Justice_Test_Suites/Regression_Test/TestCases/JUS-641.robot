@@ -11,8 +11,9 @@ Suite Teardown  Log Out and Close Browser
 *** Test Cases ***
 Confirm Manage Tags Dialog Contains Blue Add Icon
     Show Tags Panel
+    Page Should Contain Element  ${tags_panel}${tags_add_icon_xpath_value}
     Tags Panel Click Manage
-    Page Should Contain Element  ${tags_manage_tags_panel_add_icon}
+    Page Should Contain Element  ${tags_manage_tags_panel}${tags_add_icon_xpath_value}
     sleep  1 second
     Manage Tags Click Close
     Hide Tags Panel

@@ -54,12 +54,17 @@ filter_site_availability_panel_expand_icon = "xpath://div[contains(text(),'Site 
 filter_site_availability_panel_collapse_icon = "xpath://div[contains(text(),'Site Availability')]/mat-icon[contains(@class, 'arrow_down')]"
 
 # Tags Panel Elements
+tags_add_icon_xpath_value = "//mat-icon[@fonticon='ei-add_circle']"
+tags_manage_icon_xpath_value = "//mat-icon[@fonticon='ei-settings']"
+tags_refresh_icon_xpath_value = "//mat-icon[@fonticon='ei-refresh']"
+tags_close_icon_xpath_value = "//mat-icon[@fonticon='ei-close']"
+tags_panel = "xpath://app-tags"
 tags_panel_title = "xpath://div[@class='tags-header-text']"
 tags_panel_no_tags_msg = "xpath://div[text()='No Tags Found']"
-tags_panel_add_btn = "xpath://mat-icon[@fonticon='ei-add_circle']"
-tags_panel_manage_btn = "xpath://mat-icon[@fonticon='ei-settings']"
-tags_panel_refresh_btn = "xpath://mat-icon[@fonticon='ei-refresh']"
-tags_panel_close_btn = "xpath://mat-icon[@fonticon='ei-close']"
+tags_panel_add_btn = "xpath://app-tags//button[@aria-label='Add Tag']"
+tags_panel_manage_btn = "xpath://app-tags//button[@aria-label='Manage Tags']"
+tags_panel_refresh_btn = "xpath://app-tags//button[@mattooltip='Refresh']"
+tags_panel_close_btn = "xpath://app-tags//mat-icon[contains(text(),'close')]"
 
 # Edit Tag Dialog Elements
 tags_panel_edit_tag_dialog = "xpath://app-manage-tag-dialog"
