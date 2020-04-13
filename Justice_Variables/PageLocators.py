@@ -63,8 +63,8 @@ tags_panel_title = "xpath://div[@class='tags-header-text']"
 tags_panel_no_tags_msg = "xpath://div[text()='No Tags Found']"
 tags_panel_add_btn = "xpath://app-tags//button[@aria-label='Add Tag']"
 tags_panel_manage_btn = "xpath://app-tags//button[@aria-label='Manage Tags']"
-tags_panel_refresh_btn = "xpath://app-tags//button[@mattooltip='Refresh']"
-tags_panel_close_btn = "xpath://app-tags//mat-icon[contains(text(),'close')]"
+tags_panel_refresh_btn = "xpath://app-tags//button[@aria-label='Refresh Tags']"
+tags_panel_close_btn = "xpath://app-tags//button[@aria-label='Close Tags']"
 
 # Edit Tag Dialog Elements
 tags_panel_edit_tag_dialog = "xpath://app-manage-tag-dialog"
