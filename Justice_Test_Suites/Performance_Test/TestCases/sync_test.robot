@@ -79,6 +79,8 @@ Reconnect XMC To Justice
 Confirm XMC Resync Messages
     XMC Confirm Server Log Message Output  ${xmc_ip}  ${xmc_user}  ${xmc_pwd}  ${xmc_log}  Starting Resync...
     sleep  60 seconds
+    sleep  60 seconds
+    sleep  60 seconds
     XMC Confirm Server Log Message Output  ${xmc_ip}  ${xmc_user}  ${xmc_pwd}  ${xmc_log}  Resync Completed successfully.
 
 Confirm Justice Updated
