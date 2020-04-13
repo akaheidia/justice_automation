@@ -8,7 +8,7 @@ Suite Setup      Open Browser and Log In  ${JUS_URL}  ${BROWSER}  ${JUS_USERNAME
 Suite Teardown   Log Out and Close Browser
 
 *** Test Cases ***
-Confirm Close Button Not Present
+Confirm Close Button Not Present In User Group Details Panel
     Click Settings
     Confirm Settings Page Loaded
     Click User Groups
