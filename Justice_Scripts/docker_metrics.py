@@ -3,7 +3,7 @@
 # Script to facilitate querying of the Metricbeat visualization containing
 # docker system metrics
 
-import requests
+import paramiko
 import json
 import argparse
 import datetime
@@ -16,9 +16,15 @@ def getDescription():
 
 parser = argparse.ArgumentParser(description=getDescription())
 parser.add_argument('host', help='ElasticSearch IPv4 address')
+parser.add_argument('username', help='SSH Username to Justice server')
+parser.add_argument('password', help='SSH Password to Justice server')
 parser.add_argument('--minutes', help='Query the last N minutes',
                     type=int, default=15)
 args = parser.parse_args()
+
+requestJSONPath = "request.json"
+
+esDockerContainerName = "justice_elasticsearch_1"
 
 dictMapping = {"1": "container.id",
                "3": "docker.cpu.total.pct",
@@ -41,7 +47,7 @@ def createRequestFromTemplate(starttime=datetime.datetime.now()
 
     """
     with open('request.template') as template_file:
-        with open('request.json', 'w') as json_file:
+        with open(requestJSONPath, 'w') as json_file:
             arr = template_file.readlines()
 
             strStartTime = datetime.datetime.strftime(starttime,
@@ -55,21 +61,32 @@ def createRequestFromTemplate(starttime=datetime.datetime.now()
                 json_file.write(line+"\n")
 
 
-def sendMetricbeatESQuery(host):
-    """ Given the ElasticSearch host, sends a POST request containing
-        the ElasticSearch query to retrieve metric beat statistics for the
-        Docker overview visualization
-"""
+def sendMetricbeatESQuery(host, username, password):
+    """ Given the ElasticSearch host and SSH credentials, sends a POST request 
+        containing the ElasticSearch query to retrieve metric beat statistics 
+        for the Docker overview visualization
+    """
 
-    with open('request.json') as json_file:
-        data = json.load(json_file)
-        headers = {'Content-Type': 'application/json'}
-        resp = requests.post('http://' + host
-                             + ':9200/metricbeat-*/_search',
-                             headers=headers,
-                             data=json.dumps(data))
+    ssh = paramiko.SSHClient()
+    ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
+    ssh.connect(host, username=username, password=password)
+    ftp_client = ssh.open_sftp()
+    tmpJSONPath = '/tmp/' + requestJSONPath
+    ftp_client.put(requestJSONPath,
+                   tmpJSONPath)
+    ftp_client.close()
+    ssh.exec_command('docker cp ' + tmpJSONPath +
+                     ' ' + esDockerContainerName + ':' + tmpJSONPath)
 
-        return json.loads(resp.text)
+    dockerExecCmd = 'docker exec -i ' + esDockerContainerName + \
+                    ' /usr/bin/curl -H "Content-Type: application/json"' \
+                    ' --data-binary @' + tmpJSONPath + \
+                    ' http://localhost:9200/metricbeat-*/_search'
+    stdin, stdout, stderr = ssh.exec_command(dockerExecCmd)
+
+    output = stdout.readline()
+
+    return json.loads(output)
 
 
 def printESResponseToCSV(jsonresp):
@@ -95,7 +112,8 @@ def main(args):
                               - datetime.timedelta(minutes=args.minutes),
                               datetime.datetime.now())
 
-    jsonresp = sendMetricbeatESQuery(args.host)
+    jsonresp = sendMetricbeatESQuery(args.host,
+                                     args.username, args.password)
 
     printESResponseToCSV(jsonresp)
 
