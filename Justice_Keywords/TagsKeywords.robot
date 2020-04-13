@@ -170,6 +170,10 @@ Manage Tags Device Details Click Delete
     Wait Until Element Is Visible  xpath://div[text()='${value}']
     Click Element  xpath://div[text()='${value}']${tags_manage_tags_panel_delete_device_icon_xpath_value}
 
+Manage Tags Device Details Click Cancel
+    Wait Until Element Is Visible  ${tags_manage_tags_panel_device_details_cancel_enabled}
+    Click Element  ${tags_manage_tags_panel_device_details_cancel_enabled}
+
 Manage Tags Device Details Click Save
     Wait Until Element Is Visible  ${tags_manage_tags_panel_device_details_save_enabled}
     Click Element  ${tags_manage_tags_panel_device_details_save_enabled}

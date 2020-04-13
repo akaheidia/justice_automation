@@ -105,9 +105,12 @@ tags_manage_tags_panel_collapsed_btn_xpath_value = "/ancestor::tr//mat-icon[cont
 tags_manage_tags_panel_expanded_btn_xpath_value = "/ancestor::tr//mat-icon[contains(@class,'expansion-arrow')][text()='keyboard_arrow_down']"
 tags_manage_tags_panel_delete_device_icon_xpath_value = "/ancestor::a//mat-icon[@fonticon='ei-delete']"
 tags_manage_tags_panel_device_details_clear_all = "xpath://app-manage-tags-dialog//mat-icon[@fonticon='ei-clear_all']"
-tags_manage_tags_panel_device_details_save = "xpath://app-manage-tags-dialog//span[contains(text(),'Save')]"
-tags_manage_tags_panel_device_details_save_enabled = "xpath://app-manage-tags-dialog//span[contains(text(),'Save')]//ancestor::button[not(@disabled='true')]"
-tags_manage_tags_panel_device_details_save_disabled = "xpath://app-manage-tags-dialog//span[contains(text(),'Save')]//ancestor::button[@disabled='true']"
+tags_manage_tags_panel_device_details_save = "xpath://app-manage-tags-dialog//span[text()='Save']"
+tags_manage_tags_panel_device_details_save_enabled = "xpath://app-manage-tags-dialog//span[text()='Save']//ancestor::button[not(@disabled='true')]"
+tags_manage_tags_panel_device_details_save_disabled = "xpath://app-manage-tags-dialog//span[text()='Save']//ancestor::button[@disabled='true']"
+tags_manage_tags_panel_device_details_cancel = "xpath://app-manage-tags-dialog//span[text()='Cancel']"
+tags_manage_tags_panel_device_details_cancel_enabled = "xpath://app-manage-tags-dialog//span[text()='Cancel']//ancestor::button[not(@disabled='true')]"
+tags_manage_tags_panel_device_details_cancel_disabled = "xpath://app-manage-tags-dialog//span[text()='Cancel']//ancestor::button[@disabled='true']"
 
 # Confirm Delete Tags Dialog Elements
 tags_confirm_delete_tags_dialog = "xpath://app-confirm-dialog//h1[text()='Delete Tags']"
