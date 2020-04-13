@@ -12,7 +12,7 @@ Suite Teardown  Log Out and Close Browser
 Confirm Manage Tags Dialog Contains Blue Add Icon
     Show Tags Panel
     Tags Panel Click Manage
-    Page Should Contain Element  xpath://app-manage-tags-dialog//mat-icon[@fonticon='ei-add_circle']
+    Page Should Contain Element  ${tags_manage_tags_panel_add_icon}
     sleep  1 second
     Manage Tags Click Close
     Hide Tags Panel
