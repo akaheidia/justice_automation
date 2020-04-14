@@ -24,8 +24,9 @@ Confirm Wireless Controller is Present in Device Availability Report
 Confirm Wireless Controller Present In Device Availability Report
     [Arguments]  ${ip}
     Navigate to Site Availability Report
-    sleep  2 seconds
+    sleep  1 second
     Change Report Time Range to Last Hour
-    sleep  2 seconds
+    sleep  1 second
     Site Availability Drill Into Site  ${site}
+    sleep  1 second
     Confirm Device Availability Report Contains Value  ${ip}
