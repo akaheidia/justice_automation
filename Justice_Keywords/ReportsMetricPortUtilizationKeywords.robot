@@ -11,7 +11,8 @@ Confirm Port Utilization Metric Report Page Title
     Select Frame  xpath://iframe
     Select Frame  xpath://iframe[@id='resource']
 
-    Page Should Contain Element  ${reports_port_utilization_page_title}
+    sleep  1 second
+    Wait Until Page Contains Element  ${reports_port_utilization_page_title}
 
     Unselect Frame
     Unselect Frame

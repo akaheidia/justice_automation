@@ -11,7 +11,8 @@ Confirm Rx Bandwidth Metric Report Page Title
     Select Frame  xpath://iframe
     Select Frame  xpath://iframe[@id='resource']
 
-    Page Should Contain Element  ${reports_rx_bandwidth_page_title}
+    sleep  1 second
+    Wait Until Page Contains Element  ${reports_rx_bandwidth_page_title}
 
     Unselect Frame
     Unselect Frame
