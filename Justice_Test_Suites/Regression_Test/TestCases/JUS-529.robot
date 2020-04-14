@@ -38,6 +38,7 @@ Confirm Resync Messages Not Seen After Resync Complete
     sleep  60 seconds
     sleep  60 seconds
     sleep  60 seconds
+    sleep  60 seconds
 
     SSH To XMC Server  ${xmc_ip}  ${xmc_user}  ${xmc_pwd}
 
