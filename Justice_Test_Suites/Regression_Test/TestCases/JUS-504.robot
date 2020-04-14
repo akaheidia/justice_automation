@@ -18,8 +18,7 @@ ${site_5}    Level 5 Site
 Confirm Multi-Level Site Drilldowns Function
     Navigate to Site Availability Report
     sleep  2 seconds
-    Log To Console  Not Changing Filter Due To JUS-565
-#    Change Report Time Range to Last Hour
+    Change Report Time Range to Last Hour
     sleep  2 seconds
     Hide Reports Filter Panel
     Site Availability Drill Into Site  ${site_1}
