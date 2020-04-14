@@ -11,6 +11,7 @@ Confirm Device Overview Report Page Title
     Select Frame  xpath://iframe
     Select Frame  xpath://iframe[@id='resource']
 
+    sleep  1 second
     Wait Until Page Contains Element  ${reports_device_overview_page_title}
 
     Unselect Frame
