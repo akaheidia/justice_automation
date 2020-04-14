@@ -18,7 +18,7 @@ Test Teardown    Close Manage Tags and Hide Tags Panel
 ${device_filter}  10.54.142.1
 ${test_device_1}  10.54.142.10
 ${test_device_2}  10.54.142.11
-${test_tag}     Test Tag
+${test_tag}       Test Tag
 
 *** Test Cases ***
 Confirm Manage Tags Device Details Delete Allows Cancel
@@ -48,6 +48,7 @@ Log In and Create Tag and Assign Devices To Tag
     Open Browser and Log In  ${JUS_URL}  ${BROWSER}  ${JUS_USERNAME}  ${JUS_PASSWORD}
     Click List Slider
     Click Devices Tab
+    Set Server Filter  ${XMC_HOSTNAME}
     Create Tag For Test
     Assign Test Devices To Test Tag
 
@@ -63,8 +64,8 @@ Assign Test Devices To Test Tag
     Search Field Enter Text  ${device_filter}
     Select Device In Table  ${test_device_1}
     Select Device In Table  ${test_device_2}
+    Search Field Clear Text
     Click Add Devices To Tag
-    sleep  1 second
     Confirm Add Devices To Tag Panel Visible
     Confirm Add Devices To Tag Panel Contains Tag  ${test_tag}
     Add Devices To Tag Select Tag  ${test_tag}

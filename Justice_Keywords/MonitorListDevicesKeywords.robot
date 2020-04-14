@@ -16,40 +16,35 @@ Is Test Device Present
     Confirm Servers and Sites Filter Expanded
     Select Servers and Sites Server Tree Node  ${XMC_HOSTNAME}
     Refresh Devices Table
+    Search Field Enter Text  ${ip}
     ${device_present}=  Run Keyword And Return Status  Confirm Device In Table  ${ip}
+    Search Field Clear Text
     [Return]  ${device_present}
 
 Select Device In Table
     [Arguments]  ${device_ip}
-    Search Field Enter Text  ${device_ip}
     Wait Until Element Is Visible  xpath://div[text()='${device_ip}']
     ${need_to_click}=  Run Keyword And Return Status  Element Should Be Visible  xpath://div[text()='${device_ip}']/../..//div[contains(@class,'center-checkboxes')]/mat-checkbox[not(contains(@class, 'checkbox-checked'))]
     Run Keyword If  ${need_to_click} == True  Click Element  xpath://div[text()='${device_ip}']/../..//div[contains(@class,'center-checkboxes')]
     ...       ELSE  Log  ${device_ip} is already selected
-    Search Field Clear Text
 
 Deselect Device In Table
     [Arguments]  ${device_ip}
-    Search Field Enter Text  ${device_ip}
     Wait Until Element Is Visible  xpath://div[text()='${device_ip}']
     ${need_to_click}=  Run Keyword And Return Status  Element Should Be Visible  xpath://div[text()='${device_ip}']/../..//div[contains(@class,'center-checkboxes')]/mat-checkbox[contains(@class, 'checkbox-checked')]
     Run Keyword If  ${need_to_click} == True  Click Element  xpath://div[text()='${device_ip}']/../..//div[contains(@class,'center-checkboxes')]
     ...       ELSE  Log  ${device_ip} is already deselected
-    Search Field Clear Text
 
 Confirm Device In Table
     [Arguments]  ${device_ip}
-    Search Field Enter Text  ${device_ip}
     : FOR  ${index}  IN RANGE  1  10
     \    Refresh Devices Table
     \    ${found_device}=  Run Keyword And Return Status  Table Should Contain  ${list_devices_table}  ${device_ip}
     \    Exit For Loop If  ${found_device} == True
     Table Should Contain  ${list_devices_table}  ${device_ip}
-    Search Field Clear Text
 
 Confirm Device Not In Table
     [Arguments]  ${device_ip}
-    Search Field Enter Text  ${device_ip}
     ${orig_wait}=  Set Selenium Implicit Wait  1 second
     : FOR  ${index}  IN RANGE  1  10
     \    Refresh Devices Table
@@ -57,23 +52,18 @@ Confirm Device Not In Table
     \    Exit For Loop If  ${found_device} == False
     Element Should Not Contain  ${list_devices_table}  ${device_ip}
     Set Selenium Implicit Wait  ${orig_wait}
-    Search Field Clear Text
 
 Confirm Device In Table No Wait
     [Arguments]  ${device_ip}
-    Search Field Enter Text  ${device_ip}
     Refresh Devices Table
     Table Should Contain  ${list_devices_table}  ${device_ip}
-    Search Field Clear Text
 
 Confirm Device Not In Table No Wait
     [Arguments]  ${device_ip}
-    Search Field Enter Text  ${device_ip}
     ${orig_wait}=  Set Selenium Implicit Wait  1 second
     Refresh Devices Table
     Element Should Not Contain  ${list_devices_table}  ${device_ip}
     Set Selenium Implicit Wait  ${orig_wait}
-    Search Field Clear Text
 
 
 Click Add Devices To Tag
