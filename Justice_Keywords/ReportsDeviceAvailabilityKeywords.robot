@@ -36,6 +36,7 @@ Device Availability Drill Into Device
     Select Frame  xpath://iframe
     Select Frame  xpath://iframe[@id='availability']
 
+    sleep  1 second
     Click Element  xpath://span[contains(text(), '${ip}')]
 
     Unselect Frame

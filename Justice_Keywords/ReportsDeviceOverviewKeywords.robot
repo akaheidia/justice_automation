@@ -35,6 +35,7 @@ Device Overview Drill Into Metric
     Select Frame  xpath://iframe
     Select Frame  xpath://iframe[@id='resource']
 
+    sleep  1 second
     Click Element  xpath://a//span[contains(text(), '${metric}')]
 
     Unselect Frame
