@@ -25,10 +25,6 @@ Settings User Group Click Edit
     Confirm Settings User Group Edit Button Present
     Click Element  ${usergroups_edit_button}
 
-Settings User Group Click Close
-    Confirm Settings User Group Close Button Present
-    Click Element  ${usergroups_close_button}
-
 Settings User Group Click Cancel
     Confirm Settings User Group Cancel Button Present
     Click Element  ${usergroups_cancel_button}
@@ -46,9 +42,6 @@ Confirm Settings User Group Edit Button Not Present
     Wait Until Element Is Not Visible  ${usergroups_edit_button}
     Set Selenium Implicit Wait  ${orig_wait}
 
-
-Confirm Settings User Group Close Button Present
-    Wait Until Element Is Visible  ${usergroups_close_button}
 
 Confirm Settings User Group Close Button Not Present
     ${orig_wait}=  Set Selenium Implicit Wait  1 second
