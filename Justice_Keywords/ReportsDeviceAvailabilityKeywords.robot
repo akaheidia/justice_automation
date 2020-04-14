@@ -11,7 +11,8 @@ Confirm Device Availability Report Page Title
     Select Frame  xpath://iframe
     Select Frame  xpath://iframe[@id='availability']
 
-    Page Should Contain Element  ${reports_device_availability_page_title}
+    sleep  1 second
+    Wait Until Page Contains Element  ${reports_device_availability_page_title}
 
     Unselect Frame
     Unselect Frame
@@ -22,7 +23,8 @@ Confirm Device Availability Report Contains Value
     Select Frame  xpath://iframe
     Select Frame  xpath://iframe[@id='availability']
 
-    Page Should Contain Element  xpath://span[contains(text(), '${value}')]
+    sleep  1 second
+    Wait Until Page Contains Element  xpath://span[contains(text(), '${value}')]
 
     Unselect Frame
     Unselect Frame

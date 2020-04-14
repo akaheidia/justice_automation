@@ -11,7 +11,7 @@ Confirm Device Overview Report Page Title
     Select Frame  xpath://iframe
     Select Frame  xpath://iframe[@id='resource']
 
-    Page Should Contain Element  ${reports_device_overview_page_title}
+    Wait Until Page Contains Element  ${reports_device_overview_page_title}
 
     Unselect Frame
     Unselect Frame
@@ -22,7 +22,8 @@ Confirm Device Overview Report Contains Value
     Select Frame  xpath://iframe
     Select Frame  xpath://iframe[@id='resource']
 
-    Page Should Contain Element  xpath://h4[contains(text(), '${value}')]
+    sleep  1 second
+    Wait Until Page Contains Element  xpath://h4[contains(text(), '${value}')]
 
     Unselect Frame
     Unselect Frame
