@@ -109,12 +109,12 @@ Add Tag Click Cancel
 # Manage Tags Panel
 Confirm Manage Tags Panel Contains Tag
     [Arguments]  ${value}
-    Wait Until Element Is Visible  xpath://div[text()='${value}']
+    Wait Until Element Is Visible  xpath://app-manage-tags-dialog//div[text()='${value}']
 
 Confirm Manage Tags Panel Does Not Contain Tag
     [Arguments]  ${value}
     ${orig_wait}=  Set Selenium Implicit Wait  1 second
-    Wait Until Element Is Not Visible  xpath://div[text()='${value}']
+    Wait Until Element Is Not Visible  xpath://app-manage-tags-dialog//div[text()='${value}']
     Set Selenium Implicit Wait  ${orig_wait}
 
 Confirm Manage Tags Panel Is Empty
@@ -139,35 +139,35 @@ Confirm Manage Tags Device Not Assigned To Tag
 
 Manage Tags Select Tag
     [Arguments]  ${value}
-    Wait Until Element Is Visible  xpath://div[text()='${value}']
+    Wait Until Element Is Visible  xpath://app-manage-tags-dialog//div[text()='${value}']
     ${need_to_click}=  Run Keyword And Return Status  Element Should Be Visible  xpath://div[text()='${value}']/../..//div[contains(@class,'center-checkboxes')]//input[@aria-checked='false']
     Run Keyword If  ${need_to_click} == True  Click Element  xpath://div[text()='${value}']/../..//div[contains(@class,'center-checkboxes')]
     ...       ELSE  Log  ${value} is already selected
 
 Manage Tags Deselect Tag
     [Arguments]  ${value}
-    Wait Until Element Is Visible  xpath://div[text()='${value}']
+    Wait Until Element Is Visible  xpath://app-manage-tags-dialog//div[text()='${value}']
     ${need_to_click}=  Run Keyword And Return Status  Element Should Be Visible  xpath://div[text()='${value}']/../..//div[contains(@class,'center-checkboxes')]//input[@aria-checked='true']
     Run Keyword If  ${need_to_click} == True  Click Element  xpath://div[text()='${value}']/../..//div[contains(@class,'center-checkboxes')]
     ...       ELSE  Log  ${value} is already deselected
 
 Manage Tags Expand Row
     [Arguments]  ${value}
-    Wait Until Element Is Visible  xpath://div[text()='${value}']
+    Wait Until Element Is Visible  xpath://app-manage-tags-dialog//div[text()='${value}']
     ${need_to_click}=  Run Keyword And Return Status  Element Should Be Visible  xpath://div[text()='${value}']${tags_manage_tags_panel_collapsed_btn_xpath_value}
     Run Keyword If  ${need_to_click} == True  Click Element  xpath://div[text()='${value}']${tags_manage_tags_panel_collapsed_btn_xpath_value}
     ...       ELSE  Log  ${value} is already expanded
 
 Manage Tags Collapse Row
     [Arguments]  ${value}
-    Wait Until Element Is Visible  xpath://div[text()='${value}']
+    Wait Until Element Is Visible  xpath://app-manage-tags-dialog//div[text()='${value}']
     ${need_to_click}=  Run Keyword And Return Status  Element Should Be Visible  xpath://div[text()='${value}']${tags_manage_tags_panel_expanded_btn_xpath_value}
     Run Keyword If  ${need_to_click} == True  Click Element  xpath://div[text()='${value}']${tags_manage_tags_panel_expanded_btn_xpath_value}
     ...       ELSE  Log  ${value} is already collapsed
 
 Manage Tags Device Details Click Delete
     [Arguments]  ${value}
-    Wait Until Element Is Visible  xpath://div[text()='${value}']
+    Wait Until Element Is Visible  xpath://app-manage-tags-dialog//div[text()='${value}']
     Click Element  xpath://div[text()='${value}']${tags_manage_tags_panel_delete_device_icon_xpath_value}
 
 Manage Tags Device Details Click Cancel

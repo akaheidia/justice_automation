@@ -115,6 +115,14 @@ Confirm Add Devices To Tag Panel Not Visible
     Wait Until Element Is Not Visible  ${tags_add_devices_to_tag_panel}
     Set Selenium Implicit Wait  ${orig_wait}
 
+Confirm Add Devices To Tag Panel Is Empty
+    Wait Until Element Is Visible  ${tags_add_devices_to_tag_panel_no_tags_msg}
+
+Confirm Add Devices To Tag Panel Is Not Empty
+    ${orig_wait}=  Set Selenium Implicit Wait  1 second
+    Wait Until Element Is Not Visible  ${tags_add_devices_to_tag_panel_no_tags_msg}
+    Set Selenium Implicit Wait  ${orig_wait}
+
 Confirm Add Devices To Tag Panel Contains Tag
     [Arguments]  ${value}
     Wait Until Element Is Visible  xpath://app-add-to-tag-dialog//span[text()='${value}']

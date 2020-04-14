@@ -120,6 +120,7 @@ tags_confirm_delete_tags_dialog_cancel = "xpath://app-confirm-dialog//span[text(
 # Add Devices To Tag Elements
 tags_add_devices_to_tag_button = "xpath://button[@aria-label='Add device to a Tag']"
 tags_add_devices_to_tag_panel = "xpath://app-add-to-tag-dialog"
+tags_add_devices_to_tag_panel_no_tags_msg = "xpath://app-add-to-tag-dialog//div[text()='No Tags Found']"
 tags_add_devices_to_tag_panel_title = "xpath://app-add-to-tag-dialog//span[contains(text(),'ADD DEVICES TO TAGS')]"
 tags_add_devices_to_tag_panel_close = "xpath://app-add-to-tag-dialog//mat-icon[contains(text(),'close')]"
 tags_add_devices_to_tag_panel_add_tag = "xpath://app-add-to-tag-dialog//mat-icon[@fonticon='ei-add_circle']"
