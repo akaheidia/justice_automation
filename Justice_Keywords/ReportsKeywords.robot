@@ -587,7 +587,8 @@ Confirm Analytics Quarterly Analytics Summary Reports Page Title
 Confirm Breadcrumb Contains Text
     [Arguments]  ${value}
     Select Frame  xpath://iframe
-    Page Should Contain Element  xpath://table//div//span[contains(text(),'${value}')]
+    sleep  1 second
+    Wait Until Page Contains Element  xpath://table//div//span[contains(text(),'${value}')]
     Unselect Frame
 
 Confirm Breadcrumb Does Not Contain Text
