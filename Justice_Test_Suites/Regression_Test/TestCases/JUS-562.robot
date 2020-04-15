@@ -21,6 +21,7 @@ ${url_for_xmc}  ${XMC_URL}
 *** Test Cases ***
 Disconnect XMC From Justice
     Disconnect From RabbitMQ  ${jus_ip}  ${jus_user}  ${jus_pwd}  ${xmc_ip}  ${prompt}
+    sleep  60 seconds
     XMC Confirm Server Log Message Output  ${xmc_ip}  ${xmc_user}  ${xmc_pwd}  ${xmc_log}  No connection to the remote server.
 
 Restart XMC Server After Creating Devices
@@ -33,7 +34,6 @@ Connect XMC To Justice
     sleep  60 seconds
 
 Confirm Resync Messages on XMC Reconnect
-    sleep  60 seconds
     XMC Confirm Server Log Message Output  ${xmc_ip}  ${xmc_user}  ${xmc_pwd}  ${xmc_log}  Starting Resync...
     sleep  60 seconds
     sleep  60 seconds
