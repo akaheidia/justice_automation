@@ -125,6 +125,14 @@ Confirm Manage Tags Panel Is Not Empty
     Wait Until Element Is Not Visible  ${tags_manage_tags_panel_no_tags_msg}
     Set Selenium Implicit Wait  ${orig_wait}
 
+Confirm Manage Tags Panel Tag Created By
+    [Arguments]  ${tag}  ${user}
+    Page Should Contain Element  xpath://app-manage-tags-dialog//td[contains(@class, 'column-name')]/div[text()='${tag}']/../..//td[contains(@class, 'column-createdBy')]/div[text()='${user}']
+
+Confirm Manage Tags Panel Tag Last Edit By
+    [Arguments]  ${tag}  ${user}
+    Page Should Contain Element  xpath://app-manage-tags-dialog//td[contains(@class, 'column-name')]/div[text()='${tag}']/../..//td[contains(@class, 'column-lastEditBy')]/div[text()='${user}']
+
 Confirm Manage Tags Device Assigned To Tag
     [Arguments]  ${tag}  ${ip}
     Manage Tags Expand Row  ${tag}

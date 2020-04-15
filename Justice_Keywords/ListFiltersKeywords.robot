@@ -18,6 +18,17 @@ Set Site Filter
     Confirm Filter Panel Visible
     Select Servers and Sites Site Tree Node  ${site}
 
+Set Tag Filter
+    [Arguments]  ${tag}
+    Show Filter Panel
+    Confirm Filter Panel Visible
+    Filter Select Tag  ${tag}
+
+Filter Select Tag
+    [Arguments]  ${tag}
+    Page Should Contain Element  ${filter_tag_panel}//span[text()='${tag}']
+    Click Element  ${filter_tag_panel}//span[text()='${tag}']
+
 Refresh Servers and Sites Filter
     Click Element  ${filter_servers_and_sites_panel_refresh_icon}
     sleep  2 seconds

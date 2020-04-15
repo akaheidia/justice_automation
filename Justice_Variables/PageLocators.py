@@ -52,6 +52,7 @@ filter_alarm_severity_panel_collapse_icon = "xpath://div[contains(text(),'Alarm 
 filter_site_availability_panel_title = "xpath://div[contains(text(),'Site Availability')]"
 filter_site_availability_panel_expand_icon = "xpath://div[contains(text(),'Site Availability')]/mat-icon[contains(@class, 'arrow_right')]"
 filter_site_availability_panel_collapse_icon = "xpath://div[contains(text(),'Site Availability')]/mat-icon[contains(@class, 'arrow_down')]"
+filter_tag_panel = "xpath://div[@class='app-filter-card-tags']"
 
 # Tags Panel Elements
 tags_add_icon_xpath_value = "//mat-icon[@fonticon='ei-add_circle']"
