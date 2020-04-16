@@ -15,9 +15,7 @@ Execute Command and Verify Output
     Should Contain  ${docker_output}  justice_justice-auth_1
     Should Contain  ${docker_output}  justice_justice-ui_1
     Should Contain  ${docker_output}  justice_justice-xmc-messages_1
-    Should Contain  ${docker_output}  justice_kibana_1
     Should Contain  ${docker_output}  justice_logstash_1
-    Should Contain  ${docker_output}  justice_metricbeat_1
     Should Contain  ${docker_output}  justice_nginx_1
     Should Contain  ${docker_output}  justice_postgres_1
     Should Contain  ${docker_output}  justice_rabbitmq_1
