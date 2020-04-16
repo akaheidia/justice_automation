@@ -46,3 +46,14 @@ Confirm Monitor Page Not Loaded
     Page Should Not Contain Element  ${monitor_map_slider}
     Page Should Not Contain Element  ${monitor_list_slider}
     Set Selenium Implicit Wait  ${orig_wait}
+
+Confirm Monitor Page Not Loaded In Reports Frame
+    ${orig_wait}=  Set Selenium Implicit Wait  1 second
+    sleep  2 seconds
+    ${frame_present}=  Run Keyword And Return Status  Page Should Contain Element  xpath://iframe
+    Run Keyword If  '${frame_present}'=='True'  Select Frame  xpath://iframe
+    Page Should Not Contain Element  ${monitor_page_title}
+    Page Should Not Contain Element  ${monitor_map_slider}
+    Page Should Not Contain Element  ${monitor_list_slider}
+    Run Keyword If  '${frame_present}'=='True'  Unselect Frame
+    Set Selenium Implicit Wait  ${orig_wait}

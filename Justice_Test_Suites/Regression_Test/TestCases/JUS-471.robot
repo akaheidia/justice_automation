@@ -14,10 +14,10 @@ Confirm Reports Page Loads Correctly
     Click List Slider
     Confirm List Page Loaded
     Click Reports
+    Confirm Monitor Page Not Loaded In Reports Frame
     Confirm Reports Page Loaded
-    Confirm Monitor Page Not Loaded
 
 Confirm Refresh Browser Does Not Result In Error
     Reload Page
-    Confirm Reports Page Loaded
     Confirm Page Does Not Contain Text  rdSecureKey
+    Confirm Reports Page Loaded
