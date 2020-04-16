@@ -22,7 +22,8 @@ Confirm Filtering By Tag Works - No Devices
     Clear All Filters
 
 Confirm Filtering By Tag Works - Device Assigned To Tag
-    Assign Device To Tag
+    Assign Device To Tag  ${test_device}  ${test_tag}
+    Confirm Device Assigned To Tag  ${test_device}  ${test_tag}
     Set Tag Filter  ${test_tag}
     Confirm Device In Table  ${test_device}
     Clear All Filters
@@ -39,16 +40,6 @@ Create Test Tag
     Add Tag Set Name  ${test_tag}
     Add Tag Click Save
     Confirm Tags Panel Contains Tag  ${test_tag}
-
-Assign Device To Tag
-    Search Field Enter Text  ${test_device}
-    Select Device In Table  ${test_device}
-    Search Field Clear Text
-    Click Add Devices To Tag
-    Confirm Add Devices To Tag Panel Visible
-    Confirm Add Devices To Tag Panel Contains Tag  ${test_tag}
-    Add Devices To Tag Select Tag  ${test_tag}
-    Add Devices To Tag Click Save
 
 Delete Test Tag
     Show Tags Panel

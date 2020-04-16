@@ -136,12 +136,14 @@ Confirm Manage Tags Panel Tag Last Edit By
 Confirm Manage Tags Device Assigned To Tag
     [Arguments]  ${tag}  ${ip}
     Manage Tags Expand Row  ${tag}
+    sleep  1 second
     Page Should Contain Element  xpath://app-manage-tags-dialog//div[text()='${ip}']
 
 Confirm Manage Tags Device Not Assigned To Tag
     [Arguments]  ${tag}  ${ip}
     ${orig_wait}=  Set Selenium Implicit Wait  1 second
     Manage Tags Expand Row  ${tag}
+    sleep  1 second
     Page Should Not Contain Element  xpath://app-manage-tags-dialog//div[text()='${ip}']
     Set Selenium Implicit Wait  ${orig_wait}
 

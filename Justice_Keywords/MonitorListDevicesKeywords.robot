@@ -66,6 +66,26 @@ Confirm Device Not In Table No Wait
     Set Selenium Implicit Wait  ${orig_wait}
 
 
+Assign Device To Tag
+    [Arguments]  ${ip}  ${tag}
+    Search Field Enter Text  ${ip}
+    Select Device In Table  ${ip}
+    Search Field Clear Text
+    Click Add Devices To Tag
+    Confirm Add Devices To Tag Panel Visible
+    Confirm Add Devices To Tag Panel Contains Tag  ${tag}
+    Add Devices To Tag Select Tag  ${tag}
+    Add Devices To Tag Click Save
+
+Confirm Device Assigned To Tag
+    [Arguments]  ${ip}  ${tag}
+    Show Tags Panel
+    Confirm Tags Panel Contains Tag  ${tag}
+    Tags Panel Click Manage
+    Confirm Manage Tags Device Assigned To Tag  ${tag}  ${ip}
+    Manage Tags Click Close
+    Hide Tags Panel
+
 Click Add Devices To Tag
     Wait Until Element Is Visible  ${tags_add_devices_to_tag_button}
     ${btn_enabled}=  Run Keyword And Return Status  Element Should Be Visible  ${tags_add_devices_to_tag_button}${enabled_xpath_value}
