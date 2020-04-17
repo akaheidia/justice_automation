@@ -34,13 +34,19 @@ XMC Options Click Save
     ...    ELSE  Log To Console  Save button is disabled
 
 
-XMC Set Option Value XMC Data Pump MoM Enabled
+XMC Set Option Value XMC Data Pump Enable Sharing
     Page Should Contain Element  ${xmc_options_xmcdatapump_momenabled}
     Select Checkbox  ${xmc_options_xmcdatapump_momenabled}
 
-XMC Set Option Value XMC Data Pump MoM Disabled
+XMC Set Option Value XMC Data Pump Disable Sharing
     Page Should Contain Element  ${xmc_options_xmcdatapump_momenabled}
     Unselect Checkbox  ${xmc_options_xmcdatapump_momenabled}
+
+XMC Set Option Value XMC Data Pump MoM Enabled
+    XMC Set Option Value XMC Data Pump Enable Sharing
+
+XMC Set Option Value XMC Data Pump MoM Disabled
+    XMC Set Option Value XMC Data Pump Disable Sharing
 
 XMC Set Option Value XMC Data Pump Domain Node Type
     [Arguments]  ${value}
@@ -110,11 +116,21 @@ XMC Confirm Option Value XMC Data Pump Domain Node Type
     ${elem_value}=  Get Element Attribute  ${xmc_options_xmcdatapump_domainnodetype}  value
     Should Be Equal As Integers  ${value}  ${elem_value}  XMC Data Pump: Domain Node Type option does not have expected value
 
-XMC Confirm Option Value XMC Data Pump MoM Enabled
+XMC Confirm Option Value XMC Data Pump Sharing Enabled
     Checkbox Should Be Selected  ${xmc_options_xmcdatapump_momenabled}
 
-XMC Confirm Option Value XMC Data Pump MoM Disabled
+XMC Confirm Option Value XMC Data Pump Sharing Disabled
     Checkbox Should Not Be Selected  ${xmc_options_xmcdatapump_momenabled}
+
+XMC Confirm Option Label XMC Data Pump Enable Sharing
+    Page Should Contain Element  ${xmc_options_xmcdatapump_enable_sharing_label}
+    Page Should Not Contain  MoM Enabled
+
+XMC Confirm Option Value XMC Data Pump MoM Enabled
+    XMC Confirm Option Value XMC Data Pump Sharing Enabled
+
+XMC Confirm Option Value XMC Data Pump MoM Disabled
+    XMC Confirm Option Value XMC Data Pump Sharing Disabled
 
 XMC Confirm Option Value XMC Data Pump Host
     [Arguments]  ${value}
