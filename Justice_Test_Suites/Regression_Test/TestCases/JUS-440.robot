@@ -4,7 +4,7 @@ Resource  ../Resources/AllResources.robot
 
 Documentation    Regression test for JUS-440: Usability - XMC Data Pump options: RabbitMQ URI should only be enabled when MOM Enabled.
 
-Suite Setup      XMC Open Browser and Log In  ${XMC_2_URL}  ${BROWSER}  ${XMC_2_USERNAME}  ${XMC_2_PASSWORD}
+Suite Setup      XMC Open Browser and Log In  ${XMC_URL}  ${BROWSER}  ${XMC_USERNAME}  ${XMC_PASSWORD}
 Suite Teardown   XMC Log Out and Close Browser
 
 *** Test Cases ***
