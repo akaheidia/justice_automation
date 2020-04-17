@@ -104,3 +104,24 @@ Remove File
     OperatingSystem.Remove File            ${dir}/${filename}
     Wait Until Removed                     ${dir}/${filename}
     OperatingSystem.File Should Not Exist  ${dir}/${filename}
+
+
+Confirm File Contains Value
+    [Arguments]  ${jus_ip}  ${jus_user}  ${jus_pwd}  ${file}  ${value}
+    SSH To Justice Server  ${jus_ip}  ${jus_user}  ${jus_pwd}
+
+    ${output}=  Execute Command  grep ${value} ${file}
+    Log  ${output}
+    Should Contain  ${output}  ${value}
+
+    Close SSH Connection
+
+Confirm File Does Not Contain Value
+    [Arguments]  ${jus_ip}  ${jus_user}  ${jus_pwd}  ${file}  ${value}
+    SSH To Justice Server  ${jus_ip}  ${jus_user}  ${jus_pwd}
+
+    ${output}=  Execute Command  grep ${value} ${file}
+    Log  ${output}
+    Should Not Contain  ${output}  ${value}
+
+    Close SSH Connection
