@@ -59,10 +59,27 @@ Confirm Tags Panel Is Not Empty
     Wait Until Element Is Not Visible  ${tags_panel_no_tags_msg}
     Set Selenium Implicit Wait  ${orig_wait}
 
-Confirm Edit Tag Dialog Visible
-    Wait Until Element Is Visible  ${tags_panel_edit_tag_dialog}
-
 # Edit Tag Dialog
+Edit Tag Set Name
+    [Arguments]  ${value}
+    Element Should Be Visible  ${tags_panel_edit_tag_dialog_name}
+    Input Text  ${tags_panel_edit_tag_dialog_name}  ${value}  clear=True
+
+Edit Tag Select Star
+    Element Should Be Visible  ${tags_panel_edit_tag_dialog_star_unselected}
+    Click Element  ${tags_panel_edit_tag_dialog_star_unselected}
+    Element Should Be Visible  ${tags_panel_edit_tag_dialog_star_selected}
+
+Edit Tag Deselect Star
+    Element Should Be Visible  ${tags_panel_edit_tag_dialog_star_selected}
+    Click Element  ${tags_panel_edit_tag_dialog_star_selected}
+    Element Should Be Visible  ${tags_panel_edit_tag_dialog_star_unselected}
+
+Edit Tag Set Description
+    [Arguments]  ${value}
+    Element Should Be Visible  ${tags_panel_edit_tag_dialog_description}
+    Input Text  ${tags_panel_edit_tag_dialog_description}  ${value}  clear=True
+
 Edit Tag Click Delete
     Element Should Be Visible  ${tags_panel_edit_tag_dialog_delete}
     Click Element  ${tags_panel_edit_tag_dialog_delete}
@@ -74,6 +91,26 @@ Edit Tag Click Cancel
 Edit Tag Click Save
     Element Should Be Visible  ${tags_panel_edit_tag_dialog_save}
     Click Element  ${tags_panel_edit_tag_dialog_save}
+
+Confirm Edit Tag Dialog Visible
+    Wait Until Element Is Visible  ${tags_panel_edit_tag_dialog}
+
+Confirm Edit Tag Dialog Not Visible
+    Wait Until Element Is Not Visible  ${tags_panel_edit_tag_dialog}
+
+Confirm Edit Tag Dialog Name Value
+    [Arguments]  ${value}
+    Textfield Value Should Be  ${tags_panel_edit_tag_dialog_name}  ${value}
+
+Confirm Edit Tag Dialog Description Value
+    [Arguments]  ${value}
+    Textarea Value Should Be  ${tags_panel_edit_tag_dialog_description}  ${value}
+
+Confirm Edit Tag Dialog Star Selected
+    Element Should Be Visible  ${tags_panel_edit_tag_dialog_star_selected}
+
+Confirm Edit Tag Dialog Star Not Selected
+    Element Should Be Visible  ${tags_panel_edit_tag_dialog_star_unselected}
 
 
 # Add Tag Dialog
