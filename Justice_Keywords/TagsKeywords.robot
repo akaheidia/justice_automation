@@ -68,6 +68,9 @@ Confirm Tags Panel Is Not Empty
     Wait Until Element Is Not Visible  ${tags_panel_no_tags_msg}
     Set Selenium Implicit Wait  ${orig_wait}
 
+Confirm Tags Panel Tag Device Count Value
+    [Arguments]  ${tag}  ${value}
+    Wait Until Page Contains Element  xpath://div[@class='mat-list-text']/h3[text()='${tag}']/../../mat-chip[contains(@class,'tags-sidenav-count')][text()='${value}']
 
 # Edit Tag Dialog
 Edit Tag Set Name
@@ -179,6 +182,12 @@ Confirm Manage Tags Panel Tag Created By
 Confirm Manage Tags Panel Tag Last Edit By
     [Arguments]  ${tag}  ${user}
     Page Should Contain Element  xpath://app-manage-tags-dialog//td[contains(@class, 'column-name')]/div[text()='${tag}']/../..//td[contains(@class, 'column-lastEditBy')]/div[text()='${user}']
+
+Confirm Manage Tags Devices Assigned To Tag Count
+    [Arguments]  ${tag}  ${count}
+    Manage Tags Expand Row  ${tag}
+    sleep  1 second
+    Page Should Contain Element  xpath://mat-chip[contains(@class,'items-count')][text()='${count}']
 
 Confirm Manage Tags Device Assigned To Tag
     [Arguments]  ${tag}  ${ip}
