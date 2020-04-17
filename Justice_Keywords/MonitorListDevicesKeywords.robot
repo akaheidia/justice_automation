@@ -69,12 +69,28 @@ Confirm Device Not In Table No Wait
 Assign Device To Tag
     [Arguments]  ${ip}  ${tag}
     Search Field Enter Text  ${ip}
+    sleep  1 second
     Select Device In Table  ${ip}
     Search Field Clear Text
     Click Add Devices To Tag
     Confirm Add Devices To Tag Panel Visible
     Confirm Add Devices To Tag Panel Contains Tag  ${tag}
     Add Devices To Tag Select Tag  ${tag}
+    Add Devices To Tag Click Save
+
+Assign Device To Tags
+    [Arguments]  ${ip}  ${tag_list}
+    Search Field Enter Text  ${ip}
+    sleep  1 second
+    Select Device In Table  ${ip}
+    Search Field Clear Text
+    Click Add Devices To Tag
+    Confirm Add Devices To Tag Panel Visible
+    # Loop over the list of tags to select
+    @{tags}=  Split String  ${tag_list}  ,
+    :FOR  ${tag}  IN  @{tags}
+    \    Confirm Add Devices To Tag Panel Contains Tag  ${tag}
+    \    Add Devices To Tag Select Tag  ${tag}
     Add Devices To Tag Click Save
 
 Confirm Device Assigned To Tag

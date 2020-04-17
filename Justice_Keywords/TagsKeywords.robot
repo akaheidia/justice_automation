@@ -13,6 +13,15 @@ Tags Panel Create Tag
     Add Tag Click Save
     Confirm Tags Panel Contains Tag  ${tag_name}
 
+Tags Panel Delete Tag
+    [Arguments]  ${tag_name}
+    Show Tags Panel
+    Tags Panel Select Tag  ${tag_name}
+    sleep  1 second
+    Edit Tag Click Delete
+    Edit Tag Confirm Delete Tag Click OK
+    Confirm Tags Panel Does Not Contain Tag  ${tag_name}
+
 Tags Panel Click Add
     Confirm Tags Panel Visible
     Wait Until Element Is Visible  ${tags_panel_add_btn}
@@ -58,6 +67,7 @@ Confirm Tags Panel Is Not Empty
     ${orig_wait}=  Set Selenium Implicit Wait  1 second
     Wait Until Element Is Not Visible  ${tags_panel_no_tags_msg}
     Set Selenium Implicit Wait  ${orig_wait}
+
 
 # Edit Tag Dialog
 Edit Tag Set Name
