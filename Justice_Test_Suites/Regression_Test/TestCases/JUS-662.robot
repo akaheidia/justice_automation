@@ -14,5 +14,4 @@ Confirm XMC Data Pump Option Enable Sharing Label
     XMC Click Options Tab
     XMC Confirm Options Tab Loaded
     XMC Select Options Tree Node  XMC Data Pump
-
     XMC Confirm Option Label XMC Data Pump Enable Sharing
