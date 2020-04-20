@@ -71,3 +71,26 @@ Confirm Port List Sorting Works
     Close Sort Menu
     Confirm Sort Not Applied
     Confirm Port In Table  ${test_port}
+
+Confirm Download Menus
+    Confirm Device Details Ports Page Loaded
+
+    Download CSV Visible Rows
+    Wait Until Page Contains  Download Complete
+    Confirm File Exists  ${DOWNLOADS_DIR}  ${csv_ports_visible}
+    Remove File  ${DOWNLOADS_DIR}  ${csv_ports_visible}
+
+    Download CSV All Rows
+    Wait Until Page Contains  Download Complete
+    Confirm File Exists  ${DOWNLOADS_DIR}  ${csv_ports_all}
+    Remove File  ${DOWNLOADS_DIR}  ${csv_ports_all}
+
+    Download PDF Visible Rows
+    Wait Until Page Contains  Download Complete
+    Confirm File Exists  ${DOWNLOADS_DIR}  ${pdf_ports_visible}
+    Remove File  ${DOWNLOADS_DIR}  ${pdf_ports_visible}
+
+    Download PDF All Rows
+    Wait Until Page Contains  Download Complete
+    Confirm File Exists  ${DOWNLOADS_DIR}  ${pdf_ports_all}
+    Remove File  ${DOWNLOADS_DIR}  ${pdf_ports_all}
