@@ -179,6 +179,8 @@ sort_remove_icon_xpath_value = "//mat-icon[@fonticon='ei-remove_circle_outline']
 sort_ascending_menu_xpath_value = "//span[contains(text(),'Ascending')]"
 sort_descending_menu_xpath_value = "//span[contains(text(),'Descending')]"
 
+# Device Details Page Elements
+device_details_back_arrow = "xpath://mat-icon[contains(@class, 'ei-arrow_back')]"
 
 # End-Systems
 endsystems_table = "xpath://table[@id='endSystemsGrid']"

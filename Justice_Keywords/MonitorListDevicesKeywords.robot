@@ -65,6 +65,10 @@ Confirm Device Not In Table No Wait
     Element Should Not Contain  ${list_devices_table}  ${device_ip}
     Set Selenium Implicit Wait  ${orig_wait}
 
+Click Device Details Arrow
+    [Arguments]  ${device_ip}
+    Page Should Contain Element  xpath://td[contains(@class, 'ipAddress')]/div[text()='${device_ip}']/../..//mat-icon[contains(@class, 'ei-arrow_forward')]
+    Click Element  xpath://td[contains(@class, 'ipAddress')]/div[text()='${device_ip}']/../..//mat-icon[contains(@class, 'ei-arrow_forward')]
 
 Assign Device To Tag
     [Arguments]  ${ip}  ${tag}
