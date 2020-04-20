@@ -12,7 +12,7 @@ Confirm Device Details Page Loaded
     Page Should Contain Element  ${device_details_dashboard_link}
     Page Should Contain Element  ${device_details_ports_link}
 
-Confirm Device Details Dahboard Page Loaded
+Confirm Device Details Dashboard Page Loaded
     Page Should Contain Element  ${device_details_alarms_panel}
     Page Should Contain Element  ${device_details_events_panel}
 
