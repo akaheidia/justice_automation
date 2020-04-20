@@ -9,6 +9,7 @@ Suite Teardown   Log Out and Close Browser
 
 *** Variables ***
 ${test_device}  10.54.142.10
+${test_port}    ge.1.2
 
 *** Test Cases ***
 Confirm Device Details Page Loads
@@ -28,3 +29,16 @@ Confirm Dashboard Page Loads
 Confirm Back Arrow Works
     Device Details Click Back Arrow
     Confirm Devices Page Loaded
+
+Confirm Port Selection Works
+    Search Field Enter Text  ${test_device}
+    Click Device Details Arrow  ${test_device}
+    Device Details Click Ports Link
+    Confirm Device Details Ports Page Loaded
+    Confirm Port In Table  ${test_port}
+    Select Port In Table  ${test_port}
+    sleep  1 second
+    Deselect Port In Table  ${test_port}
+
+Confirm Port List Sorting Works
+    Confirm Device Details Ports Page Loaded

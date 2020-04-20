@@ -30,3 +30,30 @@ Device Details Click Dashboard Link
 Device Details Click Ports Link
     Page Should Contain Element  ${device_details_ports_link}
     Click Element  ${device_details_ports_link}
+
+Select Port In Table
+    [Arguments]  ${port_name}
+    Wait Until Element Is Visible  xpath://div[text()='${port_name}']
+    ${need_to_click}=  Run Keyword And Return Status  Element Should Be Visible  xpath://div[text()='${port_name}']/../..//div[contains(@class,'center-checkboxes')]/mat-checkbox[not(contains(@class, 'checkbox-checked'))]
+    Run Keyword If  ${need_to_click} == True  Click Element  xpath://div[text()='${port_name}']/../..//div[contains(@class,'center-checkboxes')]
+    ...       ELSE  Log  ${port_name} is already selected
+
+Deselect Port In Table
+    [Arguments]  ${port_name}
+    Wait Until Element Is Visible  xpath://div[text()='${port_name}']
+    ${need_to_click}=  Run Keyword And Return Status  Element Should Be Visible  xpath://div[text()='${port_name}']/../..//div[contains(@class,'center-checkboxes')]/mat-checkbox[contains(@class, 'checkbox-checked')]
+    Run Keyword If  ${need_to_click} == True  Click Element  xpath://div[text()='${port_name}']/../..//div[contains(@class,'center-checkboxes')]
+    ...       ELSE  Log  ${port_name} is already deselected
+
+
+Confirm Port In Table
+    [Arguments]  ${port_name}
+    Refresh Devices Table
+    Table Should Contain  ${device_details_ports_table}  ${port_name}
+
+Confirm Port Not In Table
+    [Arguments]  ${port_name}
+    ${orig_wait}=  Set Selenium Implicit Wait  1 second
+    Refresh Devices Table
+    Element Should Not Contain  ${device_details_ports_table}  ${port_name}
+    Set Selenium Implicit Wait  ${orig_wait}

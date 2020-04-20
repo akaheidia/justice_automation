@@ -186,6 +186,7 @@ device_details_ports_link = "xpath://div[contains(text(),'Ports')]"
 device_details_alarms_panel = "xpath://mat-card-title[contains(text(),'Alarms')]"
 device_details_events_panel = "xpath://mat-card-title[contains(text(),'Events')]"
 device_details_ports_list = "xpath://app-lists-ports"
+device_details_ports_table = "id:portsGrid"
 
 # End-Systems
 endsystems_table = "xpath://table[@id='endSystemsGrid']"
