@@ -19,6 +19,8 @@ Confirm Filter Panel Remains Filtered On Time Range If Drill Down
     Confirm Reports Filter Time Range Value  Last Hour
     Click Network Scorecard Site Availability Drilldown
     Confirm Reports Filter Time Range Value  Last Hour
+    Click Breadcrumb  Home
+    Confirm Reports Filter Time Range Value  Last Hour
 
 Confirm Filter Panel Resets Time Range To Default If Select New Report
     Navigate to Network Scorecard Report
