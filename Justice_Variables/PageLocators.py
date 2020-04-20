@@ -181,6 +181,12 @@ sort_descending_menu_xpath_value = "//span[contains(text(),'Descending')]"
 
 # Device Details Page Elements
 device_details_back_arrow = "xpath://mat-icon[contains(@class, 'ei-arrow_back')]"
+device_details_ip_label = "xpath://div[@class='info-header'][contains(text(),'IP ADDRESS')]"
+device_details_dashboard_link = "xpath://div[contains(text(),'Dashboard')]"
+device_details_ports_link = "xpath://div[contains(text(),'Ports')]"
+device_details_alarms_panel = "xpath://mat-card-title[contains(text(),'Alarms')]"
+device_details_events_panel = "xpath://mat-card-title[contains(text(),'Events')]"
+device_details_ports_list = "xpath://app-lists-ports"
 
 # End-Systems
 endsystems_table = "xpath://table[@id='endSystemsGrid']"

@@ -5,6 +5,9 @@ Variables  ../Justice_Variables/PageLocators.py
 Documentation    Keywords specific to the Devices tab on the Monitor List page.
 
 *** Keywords ***
+Confirm Devices Page Loaded
+    Page Should Contain Element  ${list_devices_table}
+
 Refresh Devices Table
     Click Element  ${list_refresh_icon}
 
