@@ -125,8 +125,8 @@ Open Download Menu
 
 Close Download Menu
     ${orig_wait}=  Set Selenium Implicit Wait  1 second
-    ${menu_open}=  Run Keyword And Return Status  Element Should Be Visible  ${list_download_selected_icon}
-    Run Keyword If  '${menu_open}'=='True'  Click Element  ${list_download_selected_icon}
+    ${menu_open}=  Run Keyword And Return Status  Element Should Be Visible  ${list_icon_selected}
+    Run Keyword If  '${menu_open}'=='True'  Click Element  ${list_icon_selected}
     Set Selenium Implicit Wait  ${orig_wait}
 
 
@@ -139,7 +139,7 @@ Open Sort Menu
 Close Sort Menu
     ${orig_wait}=  Set Selenium Implicit Wait  1 second
     ${menu_open}=  Run Keyword And Return Status  Element Should Be Visible  ${sort_menu_panel}
-    Run Keyword If  '${menu_open}'=='True'  Click Element  ${list_sort_selected_icon}
+    Run Keyword If  '${menu_open}'=='True'  Click Element  ${list_icon_selected}
     Set Selenium Implicit Wait  ${orig_wait}
 
 Open Add Sort Menu
@@ -210,12 +210,12 @@ Confirm Events Tab Selected
 
 Confirm Download Menu Closed
     ${orig_wait}=  Set Selenium Implicit Wait  1 second
-    Element Should Not Be Visible  ${list_download_selected_icon}
+    Element Should Not Be Visible  ${list_icon_selected}
     Set Selenium Implicit Wait  ${orig_wait}
 
 Confirm Sort Menu Closed
     ${orig_wait}=  Set Selenium Implicit Wait  1 second
-    Element Should Not Be Visible  ${list_sort_selected_icon}
+    Element Should Not Be Visible  ${list_icon_selected}
     Set Selenium Implicit Wait  ${orig_wait}
 
 Confirm Sort Applied
