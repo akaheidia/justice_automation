@@ -11,18 +11,23 @@ Suite Teardown   Log Out and Close Browser
 *** Test Cases ***
 Confirm Filter Panel Remains Filtered On Time Range If Drill Down
     Click Reports
-    sleep  2 seconds
+    sleep  3 seconds
     Confirm Reports Page Loaded
     Show Reports Filter Panel
     Set Reports Filter Time Range  Last Hour
     Apply Reports Filter
+    sleep  1 second
     Confirm Reports Filter Time Range Value  Last Hour
     Click Network Scorecard Site Availability Drilldown
     Confirm Reports Filter Time Range Value  Last Hour
+    Site Availability Drill Into Site  ${site_device_down}
+    Confirm Reports Filter Time Range Value  Last Hour
+
+Confirm Filter Panel Remains Filtered On Time Range If Navigate With Breadcrumb
     Click Breadcrumb  Home
     Confirm Reports Filter Time Range Value  Last Hour
 
-Confirm Filter Panel Resets Time Range To Default If Select New Report
+Confirm Filter Panel Resets Time Range To Default If Select New Report From Menu
     Navigate to Network Scorecard Report
     Show Reports Filter Panel
     Confirm Reports Filter Time Range Value  Last 24 Hours
