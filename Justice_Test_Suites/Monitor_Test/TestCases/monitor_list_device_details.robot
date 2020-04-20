@@ -16,9 +16,15 @@ Confirm Device Details Page Loads
     Click Device Details Arrow  ${test_device}
     Confirm Device Details Page Loaded  ${test_device}
     Confirm Device Details Dahboard Page Loaded
+
+Confirm Ports Page Loads
     Device Details Click Ports Link
     Confirm Device Details Ports Page Loaded
+
+Confirm Dashboard Page Loads
     Device Details Click Dashboard Link
     Confirm Device Details Dahboard Page Loaded
+
+Confirm Back Arrow Works
     Device Details Click Back Arrow
     Confirm Devices Page Loaded
