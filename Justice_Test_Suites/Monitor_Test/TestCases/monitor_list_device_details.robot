@@ -42,3 +42,32 @@ Confirm Port Selection Works
 
 Confirm Port List Sorting Works
     Confirm Device Details Ports Page Loaded
+    Confirm Sort Not Applied
+    Open Sort Menu
+    Open Add Sort Menu
+    Select Sort Choice  Status
+    Select Sort Choice  Name
+    Select Sort Choice  Alias
+    Select Sort Choice  Template
+    Select Sort Choice  Speed
+    Select Sort Choice  Neighbor
+    Select Sort Choice  Description
+    Close Add Sort Menu
+    Close Sort Menu
+    Confirm Sort Applied
+    Confirm Port In Table  ${test_port}
+    Set Sort Direction  Name  Ascending
+    Set Sort Direction  Name  Descending
+    Set Sort Direction  Description  Ascending
+    Set Sort Direction  Status  Descending
+    Open Sort Menu
+    Click Remove Sort Icon  Description
+    Click Remove Sort Icon  Neighbor
+    Click Remove Sort Icon  Speed
+    Click Remove Sort Icon  Template
+    Click Remove Sort Icon  Alias
+    Click Remove Sort Icon  Name
+    Click Remove Sort Icon  Status
+    Close Sort Menu
+    Confirm Sort Not Applied
+    Confirm Port In Table  ${test_port}
