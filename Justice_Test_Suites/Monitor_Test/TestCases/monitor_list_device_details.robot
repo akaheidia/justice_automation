@@ -16,7 +16,7 @@ Confirm Device Details Page Loads
     Search Field Enter Text  ${test_device}
     Click Device Details Arrow  ${test_device}
     Confirm Device Details Page Loaded  ${test_device}
-    Confirm Device Details Dahboard Page Loaded
+    Confirm Device Details Dashboard Page Loaded
 
 Confirm Ports Page Loads
     Device Details Click Ports Link
@@ -24,7 +24,7 @@ Confirm Ports Page Loads
 
 Confirm Dashboard Page Loads
     Device Details Click Dashboard Link
-    Confirm Device Details Dahboard Page Loaded
+    Confirm Device Details Dashboard Page Loaded
 
 Confirm Back Arrow Works
     Device Details Click Back Arrow
@@ -39,6 +39,13 @@ Confirm Port Selection Works
     Select Port In Table  ${test_port}
     sleep  1 second
     Deselect Port In Table  ${test_port}
+
+Confirm Table Paging
+    Confirm Device Details Ports Page Loaded
+    Go To Last Page
+    Go To First Page
+    Go To Next Page
+    Go To Previous Page
 
 Confirm Port List Sorting Works
     Confirm Device Details Ports Page Loaded
@@ -94,3 +101,5 @@ Confirm Download Menus
     Wait Until Page Contains  Download Complete
     Confirm File Exists  ${DOWNLOADS_DIR}  ${pdf_ports_all}
     Remove File  ${DOWNLOADS_DIR}  ${pdf_ports_all}
+    sleep  1 second
+    Wait Until Page Does Not Contain  Download Complete
