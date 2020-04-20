@@ -101,5 +101,3 @@ Confirm Download Menus
     Wait Until Page Contains  Download Complete
     Confirm File Exists  ${DOWNLOADS_DIR}  ${pdf_ports_all}
     Remove File  ${DOWNLOADS_DIR}  ${pdf_ports_all}
-    sleep  1 second
-    Wait Until Page Does Not Contain  Download Complete
