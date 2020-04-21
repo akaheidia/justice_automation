@@ -5,7 +5,7 @@ Resource  ../Resources/AllResources.robot
 
 Documentation   This test suite verifies the GET requests return a successful status code.
 ...
-...             The Suite Setup section objtains the access token used in the GET requests
+...             The Suite Setup section obtains the access token used in the GET requests
 ...             for this test suite.
 ...
 ...             This test is data driven:  the Test Template section specifies the keyword
