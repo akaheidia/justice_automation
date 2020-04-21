@@ -130,6 +130,7 @@ tags_add_devices_to_tag_panel_refresh = "xpath://app-add-to-tag-dialog//mat-icon
 tags_add_devices_to_tag_panel_save = "xpath://app-add-to-tag-dialog//span[text()='Save']"
 
 # Map Page Elements
+map_background_image = "xpath://canvas[@class='leaflet-zoom-animated']"
 map_zoom_in_enabled_button = "xpath://a[@class='leaflet-control-zoom-in']"
 map_zoom_in_disabled_button = "xpath://a[@class='leaflet-control-zoom-in leaflet-disabled']"
 map_zoom_out_enabled_button = "xpath://a[@class='leaflet-control-zoom-out']"

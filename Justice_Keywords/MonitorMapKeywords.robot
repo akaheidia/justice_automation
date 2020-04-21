@@ -11,3 +11,5 @@ Confirm Map Page Loaded
     Page Should Contain Element  ${monitor_map_slider}
     Page Should Contain Element  ${monitor_list_slider}
     Confirm Map Slider Selected
+    Page Should Contain Element  ${map_background_image}
+    Page Should Contain Element  ${map_zoom_in_enabled_button}
