@@ -42,7 +42,7 @@ Confirm Resync Messages Not Seen After Resync Complete
 
     SSH To XMC Server  ${xmc_ip}  ${xmc_user}  ${xmc_pwd}
 
-    Write  tail -n 50 -f ${xmc_log}
+    Write  tail -n 150 -f ${xmc_log}
     ${output}=  Read Until  Resync Completed successfully
     Should Contain  ${output}  Resync Completed successfully
     ${output}=  Read
