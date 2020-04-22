@@ -32,7 +32,7 @@ Change XMC Data Pump Diagnostic Level To Verbose
 
 Confirm Resync Messages Not Seen After Resync Complete
     Disconnect From RabbitMQ  ${jus_ip}  ${jus_user}  ${jus_pwd}  ${xmc_ip}  ${prompt}
-    sleep  10 seconds
+    sleep  30 seconds
     Reconnect To RabbitMQ  ${jus_ip}  ${jus_user}  ${jus_pwd}  ${xmc_ip}  ${prompt}
 
     sleep  60 seconds
