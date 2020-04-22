@@ -70,7 +70,7 @@ Confirm CSV File Extension for Alarms All Filtered Rows
 
 
 Confirm CSV File Extension for Events All Rows
-    Navigate to Events and Set Filter  ${XMC_HOSTNAME}
+    Navigate to Events and Set Filter  ${XMC_2_HOSTNAME}
     Download CSV All Rows
     Wait Until Page Contains  Download Complete  timeout=1 minute
     Confirm File Exists  ${csv_events_all}
