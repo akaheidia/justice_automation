@@ -30,14 +30,14 @@ monitor_map_slider = "xpath://span[text()='Map']"
 monitor_list_slider = "xpath://span[text()='List']"
 monitor_selected_slider_class = "list-switcher-selected-text"
 monitor_unselected_slider_class = "list-switcher-unselected-text"
-monitor_search_icon = "xpath://mat-icon[@fonticon='ei-search']"
+monitor_search_icon = "xpath://mat-toolbar[contains(@class, 'extr-top-toolbar')]//button//mat-icon[@fonticon='ei-search']"
 monitor_help_icon = "xpath://mat-icon[@fonticon='ei-help']"
 monitor_alarms_icon = "xpath://mat-icon[@fonticon='ei-alarm_type']"
 monitor_tags_icon = "xpath://mat-icon[@fonticon='ei-label_outline']"
 monitor_filter_icon = "xpath://mat-icon[@fonticon='ei-filter']"
 
 # Search Field Elements
-search_field_text = "xpath://input[@placeholder='Search...']"
+search_field_text = "xpath://mat-toolbar[contains(@class, 'extr-top-toolbar')]//input[@placeholder='Search...']"
 
 # Filter Panel Elements
 filter_panel_title = "xpath://div[text()='Filters']"
@@ -188,6 +188,8 @@ device_details_alarms_panel = "xpath://mat-card-title[contains(text(),'Alarms')]
 device_details_events_panel = "xpath://mat-card-title[contains(text(),'Events')]"
 device_details_ports_list = "xpath://app-lists-ports"
 device_details_ports_table = "id:portsGrid"
+device_details_search_button = "xpath://app-lists-ports//button//mat-icon[contains(@class,'ei-search')]"
+device_details_search_field = "xpath://app-lists-ports//input[@placeholder='Search...']"
 
 # End-Systems
 endsystems_table = "xpath://table[@id='endSystemsGrid']"

@@ -31,6 +31,29 @@ Device Details Click Ports Link
     Page Should Contain Element  ${device_details_ports_link}
     Click Element  ${device_details_ports_link}
 
+Device Details Show Search Field
+    ${orig_wait}=  Set Selenium Implicit Wait  1 second
+    ${need_to_show}=  Run Keyword And Return Status  Element Should Not Be Visible  ${device_details_search_field}
+    Run Keyword If  ${need_to_show}  Click Element  ${device_details_search_button}
+    ...    ELSE  Log  Search Field Already Shown
+    Set Selenium Implicit Wait  ${orig_wait}
+    Wait Until Element Is Visible  ${device_details_search_field}
+
+Device Details Hide Search Field
+    ${need_to_hide}=  Run Keyword And Return Status  Element Should Be Visible  ${device_details_search_field}
+    Run Keyword If  ${need_to_hide}  Click Element  ${device_details_search_button}
+    ...    ELSE  Log  Tags Panel Already Hidden
+    Wait Until Element Is Not Visible  ${device_details_search_field}
+
+Device Details Search Field Enter Text
+    [Arguments]  ${value}
+    Device Details Show Search Field
+    Input Text  ${device_details_search_field}  ${value}  clear=True
+
+Device Details Search Field Clear Text
+    Device Details Show Search Field
+    Input Text  ${device_details_search_field}  ${empty}  clear=True
+
 Select Port In Table
     [Arguments]  ${port_name}
     Wait Until Element Is Visible  xpath://div[text()='${port_name}']

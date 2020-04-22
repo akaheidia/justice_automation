@@ -34,11 +34,14 @@ Confirm Port Selection Works
     Search Field Enter Text  ${test_device}
     Click Device Details Arrow  ${test_device}
     Device Details Click Ports Link
+    sleep  1 second
     Confirm Device Details Ports Page Loaded
+    Device Details Search Field Enter Text  ${test_port}
     Confirm Port In Table  ${test_port}
     Select Port In Table  ${test_port}
     sleep  1 second
     Deselect Port In Table  ${test_port}
+    Device Details Search Field Clear Text
 
 Confirm Table Paging
     Confirm Device Details Ports Page Loaded
