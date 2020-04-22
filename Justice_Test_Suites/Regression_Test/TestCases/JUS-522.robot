@@ -13,7 +13,7 @@ Set Both Server and Event Type Filter and Confirm Events Present
     Clear All Filters
     Confirm Events Present
     Confirm Events Table Not Empty
-    Set Server Filter  ${XMC_HOSTNAME}
+    Set Server Filter  ${XMC_2_HOSTNAME}
     sleep  2 seconds
     Confirm Events Present
     Confirm Events Table Not Empty
