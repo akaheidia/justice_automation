@@ -10,7 +10,7 @@ Suite Teardown  Log Out and Close Browser
 
 
 *** Test Cases ***
-Confirm XMC Server Present In Lost Filter Panel
+Confirm XMC Server Present In List Filter Panel
     Click Monitor
     Show Filter Panel
     Confirm Filter Panel Contains Server  ${XMC_HOSTNAME}
