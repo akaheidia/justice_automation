@@ -54,7 +54,7 @@ Show Search Field
 Hide Search Field
     ${need_to_hide}=  Run Keyword And Return Status  Element Should Be Visible  ${search_field_text}
     Run Keyword If  ${need_to_hide}  Click Element  ${monitor_search_icon}
-    ...    ELSE  Log  Tags Panel Already Hidden
+    ...    ELSE  Log  Search Field Already Hidden
     Wait Until Element Is Not Visible  ${search_field_text}
 
 Search Field Enter Text
