@@ -31,7 +31,7 @@ Confirm CSV All Filtered Rows for Alarms
 
 
 Confirm CSV All Rows for Events
-    Navigate to Events and Set Filter  ${XMC_HOSTNAME}
+    Navigate to Events and Set Filter  ${XMC_2_HOSTNAME}
     Download CSV All Rows
     Wait Until Page Contains  Download Complete  timeout=1 minute
     Confirm File Contents  ${csv_events_all}
