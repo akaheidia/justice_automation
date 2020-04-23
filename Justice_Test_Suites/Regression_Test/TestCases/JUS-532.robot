@@ -22,9 +22,9 @@ ${debug_msg}      DEBUG [com.extreme.outboundmessage.OutboundMessageEngine] RESY
 *** Test Cases ***
 Confirm Extraneous Resync Messages Not Seen
     Disconnect From RabbitMQ  ${jus_ip}  ${jus_user}  ${jus_pwd}  ${xmc_ip}  ${prompt}
+    sleep  30 seconds
     XMC Confirm Server Log Message Output  ${xmc_ip}  ${xmc_user}  ${xmc_pwd}  ${xmc_log}  No connection to the remote server.
     Reconnect To RabbitMQ  ${jus_ip}  ${jus_user}  ${jus_pwd}  ${xmc_ip}  ${prompt}
-
     sleep  60 seconds
     sleep  60 seconds
     sleep  60 seconds
