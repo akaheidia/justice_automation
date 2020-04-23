@@ -80,3 +80,8 @@ Confirm Port Not In Table
     Refresh Devices Table
     Element Should Not Contain  ${device_details_ports_table}  ${port_name}
     Set Selenium Implicit Wait  ${orig_wait}
+
+Confirm Device Details Ports Page Does Not Support Assigning Tags
+    ${orig_wait}=  Set Selenium Implicit Wait  1 second
+    Page Should Not Contain Element  ${tags_add_ports_to_tag_button}
+    Set Selenium Implicit Wait  ${orig_wait}

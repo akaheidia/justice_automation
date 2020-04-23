@@ -129,6 +129,9 @@ tags_add_devices_to_tag_panel_manage_tags = "xpath://app-add-to-tag-dialog//mat-
 tags_add_devices_to_tag_panel_refresh = "xpath://app-add-to-tag-dialog//mat-icon[@fonticon='ei-refresh']"
 tags_add_devices_to_tag_panel_save = "xpath://app-add-to-tag-dialog//span[text()='Save']"
 
+# Add Ports To Tag Elements
+tags_add_ports_to_tag_button = "xpath://button[@aria-label='Add port to a Tag']"
+
 # Map Page Elements
 map_background_image = "xpath://canvas[@class='leaflet-zoom-animated']"
 map_zoom_in_enabled_button = "xpath://a[@class='leaflet-control-zoom-in']"
