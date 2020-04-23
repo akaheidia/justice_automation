@@ -8,7 +8,6 @@ Suite Setup      Open Browser and Log In  ${JUS_URL}  ${BROWSER}  ${JUS_USERNAME
 Suite Teardown   Log Out and Close Browser
 
 *** Test Cases ***
-
 Confirm Browser Back Button From Add New Report Page
     Navigate to Network Summary Report
     Confirm Network Summary Reports Page Title
