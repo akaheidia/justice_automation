@@ -185,12 +185,14 @@ Confirm Manage Tags Panel Tag Last Edit By
 
 Confirm Manage Tags Devices Assigned To Tag Count
     [Arguments]  ${tag}  ${count}
+    sleep  1 second
     Manage Tags Expand Row  ${tag}
     sleep  1 second
     Page Should Contain Element  xpath://mat-chip[contains(@class,'items-count')][text()='${count}']
 
 Confirm Manage Tags Device Assigned To Tag
     [Arguments]  ${tag}  ${ip}
+    sleep  1 second
     Manage Tags Expand Row  ${tag}
     sleep  1 second
     Page Should Contain Element  xpath://app-manage-tags-dialog//div[text()='${ip}']

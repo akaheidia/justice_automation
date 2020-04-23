@@ -22,6 +22,7 @@ Confirm Tags Panel Device Count
     Confirm Tags Panel Tag Device Count Value  ${tag_3}  1
 
 Confirm Details Panel Device Count
+    Show Tags Panel
     Tags Panel Click Manage
     Confirm Manage Tags Devices Assigned To Tag Count  ${tag_1}  1
     Confirm Manage Tags Device Assigned To Tag  ${tag_1}  ${test_device}
@@ -32,6 +33,7 @@ Confirm Details Panel Device Count
     Manage Tags Click Close
 
 Confirm Deleting Device From One Tag Does Not Affect Other Tags
+    Show Tags Panel
     Tags Panel Click Manage
     sleep  1 second
     Manage Tags Expand Row  ${tag_2}
