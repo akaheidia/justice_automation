@@ -8,7 +8,6 @@ Suite Setup      XMC Open Browser and Log In  ${XMC_URL}  ${BROWSER}  ${XMC_USER
 Suite Teardown   XMC Log Out and Close Browser
 
 *** Test Cases ***
-
 Confirm XMC Data Pump Option Enable Sharing Label
     XMC Navigate to Administration Page
     XMC Click Options Tab
