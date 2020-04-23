@@ -8,12 +8,15 @@ Suite Setup      Open Browser and Log In  ${JUS_URL}  ${BROWSER}  ${JUS_USERNAME
 Suite Teardown   Log Out and Close Browser
 
 *** Test Cases ***
-Confirm Close Button Not Present In User Group Details Panel
-    Click Settings
-    Confirm Settings Page Loaded
-    Click User Groups
-    Confirm User Groups Page Loaded
-    Settings Select User Group  ${XMC_HOSTNAME}  NetSight Administrator
-    Confirm Settings User Group Close Button Not Present
-    Settings Select User Group  ${XMC_HOSTNAME}  Custom Group
-    Confirm Settings User Group Close Button Not Present
+Test Not Supported
+    Log To Console  Settings Page Has Been Removed - Test Commented Out Until It Is Added Back
+
+#Confirm Close Button Not Present In User Group Details Panel
+#    Click Settings
+#    Confirm Settings Page Loaded
+#    Click User Groups
+#    Confirm User Groups Page Loaded
+#    Settings Select User Group  ${XMC_HOSTNAME}  NetSight Administrator
+#    Confirm Settings User Group Close Button Not Present
+#    Settings Select User Group  ${XMC_HOSTNAME}  Custom Group
+#    Confirm Settings User Group Close Button Not Present
