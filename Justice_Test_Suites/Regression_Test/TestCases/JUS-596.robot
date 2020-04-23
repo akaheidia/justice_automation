@@ -12,6 +12,12 @@ ${port_list}    9200,9300,5432,4369,15671,15672,25672
 
 *** Test Cases ***
 Execute Command and Verify Output
+    ${output}=  Execute Command  apt-get update
+    Log To Console  ${output}
+    ${output}=  Execute Command  apt --fix-broken install
+    Log To Console  ${output}
+    ${output}=  Execute Command  apt-get install nmap
+    Log To Console  ${output}
     ${output}=  Execute Command  nmap -p ${port_list} ${JUS_HOST_IP}
     Log                 ${output}
     Should Not Contain  ${output}  open
