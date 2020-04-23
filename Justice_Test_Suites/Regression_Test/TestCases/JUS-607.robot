@@ -8,7 +8,6 @@ Documentation   Regression test for JUS-607: Filters: Server & Sites panel is em
 Suite Setup     Open Browser and Log In  ${JUS_URL}  ${BROWSER}  ${JUS_USERNAME}  ${JUS_PASSWORD}
 Suite Teardown  Log Out and Close Browser
 
-
 *** Test Cases ***
 Confirm XMC Server Present In List Filter Panel
     Click Monitor
