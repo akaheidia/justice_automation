@@ -75,7 +75,9 @@ Confirm Devices Added To Justice
     Confirm Servers and Sites Filter Expanded
     Select Servers and Sites Server Tree Node  ${xmc_host}
     Refresh Devices Table
+    Search Field Enter Text  ${engine_ip}
     Confirm Device In Table  ${engine_ip}
+    Search Field Enter Text  ${device_ip}
     Confirm Device In Table  ${device_ip}
     Log Out and Close Browser
 
@@ -132,6 +134,8 @@ Confirm Devices Removed From Justice
     Confirm Filter Panel Visible
     Confirm Servers and Sites Filter Expanded
     Select Servers and Sites Server Tree Node  ${xmc_host}
+    Search Field Enter Text  ${engine_ip}
     Confirm Device Not In Table  ${engine_ip}
+    Search Field Enter Text  ${device_ip}
     Confirm Device Not In Table  ${device_ip}
     Log Out and Close Browser
