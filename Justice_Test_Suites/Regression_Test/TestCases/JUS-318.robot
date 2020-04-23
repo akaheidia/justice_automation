@@ -23,3 +23,7 @@ Confirm Error Message For Disconnected XMC
     Disconnect From RabbitMQ  ${jus_ip}  ${jus_user}  ${jus_pwd}  ${xmc_ip}  ${prompt}
     XMC Confirm Server Log Message Output  ${xmc_ip}  ${xmc_user}  ${xmc_pwd}  ${xmc_log}  ${msg}
     Reconnect To RabbitMQ  ${jus_ip}  ${jus_user}  ${jus_pwd}  ${xmc_ip}  ${prompt}
+    sleep  60 seconds
+    sleep  60 seconds
+    sleep  60 seconds
+    sleep  60 seconds
