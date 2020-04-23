@@ -5,9 +5,6 @@ Resource  ../Resources/AllResources.robot
 
 Documentation   Regression test for JUS-644: Tags - Manage Tags: No Cancel Button in Device Details.
 
-#Suite Setup     Log In and Navigate To Devices Page
-#Suite Teardown  Log Out and Close Browser
-
 Suite Setup      Log In and Create Tag and Assign Devices To Tag
 Suite Teardown   Clean Up Tags and Log Out and Close Browser
 
