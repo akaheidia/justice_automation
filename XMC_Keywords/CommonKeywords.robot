@@ -70,7 +70,7 @@ XMC Confirm Server Log Message Output
     [Arguments]  ${ip}  ${user}  ${pwd}  ${server_log}  ${message}
     SSH To XMC Server  ${ip}  ${user}  ${pwd}
 
-    Write  tail -n 50 -f ${server_log}
+    Write  tail -n 150 -f ${server_log}
     ${output}=  Read Until  ${message}
     Should Contain  ${output}  ${message}
 
