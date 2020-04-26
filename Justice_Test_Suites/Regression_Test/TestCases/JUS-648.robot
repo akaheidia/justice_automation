@@ -18,6 +18,7 @@ Confirm Filter Panel Remains Filtered On Time Range If Drill Down
     Apply Reports Filter
     sleep  1 second
     Confirm Reports Filter Time Range Value  Last Hour
+    sleep  1 second
     Click Network Scorecard Site Availability Drilldown
     Confirm Reports Filter Time Range Value  Last Hour
     Site Availability Drill Into Site  ${site_device_down}
