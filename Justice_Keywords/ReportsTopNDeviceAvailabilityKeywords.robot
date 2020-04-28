@@ -36,7 +36,7 @@ Confirm Top N Device Availability Report Does Not Contain Value
     Select Frame  xpath://iframe[@id='resource']
 
     sleep  1 second
-    Confirm Page Does Not Contain Text  ${value}
+    Page Should Not Contain Element  xpath://span[contains(text(), '${value}')]
 
     Unselect Frame
     Unselect Frame

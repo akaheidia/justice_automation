@@ -14,6 +14,7 @@ Confirm Drilldown Correct For Last Hour
     Confirm Network Summary Reports Page Title
     Show Reports Filter Panel
     Set Reports Filter Time Range  Last Hour
+    Apply Reports Filter
     sleep  2 seconds
     Click Device Availability Drilldown
     Confirm Reports Filter Time Range Value  Last Hour
@@ -25,6 +26,7 @@ Confirm Drilldown Correct For Last Month
     Confirm Network Summary Reports Page Title
     Show Reports Filter Panel
     Set Reports Filter Time Range  Last Month
+    Apply Reports Filter
     sleep  2 seconds
     Click Device Availability Drilldown
     Confirm Reports Filter Time Range Value  Last Month
