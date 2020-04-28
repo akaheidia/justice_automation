@@ -77,6 +77,28 @@ Deselect Reports Filter Server
     [Arguments]  ${server}
 #    "xpath://div[@class='server-site-filter']//li[1]//label[1]//input[1]"
 
+Set Reports Filter Device Tags
+    [Arguments]  ${value}
+    Select Frame  xpath://iframe
+
+    # Open the Device Tags selector
+    ${closed}=  Run Keyword And Return Status  Element Should Be Visible  ${reports_filter_panel_device_tags_choice_list_closed}
+    Run Keyword If  '${closed}'  Click Element  ${reports_filter_panel_device_tags_field}
+    ...      ELSE  Log To Console  Device Tags Selector Already Open
+
+    # Loop over the list of device tags to select
+    @{device_tags}=  Split String  ${value}  ,
+    :FOR  ${item}  IN  @{device_tags}
+    \    Page Should Contain Element  xpath://span[contains(text(),'${item}')]
+    \    Click Element  xpath://span[contains(text(),'${item}')]
+
+    # Close the Device Tags selector
+        ${open}=  Run Keyword And Return Status  Element Should Be Visible  ${reports_filter_panel_device_tags_choice_list_open}
+    Run Keyword If  '${open}'  Click Element  ${reports_filter_panel_device_tags_field}
+    ...      ELSE  Log To Console  Device Tags Selector Already Closed
+
+    Unselect Frame
+
 Set Reports Filter Device Types
     [Arguments]  ${value}
     Select Frame  xpath://iframe

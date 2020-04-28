@@ -53,6 +53,17 @@ Confirm Site Availability Report Table Contains Value
     Unselect Frame
     Unselect Frame
 
+Confirm Site Availability Report Table Does Not Contain Value
+    [Arguments]  ${value}
+    sleep  1 second
+    Select Frame  xpath://iframe
+    Select Frame  xpath://iframe[@id='availability']
+
+    Page Should Not Contain Element  xpath://td[*]/span[contains(text(),'${value}')]
+
+    Unselect Frame
+    Unselect Frame
+
 Get Site Availability Report Table Value Count
     [Arguments]  ${value}
     sleep  1 second
