@@ -183,6 +183,10 @@ Confirm Manage Tags Panel Tag Last Edit By
     [Arguments]  ${tag}  ${user}
     Page Should Contain Element  xpath://app-manage-tags-dialog//td[contains(@class, 'column-name')]/div[text()='${tag}']/../..//td[contains(@class, 'column-lastEditBy')]/div[text()='${user}']
 
+Confirm Manage Tags Panel Number Tagged Items
+    [Arguments]  ${tag}  ${count}
+    Page Should Contain Element  xpath://app-manage-tags-dialog//td[contains(@class, 'column-name')]/div[text()='${tag}']/../..//td[contains(@class, 'column-totalItems')]/div[text()='${count}']
+
 Confirm Manage Tags Devices Assigned To Tag Count
     [Arguments]  ${tag}  ${count}
     sleep  1 second
