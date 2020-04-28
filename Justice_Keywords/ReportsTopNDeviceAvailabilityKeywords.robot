@@ -28,3 +28,15 @@ Confirm Top N Device Availability Report Contains Value
 
     Unselect Frame
     Unselect Frame
+
+Confirm Top N Device Availability Report Does Not Contain Value
+    [Arguments]  ${value}
+    sleep  2 seconds
+    Select Frame  xpath://iframe
+    Select Frame  xpath://iframe[@id='resource']
+
+    sleep  1 second
+    Confirm Page Does Not Contain Text  ${value}
+
+    Unselect Frame
+    Unselect Frame
