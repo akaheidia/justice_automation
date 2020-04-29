@@ -9,29 +9,27 @@ Suite Setup    Set Access Token
 
 *** Variables ***
 &{headers}=       Content-Type=application/json
-${group_id}       -6588830668651339356
-
-#*** Keywords ***
-#Set Access Token
-#    &{header}=  Create Dictionary  Content-Type=application/json
-#    Create Session  alias=justice   url=${JUS_URL}  headers=${header}
-#    &{data}=    Create Dictionary   userId=${JUS_USERNAME}  password=${JUS_PASSWORD}  grant_type=password  scope=Extreme Networks
-#    ${resp}=     Post Request  justice  /auth/api/login    json=${data}
-#    Should Be Equal As Strings  ${resp.status_code}  200
-#    ${jsondata}=  To Json  ${resp.content}
-#    ${access_token}=  Collections.Get From Dictionary  ${jsondata}  access_token
-#    Set Suite Variable  ${access_token}
 
 *** Test Cases ***
 Confirm Get User Groups API Success
-#    Confirm Get Request Successful  /v1/api/settings/userGroups
     &{auth}=  Create Dictionary  Authorization  Bearer ${access_token}
+    Set Suite Variable  ${auth}
+
     Create Session  alias=justice  url=${JUS_URL}
     ${resp}=  Get Request  justice  /v1/api/settings/userGroups  ${auth}
     Should Be Equal As Strings  ${resp.status_code}  200
+
+    # Extract the Group ID for the next test
     ${jsondata}=  To Json  ${resp.content}
-    Log To Console  ${jsondata}
-#    ${group_id}=  Collections.Get From Dictionary  ${jsondata}  Custom Group
-    Log To Console  Group: ${group_id}
-    ${resp}=  Post Request  justice  /v1/api/settings/userGroups/${group_id}/permissions  ${auth}
-    Log To Console  ${resp}
+    Log  ${jsondata}
+    ${firstentry}=  Get From List  ${jsondata}  0
+    Log  First Entry: ${firstentry}
+    ${group_id}=  Collections.Get From Dictionary  ${firstentry}  userGroupId
+    Log  Group ID: ${group_id}
+    Set Suite Variable  ${group_id}
+
+Confirm Get User Groups Permissions Success
+    ${resp}=  Get Request  justice  /v1/api/settings/userGroups/${group_id}/permissions  ${auth}
+    Log  ${resp.content}
+    Log  ${resp.status_code}
+    Should Be Equal As Strings  ${resp.status_code}  200
