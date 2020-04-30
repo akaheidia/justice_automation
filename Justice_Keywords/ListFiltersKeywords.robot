@@ -138,3 +138,15 @@ Confirm Site Selected
 Confirm Site Not Selected
     [Arguments]  ${node_name}
     Page Should Contain Element  xpath://span[@class='ui-chkbox-icon ui-clickable pi']/../../../span[contains(@class, 'ui-treenode-label')]/span[text()='${node_name}']
+
+Confirm Full Server Filter Applied
+    [Arguments]  ${server_name}
+    Element Should Be Visible  xpath://span[@class='ui-treenode-label ui-corner-all ui-state-highlight']/span[contains(text(), '${server_name}')]/../..//div[contains(@class, 'ui-chkbox-box')]/span[@class='ui-chkbox-icon ui-clickable pi pi-check']/..
+
+Confirm Partial Server Filter Applied
+    [Arguments]  ${server_name}
+    Element Should Be Visible  xpath://span[@class='ui-treenode-label ui-corner-all']/span[contains(text(), '${server_name}')]/../..//div[contains(@class, 'ui-chkbox-box')]/span[@class='ui-chkbox-icon ui-clickable pi pi-minus']/..
+
+Confirm No Server Filter Applied
+    [Arguments]  ${server_name}
+    Element Should Be Visible  xpath://span[@class='ui-treenode-label ui-corner-all']/span[contains(text(), '${server_name}')]/../..//div[contains(@class, 'ui-chkbox-box')]/span[@class='ui-chkbox-icon ui-clickable pi']/..
