@@ -13,6 +13,11 @@ Click Map Slider
     Click Element  ${monitor_map_slider}
 
 
+Show Contextual Help
+    Click Element  ${monitor_help_icon}
+    Click Element  ${help_contextual_help}
+    sleep  3 seconds
+
 Show Filter Panel
     ${orig_wait}=  Set Selenium Implicit Wait  1 second
     ${need_to_show}=  Run Keyword And Return Status  Element Should Not Be Visible  ${filter_panel_title}

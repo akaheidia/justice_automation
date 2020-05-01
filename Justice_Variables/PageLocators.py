@@ -36,6 +36,9 @@ monitor_alarms_icon = "xpath://mat-icon[@fonticon='ei-alarm_type']"
 monitor_tags_icon = "xpath://mat-icon[@fonticon='ei-label_outline']"
 monitor_filter_icon = "xpath://mat-icon[@fonticon='ei-filter']"
 
+# Help Elements
+help_contextual_help = "xpath://h3[contains(text(),'Contextual Help')]"
+
 # Search Field Elements
 search_field_text = "xpath://mat-toolbar[contains(@class, 'extr-top-toolbar')]//input[@placeholder='Search...']"
 
