@@ -16,7 +16,9 @@ Confirm Site Availability Drilldown Contains Data
     Confirm Network Summary Reports Page Title
     Show Reports Filter Panel
     Set Reports Filter Time Range  Last Hour
+    Apply Reports Filter
     Click Site Availability Drilldown
+    sleep  2 seconds
     Confirm Top N Top Site Availability Reports Page Title
     Confirm Top N Top Site Availability Reports Page Contains Value  ${site_name}
 
@@ -25,6 +27,7 @@ Confirm Top N Top Site Availability Report Contains Data
     Confirm Top N Top Site Availability Reports Page Title
     Show Reports Filter Panel
     Set Reports Filter Time Range  Last Hour
+    Apply Reports Filter
     Confirm Top N Top Site Availability Reports Page Contains Value  ${site_name}
 
 Confirm Site Availability Report Contains Data
@@ -32,4 +35,5 @@ Confirm Site Availability Report Contains Data
     Confirm Site Availability Reports Page Title
     Show Reports Filter Panel
     Set Reports Filter Time Range  Last Hour
+    Apply Reports Filter
     Confirm Site Availability Report Table Contains Value  ${site_name}
