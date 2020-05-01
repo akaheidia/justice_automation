@@ -18,11 +18,11 @@ Confirm XMC Data Pump Options for RabbitMQ URI are Split Into Components
     XMC Set Option Value XMC Data Pump MoM Enabled
 
     XMC Set Option Value XMC Data Pump Host  ${JUS_HOST_IP}
-    XMC Set Option Value XMC Data Pump Port  5672
-    XMC Set Option Value XMC Data Pump Username  guest
-    XMC Set Option Value XMC Data Pump Password  extreme
+    XMC Set Option Value XMC Data Pump Port  ${option_port}
+    XMC Set Option Value XMC Data Pump Username  ${option_user}
+    XMC Set Option Value XMC Data Pump Password  ${option_pwd}
 
     XMC Confirm Option Value XMC Data Pump Host  ${JUS_HOST_IP}
-    XMC Confirm Option Value XMC Data Pump Port  5672
-    XMC Confirm Option Value XMC Data Pump Username  guest
-    XMC Confirm Option Value XMC Data Pump Password  extreme
+    XMC Confirm Option Value XMC Data Pump Port  ${option_port}
+    XMC Confirm Option Value XMC Data Pump Username  ${option_user}
+    XMC Confirm Option Value XMC Data Pump Password  ${option_pwd}

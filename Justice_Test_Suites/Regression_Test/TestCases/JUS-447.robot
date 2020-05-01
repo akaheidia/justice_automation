@@ -19,13 +19,13 @@ Confirm XMC Data Pump Options Default Values
 
     XMC Set Option Value XMC Data Pump MoM Enabled
 
-    XMC Confirm Option Value XMC Data Pump Host  127.0.0.1
-    XMC Confirm Option Value XMC Data Pump Port  5672
-    XMC Confirm Option Value XMC Data Pump Username  guest
-    XMC Confirm Option Value XMC Data Pump Password  extreme
+    XMC Confirm Option Value XMC Data Pump Host  ${option_host}
+    XMC Confirm Option Value XMC Data Pump Port  ${option_port}
+    XMC Confirm Option Value XMC Data Pump Username  ${option_user}
+    XMC Confirm Option Value XMC Data Pump Password  ${option_pwd}
 
-    XMC Confirm Option Value XMC Data Pump Queue Add Delay  3
-    XMC Confirm Option Value XMC Data Pump Queue Add Service Period  2
-    XMC Confirm Option Value XMC Data Pump Max Action Queue Size  150000
-    XMC Confirm Option Value XMC Data Pump Max Actions Queueable  60000
-    XMC Confirm Option Value XMC Data Pump Max Actions Serviced  500
+    XMC Confirm Option Value XMC Data Pump Queue Add Delay  ${option_q_delay}
+    XMC Confirm Option Value XMC Data Pump Queue Add Service Period  ${option_q_service_period}
+    XMC Confirm Option Value XMC Data Pump Max Action Queue Size  ${option_max_action_q_size}
+    XMC Confirm Option Value XMC Data Pump Max Actions Queueable  ${option_max_actions_qable}
+    XMC Confirm Option Value XMC Data Pump Max Actions Serviced  ${option_max_actions_serviced}

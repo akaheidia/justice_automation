@@ -106,3 +106,16 @@ ${pdf_events_filtered}           Events - All Filtered Rows.pdf
 ${pdf_endsystems_all}            End-Systems - All Rows.pdf
 ${pdf_endsystems_visible}        End-Systems - Visible Rows.pdf
 ${pdf_endsystems_filtered}       End-Systems - All Filtered Rows.pdf
+
+# XMC Data Pump Options Defaults
+${option_enabled}                false
+${option_secured}                true
+${option_host}                   127.0.0.1
+${option_port}                   5671
+${option_user}                   guest
+${option_pwd}                    extreme
+${option_q_delay}                3
+${option_q_service_period}       2
+${option_max_action_q_size}      150000
+${option_max_actions_qable}      60000
+${option_max_actions_serviced}   500
