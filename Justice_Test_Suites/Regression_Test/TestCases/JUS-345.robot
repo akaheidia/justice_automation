@@ -16,6 +16,7 @@ Confirm Filter Panel Remains Filtered If Drill Down
     Show Reports Filter Panel
     Set Reports Filter Device Types  B-Series,C-Series,Wireless Controller
     Apply Reports Filter
+    sleep  2 seconds
     Confirm Reports Filter Does Not Contain All Device Types
     Click Network Scorecard Site Availability Drilldown
     Confirm Reports Filter Does Not Contain All Device Types
