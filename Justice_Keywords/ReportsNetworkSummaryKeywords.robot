@@ -119,6 +119,26 @@ Click Memory Utilization Drilldown
     Unselect Frame
 
 
+Confirm Device Availability Panel Has Data
+    ${orig_wait}=  Set Selenium Implicit Wait  1 second
+    Select Frame  xpath://iframe
+    Select Frame  xpath://iframe[@id='device_availability']
+
+    Page Should Not Contain Element  ${reports_chart_no_data}
+
+    Unselect Frame
+    Unselect Frame
+    Set Selenium Implicit Wait  ${orig_wait}
+
+Confirm Device Availability Panel Has No Data
+    Select Frame  xpath://iframe
+    Select Frame  xpath://iframe[@id='device_availability']
+
+    Page Should Contain Element  ${reports_chart_no_data}
+
+    Unselect Frame
+    Unselect Frame
+
 Confirm Top APs by Clients Panel Has Data
     ${orig_wait}=  Set Selenium Implicit Wait  1 second
     Select Frame  xpath://iframe
