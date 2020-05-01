@@ -21,7 +21,6 @@ Confirm Site Availability Drilldown
     Click Site Availability Drilldown
     Confirm Top N Top Site Availability Reports Page Title
 
-
 Confirm Top APs by Clients Drilldown
     Click Top APs by Clients Drilldown
     Confirm Top N Top APs by Clients Reports Page Title

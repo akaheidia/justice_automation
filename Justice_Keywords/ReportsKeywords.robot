@@ -469,7 +469,7 @@ Confirm Site Port Error Reports Page Title
 
 
 Confirm Top N Top Device Availability Reports Page Title
-    sleep  2 seconds
+    sleep  4 seconds
     Select Frame  xpath://iframe
     Select Frame  xpath://iframe[@id='resource']
 
@@ -479,7 +479,7 @@ Confirm Top N Top Device Availability Reports Page Title
     Unselect Frame
 
 Confirm Top N Top Site Availability Reports Page Title
-    sleep  2 seconds
+    sleep  4 seconds
     Select Frame  xpath://iframe
     Select Frame  xpath://iframe[@id='resource']
 
@@ -489,7 +489,7 @@ Confirm Top N Top Site Availability Reports Page Title
     Unselect Frame
 
 Confirm Top N Top CPU Utilization Reports Page Title
-    sleep  2 seconds
+    sleep  4 seconds
     Select Frame  xpath://iframe
     Select Frame  xpath://iframe[@id='resource']
 
@@ -499,7 +499,7 @@ Confirm Top N Top CPU Utilization Reports Page Title
     Unselect Frame
 
 Confirm Top N Top Memory Utilization Reports Page Title
-    sleep  2 seconds
+    sleep  4 seconds
     Select Frame  xpath://iframe
     Select Frame  xpath://iframe[@id='resource']
 
@@ -509,7 +509,7 @@ Confirm Top N Top Memory Utilization Reports Page Title
     Unselect Frame
 
 Confirm Top N Top Port Utilization Reports Page Title
-    sleep  2 seconds
+    sleep  4 seconds
     Select Frame  xpath://iframe
     Select Frame  xpath://iframe[@id='resource']
 
@@ -519,7 +519,7 @@ Confirm Top N Top Port Utilization Reports Page Title
     Unselect Frame
 
 Confirm Top N Top Port Error Reports Page Title
-    sleep  2 seconds
+    sleep  4 seconds
     Select Frame  xpath://iframe
     Select Frame  xpath://iframe[@id='resource']
 
@@ -529,7 +529,7 @@ Confirm Top N Top Port Error Reports Page Title
     Unselect Frame
 
 Confirm Top N Top APs by Clients Reports Page Title
-    sleep  2 seconds
+    sleep  4 seconds
     Select Frame  xpath://iframe
     Select Frame  xpath://iframe[@id='resource']
 
@@ -539,7 +539,7 @@ Confirm Top N Top APs by Clients Reports Page Title
     Unselect Frame
 
 Confirm Top N Top APs by Bandwidth Reports Page Title
-    sleep  2 seconds
+    sleep  4 seconds
     Select Frame  xpath://iframe
     Select Frame  xpath://iframe[@id='resource']
 
