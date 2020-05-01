@@ -5,7 +5,6 @@ Resource  ../Resources/AllResources.robot
 
 Documentation    Regression test for JUS-461: Add XMC Data Pump to Server Diagnostics.
 
-#Suite Setup     XMC Open Browser and Log In  ${XMC_URL}  ${BROWSER}  ${XMC_USERNAME}  ${XMC_PASSWORD}
 Suite Teardown  Clean Up Test
 
 *** VARIABLES ***
