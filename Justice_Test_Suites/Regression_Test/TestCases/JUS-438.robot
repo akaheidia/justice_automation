@@ -11,8 +11,10 @@ Suite Teardown   Log Out and Close Browser
 *** Test Cases ***
 Confirm Wireless Volume Donut Has Drilldown
     Navigate to Reports
+    sleep  2 seconds
     Confirm Network Scorecard Reports Page Title
     Click Network Scorecard Site Wireless Volume Drilldown
+    sleep  2 seconds
     Confirm Site Wireless Volume Reports Page Title
     Click Breadcrumb  Home
     sleep  2 seconds
