@@ -29,6 +29,7 @@ Confirm Manage From Add Devices To Tag Panel
     Add Devices To Tag Click Manage
     Confirm Manage Tags Panel Contains Tag  ${test_tag}
     Manage Tags Select Tag  ${test_tag}
+    sleep  1 second
     Manage Tags Click Delete
     Manage Tags Confirm Delete Tags Click OK
     Confirm Manage Tags Panel Does Not Contain Tag  ${test_tag}
