@@ -14,6 +14,16 @@ XMC Select Options Tree Node
     Page Should Contain Element  xpath://span[contains(text(),'${nodename}')]
     Click Element  xpath://span[contains(text(),'${nodename}')]
 
+XMC Confirm Option Present
+    [Arguments]  ${value}
+    sleep  1 second
+    Element Should Be Visible  xpath://span[contains(text(),'${value}')]
+
+XMC Confirm Option Not Present
+    [Arguments]  ${value}
+    ${orig_wait}=  Set Selenium Implicit Wait  1 second
+    Element Should Not Be Visible  xpath://span[contains(text(),'${value}')]
+    Set Selenium Implicit Wait  ${orig_wait}
 
 XMC Options Click Restore Defaults
     Page Should Contain Element  ${xmc_options_restore_defaults_btn}
