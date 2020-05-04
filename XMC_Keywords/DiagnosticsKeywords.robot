@@ -9,6 +9,12 @@ Documentation    Keywords specific to the Administration> Diagnostics tab in XMC
 XMC Confirm Diagnostics Tab Loaded
     Page Should Contain Element  ${xmc_diagnostics_level_selector}
 
+XMC Set Main Diagnostic Level
+    [Arguments]  ${value}
+    Click Element  ${xmc_diagnostics_level_selector}
+    Page Should Contain Element  xpath://a[@class='x-menu-item-link']/span[text()='${value}']
+    Click Element  xpath://a[@class='x-menu-item-link']/span[text()='${value}']
+
 XMC Expand Diagnostics Tree Node
     [Arguments]  ${nodename}
     ${need_to_expand}=  Run Keyword And Return Status  Element Should Be Visible  xpath://span[contains(@class,'x-tree-node-text')][text()='${nodename}']${xmc_diagnostics_tree_collapsed_icon_xpath_value}
