@@ -81,6 +81,16 @@ xmc_diagnostics_reset_defaults_success_dialog_ok_btn = "xpath://span[contains(@c
 xmc_diagnostics_ok_success_dialog = "xpath://div[contains(text(),'Server Diagnostic Settings Updated')]"
 xmc_diagnostics_ok_success_dialog_ok_btn = "xpath://span[contains(@class,'x-btn-inner x-btn-inner-blue-small')][contains(text(),'OK')]"
 xmc_diagnostics_xmc_data_pump_selector = "xpath://input[contains(@name,'XMC Data Pump')]"
+xmc_diagnostics_enable_beta_features = "xpath://span[contains(text(),'Enable Feature')]"
+xmc_diagnostics_disable_beta_features = "xpath://span[contains(text(),'Disable Feature(s)')]"
+xmc_beta_features_enter_key_dialog_title = "xpath://div[contains(text(),'Enter Beta Activation Key')]"
+xmc_beta_features_key_field = "xpath://input[contains(@name,'textfield-inputEl')]"
+xmc_beta_features_ok_btn = "xpath://span[text()='OK']"
+xmc_beta_features_cancel_btn = "xpath://span[text()='Cancel']"
+xmc_beta_agreement_dialog_title = "xpath://div[contains(text(),'Beta Agreement')]"
+xmc_beta_agreement_accept_btn = "xpath://span[contains(text(),'Accept')]"
+xmc_beta_agreement_decline_btn = "xpath://span[contains(text(),'Decline')]"
+xmc_beta_features_enabled = "xpath://div[contains(@class,'x-grid-cell-inner')][contains(text(),'Beta Features')]"
 
 # Analytics Page
 xmc_analytics_dashboard_tab = "xpath://span[@class='x-tab-inner x-tab-inner-extr-main-tab-panel'][text()='Dashboard']"

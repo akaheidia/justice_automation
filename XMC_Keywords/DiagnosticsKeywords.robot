@@ -26,6 +26,30 @@ XMC Select Diagnostics Tree Node
     Page Should Contain Element  xpath://span[contains(@class,'x-tree-node-text')][text()='${nodename}']
     Click Element  xpath://span[contains(@class,'x-tree-node-text')][text()='${nodename}']
 
+XMC Disable Beta Features
+    Page Should Contain Element  ${xmc_diagnostics_disable_beta_features}
+    Click Element  ${xmc_diagnostics_disable_beta_features}
+
+XMC Enable Beta Features
+    [Arguments]  ${key}
+    Page Should Contain Element  ${xmc_diagnostics_enable_beta_features}
+    Click Element  ${xmc_diagnostics_enable_beta_features}
+    sleep  1 second
+    Page Should Contain Element  ${xmc_beta_features_enter_key_dialog_title}
+    Input Text  ${xmc_beta_features_key_field}  ${key}  clear=True
+    Click Element  ${xmc_beta_features_ok_btn}
+    sleep  1 second
+    Page Should Contain Element  ${xmc_beta_agreement_dialog_title}
+    Click Element  ${xmc_beta_agreement_accept_btn}
+
+XMC Confirm Beta Features Enabled
+    Page Should Contain Element  ${xmc_beta_features_enabled}
+
+XMC Confirm Beta Features Disabled
+    ${orig_wait}=  Set Selenium Implicit Wait  1 second
+    Page Should Not Contain Element  ${xmc_beta_features_enabled}
+    Set Selenium Implicit Wait  ${orig_wait}
+
 XMC Set XMC Data Pump Diagnostic Level
     [Arguments]  ${value}
     Page Should Contain Element  ${xmc_diagnostics_xmc_data_pump_selector}
