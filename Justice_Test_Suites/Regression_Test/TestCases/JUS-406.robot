@@ -24,6 +24,7 @@ Confirm Rx Bandwidth Metric Report Labels
 
 Confirm Total Bandwidth Metric Report Labels
     Device Overview Drill Into Metric  Total Bandwidth
+    sleep  2 seconds
     Confirm Total Bandwidth Metric Report Page Title
     Confirm Metric Report Table Column Header Contains Value  AVERAGE TOTAL BANDWIDTH
     Confirm Metric Report Table Column Header Contains Value  MINIMUM TOTAL BANDWIDTH
