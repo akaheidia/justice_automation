@@ -40,6 +40,18 @@ Suite Teardown   XMC Log Out and Close Browser
 
 *** Test Cases ***
 
+#Enable Beta Features for XMC
+#    Navigate to Diagnostics Tab
+#    XMC Confirm Diagnostics Tab Loaded
+#    XMC Set Main Diagnostic Level  Diagnostic
+#    sleep  1 second
+#    XMC Expand Diagnostics Tree Node  Beta Features
+#    XMC Select Diagnostics Tree Node  Enable/Disable Beta Features
+#    Wait Until Page Contains  Enable/Disable Beta Features  timeout=5 seconds
+#    XMC Enable Beta Features  netsight
+#    sleep  1 second
+#    XMC Confirm Beta Features Enabled
+
 #Set XMC Data Pump Options
 #    Navigate to Options Tab
 #    XMC Select Options Tree Node  XMC Data Pump
@@ -102,6 +114,11 @@ Navigate to Options Tab
     XMC Navigate to Administration Page
     XMC Click Options Tab
     XMC Confirm Options Tab Loaded
+
+Navigate to Diagnostics Tab
+    XMC Navigate to Administration Page
+    XMC Click Diagnostics Tab
+    XMC Confirm Diagnostics Tab Loaded
 
 Navigate to Devices Tab
     XMC Navigate To Network Page
