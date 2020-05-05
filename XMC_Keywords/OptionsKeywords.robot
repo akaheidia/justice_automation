@@ -45,20 +45,20 @@ XMC Options Click Save
 
 
 XMC Set Option Value XMC Data Pump Enable Sharing
-    Page Should Contain Element  ${xmc_options_xmcdatapump_enable_sharing_label}
-    Select Checkbox  ${xmc_options_xmcdatapump_enable_sharing_label}
+    Page Should Contain Element  ${xmc_options_xmcdatapump_enable_sharing_checkbox}
+    Select Checkbox  ${xmc_options_xmcdatapump_enable_sharing_checkbox}
 
 XMC Set Option Value XMC Data Pump Disable Sharing
-    Page Should Contain Element  ${xmc_options_xmcdatapump_enable_sharing_label}
-    Unselect Checkbox  ${xmc_options_xmcdatapump_enable_sharing_label}
+    Page Should Contain Element  ${xmc_options_xmcdatapump_enable_sharing_checkbox}
+    Unselect Checkbox  ${xmc_options_xmcdatapump_enable_sharing_checkbox}
 
 XMC Set Option Value XMC Data Pump Enable Secured Connection
-    Page Should Contain Element  ${xmc_options_xmcdatapump_enable_secured_connection_label}
-    Select Checkbox  ${xmc_options_xmcdatapump_enable_secured_connection_label}
+    Page Should Contain Element  ${xmc_options_xmcdatapump_enable_secured_connection_checkbox}
+    Select Checkbox  ${xmc_options_xmcdatapump_enable_secured_connection_checkbox}
 
 XMC Set Option Value XMC Data Pump Disable Secured Connection
-    Page Should Contain Element  ${xmc_options_xmcdatapump_enable_secured_connection_label}
-    Unselect Checkbox  ${xmc_options_xmcdatapump_enable_secured_connection_label}
+    Page Should Contain Element  ${xmc_options_xmcdatapump_enable_secured_connection_checkbox}
+    Unselect Checkbox  ${xmc_options_xmcdatapump_enable_secured_connection_checkbox}
 
 XMC Set Option Value XMC Data Pump Host
     [Arguments]  ${value}
@@ -119,20 +119,23 @@ XMC Options Save Warnings Dialog Click No
 
 
 XMC Confirm Option Value XMC Data Pump Sharing Enabled
-    Checkbox Should Be Selected  ${xmc_options_xmcdatapump_enable_sharing_label}
+    Checkbox Should Be Selected  ${xmc_options_xmcdatapump_enable_sharing_checkbox}
 
 XMC Confirm Option Value XMC Data Pump Sharing Disabled
-    Checkbox Should Not Be Selected  ${xmc_options_xmcdatapump_enable_sharing_label}
+    Checkbox Should Not Be Selected  ${xmc_options_xmcdatapump_enable_sharing_checkbox}
 
 XMC Confirm Option Label XMC Data Pump Enable Sharing
     Page Should Contain Element  ${xmc_options_xmcdatapump_enable_sharing_label}
     Page Should Not Contain  MoM Enabled
 
+XMC Confirm Option Label XMC Data Pump Enable Secured Connection
+    Page Should Contain Element  ${xmc_options_xmcdatapump_enable_secured_connection_label}
+
 XMC Confirm Option Value XMC Data Pump Secured Connection Enabled
-    Checkbox Should Be Selected  ${xmc_options_xmcdatapump_enable_secured_connection_label}
+    Checkbox Should Be Selected  ${xmc_options_xmcdatapump_enable_secured_connection_checkbox}
 
 XMC Confirm Option Value XMC Data Pump Secured Connection Disabled
-    Checkbox Should Not Be Selected  ${xmc_options_xmcdatapump_enable_secured_connection_label}
+    Checkbox Should Not Be Selected  ${xmc_options_xmcdatapump_enable_secured_connection_checkbox}
 
 XMC Confirm Option Value XMC Data Pump Host
     [Arguments]  ${value}
