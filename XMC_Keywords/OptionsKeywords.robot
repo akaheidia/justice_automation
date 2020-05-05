@@ -128,6 +128,12 @@ XMC Confirm Option Label XMC Data Pump Enable Sharing
     Page Should Contain Element  ${xmc_options_xmcdatapump_enable_sharing_label}
     Page Should Not Contain  MoM Enabled
 
+XMC Confirm Option Value XMC Data Pump Secured Connection Enabled
+    Checkbox Should Be Selected  ${xmc_options_xmcdatapump_enable_secured_connection_label}
+
+XMC Confirm Option Value XMC Data Pump Secured Connection Disabled
+    Checkbox Should Not Be Selected  ${xmc_options_xmcdatapump_enable_secured_connection_label}
+
 XMC Confirm Option Value XMC Data Pump Host
     [Arguments]  ${value}
     ${elem_value}=  Get Element Attribute  ${xmc_options_xmcdatapump_host}  value
