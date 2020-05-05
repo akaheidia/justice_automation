@@ -14,6 +14,9 @@ Documentation    Regression test for all resync issues in non-verbose mode;  inc
 ...              JUS-538: Reports: When XMC disconnects/reconnects, reports lose historical data
 ...              JUS-562: Resync: Resync does not occur if XMC server is restarted while disconnected.
 
+Suite Setup      Disable Secured Connection So IP Can Be Obtained For RabbitMQ Connections
+Suite Teardown   Enable Secured Connection
+
 *** Variables ***
 ${engine_ip}                 1.1.1.1
 ${device_ip}                 10.54.142.12
@@ -193,3 +196,43 @@ Confirm Report Data Is Present In Justice
     Confirm Site Availability Report Table Contains Value  ${site_device_down}
     Site Availability Drill Into Site  ${site_device_down}
     Log Out and Close Browser
+
+*** Keywords ***
+Disable Secured Connection So IP Can Be Obtained For RabbitMQ Connections
+    XMC Open Browser and Log In  ${url_for_xmc}  ${BROWSER}  ${xmc_user}  ${xmc_pwd}
+    XMC Navigate to Administration Page
+    XMC Click Options Tab
+    XMC Confirm Options Tab Loaded
+    sleep  1 second
+    XMC Select Options Tree Node  XMC Data Pump
+    XMC Set Option Value XMC Data Pump Disable Secured Connection
+    XMC Set Option Value XMC Data Pump Port  ${option_unsecure_port}
+    sleep  1 second
+    XMC Options Click Save
+    sleep  2 seconds
+    XMC Confirm Options Save Warnings Dialog Present
+    XMC Options Save Warnings Dialog Click Yes
+    XMC Log Out and Close Browser
+    Restart XMC Server
+
+Enable Secured Connection
+    XMC Open Browser and Log In  ${url_for_xmc}  ${BROWSER}  ${xmc_user}  ${xmc_pwd}
+    XMC Navigate to Administration Page
+    XMC Click Options Tab
+    XMC Confirm Options Tab Loaded
+    sleep  1 second
+    XMC Select Options Tree Node  XMC Data Pump
+    XMC Set Option Value XMC Data Pump Enable Secured Connection
+    XMC Set Option Value XMC Data Pump Port  ${option_secure_port}
+    sleep  1 second
+    XMC Options Click Save
+    sleep  2 seconds
+    XMC Confirm Options Save Warnings Dialog Present
+    XMC Options Save Warnings Dialog Click Yes
+    XMC Log Out and Close Browser
+    Restart XMC Server
+
+Restart XMC Server
+    XMC Restart Server  ${xmc_ip}  ${xmc_user}  ${xmc_pwd}
+    sleep  5 minutes
+    XMC Wait For Server Restart  ${url_for_xmc}  ${BROWSER}
