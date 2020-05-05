@@ -13,8 +13,8 @@ Confirm XMC Data Pump Option Does Not Include Domain Node Type
     XMC Click Options Tab
     XMC Confirm Options Tab Loaded
     XMC Select Options Tree Node  XMC Data Pump
-    XMC Set Option Value XMC Data Pump MoM Enabled
-    Page Should Not Contain Element  ${xmc_options_xmcdatapump_domainnodetype}
+    XMC Set Option Value XMC Data Pump Enable Sharing
+    Page Should Not Contain  Domain Node Type
 
 Confirm domainnodetype Field present in NSJBoss.properties file
     XMC Confirm File Contains Value  ${XMC_HOST_IP}  ${XMC_USERNAME}  ${XMC_PASSWORD}  ${XMC_NSJBOSS_PROPERTIES}  extreme.domainnode.nodetype

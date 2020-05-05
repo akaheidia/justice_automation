@@ -45,23 +45,20 @@ XMC Options Click Save
 
 
 XMC Set Option Value XMC Data Pump Enable Sharing
-    Page Should Contain Element  ${xmc_options_xmcdatapump_momenabled}
-    Select Checkbox  ${xmc_options_xmcdatapump_momenabled}
+    Page Should Contain Element  ${xmc_options_xmcdatapump_enable_sharing_label}
+    Select Checkbox  ${xmc_options_xmcdatapump_enable_sharing_label}
 
 XMC Set Option Value XMC Data Pump Disable Sharing
-    Page Should Contain Element  ${xmc_options_xmcdatapump_momenabled}
-    Unselect Checkbox  ${xmc_options_xmcdatapump_momenabled}
+    Page Should Contain Element  ${xmc_options_xmcdatapump_enable_sharing_label}
+    Unselect Checkbox  ${xmc_options_xmcdatapump_enable_sharing_label}
 
-XMC Set Option Value XMC Data Pump MoM Enabled
-    XMC Set Option Value XMC Data Pump Enable Sharing
+XMC Set Option Value XMC Data Pump Enable Secured Connection
+    Page Should Contain Element  ${xmc_options_xmcdatapump_enable_secured_connection_label}
+    Select Checkbox  ${xmc_options_xmcdatapump_enable_secured_connection_label}
 
-XMC Set Option Value XMC Data Pump MoM Disabled
-    XMC Set Option Value XMC Data Pump Disable Sharing
-
-XMC Set Option Value XMC Data Pump Domain Node Type
-    [Arguments]  ${value}
-    Page Should Contain Element  ${xmc_options_xmcdatapump_domainnodetype}
-    Input Text  ${xmc_options_xmcdatapump_domainnodetype}  ${value}
+XMC Set Option Value XMC Data Pump Disable Secured Connection
+    Page Should Contain Element  ${xmc_options_xmcdatapump_enable_secured_connection_label}
+    Unselect Checkbox  ${xmc_options_xmcdatapump_enable_secured_connection_label}
 
 XMC Set Option Value XMC Data Pump Host
     [Arguments]  ${value}
@@ -121,26 +118,15 @@ XMC Options Save Warnings Dialog Click No
     Click Element  ${xmc_options_save_warning_dialog_no_btn}
 
 
-XMC Confirm Option Value XMC Data Pump Domain Node Type
-    [Arguments]  ${value}
-    ${elem_value}=  Get Element Attribute  ${xmc_options_xmcdatapump_domainnodetype}  value
-    Should Be Equal As Integers  ${value}  ${elem_value}  XMC Data Pump: Domain Node Type option does not have expected value
-
 XMC Confirm Option Value XMC Data Pump Sharing Enabled
-    Checkbox Should Be Selected  ${xmc_options_xmcdatapump_momenabled}
+    Checkbox Should Be Selected  ${xmc_options_xmcdatapump_enable_sharing_label}
 
 XMC Confirm Option Value XMC Data Pump Sharing Disabled
-    Checkbox Should Not Be Selected  ${xmc_options_xmcdatapump_momenabled}
+    Checkbox Should Not Be Selected  ${xmc_options_xmcdatapump_enable_sharing_label}
 
 XMC Confirm Option Label XMC Data Pump Enable Sharing
     Page Should Contain Element  ${xmc_options_xmcdatapump_enable_sharing_label}
     Page Should Not Contain  MoM Enabled
-
-XMC Confirm Option Value XMC Data Pump MoM Enabled
-    XMC Confirm Option Value XMC Data Pump Sharing Enabled
-
-XMC Confirm Option Value XMC Data Pump MoM Disabled
-    XMC Confirm Option Value XMC Data Pump Sharing Disabled
 
 XMC Confirm Option Value XMC Data Pump Host
     [Arguments]  ${value}
@@ -188,15 +174,6 @@ XMC Confirm Option Value XMC Data Pump Max Actions Serviced
     [Arguments]  ${value}
     ${elem_value}=  Get Element Attribute  ${xmc_options_xmcdatapump_max_actions_serviced}  value
     Should Be Equal  ${value}  ${elem_value}  XMC Data Pump: Max Actions Serviced option does not have expected value
-
-
-XMC Confirm Option Enabled XMC Data Pump Domain Node Type
-    ${orig_wait}=  Set Selenium Implicit Wait  1 second
-    Page Should Not Contain Element  ${xmc_options_xmcdatapump_domainnodetype}${xmc_options_xmcdatapump_disabled_xpath_value}
-    Set Selenium Implicit Wait  ${orig_wait}
-
-XMC Confirm Option Disabled XMC Data Pump Domain Node Type
-    Page Should Contain Element  ${xmc_options_xmcdatapump_domainnodetype}${xmc_options_xmcdatapump_disabled_xpath_value}
 
 
 XMC Confirm Option Enabled XMC Data Pump Host

@@ -15,7 +15,7 @@ Confirm XMC Data Pump Options for RabbitMQ URI are Split Into Components
     XMC Confirm Options Tab Loaded
 
     XMC Select Options Tree Node  XMC Data Pump
-    XMC Set Option Value XMC Data Pump MoM Enabled
+    XMC Set Option Value XMC Data Pump Enable Sharing
 
     XMC Set Option Value XMC Data Pump Host  ${JUS_HOST_IP}
     XMC Set Option Value XMC Data Pump Port  ${option_port}

@@ -127,7 +127,7 @@ xmc_analytics_confirm_delete_engine_dialog_no_btn = "xpath://span[contains(@clas
 # XMC Data Pump Options
 xmc_options_xmcdatapump_momenabled = "xpath://input[@name='momEnabled']"
 xmc_options_xmcdatapump_enable_sharing_label = "xpath://label[contains(text(),'Enable Sharing')]"
-xmc_options_xmcdatapump_domainnodetype = "xpath://input[@name='domainNodeType']"
+xmc_options_xmcdatapump_enable_secured_connection_label = "xpath://label[contains(text(),'Enable Secured Connection')]"
 xmc_options_xmcdatapump_host = "xpath://input[@name='rabbitmqHost']"
 xmc_options_xmcdatapump_port = "xpath://input[@name='rabbitmqPort']"
 xmc_options_xmcdatapump_user = "xpath://input[@name='rabbitmqUserName']"

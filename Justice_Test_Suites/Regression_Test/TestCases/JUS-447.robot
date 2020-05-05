@@ -15,9 +15,9 @@ Confirm XMC Data Pump Options Default Values
     XMC Select Options Tree Node  XMC Data Pump
     XMC Options Click Restore Defaults
 
-    XMC Confirm Option Value XMC Data Pump MoM Disabled
+    XMC Confirm Option Value XMC Data Pump Disable Sharing
 
-    XMC Set Option Value XMC Data Pump MoM Enabled
+    XMC Set Option Value XMC Data Pump Enable Sharing
 
     XMC Confirm Option Value XMC Data Pump Host  ${option_host}
     XMC Confirm Option Value XMC Data Pump Port  ${option_port}

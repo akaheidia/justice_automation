@@ -14,7 +14,7 @@ Confirm User Informed About Server Restart Via Label
     XMC Confirm Options Tab Loaded
     XMC Select Options Tree Node  XMC Data Pump
     XMC Confirm Page Contains Text  Server may need to be restarted
-    XMC Set Option Value XMC Data Pump MoM Enabled
+    XMC Set Option Value XMC Data Pump Enable Sharing
 
 Confirm User Informed About Server Restart When Changing Host
     XMC Set Option Value XMC Data Pump Host  1.2.3.4
