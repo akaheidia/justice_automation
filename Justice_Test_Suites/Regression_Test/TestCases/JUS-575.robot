@@ -9,7 +9,7 @@ Suite Setup     XMC Open Browser and Log In  ${XMC_URL}  ${BROWSER}  ${XMC_USERN
 Suite Teardown  XMC Log Out and Close Browser
 
 *** Test Cases ***
-Confirm XMC Data Pump Options Hidden Under Beta Flag
+Confirm XMC Data Pump Diagnostic Hidden Under Beta Flag
     XMC Navigate To Administration Page
     XMC Click Diagnostics Tab
     XMC Confirm Diagnostics Tab Loaded
@@ -21,12 +21,11 @@ Confirm XMC Data Pump Options Hidden Under Beta Flag
     XMC Disable Beta Features
     sleep  1 second
     XMC Confirm Beta Features Disabled
-    XMC Click Options Tab
-    sleep  1 second
-    XMC Confirm Option Not Present  XMC Data Pump
+    XMC Expand Diagnostics Tree Node  Server
+    XMC Select Diagnostics Tree Node  Server Diagnostics
+    Wait Until Page Does Not Contain  XMC Data Pump  timeout=5 seconds
 
-Confirm XMC Data Pump Options Displayed With Beta Flag
-    XMC Click Diagnostics Tab
+Confirm XMC Data Pump Dianostic Displayed With Beta Flag
     XMC Confirm Diagnostics Tab Loaded
     XMC Set Main Diagnostic Level  Diagnostic
     sleep  1 second
@@ -36,5 +35,6 @@ Confirm XMC Data Pump Options Displayed With Beta Flag
     XMC Enable Beta Features  netsight
     sleep  1 second
     XMC Confirm Beta Features Enabled
-    XMC Click Options Tab
-    XMC Confirm Option Present  XMC Data Pump
+    XMC Expand Diagnostics Tree Node  Server
+    XMC Select Diagnostics Tree Node  Server Diagnostics
+    Wait Until Page Contains  XMC Data Pump  timeout=5 seconds
