@@ -20,7 +20,7 @@ Confirm XMC Data Pump Options Default Values
     XMC Set Option Value XMC Data Pump Enable Sharing
 
     XMC Confirm Option Value XMC Data Pump Host  ${option_host}
-    XMC Confirm Option Value XMC Data Pump Port  ${option_port}
+    XMC Confirm Option Value XMC Data Pump Port  ${option_secure_port}
     XMC Confirm Option Value XMC Data Pump Username  ${option_user}
     XMC Confirm Option Value XMC Data Pump Password  ${option_pwd}
 

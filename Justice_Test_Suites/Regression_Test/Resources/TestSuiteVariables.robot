@@ -111,7 +111,8 @@ ${pdf_endsystems_filtered}       End-Systems - All Filtered Rows.pdf
 ${option_enabled}                false
 ${option_secured}                true
 ${option_host}                   127.0.0.1
-${option_port}                   5671
+${option_secure_port}            5671
+${option_unsecure_port}          5672
 ${option_user}                   guest
 ${option_pwd}                    extreme
 ${option_q_delay}                3

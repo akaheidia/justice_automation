@@ -21,5 +21,5 @@ Confirm XMC Data Pump Option Enable Shared Connection Present
     XMC Confirm Option Value XMC Data Pump Secured Connection Enabled
 
 Confirm XMC Data Pump Option Port Default Value
-    XMC Confirm Option Value XMC Data Pump Port  ${option_port}
+    XMC Confirm Option Value XMC Data Pump Port  ${option_secure_port}
 
