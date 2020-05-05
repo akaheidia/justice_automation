@@ -62,7 +62,7 @@ Suite Teardown   XMC Log Out and Close Browser
 #    XMC Options Click Save
 #    Reload Page
 #    XMC Select Options Tree Node  XMC Data Pump
-#    XMC Confirm Option Value XMC Data Pump Enable Sharing
+#    XMC Confirm Option Value XMC Data Pump Sharing Enabled
 #    XMC Confirm Option Value XMC Data Pump Host  ${JUS_HOST_IP}
 #    XMC Confirm Option Value XMC Data Pump Port  5672
 #    XMC Confirm Option Value XMC Data Pump Username  guest

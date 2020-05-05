@@ -15,7 +15,7 @@ Confirm XMC Data Pump Options Default Values
     XMC Select Options Tree Node  XMC Data Pump
     XMC Options Click Restore Defaults
 
-    XMC Confirm Option Value XMC Data Pump Disable Sharing
+    XMC Confirm Option Value XMC Data Pump Sharing Disabled
 
     XMC Set Option Value XMC Data Pump Enable Sharing
 
