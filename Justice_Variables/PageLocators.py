@@ -344,6 +344,12 @@ reports_chart_no_data = "xpath://*[@class='highcharts-no-data']"
 # Reports - Site Availability Page Elements
 site_availability_table = "xpath://table[@id='sites']"
 
+# Reports - Quarterly Analytics Summary Page Elements
+reports_analytics_quarterly_summary_1st_quarter = "xpath://h2[contains(text(),'1st Quarter')]"
+reports_analytics_quarterly_summary_2nd_quarter = "xpath://h2[contains(text(),'2nd Quarter')]"
+reports_analytics_quarterly_summary_3rd_quarter = "xpath://h2[contains(text(),'3rd Quarter')]"
+reports_analytics_quarterly_summary_4th_quarter = "xpath://h2[contains(text(),'4th Quarter')]"
+
 # Reports - General Page Titles
 reports_device_availability_page_title = "xpath://h2[text()='Device Availability']"
 reports_top_device_availability_page_title = "xpath://h2[text()='Top Device Availability']"

@@ -202,3 +202,63 @@ Confirm Analytics Quarterly Analytics Summary Report Page Top N Panel Does Not C
     Unselect Frame
     Unselect Frame
     Set Selenium Implicit Wait  ${orig_wait}
+
+
+Confirm Analytics Quarterly Analytics Summary Report Page Contains First Quarter
+    sleep  1 second
+    Select Frame  xpath://iframe
+    Page Should Contain Element  ${reports_analytics_quarterly_summary_1st_quarter}
+    Unselect Frame
+
+Confirm Analytics Quarterly Analytics Summary Report Page Does Not Contain First Quarter
+    ${orig_wait}=  Set Selenium Implicit Wait  1 second
+    sleep  1 second
+    Select Frame  xpath://iframe
+    Page Should Not Contain Element  ${reports_analytics_quarterly_summary_1st_quarter}
+    Unselect Frame
+    Set Selenium Implicit Wait  ${orig_wait}
+
+
+Confirm Analytics Quarterly Analytics Summary Report Page Contains Second Quarter
+    sleep  1 second
+    Select Frame  xpath://iframe
+    Page Should Contain Element  ${reports_analytics_quarterly_summary_2nd_quarter}
+    Unselect Frame
+
+Confirm Analytics Quarterly Analytics Summary Report Page Does Not Contain Second Quarter
+    ${orig_wait}=  Set Selenium Implicit Wait  1 second
+    sleep  1 second
+    Select Frame  xpath://iframe
+    Page Should Not Contain Element  ${reports_analytics_quarterly_summary_2nd_quarter}
+    Unselect Frame
+    Set Selenium Implicit Wait  ${orig_wait}
+
+
+Confirm Analytics Quarterly Analytics Summary Report Page Contains Third Quarter
+    sleep  1 second
+    Select Frame  xpath://iframe
+    Page Should Contain Element  ${reports_analytics_quarterly_summary_3rd_quarter}
+    Unselect Frame
+
+Confirm Analytics Quarterly Analytics Summary Report Page Does Not Contain Third Quarter
+    ${orig_wait}=  Set Selenium Implicit Wait  1 second
+    sleep  1 second
+    Select Frame  xpath://iframe
+    Page Should Not Contain Element  ${reports_analytics_quarterly_summary_3rd_quarter}
+    Unselect Frame
+    Set Selenium Implicit Wait  ${orig_wait}
+
+
+Confirm Analytics Quarterly Analytics Summary Report Page Contains Fourth Quarter
+    sleep  1 second
+    Select Frame  xpath://iframe
+    Page Should Contain Element  ${reports_analytics_quarterly_summary_4th_quarter}
+    Unselect Frame
+
+Confirm Analytics Quarterly Analytics Summary Report Page Does Not Contain Fourth Quarter
+    ${orig_wait}=  Set Selenium Implicit Wait  1 second
+    sleep  1 second
+    Select Frame  xpath://iframe
+    Page Should Not Contain Element  ${reports_analytics_quarterly_summary_4th_quarter}
+    Unselect Frame
+    Set Selenium Implicit Wait  ${orig_wait}
