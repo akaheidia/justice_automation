@@ -512,3 +512,35 @@ Confirm Quarterly Analytics Summary Report Second Third and Fourth Quarters
     Confirm Analytics Quarterly Analytics Summary Report Page Contains Second Quarter
     Confirm Analytics Quarterly Analytics Summary Report Page Contains Third Quarter
     Confirm Analytics Quarterly Analytics Summary Report Page Contains Fourth Quarter
+
+Confirm Quarterly Analytics Summary Report First Second Third and Fourth Quarters
+    Show Reports Filter Panel
+    Set Reports Filter Months  January,February,March,April,May,June,July,August,September,October,November,December
+    Apply Reports Filter
+    sleep  2 seconds
+    Confirm Analytics Quarterly Analytics Summary Report Page Contains First Quarter
+    Confirm Analytics Quarterly Analytics Summary Report Page Contains Second Quarter
+    Confirm Analytics Quarterly Analytics Summary Report Page Contains Third Quarter
+    Confirm Analytics Quarterly Analytics Summary Report Page Contains Fourth Quarter
+    Show Reports Filter Panel
+    Set Reports Filter Months  January,April,July,October
+    Apply Reports Filter
+    sleep  2 seconds
+    Confirm Analytics Quarterly Analytics Summary Report Page Contains First Quarter
+    Confirm Analytics Quarterly Analytics Summary Report Page Contains Second Quarter
+    Confirm Analytics Quarterly Analytics Summary Report Page Contains Third Quarter
+    Confirm Analytics Quarterly Analytics Summary Report Page Contains Fourth Quarter
+    Set Reports Filter Months  February,May,August,November
+    Apply Reports Filter
+    sleep  2 seconds
+    Confirm Analytics Quarterly Analytics Summary Report Page Contains First Quarter
+    Confirm Analytics Quarterly Analytics Summary Report Page Contains Second Quarter
+    Confirm Analytics Quarterly Analytics Summary Report Page Contains Third Quarter
+    Confirm Analytics Quarterly Analytics Summary Report Page Contains Fourth Quarter
+    Set Reports Filter Months  March,June,September,December
+    Apply Reports Filter
+    sleep  2 seconds
+    Confirm Analytics Quarterly Analytics Summary Report Page Contains First Quarter
+    Confirm Analytics Quarterly Analytics Summary Report Page Contains Second Quarter
+    Confirm Analytics Quarterly Analytics Summary Report Page Contains Third Quarter
+    Confirm Analytics Quarterly Analytics Summary Report Page Contains Fourth Quarter
