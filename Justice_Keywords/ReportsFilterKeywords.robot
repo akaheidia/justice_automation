@@ -7,7 +7,6 @@ Variables  ../Justice_Variables/PageLocators.py
 Documentation    Keywords specific to the Filter Panel of the Reports page.
 
 *** Keywords ***
-
 Change Report Time Range to Last Hour
     Show Reports Filter Panel
     Confirm Reports Filter Panel Visible
@@ -93,7 +92,7 @@ Set Reports Filter Device Tags
     \    Click Element  xpath://span[contains(text(),'${item}')]
 
     # Close the Device Tags selector
-        ${open}=  Run Keyword And Return Status  Element Should Be Visible  ${reports_filter_panel_device_tags_choice_list_open}
+    ${open}=  Run Keyword And Return Status  Element Should Be Visible  ${reports_filter_panel_device_tags_choice_list_open}
     Run Keyword If  '${open}'  Click Element  ${reports_filter_panel_device_tags_field}
     ...      ELSE  Log To Console  Device Tags Selector Already Closed
 
@@ -119,9 +118,35 @@ Set Reports Filter Device Types
     \    Click Element  xpath://span[contains(text(),'${item}')]
 
     # Close the Device Type selector
-        ${open}=  Run Keyword And Return Status  Element Should Be Visible  ${reports_filter_panel_device_type_choice_list_open}
+    ${open}=  Run Keyword And Return Status  Element Should Be Visible  ${reports_filter_panel_device_type_choice_list_open}
     Run Keyword If  '${open}'  Click Element  ${reports_filter_panel_device_type_field}
     ...      ELSE  Log To Console  Device Type Selector Already Closed
+
+    Unselect Frame
+
+Set Reports Filter Months
+    [Arguments]  ${value}
+    Select Frame  xpath://iframe
+
+    # Open the Month selector
+    ${closed}=  Run Keyword And Return Status  Element Should Be Visible  ${reports_filter_panel_month_choice_list_closed}
+    Run Keyword If  '${closed}'  Click Element  ${reports_filter_panel_month_field}
+    ...      ELSE  Log To Console  Month Selector Already Open
+
+    # Select and then deselect the Check All checkbox to clear any existing selections
+    Select Checkbox  ${reports_filter_panel_month_check_all}
+    Unselect Checkbox  ${reports_filter_panel_month_check_all}
+
+    # Loop over the list of months to select
+    @{device_types}=  Split String  ${value}  ,
+    :FOR  ${item}  IN  @{device_types}
+    \    Page Should Contain Element  xpath://span[contains(text(),'${item}')]
+    \    Click Element  xpath://span[contains(text(),'${item}')]
+
+    # Close the Month selector
+    ${open}=  Run Keyword And Return Status  Element Should Be Visible  ${reports_filter_panel_month_choice_list_open}
+    Run Keyword If  '${open}'  Click Element  ${reports_filter_panel_month_field}
+    ...      ELSE  Log To Console  Month Selector Already Closed
 
     Unselect Frame
 
@@ -158,6 +183,42 @@ Confirm Reports Filter Does Not Contain All Device Types
     ${open}=  Run Keyword And Return Status  Element Should Be Visible  ${reports_filter_panel_device_type_choice_list_open}
     Run Keyword If  '${open}'  Click Element  ${reports_filter_panel_device_type_field}
     ...      ELSE  Log To Console  Device Type Selector Already Closed
+
+    Unselect Frame
+
+Confirm Reports Filter Contains All Months
+    Select Frame  xpath://iframe
+
+    # Open the Month selector
+    ${closed}=  Run Keyword And Return Status  Element Should Be Visible  ${reports_filter_panel_month_choice_list_closed}
+    Run Keyword If  '${closed}'  Click Element  ${reports_filter_panel_month_field}
+    ...      ELSE  Log To Console  Month Selector Already Open
+
+    # Confirm the "Check All" choice is selected
+    Checkbox Should Be Selected  ${reports_filter_panel_month_check_all}
+
+    # Close the Month selector
+    ${open}=  Run Keyword And Return Status  Element Should Be Visible  ${reports_filter_panel_month_choice_list_open}
+    Run Keyword If  '${open}'  Click Element  ${reports_filter_panel_month_field}
+    ...      ELSE  Log To Console  Month Selector Already Closed
+
+    Unselect Frame
+
+Confirm Reports Filter Does Not Contain All Months
+    Select Frame  xpath://iframe
+
+    # Open the Month selector
+    ${closed}=  Run Keyword And Return Status  Element Should Be Visible  ${reports_filter_panel_month_choice_list_closed}
+    Run Keyword If  '${closed}'  Click Element  ${reports_filter_panel_month_field}
+    ...      ELSE  Log To Console  Month Selector Already Open
+
+    # Confirm the "Check All" choice is selected
+    Checkbox Should Not Be Selected  ${reports_filter_panel_month_check_all}
+
+    # Close the Month selector
+    ${open}=  Run Keyword And Return Status  Element Should Be Visible  ${reports_filter_panel_month_choice_list_open}
+    Run Keyword If  '${open}'  Click Element  ${reports_filter_panel_month_field}
+    ...      ELSE  Log To Console  Month Selector Already Closed
 
     Unselect Frame
 
