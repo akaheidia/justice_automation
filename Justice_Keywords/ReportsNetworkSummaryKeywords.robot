@@ -214,3 +214,14 @@ Confirm End Systems Panel Has Data
     Unselect Frame
     Unselect Frame
     Set Selenium Implicit Wait  ${orig_wait}
+
+
+Confirm Site Availability Site Label
+    [Arguments]  ${site}
+    Select Frame  xpath://iframe
+    Select Frame  xpath://iframe[@id='site_availability']
+
+    Page Should Contain Element  xpath://a[contains(text(),'${site}')]
+
+    Unselect Frame
+    Unselect Frame

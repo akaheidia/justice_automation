@@ -124,3 +124,24 @@ Confirm Analytics Summary Report Page Network Panel Does Not Contain Message
     Unselect Frame
     Unselect Frame
     Set Selenium Implicit Wait  ${orig_wait}
+
+
+Confirm Top Sites by Clients Site Label
+    [Arguments]  ${site}
+    Select Frame  xpath://iframe
+    Select Frame  xpath://iframe[@id='top_n']
+
+    Page Should Contain Element  xpath://div[@id='client_sites']//span[contains(text(), '${site}')]
+
+    Unselect Frame
+    Unselect Frame
+
+Confirm Top Sites by Volume Site Label
+    [Arguments]  ${site}
+    Select Frame  xpath://iframe
+    Select Frame  xpath://iframe[@id='top_n']
+
+    Page Should Contain Element  xpath://div[@id='volume_sites']//span[contains(text(), '${site}')]
+
+    Unselect Frame
+    Unselect Frame
