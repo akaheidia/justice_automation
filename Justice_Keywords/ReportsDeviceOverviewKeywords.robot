@@ -5,7 +5,6 @@ Variables  ../Justice_Variables/PageLocators.py
 Documentation    Keywords specific to the Device Overview Report page.
 
 *** Keywords ***
-
 Confirm Device Overview Report Page Title
     sleep  1 second
     Select Frame  xpath://iframe

@@ -119,6 +119,29 @@ Click Memory Utilization Drilldown
     Unselect Frame
 
 
+Click Device Availability Device Drilldown
+    [Arguments]  ${ip}
+    Select Frame  xpath://iframe
+    Select Frame  xpath://iframe[@id='device_availability']
+
+    Wait Until Page Contains Element  xpath://a[contains(text(),'${ip}')]
+    Click Element  xpath://a[contains(text(),'${ip}')]
+
+    Unselect Frame
+    Unselect Frame
+
+Click Site Availability Site Drilldown
+    [Arguments]  ${site}
+    Select Frame  xpath://iframe
+    Select Frame  xpath://iframe[@id='site_availability']
+
+    Wait Until Page Contains Element  xpath://a[contains(text(),'${site}')]
+    Click Element  xpath://a[contains(text(),'${site}')]
+
+    Unselect Frame
+    Unselect Frame
+
+
 Confirm Device Availability Panel Has Data
     ${orig_wait}=  Set Selenium Implicit Wait  1 second
     Select Frame  xpath://iframe
@@ -133,6 +156,26 @@ Confirm Device Availability Panel Has Data
 Confirm Device Availability Panel Has No Data
     Select Frame  xpath://iframe
     Select Frame  xpath://iframe[@id='device_availability']
+
+    Page Should Contain Element  ${reports_chart_no_data}
+
+    Unselect Frame
+    Unselect Frame
+
+Confirm Site Availability Panel Has Data
+    ${orig_wait}=  Set Selenium Implicit Wait  1 second
+    Select Frame  xpath://iframe
+    Select Frame  xpath://iframe[@id='site_availability']
+
+    Page Should Not Contain Element  ${reports_chart_no_data}
+
+    Unselect Frame
+    Unselect Frame
+    Set Selenium Implicit Wait  ${orig_wait}
+
+Confirm Site Availability Panel Has No Data
+    Select Frame  xpath://iframe
+    Select Frame  xpath://iframe[@id='site_availability']
 
     Page Should Contain Element  ${reports_chart_no_data}
 
