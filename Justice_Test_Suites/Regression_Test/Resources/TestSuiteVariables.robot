@@ -3,7 +3,7 @@
 ${BROWSER}                       Chrome
 
 # Site Names
-${site_device_down}              Device Down Test Site
+${site_device_down}              Device Down Site
 ${site_empty}                    Empty Site
 ${site_level_1}                  Level 1 Site
 ${site_level_2}                  Level 2 Site

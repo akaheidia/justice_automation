@@ -6,7 +6,7 @@ Documentation    This test suite performs steps necessary to get the test enviro
 ...              The following Sites and Devices are created in XMC:
 ...              World
 ...                  10.54.142.14  (7100)
-...                  Device Down Test Site
+...                  Device Down Site
 ...                      10.54.142.31  (B5)
 ...                      10.54.142.53  (B5_2;  device is set to "bad profile" to have device status down)
 ...                  Empty Site  (no devices)
