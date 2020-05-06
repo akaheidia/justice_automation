@@ -14,6 +14,7 @@ ${test_port}    ge.1.2
 *** Test Cases ***
 Confirm Device Details Page Loads
     Search Field Enter Text  ${test_device}
+    sleep  2 seconds
     Click Device Details Arrow  ${test_device}
     Confirm Device Details Page Loaded  ${test_device}
     Confirm Device Details Dashboard Page Loaded
