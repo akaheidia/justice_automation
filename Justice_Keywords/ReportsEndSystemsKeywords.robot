@@ -2,7 +2,7 @@
 Library    SeleniumLibrary
 Variables  ../Justice_Variables/PageLocators.py
 
-Documentation    Keywords specific to the Device Overview Report page.
+Documentation    Keywords specific to the End Systems Report page.
 
 *** Keywords ***
 Confirm End Systems Report Page Title
