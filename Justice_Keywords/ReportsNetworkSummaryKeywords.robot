@@ -79,8 +79,8 @@ Click End Systems Drilldown
     Select Frame  xpath://iframe
     Select Frame  xpath://iframe[@id='endsystems']
 
-    Wait Until Page Contains Element  ${reports_endsystem_types_drilldown}
-    Click Element  ${reports_endsystem_types_drilldown}
+    Wait Until Page Contains Element  ${reports_endsystems_drilldown}
+    Click Element  ${reports_endsystems_drilldown}
 
     Unselect Frame
     Unselect Frame
