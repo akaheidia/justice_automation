@@ -230,6 +230,7 @@ reports_filter_panel_month_check_all = "xpath://input[@id='analytics_month_check
 reports_filter_panel_time_range_field = "id:period"
 reports_filter_panel_custom_start_date = "//input[@name='start_date']"
 reports_filter_panel_custom_end_date = "//input[@name='stop_date']"
+reports_filter_panel_search = "//input[@name='endsystems_search']"
 reports_filter_panel_apply_button = "xpath://a[@class='btn btn-primary'][text()='Apply']"
 
 # Reports Page Tree Nodes
@@ -358,6 +359,7 @@ reports_analytics_quarterly_summary_4th_quarter = "xpath://h2[contains(text(),'4
 reports_device_availability_page_title = "xpath://h2[text()='Device Availability']"
 reports_top_device_availability_page_title = "xpath://h2[text()='Top Device Availability']"
 reports_device_overview_page_title = "xpath://h2[text()='Device Overview']"
+reports_endsystems_page_title = "xpath://h2[text()='End Systems']"
 reports_site_port_utilization_page_title = "xpath://h2[text()='Site Port Utilization']"
 reports_port_utilization_page_title = "xpath://h2[text()='Port Utilization']"
 reports_port_overview_page_title = "xpath://h2[text()='Port Overview']"

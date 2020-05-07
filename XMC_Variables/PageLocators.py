@@ -145,7 +145,7 @@ xmc_options_xmcdatapump_max_actions_serviced = "//input[@name='obMaxActionsServi
 xmc_options_xmcdatapump_disabled_xpath_value = "[@disabled]"
 
 xmc_options_save_warning_dialog = "xpath://div[contains(text(),'Options - Save Warning(s)')]"
-xmc_options_save_warning_dialog_yes_btn = "xpath://span[contains(@class,'x-btn-blue-small')][contains(text(),'Yes')]"
+xmc_options_save_warning_dialog_yes_btn = "xpath://span[contains(@class,'x-btn-inner-blue-small')][contains(text(),'Yes')]"
 xmc_options_save_warning_dialog_no_btn = "xpath://span[contains(@class,'x-btn-inner x-btn-inner-default-small')][contains(text(),'No')]"
 
 ## Toolbar Buttons

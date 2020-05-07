@@ -150,6 +150,13 @@ Set Reports Filter Months
 
     Unselect Frame
 
+Set Reports Filter Search Text
+    [Arguments]  ${value}
+    Select Frame  xpath://iframe
+    Page Should Contain Element  ${reports_filter_panel_search}
+    Input Text  ${reports_filter_panel_search}  ${value}  clear=True
+    Unselect Frame
+
 Confirm Reports Filter Contains All Device Types
     Select Frame  xpath://iframe
 

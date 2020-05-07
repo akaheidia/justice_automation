@@ -16,6 +16,7 @@ Resource   ../Justice_Keywords/ReportsAnalyticsQuarterlySummaryKeywords.robot
 Resource   ../Justice_Keywords/ReportsAnalyticsSummaryKeywords.robot
 Resource   ../Justice_Keywords/ReportsDeviceAvailabilityKeywords.robot
 Resource   ../Justice_Keywords/ReportsDeviceOverviewKeywords.robot
+Resource   ../Justice_Keywords/ReportsEndSystemsKeywords.robot
 Resource   ../Justice_Keywords/ReportsFilterKeywords.robot
 Resource   ../Justice_Keywords/ReportsMetricKeywords.robot
 Resource   ../Justice_Keywords/ReportsMetricPortUtilizationKeywords.robot
