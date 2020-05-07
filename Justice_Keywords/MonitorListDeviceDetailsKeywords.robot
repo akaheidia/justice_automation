@@ -85,3 +85,13 @@ Confirm Device Details Ports Page Does Not Support Assigning Tags
     ${orig_wait}=  Set Selenium Implicit Wait  1 second
     Page Should Not Contain Element  ${tags_add_ports_to_tag_button}
     Set Selenium Implicit Wait  ${orig_wait}
+
+Confirm Port Table Contains Column
+    [Arguments]  ${col}
+    Page Should Contain Element  xpath://button[contains(@class, 'mat-sort-header-button') and contains(text(),'${col}')]
+
+Confirm Port Table Does Not Contain Column
+    [Arguments]  ${col}
+    ${orig_wait}=  Set Selenium Implicit Wait  1 second
+    Page Should Not Contain Element  xpath://button[contains(@class, 'mat-sort-header-button') and contains(text(),'${col}')]
+    Set Selenium Implicit Wait  ${orig_wait}
