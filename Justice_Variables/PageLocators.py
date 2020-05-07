@@ -370,6 +370,23 @@ reports_tx_bandwidth_page_title = "xpath://h2[text()='Tx Bandwidth']"
 # Reports - General Panel Titles
 reports_top_sites_by_clients = "xpath://h4[contains(text(),'Top Sites by Clients')]"
 
+# Self Service Report Elements
+reports_self_service_page_title = "xpath://span[contains(text(),'SELF-SERVICE ANALYTICS')]"
+reports_self_service_visual_data_button = "xpath://td[@class='rdAgTabHeading']//span[contains(text(),'Data')]"
+reports_self_service_visual_formula_button = "xpath://td[@class='rdAgTabHeading']//span[contains(text(),'Formula')]"
+reports_self_service_visual_filter_button = "xpath://td[@class='rdAgTabHeading']//span[contains(text(),'Filter')]"
+reports_self_service_visual_add_chart_button = "xpath://td[@class='rdAgTabHeading']//span[contains(text(),'Add Chart')]"
+reports_self_service_visual_add_crosstab_button = "xpath://td[@class='rdAgTabHeading']//span[contains(text(),'Add Crosstab')]"
+reports_self_service_visual_data_select_data_field = "xpath://select[@name='rdStartTable']"
+reports_self_service_visual_data_hourly_data_option = "xpath://option[text()='hourly_data']"
+reports_self_service_visual_data_raw_data_option = "xpath://option[text()='raw_data']"
+reports_self_service_visual_filter_column = "xpath://select[@name='rdAfFilterColumnID_rdAgAnalysisFilter']"
+reports_self_service_visual_filter_comparison = "xpath://select[@name='rdAfFilterOperator_rdAgAnalysisFilter']"
+reports_self_service_visual_filter_value = "xpath://input[@name='rdAfFilterValue_rdAgAnalysisFilter']"
+reports_self_service_visual_filter_add_button = "xpath://span[@id='lblFilterAdd_rdAgAnalysisFilter']"
+reports_self_service_visual_analysis_table = "id:dtAnalysisGrid"
+reports_self_service_visual_analysis_table_page_number = "xpath://input[@name='dtAnalysisGrid-PageNr']"
+
 # Settings Page Elements
 settings_page_title = "xpath://span[@class='settings-title']"
 settings_usergroups_menu = "xpath://div[text()='User Groups']"

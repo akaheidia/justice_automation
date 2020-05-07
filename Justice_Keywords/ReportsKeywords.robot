@@ -199,12 +199,6 @@ Click Add New Category
     Click Element  ${reports_add_new_category_menu}
     Unselect Frame
 
-Click Go To Reports Button
-    Select Frame  xpath://iframe
-    Click Element  ${reports_add_go_to_reports_button}
-    Wait Until Page Contains Element  ${reports_add_button}  timeout=10 seconds
-    Unselect Frame
-
 
 Confirm Reports Tree Node Expanded State
     [Arguments]  ${icon_element}

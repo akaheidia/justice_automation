@@ -26,6 +26,7 @@ Resource   ../Justice_Keywords/ReportsMetricTxBandwidthKeywords.robot
 Resource   ../Justice_Keywords/ReportsNetworkScorecardKeywords.robot
 Resource   ../Justice_Keywords/ReportsNetworkSummaryKeywords.robot
 Resource   ../Justice_Keywords/ReportsPortOverviewKeywords.robot
+Resource   ../Justice_Keywords/ReportsSelfServiceKeywords.robot
 Resource   ../Justice_Keywords/ReportsSiteAvailabilityKeywords.robot
 Resource   ../Justice_Keywords/ReportsSitePortUtilizationKeywords.robot
 Resource   ../Justice_Keywords/ReportsTopNDeviceAvailabilityKeywords.robot

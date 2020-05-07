@@ -15,7 +15,7 @@ Confirm Logout Link Removed From Add New Report Page
     Confirm Page Does Not Contain Text  Logout
 
 Confirm Logout Link Removed From Add New Visual Page
-    Click Go To Reports Button
+    Self Service Click Go To Reports Button
     Click Reports Add Button
     Click Add New Visual
     Confirm Page Does Not Contain Text  Logout
