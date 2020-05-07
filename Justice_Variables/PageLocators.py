@@ -384,6 +384,7 @@ reports_self_service_visual_filter_column = "xpath://select[@name='rdAfFilterCol
 reports_self_service_visual_filter_comparison = "xpath://select[@name='rdAfFilterOperator_rdAgAnalysisFilter']"
 reports_self_service_visual_filter_value = "xpath://input[@name='rdAfFilterValue_rdAgAnalysisFilter']"
 reports_self_service_visual_filter_add_button = "xpath://span[@id='lblFilterAdd_rdAgAnalysisFilter']"
+reports_self_service_visual_filter_remove_button = "xpath://img[contains(@id, 'lblFilterRemove_rdAgAnalysisFilter_Row')]"
 reports_self_service_visual_analysis_table = "id:dtAnalysisGrid"
 reports_self_service_visual_analysis_table_page_number = "xpath://input[@name='dtAnalysisGrid-PageNr']"
 

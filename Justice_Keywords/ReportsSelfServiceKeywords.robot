@@ -36,6 +36,7 @@ Self Service Visual Set Select Data To Hourly Data
     Page Should Contain Element  ${reports_self_service_visual_data_hourly_data_option}
     Click Element  ${reports_self_service_visual_data_hourly_data_option}
     Unselect Frame
+    sleep  2 seconds
 
 Self Service Visual Set Select Data To Raw Data
     Select Frame  xpath://iframe
@@ -44,15 +45,15 @@ Self Service Visual Set Select Data To Raw Data
     Page Should Contain Element  ${reports_self_service_visual_data_raw_data_option}
     Click Element  ${reports_self_service_visual_data_raw_data_option}
     Unselect Frame
+    sleep  2 seconds
 
 Self Service Visual Select Filter Column
     [Arguments]  ${value}
     Select Frame  xpath://iframe
     Page Should Contain Element  ${reports_self_service_visual_filter_column}
     Click Element  ${reports_self_service_visual_filter_column}
-    Select From List By Label  ${value}
-#    Page Should Contain Element  xpath://option[contains(text(),'${value}')]
-#    Click Element  xpath://select[@id='rdAgCalcDataColumns']//option[contains(text(),'${value}')]
+    Select From List By Label  ${reports_self_service_visual_filter_column}  ${value}
+    Click Element  ${reports_self_service_visual_filter_column}
     Unselect Frame
 
 Self Service Visual Select Filter Comparison
@@ -60,9 +61,8 @@ Self Service Visual Select Filter Comparison
     Select Frame  xpath://iframe
     Page Should Contain Element  ${reports_self_service_visual_filter_comparison}
     Click Element  ${reports_self_service_visual_filter_comparison}
-    Select From List By Label  ${value}
-#    Page Should Contain Element  xpath://option[contains(text(),'${value}')]
-#    Click Element  xpath://select[@id='rdAfFilterOperator_rdAgAnalysisFilter']//option[contains(text(),'${value}')]
+    Select From List By Label  ${reports_self_service_visual_filter_comparison}  ${value}
+    Click Element  ${reports_self_service_visual_filter_comparison}
     Unselect Frame
 
 Self Service Visual Set Filter Value
@@ -76,6 +76,13 @@ Self Service Visual Filter Click Add
     Select Frame  xpath://iframe
     Page Should Contain Element  ${reports_self_service_visual_filter_add_button}
     Click Element  ${reports_self_service_visual_filter_add_button}
+    Unselect Frame
+
+Self Service Visual Filter Click Remove
+    Select Frame  xpath://iframe
+    Page Should Contain Element  ${reports_self_service_visual_filter_remove_button}
+    Click Element  ${reports_self_service_visual_filter_remove_button}
+    Handle Alert
     Unselect Frame
 
 Confirm Self Service Visual Table Contains Data
