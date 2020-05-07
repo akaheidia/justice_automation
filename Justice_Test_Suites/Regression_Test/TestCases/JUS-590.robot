@@ -11,7 +11,7 @@ Suite Teardown   Log Out and Close Browser
 ${test_device}  10.54.142.32
 
 *** Test Cases ***
-Confirm Port View For Device Is Present
+Confirm Port View Is Accessible When Window Small
     Set Server Filter  ${XMC_HOSTNAME}
     Search Field Enter Text  ${test_device}
     sleep  2 seconds
