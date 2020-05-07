@@ -23,5 +23,5 @@ Confirm End-System Report Does Not Result In Error
     Apply Reports Filter
     sleep  2 seconds
 #    Click End System Pie Slice Drilldown  Windows
-#    Click End System Types Drilldown
+#    Click End Systems Drilldown
 #    sleep  2 seconds

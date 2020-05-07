@@ -75,7 +75,7 @@ Click Port Error Drilldown
     Unselect Frame
     Unselect Frame
 
-Click End System Types Drilldown
+Click End Systems Drilldown
     Select Frame  xpath://iframe
     Select Frame  xpath://iframe[@id='endsystems']
 
