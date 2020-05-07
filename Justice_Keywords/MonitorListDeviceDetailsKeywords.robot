@@ -52,7 +52,7 @@ Device Details Search Field Enter Text
 
 Device Details Search Field Clear Text
     Device Details Show Search Field
-    Input Text  ${device_details_search_field}  ${empty}  clear=True
+    Clear Element Text  ${device_details_search_field}
 
 Select Port In Table
     [Arguments]  ${port_name}

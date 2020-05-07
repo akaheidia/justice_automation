@@ -69,7 +69,7 @@ Search Field Enter Text
 
 Search Field Clear Text
     Show Search Field
-    Input Text  ${search_field_text}  ${empty}  clear=True
+    Clear Element Text  ${search_field_text}
 
 
 Confirm List Slider Selected

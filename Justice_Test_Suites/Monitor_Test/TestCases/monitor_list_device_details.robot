@@ -31,20 +31,11 @@ Confirm Back Arrow Works
     Device Details Click Back Arrow
     Confirm Devices Page Loaded
 
-Confirm Port Selection Works
+Confirm Table Paging
     Search Field Enter Text  ${test_device}
     Click Device Details Arrow  ${test_device}
     Device Details Click Ports Link
     sleep  1 second
-    Confirm Device Details Ports Page Loaded
-    Device Details Search Field Enter Text  ${test_port}
-    Confirm Port In Table  ${test_port}
-    Select Port In Table  ${test_port}
-    sleep  1 second
-    Deselect Port In Table  ${test_port}
-    Device Details Search Field Clear Text
-
-Confirm Table Paging
     Confirm Device Details Ports Page Loaded
     Go To Last Page
     Go To First Page
@@ -105,3 +96,16 @@ Confirm Download Menus
     Wait Until Page Contains  Download Complete
     Confirm File Exists  ${DOWNLOADS_DIR}  ${pdf_ports_all}
     Remove File  ${DOWNLOADS_DIR}  ${pdf_ports_all}
+
+Confirm Port Local Search Works
+    Confirm Device Details Ports Page Loaded
+    Device Details Search Field Enter Text  ${test_port}
+    Confirm Port In Table  ${test_port}
+
+Confirm Port Selection Works
+    Confirm Device Details Ports Page Loaded
+    Select Port In Table  ${test_port}
+    sleep  1 second
+    Deselect Port In Table  ${test_port}
+    Device Details Search Field Clear Text
+    Device Details Hide Search Field
