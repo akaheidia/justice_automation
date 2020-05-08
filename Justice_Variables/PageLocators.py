@@ -372,11 +372,6 @@ reports_top_sites_by_clients = "xpath://h4[contains(text(),'Top Sites by Clients
 
 # Self Service Report Elements
 reports_self_service_page_title = "xpath://span[contains(text(),'SELF-SERVICE ANALYTICS')]"
-# reports_self_service_visual_data_button = "xpath://td[@class='rdAgTabHeading']//span[contains(text(),'Data')]"
-# reports_self_service_visual_formula_button = "xpath://td[@class='rdAgTabHeading']//span[contains(text(),'Formula')]"
-# reports_self_service_visual_filter_button = "xpath://td[@class='rdAgTabHeading']//span[contains(text(),'Filter')]"
-# reports_self_service_visual_add_chart_button = "xpath://td[@class='rdAgTabHeading']//span[contains(text(),'Add Chart')]"
-# reports_self_service_visual_add_crosstab_button = "xpath://td[@class='rdAgTabHeading']//span[contains(text(),'Add Crosstab')]"
 reports_self_service_visual_data_button = "id:colQueryBuilder"
 reports_self_service_visual_formula_button = "id:colCalc"
 reports_self_service_visual_filter_button = "id:colFilter"
@@ -392,6 +387,19 @@ reports_self_service_visual_filter_add_button = "xpath://span[@id='lblFilterAdd_
 reports_self_service_visual_filter_remove_button = "xpath://img[contains(@id, 'lblFilterRemove_rdAgAnalysisFilter_Row')]"
 reports_self_service_visual_analysis_table = "id:dtAnalysisGrid"
 reports_self_service_visual_analysis_table_page_number = "xpath://input[@name='dtAnalysisGrid-PageNr']"
+reports_self_service_report_design_content = "id:divReportAuthorWorkContainer"
+reports_self_service_report_design_new_split_row = "id:lblNewSplitRow"
+reports_self_service_report_design_add_space = "id:lblAddSpace"
+reports_self_service_report_design_new_visual = "id:imgAddVisualgallery"
+reports_self_service_report_design_new_text = "id:lblNewText"
+reports_self_service_report_design_new_image = "id:lblNewImage"
+reports_self_service_report_design_new_link = "id:lblNewLink"
+reports_self_service_report_design_new_pdf_link = "id:lblNewPdf"
+reports_self_service_report_visual_gallery_title = "xpath://span[@class='rdPopupPanelTitleCaption'][contains(text(),'Visual Gallery')]"
+reports_self_service_report_visual_gallery_selector = "id:rdInputGalleryFilter"
+reports_self_service_report_visual_gallery_analytics_statistics = "xpath://option[@value='Analytics Statistics']"
+reports_self_service_report_visual_gallery_network_statistics = "xpath://option[@value='Network Statistics']"
+
 
 # Settings Page Elements
 settings_page_title = "xpath://span[@class='settings-title']"

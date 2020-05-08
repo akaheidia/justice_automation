@@ -124,3 +124,39 @@ Confirm Self Service Visual Table Does Not Contain Value
     Page Should Not Contain Element  xpath://td/span[contains(text(), '${value}')]
     Unselect Frame
     Set Selenium Implicit Wait  ${orig_wait}
+
+
+Self Service Report Add New Visual
+    Select Frame  xpath://iframe
+    Page Should Contain Element  ${reports_self_service_report_design_new_visual}
+    Page Should Contain Element  ${reports_self_service_report_design_content}
+    Drag and Drop  ${reports_self_service_report_design_new_visual}  ${reports_self_service_report_design_content}
+    Unselect Frame
+
+Self Service Report Confirm Visual Gallery Present
+    Select Frame  xpath://iframe
+    Page Should Contain Element  ${reports_self_service_report_visual_gallery_title}
+    Unselect Frame
+
+Self Service Report Select Gallery Type
+    [Arguments]  ${value}
+    Select Frame  xpath://iframe
+    Page Should Contain Element  ${reports_self_service_report_visual_gallery_selector}
+    Click Element  ${reports_self_service_report_visual_gallery_selector}
+    Select From List By Label  ${reports_self_service_report_visual_gallery_selector}  ${value}
+    Click Element  ${reports_self_service_report_visual_gallery_selector}
+    Unselect Frame
+
+Confirm Self Service Report Gallery Contains Component
+    [Arguments]  ${value}
+    Select Frame  xpath://iframe
+    Page Should Contain Element  xpath://span[text()='${value}']
+    Unselect Frame
+
+Confirm Self Service Report Gallery Does Not Contain Component
+    [Arguments]  ${value}
+    ${orig_wait}=  Set Selenium Implicit Wait  1 second
+    Select Frame  xpath://iframe
+    Page Should Not Contain Element  xpath://span[text()='${value}']
+    Unselect Frame
+    Set Selenium Implicit Wait  ${orig_wait}
