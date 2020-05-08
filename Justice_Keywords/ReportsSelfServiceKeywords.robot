@@ -23,10 +23,28 @@ Self Service Visual Click Data
     Click Element  ${reports_self_service_visual_data_button}
     Unselect Frame
 
+Self Service Visual Click Formula
+    Select Frame  xpath://iframe
+    Wait Until Page Contains Element  ${reports_self_service_visual_formula_button}  timeout=10 seconds
+    Click Element  ${reports_self_service_visual_formula_button}
+    Unselect Frame
+
 Self Service Visual Click Filter
     Select Frame  xpath://iframe
     Wait Until Page Contains Element  ${reports_self_service_visual_filter_button}  timeout=10 seconds
     Click Element  ${reports_self_service_visual_filter_button}
+    Unselect Frame
+
+Self Service Visual Click Add Chart
+    Select Frame  xpath://iframe
+    Wait Until Page Contains Element  ${reports_self_service_visual_add_chart_button}  timeout=10 seconds
+    Click Element  ${reports_self_service_visual_add_chart_button}
+    Unselect Frame
+
+Self Service Visual Click Add Crosstab
+    Select Frame  xpath://iframe
+    Wait Until Page Contains Element  ${reports_self_service_visual_add_crosstab_button}  timeout=10 seconds
+    Click Element  ${reports_self_service_visual_add_crosstab_button}
     Unselect Frame
 
 Self Service Visual Set Select Data To Hourly Data
