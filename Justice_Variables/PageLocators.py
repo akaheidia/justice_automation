@@ -372,6 +372,13 @@ reports_top_sites_by_clients = "xpath://h4[contains(text(),'Top Sites by Clients
 
 # Self Service Report Elements
 reports_self_service_page_title = "xpath://span[contains(text(),'SELF-SERVICE ANALYTICS')]"
+reports_self_service_menu = "xpath://img[@id='imgTitleMenu']"
+reports_self_service_name = "xpath://span[@id='lblBookmarkCaption']"
+reports_self_service_rename_new_name_field = "xpath://input[@id='txtEditBookmarkDescription']"
+reports_self_service_rename_save_button = "xpath://span[@id='btnEditBookmarks_actionEditBookmark']"
+reports_self_service_select_category_dialog = "xpath://h2[contains(text(),'Select Category')]"
+reports_self_service_select_category_field = "xpath://select[@id='selected_category']"
+reports_self_service_select_category_save_button = "xpath://div[@id='category_selection']//span[text()='Save']"
 reports_self_service_visual_data_button = "id:colQueryBuilder"
 reports_self_service_visual_formula_button = "id:colCalc"
 reports_self_service_visual_filter_button = "id:colFilter"

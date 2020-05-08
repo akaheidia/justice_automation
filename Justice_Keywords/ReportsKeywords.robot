@@ -273,6 +273,13 @@ Click Report Menu
     Click Element  ${menu}
     Unselect Frame
 
+Click Self Service Report Menu
+    [Arguments]  ${menu}
+    Select Frame  xpath://iframe
+    Element Should Be Visible  xpath://table[@id='rdMenuTable']//span[text()='${menu}']
+    Click Element  xpath://table[@id='rdMenuTable']//span[text()='${menu}']
+    Unselect Frame
+
 Click Network Scorecard Report Menu
     Click Report Menu  ${reports_network_scorecard_menu}
 

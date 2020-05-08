@@ -17,6 +17,31 @@ Self Service Click Go To Reports Button
     Wait Until Page Contains Element  ${reports_add_button}  timeout=10 seconds
     Unselect Frame
 
+Self Service Rename
+    [Arguments]  ${value}
+    Select Frame  xpath://iframe
+    Page Should Contain Element  ${reports_self_service_menu}
+    Click Element  ${reports_self_service_menu}
+    Click Element  xpath://span[text()='Rename']
+    Input Text  ${reports_self_service_rename_new_name_field}  ${value}  clear=True
+    Click Element  ${reports_self_service_rename_save_button}
+    Unselect Frame
+
+Self Service Select Category
+    [Arguments]  ${value}
+    Select Frame  xpath://iframe
+    Page Should Contain Element  ${reports_self_service_select_category_field}
+    Click Element  ${reports_self_service_select_category_field}
+    Select From List By Label  ${reports_self_service_select_category_field}  ${value}
+    Click Element  ${reports_self_service_select_category_field}
+    Unselect Frame
+
+Self Service Select Category Click Save
+    Select Frame  xpath://iframe
+    Page Should Contain Element  ${reports_self_service_select_category_save_button}
+    Click Element  ${reports_self_service_select_category_save_button}
+    Unselect Frame
+
 Self Service Visual Click Data
     Select Frame  xpath://iframe
     Wait Until Page Contains Element  ${reports_self_service_visual_data_button}  timeout=10 seconds
@@ -194,3 +219,14 @@ Confirm Self Service Report Does Not Contain Component
     Page Should Not Contain Element  xpath://span[text()='${value}']
     Unselect Frame
     Set Selenium Implicit Wait  ${orig_wait}
+
+Confirm Self Service Report Name
+    [Arguments]  ${value}
+    Select Frame  xpath://iframe
+    Page Should Contain Element  xpath://span[@id='lblBookmarkCaption'][text()='${value}']
+    Unselect Frame
+
+Confirm Self Service Select Category Dialog Visible
+    Select Frame  xpath://iframe
+    Page Should Contain Element  ${reports_self_service_select_category_dialog}
+    Unselect Frame
