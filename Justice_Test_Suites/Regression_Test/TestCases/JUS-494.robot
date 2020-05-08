@@ -40,4 +40,3 @@ Confirm Self Service Visual Contains Raw Data
     sleep  3 seconds
     Confirm Self Service Visual Table Contains Value  ${XMC_HOSTNAME}
     Self Service Visual Filter Click Remove
-
