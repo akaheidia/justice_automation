@@ -396,9 +396,14 @@ reports_self_service_report_design_new_image = "id:lblNewImage"
 reports_self_service_report_design_new_link = "id:lblNewLink"
 reports_self_service_report_design_new_pdf_link = "id:lblNewPdf"
 reports_self_service_report_visual_gallery_title = "xpath://span[@class='rdPopupPanelTitleCaption'][contains(text(),'Visual Gallery')]"
+reports_self_service_report_visual_gallery_find_text = "xpath://input[@id='rdInputAddPanelFind']"
 reports_self_service_report_visual_gallery_selector = "id:rdInputGalleryFilter"
 reports_self_service_report_visual_gallery_analytics_statistics = "xpath://option[@value='Analytics Statistics']"
 reports_self_service_report_visual_gallery_network_statistics = "xpath://option[@value='Network Statistics']"
+reports_self_service_report_visual_gallery_add_button_xpath_value = "/../a/span[text()='Add']"
+reports_self_service_report_visual_gallery_done_button = "id:ppDoneButton"
+
+# //span[@class='rdDashboardTitleCaption' and text() = 'Top Applications by Clients']/a[contains(@id, 'actionAddPanel')]
 
 
 # Settings Page Elements

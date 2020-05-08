@@ -147,6 +147,26 @@ Self Service Report Select Gallery Type
     Click Element  ${reports_self_service_report_visual_gallery_selector}
     Unselect Frame
 
+Self Service Report Set Find Text
+    [Arguments]  ${value}
+    Select Frame  xpath://iframe
+    Page Should Contain Element  ${reports_self_service_report_visual_gallery_find_text}
+    Input Text  ${reports_self_service_report_visual_gallery_find_text}  ${value}  clear=True
+    Unselect Frame
+
+Self Service Report Gallery Click Add
+    [Arguments]  ${value}
+    Select Frame  xpath://iframe
+    Page Should Contain Element  xpath://span[text()='${value}']${reports_self_service_report_visual_gallery_add_button_xpath_value}
+    Click Element  xpath://span[text()='${value}']${reports_self_service_report_visual_gallery_add_button_xpath_value}
+    Unselect Frame
+
+Self Service Report Gallery Click Done
+    Select Frame  xpath://iframe
+    Page Should Contain Element  ${reports_self_service_report_visual_gallery_done_button}
+    Click Element  ${reports_self_service_report_visual_gallery_done_button}
+    Unselect Frame
+
 Confirm Self Service Report Gallery Contains Component
     [Arguments]  ${value}
     Select Frame  xpath://iframe
@@ -154,6 +174,20 @@ Confirm Self Service Report Gallery Contains Component
     Unselect Frame
 
 Confirm Self Service Report Gallery Does Not Contain Component
+    [Arguments]  ${value}
+    ${orig_wait}=  Set Selenium Implicit Wait  1 second
+    Select Frame  xpath://iframe
+    Page Should Not Contain Element  xpath://span[text()='${value}']
+    Unselect Frame
+    Set Selenium Implicit Wait  ${orig_wait}
+
+Confirm Self Service Report Contains Component
+    [Arguments]  ${value}
+    Select Frame  xpath://iframe
+    Page Should Contain Element  xpath://span[text()='${value}']
+    Unselect Frame
+
+Confirm Self Service Report Does Not Contain Component
     [Arguments]  ${value}
     ${orig_wait}=  Set Selenium Implicit Wait  1 second
     Select Frame  xpath://iframe
