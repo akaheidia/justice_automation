@@ -276,8 +276,18 @@ Click Report Menu
 Click Self Service Report Menu
     [Arguments]  ${menu}
     Select Frame  xpath://iframe
-    Element Should Be Visible  xpath://table[@id='rdMenuTable']//span[text()='${menu}']
-    Click Element  xpath://table[@id='rdMenuTable']//span[text()='${menu}']
+#    Element Should Be Visible  xpath://table[@id='rdMenuTable']//span[text()='${menu}']
+#    Click Element  xpath://table[@id='rdMenuTable']//span[text()='${menu}']
+    Element Should Be Visible  xpath://span[@id='rdDmtCaption' and text()='Self Service']//following::span[@id='rdDmtCaption' and text()='${menu}']
+    Click Element  xpath://span[@id='rdDmtCaption' and text()='Self Service']//following::span[@id='rdDmtCaption' and text()='${menu}']
+    Unselect Frame
+
+Click Self Service Report Menu For Category
+    [Arguments]  ${menu}  ${category}
+    Log To Console  Menu: ${menu}, Category: ${category}
+    Select Frame  xpath://iframe
+    Element Should Be Visible  xpath://span[@id='rdDmtCaption' and text()='${category}']//following::span[@id='rdDmtCaption' and text()='${menu}']
+    Click Element  xpath://span[@id='rdDmtCaption' and text()='${category}']//following::span[@id='rdDmtCaption' and text()='${menu}']
     Unselect Frame
 
 Click Network Scorecard Report Menu

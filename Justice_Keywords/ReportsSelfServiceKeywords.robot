@@ -27,6 +27,14 @@ Self Service Rename
     Click Element  ${reports_self_service_rename_save_button}
     Unselect Frame
 
+Self Service Delete
+    Select Frame  xpath://iframe
+    Page Should Contain Element  ${reports_self_service_menu}
+    Click Element  ${reports_self_service_menu}
+    Click Element  xpath://span[text()='Delete']
+    Handle Alert
+    Unselect Frame
+
 Self Service Select Category
     [Arguments]  ${value}
     Select Frame  xpath://iframe
@@ -230,3 +238,17 @@ Confirm Self Service Select Category Dialog Visible
     Select Frame  xpath://iframe
     Page Should Contain Element  ${reports_self_service_select_category_dialog}
     Unselect Frame
+
+Confirm Self Service Report In Category
+    [Arguments]  ${report}  ${category}
+    Select Frame  xpath://iframe
+    Page Should Contain Element  xpath://span[@id='rdDmtCaption' and text()='${category}']//following::span[@id='rdDmtCaption' and text()='${report}']
+    Unselect Frame
+
+Confirm Self Service Report Not In Category
+    [Arguments]  ${report}  ${category}
+    ${orig_wait}=  Set Selenium Implicit Wait  1 second
+    Select Frame  xpath://iframe
+    Page Should Not Contain Element  xpath://span[@id='rdDmtCaption' and text()='${category}']//following::span[@id='rdDmtCaption' and text()='${report}']
+    Unselect Frame
+    Set Selenium Implicit Wait  ${orig_wait}
