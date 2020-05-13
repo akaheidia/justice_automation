@@ -52,21 +52,21 @@ Suite Teardown   XMC Log Out and Close Browser
 #    sleep  1 second
 #    XMC Confirm Beta Features Enabled
 
-#Set XMC Data Pump Options
+#Set Data Pump Options
 #    Navigate to Options Tab
-#    XMC Select Options Tree Node  XMC Data Pump
-#    XMC Set Option Value XMC Data Pump Enable Sharing
-#    XMC Set Option Value XMC Data Pump Host  ${JUS_HOST_IP}
-#    XMC Set Option Value XMC Data Pump Username  guest
-#    XMC Set Option Value XMC Data Pump Password  extreme
+#    XMC Select Options Tree Node  Data Pump
+#    XMC Set Option Value Data Pump Enable Sharing
+#    XMC Set Option Value Data Pump Host  ${JUS_HOST_IP}
+#    XMC Set Option Value Data Pump Username  guest
+#    XMC Set Option Value Data Pump Password  extreme
 #    XMC Options Click Save
 #    Reload Page
-#    XMC Select Options Tree Node  XMC Data Pump
-#    XMC Confirm Option Value XMC Data Pump Sharing Enabled
-#    XMC Confirm Option Value XMC Data Pump Host  ${JUS_HOST_IP}
-#    XMC Confirm Option Value XMC Data Pump Port  5672
-#    XMC Confirm Option Value XMC Data Pump Username  guest
-#    XMC Confirm Option Value XMC Data Pump Password  extreme
+#    XMC Select Options Tree Node  Data Pump
+#    XMC Confirm Option Value Data Pump Sharing Enabled
+#    XMC Confirm Option Value Data Pump Host  ${JUS_HOST_IP}
+#    XMC Confirm Option Value Data Pump Port  5672
+#    XMC Confirm Option Value Data Pump Username  guest
+#    XMC Confirm Option Value Data Pump Password  extreme
 
 #Create Sites in XMC
 #    Navigate to Devices Tab

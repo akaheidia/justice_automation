@@ -13,26 +13,26 @@ Confirm XMC Data Pump Option Enabled State
     XMC Navigate to Administration Page
     XMC Click Options Tab
     XMC Confirm Options Tab Loaded
-    XMC Select Options Tree Node  XMC Data Pump
+    XMC Select Options Tree Node  Data Pump
 
-    XMC Set Option Value XMC Data Pump Disable Sharing
-    XMC Confirm Option Disabled XMC Data Pump Host
-    XMC Confirm Option Disabled XMC Data Pump Port
-    XMC Confirm Option Disabled XMC Data Pump User
-    XMC Confirm Option Disabled XMC Data Pump Password
-    XMC Confirm Option Disabled XMC Data Pump Queue Add Delay
-    XMC Confirm Option Disabled XMC Data Pump Queue Add Service Period
-    XMC Confirm Option Disabled XMC Data Pump Max Action Queue Size
-    XMC Confirm Option Disabled XMC Data Pump Max Actions Queueable
-    XMC Confirm Option Disabled XMC Data Pump Max Actions Serviced
+    XMC Set Option Value Data Pump Disable Sharing
+    XMC Confirm Option Disabled Data Pump Host
+    XMC Confirm Option Disabled Data Pump Port
+    XMC Confirm Option Disabled Data Pump User
+    XMC Confirm Option Disabled Data Pump Password
+    XMC Confirm Option Disabled Data Pump Queue Add Delay
+    XMC Confirm Option Disabled Data Pump Queue Add Service Period
+    XMC Confirm Option Disabled Data Pump Max Action Queue Size
+    XMC Confirm Option Disabled Data Pump Max Actions Queueable
+    XMC Confirm Option Disabled Data Pump Max Actions Serviced
 
-    XMC Set Option Value XMC Data Pump Enable Sharing
-    XMC Confirm Option Enabled XMC Data Pump Host
-    XMC Confirm Option Enabled XMC Data Pump Port
-    XMC Confirm Option Enabled XMC Data Pump User
-    XMC Confirm Option Enabled XMC Data Pump Password
-    XMC Confirm Option Enabled XMC Data Pump Queue Add Delay
-    XMC Confirm Option Enabled XMC Data Pump Queue Add Service Period
-    XMC Confirm Option Enabled XMC Data Pump Max Action Queue Size
-    XMC Confirm Option Enabled XMC Data Pump Max Actions Queueable
-    XMC Confirm Option Enabled XMC Data Pump Max Actions Serviced
+    XMC Set Option Value Data Pump Enable Sharing
+    XMC Confirm Option Enabled Data Pump Host
+    XMC Confirm Option Enabled Data Pump Port
+    XMC Confirm Option Enabled Data Pump User
+    XMC Confirm Option Enabled Data Pump Password
+    XMC Confirm Option Enabled Data Pump Queue Add Delay
+    XMC Confirm Option Enabled Data Pump Queue Add Service Period
+    XMC Confirm Option Enabled Data Pump Max Action Queue Size
+    XMC Confirm Option Enabled Data Pump Max Actions Queueable
+    XMC Confirm Option Enabled Data Pump Max Actions Serviced

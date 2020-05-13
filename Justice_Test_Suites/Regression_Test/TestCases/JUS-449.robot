@@ -8,13 +8,12 @@ Suite Setup      XMC Open Browser and Log In  ${XMC_2_URL}  ${BROWSER}  ${XMC_2_
 Suite Teardown   XMC Log Out and Close Browser
 
 *** Test Cases ***
-
 Confirm XMC Data Pump Options for RabbitMQ URI are Split Into Components
     XMC Navigate to Administration Page
     XMC Click Options Tab
     XMC Confirm Options Tab Loaded
 
-    XMC Select Options Tree Node  XMC Data Pump
+    XMC Select Options Tree Node  Data Pump
     XMC Set Option Value XMC Data Pump Enable Sharing
 
     Page Should Contain  Message Broker

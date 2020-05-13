@@ -9,7 +9,7 @@ Suite Setup     XMC Open Browser and Log In  ${XMC_URL}  ${BROWSER}  ${XMC_USERN
 Suite Teardown  XMC Log Out and Close Browser
 
 *** Test Cases ***
-Confirm XMC Data Pump Options Hidden Under Beta Flag
+Confirm Data Pump Options Hidden Under Beta Flag
     XMC Navigate To Administration Page
     XMC Click Diagnostics Tab
     XMC Confirm Diagnostics Tab Loaded
@@ -23,9 +23,9 @@ Confirm XMC Data Pump Options Hidden Under Beta Flag
     XMC Confirm Beta Features Disabled
     XMC Click Options Tab
     sleep  1 second
-    XMC Confirm Option Not Present  XMC Data Pump
+    XMC Confirm Option Not Present  Data Pump
 
-Confirm XMC Data Pump Options Displayed With Beta Flag
+Confirm Data Pump Options Displayed With Beta Flag
     XMC Click Diagnostics Tab
     XMC Confirm Diagnostics Tab Loaded
     XMC Set Main Diagnostic Level  Diagnostic
@@ -37,4 +37,4 @@ Confirm XMC Data Pump Options Displayed With Beta Flag
     sleep  1 second
     XMC Confirm Beta Features Enabled
     XMC Click Options Tab
-    XMC Confirm Option Present  XMC Data Pump
+    XMC Confirm Option Present  Data Pump
