@@ -14,7 +14,7 @@ Confirm XMC Data Pump Options for RabbitMQ URI are Split Into Components
     XMC Confirm Options Tab Loaded
 
     XMC Select Options Tree Node  Data Pump
-    XMC Set Option Value XMC Data Pump Enable Sharing
+    XMC Set Option Value Data Pump Enable Sharing
 
     Page Should Contain  Message Broker
     XMC Confirm Page Does Not Contain Text  RabbitMQ
