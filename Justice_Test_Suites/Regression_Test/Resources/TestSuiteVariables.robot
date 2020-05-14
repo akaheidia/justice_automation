@@ -107,7 +107,7 @@ ${pdf_endsystems_all}            End-Systems - All Rows.pdf
 ${pdf_endsystems_visible}        End-Systems - Visible Rows.pdf
 ${pdf_endsystems_filtered}       End-Systems - All Filtered Rows.pdf
 
-# XMC Data Pump Options Defaults
+# Data Pump Option Defaults
 ${option_enabled}                false
 ${option_secured}                true
 ${option_host}                   127.0.0.1

@@ -8,9 +8,9 @@ Suite Setup     XMC Open Browser and Log In  ${XMC_URL}  ${BROWSER}  ${XMC_USERN
 Suite Teardown  XMC Log Out and Close Browser
 
 *** Test Cases ***
-Confirm XMC Data Pump Password Option Default Value
+Confirm Data Pump Password Option Default Value
     XMC Navigate To Administration Page
     XMC Click Options Tab
     XMC Confirm Options Tab Loaded
-    XMC Select Options Tree Node  XMC Data Pump
-    XMC Confirm Option Value XMC Data Pump Password  extreme
+    XMC Select Options Tree Node  Data Pump
+    XMC Confirm Option Value Data Pump Password  extreme

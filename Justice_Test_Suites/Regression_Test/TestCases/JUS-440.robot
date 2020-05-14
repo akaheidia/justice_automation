@@ -9,7 +9,7 @@ Suite Teardown   XMC Log Out and Close Browser
 
 *** Test Cases ***
 
-Confirm XMC Data Pump Option Enabled State
+Confirm Data Pump Option Enabled State
     XMC Navigate to Administration Page
     XMC Click Options Tab
     XMC Confirm Options Tab Loaded

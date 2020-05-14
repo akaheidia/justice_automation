@@ -12,33 +12,33 @@ Confirm User Informed About Server Restart Via Label
     XMC Navigate To Administration Page
     XMC Click Options Tab
     XMC Confirm Options Tab Loaded
-    XMC Select Options Tree Node  XMC Data Pump
+    XMC Select Options Tree Node  Data Pump
     XMC Confirm Page Contains Text  Server may need to be restarted
-    XMC Set Option Value XMC Data Pump Enable Sharing
+    XMC Set Option Value Data Pump Enable Sharing
 
 Confirm User Informed About Server Restart When Changing Host
-    XMC Set Option Value XMC Data Pump Host  1.2.3.4
+    XMC Set Option Value Data Pump Host  1.2.3.4
     XMC Wait For Save Button To Be Enabled
     XMC Options Click Save
     XMC Confirm Options Save Warnings Dialog Present
     XMC Options Save Warnings Dialog Click No
 
 Confirm User Informed About Server Restart When Changing Port
-    XMC Set Option Value XMC Data Pump Port  5633
+    XMC Set Option Value Data Pump Port  5633
     XMC Wait For Save Button To Be Enabled
     XMC Options Click Save
     XMC Confirm Options Save Warnings Dialog Present
     XMC Options Save Warnings Dialog Click No
 
 Confirm User Informed About Server Restart When Changing User
-    XMC Set Option Value XMC Data Pump Username  TEMP
+    XMC Set Option Value Data Pump Username  TEMP
     XMC Wait For Save Button To Be Enabled
     XMC Options Click Save
     XMC Confirm Options Save Warnings Dialog Present
     XMC Options Save Warnings Dialog Click No
 
 Confirm User Informed About Server Restart When Changing Password
-    XMC Set Option Value XMC Data Pump Password  TEMP
+    XMC Set Option Value Data Pump Password  TEMP
     XMC Wait For Save Button To Be Enabled
     XMC Options Click Save
     XMC Confirm Options Save Warnings Dialog Present

@@ -15,17 +15,17 @@ ${xmc_pwd}    ${XMC_PASSWORD}
 ${xmc_log}    ${XMC_SERVER_LOG}
 
 *** Test Cases ***
-Confirm XMC Data Pump Present on Server Diagnostics Page
+Confirm Data Pump Present on Server Diagnostics Page
     XMC Open Browser and Log In  ${XMC_URL}  ${BROWSER}  ${XMC_USERNAME}  ${XMC_PASSWORD}
     XMC Navigate To Administration Page
     XMC Click Diagnostics Tab
     XMC Confirm Diagnostics Tab Loaded
     XMC Expand Diagnostics Tree Node  Server
     XMC Select Diagnostics Tree Node  Server Diagnostics
-    Wait Until Page Contains  XMC Data Pump  timeout=5 seconds
+    Wait Until Page Contains  Data Pump  timeout=5 seconds
 
-Confirm Changing XMC Data Pump Diagnostic Level Works
-    XMC Set XMC Data Pump Diagnostic Level  Verbose
+Confirm Changing Data Pump Diagnostic Level Works
+    XMC Set Data Pump Diagnostic Level  Verbose
     XMC Diagnostics Click OK
     XMC Log Out and Close Browser
 
@@ -66,5 +66,5 @@ Reset Diagnostics
     XMC Confirm Diagnostics Tab Loaded
     XMC Expand Diagnostics Tree Node  Server
     XMC Select Diagnostics Tree Node  Server Diagnostics
-    Wait Until Page Contains  XMC Data Pump  timeout=5 seconds
+    Wait Until Page Contains  Data Pump  timeout=5 seconds
     XMC Diagnostics Click Reset Defaults

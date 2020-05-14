@@ -27,15 +27,15 @@ ${resync_msg_sent}  RESYNC message sent for type = EVENT
 ${debug_msg}        DEBUG [com.extreme.outboundmessage.OutboundMessageEngine] RESYNC message sent for type = EVENT
 
 *** Test Cases ***
-Change XMC Data Pump Diagnostic Level To Verbose
+Change Data Pump Diagnostic Level To Verbose
     XMC Open Browser and Log In  ${XMC_URL}  ${BROWSER}  ${XMC_USERNAME}  ${XMC_PASSWORD}
     XMC Navigate To Administration Page
     XMC Click Diagnostics Tab
     XMC Confirm Diagnostics Tab Loaded
     XMC Expand Diagnostics Tree Node  Server
     XMC Select Diagnostics Tree Node  Server Diagnostics
-    Wait Until Page Contains  XMC Data Pump  timeout=5 seconds
-    XMC Set XMC Data Pump Diagnostic Level  Verbose
+    Wait Until Page Contains  Data Pump  timeout=5 seconds
+    XMC Set Data Pump Diagnostic Level  Verbose
     XMC Diagnostics Click OK
     XMC Log Out and Close Browser
 
@@ -61,15 +61,15 @@ Confirm Resync Messages Not Seen After Resync Complete
 
     Close SSH Connection
 
-Reset XMC Data Pump Diagnostic Level
+Reset Data Pump Diagnostic Level
     XMC Open Browser and Log In  ${XMC_URL}  ${BROWSER}  ${XMC_USERNAME}  ${XMC_PASSWORD}
     XMC Navigate To Administration Page
     XMC Click Diagnostics Tab
     XMC Confirm Diagnostics Tab Loaded
     XMC Expand Diagnostics Tree Node  Server
     XMC Select Diagnostics Tree Node  Server Diagnostics
-    Wait Until Page Contains  XMC Data Pump  timeout=5 seconds
-    XMC Set XMC Data Pump Diagnostic Level  Default emc.xml Value
+    Wait Until Page Contains  Data Pump  timeout=5 seconds
+    XMC Set Data Pump Diagnostic Level  Default emc.xml Value
     XMC Diagnostics Click OK
     XMC Log Out and Close Browser
 
@@ -80,9 +80,9 @@ Disable Secured Connection So IP Can Be Obtained For RabbitMQ Connections
     XMC Click Options Tab
     XMC Confirm Options Tab Loaded
     sleep  1 second
-    XMC Select Options Tree Node  XMC Data Pump
-    XMC Set Option Value XMC Data Pump Disable Secured Connection
-    XMC Set Option Value XMC Data Pump Port  ${option_unsecure_port}
+    XMC Select Options Tree Node  Data Pump
+    XMC Set Option Value Data Pump Disable Secured Connection
+    XMC Set Option Value Data Pump Port  ${option_unsecure_port}
     sleep  1 second
     XMC Options Click Save
     sleep  2 seconds
@@ -97,9 +97,9 @@ Enable Secured Connection
     XMC Click Options Tab
     XMC Confirm Options Tab Loaded
     sleep  1 second
-    XMC Select Options Tree Node  XMC Data Pump
-    XMC Set Option Value XMC Data Pump Enable Secured Connection
-    XMC Set Option Value XMC Data Pump Port  ${option_secure_port}
+    XMC Select Options Tree Node  Data Pump
+    XMC Set Option Value Data Pump Enable Secured Connection
+    XMC Set Option Value Data Pump Port  ${option_secure_port}
     sleep  1 second
     XMC Options Click Save
     sleep  2 seconds
