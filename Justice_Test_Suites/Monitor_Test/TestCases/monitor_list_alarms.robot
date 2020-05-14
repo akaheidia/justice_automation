@@ -35,31 +35,31 @@ Confirm Download Menus
     Set Server Filter  ${XMC_HOSTNAME}
 
     Download CSV Visible Rows
-    Wait Until Page Contains  Download Complete
+    Wait Until Download Completes
     Confirm File Exists  ${DOWNLOADS_DIR}  ${csv_alarms_visible}
     Remove File  ${DOWNLOADS_DIR}  ${csv_alarms_visible}
 
     Download CSV All Rows
-    Wait Until Page Contains  Download Complete
+    Wait Until Download Completes
     Confirm File Exists  ${DOWNLOADS_DIR}  ${csv_alarms_all}
     Remove File  ${DOWNLOADS_DIR}  ${csv_alarms_all}
 
     Download CSV All Filtered Rows
-    Wait Until Page Contains  Download Complete
+    Wait Until Download Completes
     Confirm File Exists  ${DOWNLOADS_DIR}  ${csv_alarms_filtered}
     Remove File  ${DOWNLOADS_DIR}  ${csv_alarms_filtered}
 
     Download PDF Visible Rows
-    Wait Until Page Contains  Download Complete
+    Wait Until Download Completes
     Confirm File Exists  ${DOWNLOADS_DIR}  ${pdf_alarms_visible}
     Remove File  ${DOWNLOADS_DIR}  ${pdf_alarms_visible}
 
     Download PDF All Rows
-    Wait Until Page Contains  Download Complete
+    Wait Until Download Completes
     Confirm File Exists  ${DOWNLOADS_DIR}  ${pdf_alarms_all}
     Remove File  ${DOWNLOADS_DIR}  ${pdf_alarms_all}
 
     Download PDF All Filtered Rows
-    Wait Until Page Contains  Download Complete
+    Wait Until Download Completes
     Confirm File Exists  ${DOWNLOADS_DIR}  ${pdf_alarms_filtered}
     Remove File  ${DOWNLOADS_DIR}  ${pdf_alarms_filtered}

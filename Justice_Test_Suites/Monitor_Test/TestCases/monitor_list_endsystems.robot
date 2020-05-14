@@ -38,31 +38,31 @@ Confirm Download Menus
     Set Server Filter  ${xmc_with_endsystems}
 
     Download CSV Visible Rows
-    Wait Until Page Contains  Download Complete
+    Wait Until Download Completes
     Confirm File Exists  ${DOWNLOADS_DIR}  ${csv_endsystems_visible}
     Remove File  ${DOWNLOADS_DIR}  ${csv_endsystems_visible}
 
     Download CSV All Rows
-    Wait Until Page Contains  Download Complete
+    Wait Until Download Completes
     Confirm File Exists  ${DOWNLOADS_DIR}  ${csv_endsystems_all}
     Remove File  ${DOWNLOADS_DIR}  ${csv_endsystems_all}
 
     Download CSV All Filtered Rows
-    Wait Until Page Contains  Download Complete
+    Wait Until Download Completes
     Confirm File Exists  ${DOWNLOADS_DIR}  ${csv_endsystems_filtered}
     Remove File  ${DOWNLOADS_DIR}  ${csv_endsystems_filtered}
 
     Download PDF Visible Rows
-    Wait Until Page Contains  Download Complete
+    Wait Until Download Completes
     Confirm File Exists  ${DOWNLOADS_DIR}  ${pdf_endsystems_visible}
     Remove File  ${DOWNLOADS_DIR}  ${pdf_endsystems_visible}
 
     Download PDF All Rows
-    Wait Until Page Contains  Download Complete
+    Wait Until Download Completes
     Confirm File Exists  ${DOWNLOADS_DIR}  ${pdf_endsystems_all}
     Remove File  ${DOWNLOADS_DIR}  ${pdf_endsystems_all}
 
     Download PDF All Filtered Rows
-    Wait Until Page Contains  Download Complete
+    Wait Until Download Completes
     Confirm File Exists  ${DOWNLOADS_DIR}  ${pdf_endsystems_filtered}
     Remove File  ${DOWNLOADS_DIR}  ${pdf_endsystems_filtered}

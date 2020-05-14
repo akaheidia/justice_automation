@@ -93,6 +93,12 @@ Reconnect To RabbitMQ
     Close SSH Connection
 
 
+Wait Until Download Completes
+    : FOR  ${index}  IN RANGE  1  100
+    \    ${download_complete}=  Run Keyword And Return Status  Page Should Contain Text  Download Complete
+    \    Exit For Loop If  ${download_complete} == True
+
+
 Confirm File Exists
     [Arguments]  ${dir}  ${filename}
     Wait Until Created  ${dir}${/}${filename}
