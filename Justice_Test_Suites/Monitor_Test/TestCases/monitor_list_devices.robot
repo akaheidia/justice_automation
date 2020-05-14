@@ -82,7 +82,6 @@ Add Device To Tag
     Select Device In Table  ${test_device}
     Click Add Devices To Tag
     Confirm Add Devices To Tag Panel Visible
-    Add Devices To Tag Click Refresh
     Add Devices To Tag Click Add
     Add Tag Set Name  ${test_tag}
     Add Tag Click Save
