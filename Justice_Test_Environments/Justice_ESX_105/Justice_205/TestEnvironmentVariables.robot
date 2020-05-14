@@ -26,4 +26,6 @@ ${XMC_2_PASSWORD}            n7830466
 ${XMC_2_SERVER_LOG}          /usr/local/Extreme_Networks/NetSight/appdata/logs/server.log
 ${XMC_2_NSJBOSS_PROPERTIES}  /usr/local/Extreme_Networks/NetSight/appdata/NSJBoss.properties
 
-${DOWNLOADS_DIR}             /home/hwhite/Downloads
+${LIN_DOWNLOADS_DIR}         /home/hwhite/Downloads
+${WIN_DOWNLOADS_DIR}         C:\\Users\\root\\Downloads
+${DOWNLOADS_DIR}             ${LIN_DOWNLOADS_DIR}

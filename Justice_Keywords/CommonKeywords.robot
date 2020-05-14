@@ -95,15 +95,15 @@ Reconnect To RabbitMQ
 
 Confirm File Exists
     [Arguments]  ${dir}  ${filename}
-    Wait Until Created  ${dir}/${filename}
-    OperatingSystem.File Should Exist   ${dir}/${filename}
+    Wait Until Created  ${dir}${/}${filename}
+    OperatingSystem.File Should Exist   ${dir}${/}${filename}
 
 Remove File
     [Arguments]  ${dir}  ${filename}
-    OperatingSystem.File Should Exist      ${dir}/${filename}
-    OperatingSystem.Remove File            ${dir}/${filename}
-    Wait Until Removed                     ${dir}/${filename}
-    OperatingSystem.File Should Not Exist  ${dir}/${filename}
+    OperatingSystem.File Should Exist      ${dir}${/}${filename}
+    OperatingSystem.Remove File            ${dir}${/}${filename}
+    Wait Until Removed                     ${dir}${/}${filename}
+    OperatingSystem.File Should Not Exist  ${dir}${/}${filename}
 
 
 Confirm File Contains Value
