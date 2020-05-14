@@ -50,10 +50,10 @@ XMC Confirm Beta Features Disabled
     Page Should Not Contain Element  ${xmc_beta_features_enabled}
     Set Selenium Implicit Wait  ${orig_wait}
 
-XMC Set XMC Data Pump Diagnostic Level
+XMC Set Data Pump Diagnostic Level
     [Arguments]  ${value}
-    Page Should Contain Element  ${xmc_diagnostics_xmc_data_pump_selector}
-    Click Element  ${xmc_diagnostics_xmc_data_pump_selector}
+    Page Should Contain Element  ${xmc_diagnostics_data_pump_selector}
+    Click Element  ${xmc_diagnostics_data_pump_selector}
     Page Should Contain Element  xpath://li[text()='${value}']
     Click Element  xpath://li[text()='${value}']
 
