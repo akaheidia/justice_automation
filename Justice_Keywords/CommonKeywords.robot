@@ -19,7 +19,7 @@ Log Out and Close Browser
 
 Open and Maximize Browser
     [Arguments]  ${url}  ${browser}
-    Open Browser  ${url}  ${browser}  options=add_argument("--ignore-certificate-errors")
+    Open Browser  ${url}  ${browser}  options=add_argument("--ignore-certificate-errors")  ff_profile_dir=${FF_PROFILE}
     Set Browser Implicit Wait  10
     Maximize Browser Window
 

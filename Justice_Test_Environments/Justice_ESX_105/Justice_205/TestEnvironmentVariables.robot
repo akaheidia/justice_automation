@@ -29,3 +29,7 @@ ${XMC_2_NSJBOSS_PROPERTIES}  /usr/local/Extreme_Networks/NetSight/appdata/NSJBos
 ${LIN_DOWNLOADS_DIR}         /home/hwhite/Downloads
 ${WIN_DOWNLOADS_DIR}         C:\\Users\\root\\Downloads
 ${DOWNLOADS_DIR}             ${LIN_DOWNLOADS_DIR}
+
+${LIN_FF_PROFILE}            /home/hwhite/.mozilla/firefox/f64xpvp4.default-release
+${WIN_FF_PROFILE}            C:\\Users\\root\\AppData\\Roaming\\Mozilla\\Firefox\\Profiles\\w9x8g7c1.default
+${FF_PROFILE}                ${LIN_FF_PROFILE}
