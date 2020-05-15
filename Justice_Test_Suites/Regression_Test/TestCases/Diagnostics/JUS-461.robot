@@ -1,9 +1,9 @@
 *** Settings ***
 Library   SeleniumLibrary
 Library   SSHLibrary
-Resource  ../Resources/AllResources.robot
+Resource  ../../Resources/AllResources.robot
 
-Documentation    Regression test for JUS-461: Add XMC Data Pump to Server Diagnostics.
+Documentation   Regression test for JUS-461: Add XMC Data Pump to Server Diagnostics.
 
 Suite Teardown  Clean Up Test
 
