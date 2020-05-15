@@ -1,8 +1,8 @@
 *** Settings ***
 Library   SeleniumLibrary
-Resource  ../Resources/AllResources.robot
+Resource  ../../Resources/AllResources.robot
 
-Documentation    Regression test for JUS-450: Usability - XMC Data Pump options: changing values requires server restart.
+Documentation   Regression test for JUS-450: Usability - XMC Data Pump options: changing values requires server restart.
 
 Suite Setup     XMC Open Browser and Log In  ${XMC_URL}  ${BROWSER}  ${XMC_USERNAME}  ${XMC_PASSWORD}
 Suite Teardown  XMC Log Out and Close Browser

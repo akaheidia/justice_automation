@@ -1,6 +1,6 @@
 *** Settings ***
 Library   SeleniumLibrary
-Resource  ../Resources/AllResources.robot
+Resource  ../../Resources/AllResources.robot
 
 Documentation    Regression test for JUS-662: XMC Data Pump Options label change.
 

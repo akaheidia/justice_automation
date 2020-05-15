@@ -1,8 +1,8 @@
 *** Settings ***
 Library   SeleniumLibrary
-Resource  ../Resources/AllResources.robot
+Resource  ../../Resources/AllResources.robot
 
-Documentation    Regression test for JUS-447: Usability - XMC Data Pump options: new fields not at default values at startup.
+Documentation   Regression test for JUS-447: Usability - XMC Data Pump options: new fields not at default values at startup.
 
 Suite Setup     XMC Open Browser and Log In  ${XMC_URL}  ${BROWSER}  ${XMC_USERNAME}  ${XMC_PASSWORD}
 Suite Teardown  XMC Log Out and Close Browser

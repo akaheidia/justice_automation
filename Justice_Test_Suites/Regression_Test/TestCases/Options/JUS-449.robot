@@ -1,6 +1,6 @@
 *** Settings ***
 Library   SeleniumLibrary
-Resource  ../Resources/AllResources.robot
+Resource  ../../Resources/AllResources.robot
 
 Documentation    Regression test for JUS-449: Usability - XMC Data Pump options: RabbitMQ label is design-specific.
 

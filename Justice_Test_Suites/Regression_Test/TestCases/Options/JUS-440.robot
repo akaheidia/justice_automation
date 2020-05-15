@@ -1,6 +1,6 @@
 *** Settings ***
 Library   SeleniumLibrary
-Resource  ../Resources/AllResources.robot
+Resource  ../../Resources/AllResources.robot
 
 Documentation    Regression test for JUS-440: Usability - XMC Data Pump options: RabbitMQ URI should only be enabled when sharing is enabled.
 
@@ -8,7 +8,6 @@ Suite Setup      XMC Open Browser and Log In  ${XMC_URL}  ${BROWSER}  ${XMC_USER
 Suite Teardown   XMC Log Out and Close Browser
 
 *** Test Cases ***
-
 Confirm Data Pump Option Enabled State
     XMC Navigate to Administration Page
     XMC Click Options Tab

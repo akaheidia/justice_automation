@@ -1,6 +1,6 @@
 *** Settings ***
 Library   SeleniumLibrary
-Resource  ../Resources/AllResources.robot
+Resource  ../../Resources/AllResources.robot
 
 Documentation    Regression test for JUS-518: XMC Data Pump Options: Domain Node Type not updated in postgres.
 

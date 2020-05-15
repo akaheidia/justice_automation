@@ -1,6 +1,6 @@
 *** Settings ***
 Library   SeleniumLibrary
-Resource  ../Resources/AllResources.robot
+Resource  ../../Resources/AllResources.robot
 
 Documentation    Regression test for JUS-441: Usability - XMC Data Pump options: RabbitMQ URI field needs to aid user in field contents.
 
@@ -8,7 +8,6 @@ Suite Setup      XMC Open Browser and Log In  ${XMC_2_URL}  ${BROWSER}  ${XMC_2_
 Suite Teardown   XMC Log Out and Close Browser
 
 *** Test Cases ***
-
 Confirm Data Pump Options for RabbitMQ URI are Split Into Components
     XMC Navigate to Administration Page
     XMC Click Options Tab
