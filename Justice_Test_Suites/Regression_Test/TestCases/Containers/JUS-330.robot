@@ -13,7 +13,7 @@ ${USERNAME}     ${JUS_USERNAME}
 ${PASSWORD}     ${JUS_PASSWORD}
 
 *** Test Cases ***
-Execute Command and Verify Output
+Confirm Elastic Search Container Is Present
     ${docker_output}=  Execute Command  docker ps
     Log  ${docker_output}
     Should Contain  ${docker_output}  justice_elasticsearch_1
