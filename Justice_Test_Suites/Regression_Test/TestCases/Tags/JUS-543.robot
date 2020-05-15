@@ -1,7 +1,7 @@
 *** Settings ***
 Library   SSHLibrary
 Library   SeleniumLibrary
-Resource  ../Resources/AllResources.robot
+Resource  ../../Resources/AllResources.robot
 
 Documentation   Regression test for JUS-543: Tags: adding device to more than one tag results in multiple instances of the device reported in each tag.
 

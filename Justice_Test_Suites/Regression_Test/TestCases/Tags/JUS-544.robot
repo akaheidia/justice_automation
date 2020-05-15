@@ -1,9 +1,9 @@
 *** Settings ***
 Library   SSHLibrary
 Library   SeleniumLibrary
-Resource  ../Resources/AllResources.robot
+Resource  ../../Resources/AllResources.robot
 
-Documentation   Regression test for JUS-548: Tags: Filtering by tag does not work.
+Documentation   Regression test for JUS-544: Tags: "unknown" listed for CREATED BY and LAST EDIT BY columns.
 
 Suite Setup     Log In and Navigate To Devices Page
 Suite Teardown  Log Out and Close Browser
@@ -13,20 +13,15 @@ Test Teardown   Delete Test Tag
 
 *** Variables ***
 ${test_tag}     Test Tag
-${test_device}  10.54.142.10
 
 *** Test Cases ***
-Confirm Filtering By Tag Works - No Devices
-    Set Tag Filter  ${test_tag}
-    Confirm Device Not In Table  ${test_device}
-    Clear All Filters
-
-Confirm Filtering By Tag Works - Device Assigned To Tag
-    Assign Device To Tag  ${test_device}  ${test_tag}
-    Confirm Device Assigned To Tag  ${test_device}  ${test_tag}
-    Set Tag Filter  ${test_tag}
-    Confirm Device In Table  ${test_device}
-    Clear All Filters
+Confirm Manage Tags Shows Correct Author
+    Show Tags Panel
+    Tags Panel Click Manage
+    Confirm Manage Tags Panel Contains Tag  ${test_tag}
+    Confirm Manage Tags Panel Tag Created By  ${test_tag}  ${JUS_USERNAME}
+    Confirm Manage Tags Panel Tag Last Edit By  ${test_tag}  ${JUS_USERNAME}
+    Manage Tags Click Close
 
 *** Keywords ***
 Log In and Navigate To Devices Page

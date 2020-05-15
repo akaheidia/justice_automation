@@ -1,7 +1,7 @@
 *** Settings ***
 Library   SSHLibrary
 Library   SeleniumLibrary
-Resource  ../Resources/AllResources.robot
+Resource  ../../Resources/AllResources.robot
 
 Documentation   Regression test for JUS-645: Update existing reports to support device tag.
 
