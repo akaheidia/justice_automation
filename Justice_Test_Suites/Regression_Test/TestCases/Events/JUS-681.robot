@@ -1,7 +1,7 @@
 *** Settings ***
 Library  Collections
 Library  RequestsLibrary
-Resource  ../Resources/AllResources.robot
+Resource  ../../Resources/AllResources.robot
 
 Documentation   Regression test for JUS-681: Events: 404 error accessing v1/api/events - Events UI table empty.
 

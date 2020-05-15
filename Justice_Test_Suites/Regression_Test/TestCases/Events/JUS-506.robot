@@ -1,7 +1,7 @@
 *** Settings ***
 Library   SeleniumLibrary
 Library   OperatingSystem
-Resource  ../Resources/AllResources.robot
+Resource  ../../Resources/AllResources.robot
 
 Documentation    Regression test for JUS-506: Events: Navigating to last page shows empty table if more than 10,000 events.
 
