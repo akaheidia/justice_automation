@@ -11,7 +11,7 @@ Suite Teardown   Log Out and Close Browser
 *** Test Cases ***
 Confirm CSV Download Has Valid User Name Data
     Download CSV All Rows
-    Wait Until Page Contains  Download Complete
+    Wait Until Download Completes
     Confirm File Contents  ${csv_endsystems_all}
     Remove File  ${DOWNLOADS_DIR}  ${csv_endsystems_all}
     sleep  1 second

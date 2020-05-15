@@ -28,38 +28,38 @@ Confirm End-Systems Tab
 Confirm CSV Download File Name for End-Systems All Rows
     Navigate to End-Systems and Set Filter  ${XMC_2_HOSTNAME}
     Download CSV All Rows
-    Wait Until Page Contains  Download Complete
+    Wait Until Download Completes
     Confirm File Exists  ${csv_endsystems_all}
     Remove File  ${csv_endsystems_all}
 
 Confirm CSV Download File Name for End-Systems Visible Rows
     Download CSV Visible Rows
-    Wait Until Page Contains  Download Complete
+    Wait Until Download Completes
     Confirm File Exists  ${csv_endsystems_visible}
     Remove File  ${csv_endsystems_visible}
 
 Confirm CSV Download File Name for End-Systems All Filtered Rows
     Download CSV All Filtered Rows
-    Wait Until Page Contains  Download Complete
+    Wait Until Download Completes
     Confirm File Exists  ${csv_endsystems_filtered}
     Remove File  ${csv_endsystems_filtered}
 
 
 Confirm PDF Download File Name for End-Systems All Rows
     Download PDF All Rows
-    Wait Until Page Contains  Download Complete
+    Wait Until Download Completes
     Confirm File Exists  ${pdf_endsystems_all}
     Remove File  ${pdf_endsystems_all}
 
 Confirm PDF Download File Name for End-Systems Visible Rows
     Download PDF Visible Rows
-    Wait Until Page Contains  Download Complete
+    Wait Until Download Completes
     Confirm File Exists  ${pdf_endsystems_visible}
     Remove File  ${pdf_endsystems_visible}
 
 Confirm PDF Download File Name for End-Systems All Filtered Rows
     Download PDF All Filtered Rows
-    Wait Until Page Contains  Download Complete
+    Wait Until Download Completes
     Confirm File Exists  ${pdf_endsystems_filtered}
     Remove File  ${pdf_endsystems_filtered}
 

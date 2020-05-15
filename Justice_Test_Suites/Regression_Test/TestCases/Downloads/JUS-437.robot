@@ -12,19 +12,19 @@ Suite Teardown   Log Out and Close Browser
 Confirm CSV File Extension for Devices All Rows
     Navigate to Devices and Set Filter  ${XMC_HOSTNAME}
     Download CSV All Rows
-    Wait Until Page Contains  Download Complete  timeout=1 minute
+    Wait Until Download Completes
     Confirm File Exists  ${csv_devices_all}
     Remove File  ${csv_devices_all}
 
 Confirm CSV File Extension for Devices Visible Rows
     Download CSV Visible Rows
-    Wait Until Page Contains  Download Complete  timeout=1 minute
+    Wait Until Download Completes
     Confirm File Exists  ${csv_devices_visible}
     Remove File  ${csv_devices_visible}
 
 Confirm CSV File Extension for Devices All Filtered Rows
     Download CSV All Filtered Rows
-    Wait Until Page Contains  Download Complete  timeout=1 minute
+    Wait Until Download Completes
     Confirm File Exists  ${csv_devices_filtered}
     Remove File  ${csv_devices_filtered}
 
@@ -32,19 +32,19 @@ Confirm CSV File Extension for Devices All Filtered Rows
 Confirm CSV File Extension for End-Systems All Rows
     Navigate to End-Systems and Set Filter  ${XMC_2_HOSTNAME}
     Download CSV All Rows
-    Wait Until Page Contains  Download Complete  timeout=1 minute
+    Wait Until Download Completes
     Confirm File Exists  ${csv_endsystems_all}
     Remove File  ${csv_endsystems_all}
 
 Confirm CSV File Extension for End-Systems Visible Rows
     Download CSV Visible Rows
-    Wait Until Page Contains  Download Complete  timeout=1 minute
+    Wait Until Download Completes
     Confirm File Exists  ${csv_endsystems_visible}
     Remove File  ${csv_endsystems_visible}
 
 Confirm CSV File Extension for End-Systems All Filtered Rows
     Download CSV All Filtered Rows
-    Wait Until Page Contains  Download Complete  timeout=1 minute
+    Wait Until Download Completes
     Confirm File Exists  ${csv_endsystems_filtered}
     Remove File  ${csv_endsystems_filtered}
 
@@ -52,19 +52,19 @@ Confirm CSV File Extension for End-Systems All Filtered Rows
 Confirm CSV File Extension for Alarms All Rows
     Navigate to Alarms and Set Filter  ${XMC_HOSTNAME}
     Download CSV All Rows
-    Wait Until Page Contains  Download Complete  timeout=1 minute
+    Wait Until Download Completes
     Confirm File Exists  ${csv_alarms_all}
     Remove File  ${csv_alarms_all}
 
 Confirm CSV File Extension for Alarms Visible Rows
     Download CSV Visible Rows
-    Wait Until Page Contains  Download Complete  timeout=1 minute
+    Wait Until Download Completes
     Confirm File Exists  ${csv_alarms_visible}
     Remove File  ${csv_alarms_visible}
 
 Confirm CSV File Extension for Alarms All Filtered Rows
     Download CSV All Filtered Rows
-    Wait Until Page Contains  Download Complete  timeout=1 minute
+    Wait Until Download Completes
     Confirm File Exists  ${csv_alarms_filtered}
     Remove File  ${csv_alarms_filtered}
 
@@ -72,19 +72,19 @@ Confirm CSV File Extension for Alarms All Filtered Rows
 Confirm CSV File Extension for Events All Rows
     Navigate to Events and Set Filter  ${XMC_2_HOSTNAME}
     Download CSV All Rows
-    Wait Until Page Contains  Download Complete  timeout=1 minute
+    Wait Until Download Completes
     Confirm File Exists  ${csv_events_all}
     Remove File  ${csv_events_all}
 
 Confirm CSV File Extension for Events Visible Rows
     Download CSV Visible Rows
-    Wait Until Page Contains  Download Complete  timeout=1 minute
+    Wait Until Download Completes
     Confirm File Exists  ${csv_events_visible}
     Remove File  ${csv_events_visible}
 
 Confirm CSV File Extension for Events All Filtered Rows
     Download CSV All Filtered Rows
-    Wait Until Page Contains  Download Complete  timeout=1 minute
+    Wait Until Download Completes
     Confirm File Exists  ${csv_events_filtered}
     Remove File  ${csv_events_filtered}
 

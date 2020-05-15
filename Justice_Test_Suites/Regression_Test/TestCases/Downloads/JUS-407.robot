@@ -11,19 +11,19 @@ Suite Teardown   Log Out and Close Browser
 *** Test Cases ***
 Confirm CSV All Rows
     Download CSV All Rows
-    Wait Until Page Contains  Download Complete
+    Wait Until Download Completes
     Confirm File Contents  ${csv_devices_all}
     Remove File  ${DOWNLOADS_DIR}  ${csv_devices_all}
 
 Confirm CSV Visible Rows
     Download CSV Visible Rows
-    Wait Until Page Contains  Download Complete
+    Wait Until Download Completes
     Confirm File Contents  ${csv_devices_visible}
     Remove File  ${DOWNLOADS_DIR}  ${csv_devices_visible}
 
 Confirm CSV All Filtered Rows
     Download CSV All Filtered Rows
-    Wait Until Page Contains  Download Complete
+    Wait Until Download Completes
     Confirm File Contents  ${csv_devices_filtered}
     Remove File  ${DOWNLOADS_DIR}  ${csv_devices_filtered}
 

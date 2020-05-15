@@ -11,13 +11,13 @@ Suite Teardown   Log Out and Close Browser
 *** Test Cases ***
 Confirm CSV Download File Name for Events All Rows
     Download CSV All Rows
-    Wait Until Page Contains  Download Complete  timeout=2 minutes
+    Wait Until Download Completes
     Confirm File Exists  ${csv_events_all}
     Remove File  ${csv_events_all}
 
 Confirm PDF Download File Name for Events All Rows
     Download PDF All Rows
-    Wait Until Page Contains  Download Complete  timeout=2 minutes
+    Wait Until Download Completes
     Confirm File Exists  ${pdf_events_all}
     Remove File  ${pdf_events_all}
 

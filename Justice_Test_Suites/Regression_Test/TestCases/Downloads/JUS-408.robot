@@ -12,19 +12,19 @@ Suite Teardown   Log Out and Close Browser
 Confirm CSV All Rows for Alarms
     Navigate to Alarms and Set Filter  ${XMC_HOSTNAME}
     Download CSV All Rows
-    Wait Until Page Contains  Download Complete  timeout=1 minute
+    Wait Until Download Completes
     Confirm File Contents  ${csv_alarms_all}
     Remove File  ${csv_alarms_all}
 
 Confirm CSV Visible Rows for Alarms
     Download CSV Visible Rows
-    Wait Until Page Contains  Download Complete  timeout=1 minute
+    Wait Until Download Completes
     Confirm File Contents  ${csv_alarms_visible}
     Remove File  ${csv_alarms_visible}
 
 Confirm CSV All Filtered Rows for Alarms
     Download CSV All Filtered Rows
-    Wait Until Page Contains  Download Complete  timeout=1 minute
+    Wait Until Download Completes
     Confirm File Contents  ${csv_alarms_filtered}
     Remove File  ${csv_alarms_filtered}
 
@@ -32,19 +32,19 @@ Confirm CSV All Filtered Rows for Alarms
 Confirm CSV All Rows for Events
     Navigate to Events and Set Filter  ${XMC_2_HOSTNAME}
     Download CSV All Rows
-    Wait Until Page Contains  Download Complete  timeout=1 minute
+    Wait Until Download Completes
     Confirm File Contents  ${csv_events_all}
     Remove File  ${csv_events_all}
 
 Confirm CSV Visible Rows for Events
     Download CSV Visible Rows
-    Wait Until Page Contains  Download Complete  timeout=1 minute
+    Wait Until Download Completes
     Confirm File Contents  ${csv_events_visible}
     Remove File  ${csv_events_visible}
 
 Confirm CSV All Filtered Rows for Events
     Download CSV All Filtered Rows
-    Wait Until Page Contains  Download Complete  timeout=1 minute
+    Wait Until Download Completes
     Confirm File Contents  ${csv_events_filtered}
     Remove File  ${csv_events_filtered}
 
@@ -52,19 +52,19 @@ Confirm CSV All Filtered Rows for Events
 Confirm CSV All Rows for End-Systems
     Navigate to End-Systems and Set Filter  ${XMC_2_HOSTNAME}
     Download CSV All Rows
-    Wait Until Page Contains  Download Complete  timeout=1 minute
+    Wait Until Download Completes
     Confirm File Contents  ${csv_endsystems_all}
     Remove File  ${csv_endsystems_all}
 
 Confirm CSV Visible Rows for End-Systems
     Download CSV Visible Rows
-    Wait Until Page Contains  Download Complete  timeout=1 minute
+    Wait Until Download Completes
     Confirm File Contents  ${csv_endsystems_visible}
     Remove File  ${csv_endsystems_visible}
 
 Confirm CSV All Filtered Rows for End-Systems
     Download CSV All Filtered Rows
-    Wait Until Page Contains  Download Complete  timeout=1 minute
+    Wait Until Download Completes
     Confirm File Contents  ${csv_endsystems_filtered}
     Remove File  ${csv_endsystems_filtered}
 
