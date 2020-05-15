@@ -1,6 +1,6 @@
 *** Settings ***
 Library   SeleniumLibrary
-Resource  ../Resources/AllResources.robot
+Resource  ../../../Resources/AllResources.robot
 
 Documentation    Regression test for JUS-375: Reports - Usability: ring charts should have click zone on label as well as ring.
 

@@ -1,6 +1,6 @@
 *** Settings ***
 Library   SeleniumLibrary
-Resource  ../Resources/AllResources.robot
+Resource  ../../../Resources/AllResources.robot
 
 Documentation    Regression test for JUS-348: LOGI: Usability Network summary can't click on device/site.
 

@@ -1,6 +1,6 @@
 *** Settings ***
 Library   SeleniumLibrary
-Resource  ../Resources/AllResources.robot
+Resource  ../../../Resources/AllResources.robot
 
 Documentation    Regression test for JUS-400: Reports: Drilling down into child sites isn't functioning correctly.
 ...              This test assumes there is a multi-hierarchy of sites with a device in the deepest site level.
