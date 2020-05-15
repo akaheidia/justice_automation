@@ -17,7 +17,6 @@ Confirm CSV Download File Name for Events All Filtered Rows
 
 Confirm PDF Download File Name for Events All Filtered Rows
     Download PDF All Filtered Rows
-    sleep  20 seconds  # sleep is not the best solution but the timeout is failing after 1 minute instead of the specified 2 minutes
     Wait Until Page Contains  Download Complete  timeout=2 minutes
     Confirm File Exists  ${pdf_events_filtered}
     Remove File  ${pdf_events_filtered}
