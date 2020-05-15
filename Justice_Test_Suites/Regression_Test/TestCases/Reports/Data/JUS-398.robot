@@ -1,6 +1,6 @@
 *** Settings ***
 Library   SeleniumLibrary
-Resource  ../Resources/AllResources.robot
+Resource  ../../../Resources/AllResources.robot
 
 Documentation    Regression test for JUS-398: Reports: Wireless Controller not showing up in Device Availability report.
 ...              This test assumes the Wireless Controller has already been created and is collecting/reporting statistics.

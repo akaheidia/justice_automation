@@ -1,12 +1,11 @@
 *** Settings ***
 Library   SeleniumLibrary
-Resource  ../Resources/AllResources.robot
+Resource  ../../../Resources/AllResources.robot
 
 Documentation    Regression test for JUS-425: Reports: Top APs is empty even though APs exist in system.
 
 Suite Setup      Open Browser and Log In  ${JUS_URL}  ${BROWSER}  ${JUS_USERNAME}  ${JUS_PASSWORD}
 Suite Teardown   Log Out and Close Browser
-
 
 *** Test Cases ***
 Confirm Top APs Reports Contain Data

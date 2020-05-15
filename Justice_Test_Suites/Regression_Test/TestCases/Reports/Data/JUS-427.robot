@@ -1,6 +1,6 @@
 *** Settings ***
 Library   SeleniumLibrary
-Resource  ../Resources/AllResources.robot
+Resource  ../../../Resources/AllResources.robot
 
 Documentation    Regression test for JUS-427: Reports: Metric missing from title and column label when drilling into metric from Port Overview page.
 ...              This test assumes the devices have already been created which are collecting/reporting port statistics.
