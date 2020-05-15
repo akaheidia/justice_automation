@@ -1,6 +1,6 @@
 *** Settings ***
 Library   SeleniumLibrary
-Resource  ../Resources/AllResources.robot
+Resource  ../../../Resources/AllResources.robot
 
 Documentation    Regression test for JUS-406: Reports: port utilization statistics display metric name instead of human-readable name.
 ...              This test assumes the devices have already been created which are collecting/reporting port statistics.

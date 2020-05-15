@@ -1,12 +1,11 @@
 *** Settings ***
 Library   SeleniumLibrary
-Resource  ../Resources/AllResources.robot
+Resource  ../../../Resources/AllResources.robot
 
 Documentation    Regression test for JUS-346: Usability: LOGI right and left panels shouldn't close.
 
 Suite Setup      Open Browser and Log In  ${JUS_URL}  ${BROWSER}  ${JUS_USERNAME}  ${JUS_PASSWORD}
 Suite Teardown   Log Out and Close Browser
-
 
 *** Test Cases ***
 Confirm Sidebar Menu Closes When Filter Panel Opened
