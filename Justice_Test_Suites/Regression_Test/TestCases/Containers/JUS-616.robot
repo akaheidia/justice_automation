@@ -1,6 +1,6 @@
 *** Settings ***
 Library   OperatingSystem
-Resource  ../Resources/AllResources.robot
+Resource  ../../Resources/AllResources.robot
 
 Documentation   Regression test for JUS-616: Performance script used to gather metricbeats statistics cannot connect to ElasticSearch.
 

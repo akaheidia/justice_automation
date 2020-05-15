@@ -1,6 +1,6 @@
 *** Settings ***
 Library   SSHLibrary
-Resource  ../Resources/AllResources.robot
+Resource  ../../Resources/AllResources.robot
 
 Documentation   Regression test for JUS-596: Close unnecessary exposed ports on appliance.
 
