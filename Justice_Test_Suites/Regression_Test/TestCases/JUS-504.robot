@@ -2,7 +2,7 @@
 Library   SeleniumLibrary
 Resource  ../Resources/AllResources.robot
 
-Documentation    Regression test for JUS-503: Reports - Breadcrumbs: Navigating to level 5 site causes error: 414 Request - URI Too Large.
+Documentation    Regression test for JUS-504: Reports: breadcrumbs link repeats too much information.
 
 Suite Setup      Open Browser and Log In  ${JUS_URL}  ${BROWSER}  ${JUS_USERNAME}  ${JUS_PASSWORD}
 Suite Teardown   Log Out and Close Browser
