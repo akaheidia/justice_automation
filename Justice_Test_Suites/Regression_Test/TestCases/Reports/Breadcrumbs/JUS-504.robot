@@ -1,6 +1,6 @@
 *** Settings ***
 Library   SeleniumLibrary
-Resource  ../Resources/AllResources.robot
+Resource  ../../../Resources/AllResources.robot
 
 Documentation    Regression test for JUS-504: Reports: breadcrumbs link repeats too much information.
 
