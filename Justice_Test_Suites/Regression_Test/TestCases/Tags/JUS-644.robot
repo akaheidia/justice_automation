@@ -1,9 +1,9 @@
 *** Settings ***
 Library   SSHLibrary
 Library   SeleniumLibrary
-Resource  ../Resources/AllResources.robot
+Resource  ../../Resources/AllResources.robot
 
-Documentation   Regression test for JUS-644: Tags - Manage Tags: No Cancel Button in Device Details.
+Documentation    Regression test for JUS-644: Tags - Manage Tags: No Cancel Button in Device Details.
 
 Suite Setup      Log In and Create Tag and Assign Devices To Tag
 Suite Teardown   Clean Up Tags and Log Out and Close Browser
