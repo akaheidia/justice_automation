@@ -29,5 +29,5 @@ Log In and Navigate To User Group Settings Page
     Open Browser and Log In  ${JUS_URL}  ${BROWSER}  ${JUS_USERNAME}  ${JUS_PASSWORD}
 #    Click Settings
 #    Confirm Settings Page Loaded
-#    Click User Groups
-#    Confirm User Groups Page Loaded
+#    Click User_Groups
+#    Confirm User_Groups Page Loaded

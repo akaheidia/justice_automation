@@ -14,8 +14,8 @@ Test Not Supported
 #Confirm Close Button Not Present In User Group Details Panel
 #    Click Settings
 #    Confirm Settings Page Loaded
-#    Click User Groups
-#    Confirm User Groups Page Loaded
+#    Click User_Groups
+#    Confirm User_Groups Page Loaded
 #    Settings Select User Group  ${XMC_HOSTNAME}  NetSight Administrator
 #    Confirm Settings User Group Close Button Not Present
 #    Settings Select User Group  ${XMC_HOSTNAME}  Custom Group
