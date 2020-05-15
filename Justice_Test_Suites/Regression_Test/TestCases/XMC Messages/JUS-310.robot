@@ -1,8 +1,8 @@
 *** Settings ***
 Library   SeleniumLibrary
-Resource  ../Resources/AllResources.robot
+Resource  ../../Resources/AllResources.robot
 
-Documentation    Regression test for JUS-394: Significant delays between domain nodes and server components.
+Documentation    Regression test for JUS-310: Deleting Device in XMC does not remove it from Justice UI.
 
 *** Variables ***
 ${device_ip}    10.54.142.12
@@ -26,7 +26,7 @@ Confirm Device Added To Justice
     Select Servers and Sites Server Tree Node  ${XMC_HOSTNAME}
     Refresh Devices Table
     Search Field Enter Text  ${device_ip}
-    Confirm Device In Table No Wait  ${device_ip}
+    Confirm Device In Table  ${device_ip}
     Search Field Clear Text
     Log Out and Close Browser
 
@@ -50,6 +50,6 @@ Confirm Device Removed From Justice
     Confirm Servers and Sites Filter Expanded
     Select Servers and Sites Server Tree Node  ${XMC_HOSTNAME}
     Search Field Enter Text  ${device_ip}
-    Confirm Device Not In Table No Wait  ${device_ip}
+    Confirm Device Not In Table  ${device_ip}
     Search Field Clear Text
     Log Out and Close Browser
