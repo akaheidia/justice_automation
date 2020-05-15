@@ -16,7 +16,7 @@ Copy Docker Metrics Script To Current Directory
     OperatingSystem.File Should Exist  ${docker_metrics_request_template}
 
 Run Script To Gather Docker Metrics
-    Run  ./${DOCKER_METRICS_SCRIPT} ${JUS_HOST_IP} ${JUS_USERNAME} ${JUS_PASSWORD} > ${test_filename}.csv
+    Run  .${/}"${DOCKER_METRICS_SCRIPT}" ${JUS_HOST_IP} ${JUS_USERNAME} ${JUS_PASSWORD} > ${test_filename}.csv
     sleep  2 seconds
     OperatingSystem.File Should Exist  ${test_filename}.csv
 
