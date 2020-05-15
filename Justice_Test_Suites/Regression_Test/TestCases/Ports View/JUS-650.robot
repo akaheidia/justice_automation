@@ -1,7 +1,7 @@
 *** Settings ***
 Library  Collections
 Library  RequestsLibrary
-Resource  ../Resources/AllResources.robot
+Resource  ../../Resources/AllResources.robot
 
 Documentation  Regression test for JUS-650: Add itemID to ports when they are returned by getTagsByID.
 
