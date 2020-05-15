@@ -26,4 +26,4 @@ Log In and Navigate to Events View
     Hide Filter Panel
     sleep  2 seconds
     Confirm Events Present
-    Confirm Minimum Number of Events Present  10000
+    Confirm Minimum Number of Events Present  1000
