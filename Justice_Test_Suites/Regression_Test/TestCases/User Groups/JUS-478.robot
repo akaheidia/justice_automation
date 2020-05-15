@@ -1,14 +1,14 @@
 *** Settings ***
 Library  Collections
 Library  RequestsLibrary
-Resource  ../Resources/AllResources.robot
+Resource  ../../Resources/AllResources.robot
 
-Documentation   Regression test for JUS-478: Usergroups -> permissions apis need to be updated to use strings for siteIds.
+Documentation  Regression test for JUS-478: Usergroups -> permissions apis need to be updated to use strings for siteIds.
 
 Suite Setup    Set Access Token
 
 *** Variables ***
-&{headers}=       Content-Type=application/json
+&{headers}=    Content-Type=application/json
 
 *** Test Cases ***
 Confirm Get User Groups API Success
