@@ -128,9 +128,10 @@ XMC Create Device Enter Nickname
 
 XMC Create Device Click OK
     # Give the button a chance to become enabled
-    : FOR  ${index}  IN RANGE  1  100
-    \    ${ok_enabled}=  Run Keyword And Return Status  Page Should Contain Element  ${xmc_create_device_dialog_ok_btn}${xmc_btn_enabled_xpath_value}
-    \    Exit For Loop If  ${ok_enabled} == True
+    FOR  ${index}  IN RANGE  1  100
+        ${ok_enabled}=  Run Keyword And Return Status  Page Should Contain Element  ${xmc_create_device_dialog_ok_btn}${xmc_btn_enabled_xpath_value}
+        Exit For Loop If  ${ok_enabled} == True
+    END
     Page Should Contain Element  ${xmc_create_device_dialog_ok_btn}${xmc_btn_enabled_xpath_value}
     Click Element  ${xmc_create_device_dialog_ok_btn}${xmc_btn_enabled_xpath_value}
 
@@ -148,21 +149,23 @@ XMC Refresh Devices Table
 
 XMC Confirm Device In Table
     [Arguments]  ${device_ip}
-    : FOR  ${index}  IN RANGE  1  10
-    \    XMC Refresh Devices Table
-    \    ${found_device}=  Run Keyword And Return Status  Page Should Contain Element  xpath://div[contains(@class,'x-grid-cell-inner')][contains(text(),'${device_ip}')]
-    \    Log  Found device? ${found_device}
-    \    Exit For Loop If  ${found_device} == True
+    FOR  ${index}  IN RANGE  1  10
+        XMC Refresh Devices Table
+        ${found_device}=  Run Keyword And Return Status  Page Should Contain Element  xpath://div[contains(@class,'x-grid-cell-inner')][contains(text(),'${device_ip}')]
+        Log  Found device? ${found_device}
+        Exit For Loop If  ${found_device} == True
+    END
     Page Should Contain Element  xpath://div[contains(@class,'x-grid-cell-inner')][contains(text(),'${device_ip}')]
 
 XMC Confirm Device Not In Table
     [Arguments]  ${device_ip}
     ${orig_wait}=  Set Selenium Implicit Wait  1 second
-    : FOR  ${index}  IN RANGE  1  10
-    \    XMC Refresh Devices Table
-    \    ${found_device}=  Run Keyword And Return Status  Page Should Contain Element  xpath://div[contains(@class,'x-grid-cell-inner')][contains(text(),'${device_ip}')]
-    \    Log  Found device? ${found_device}
-    \    Exit For Loop If  ${found_device} == False
+    FOR  ${index}  IN RANGE  1  10
+        XMC Refresh Devices Table
+        ${found_device}=  Run Keyword And Return Status  Page Should Contain Element  xpath://div[contains(@class,'x-grid-cell-inner')][contains(text(),'${device_ip}')]
+        Log  Found device? ${found_device}
+        Exit For Loop If  ${found_device} == False
+    END
     Page Should Not Contain Element  xpath://div[contains(@class,'x-grid-cell-inner')][contains(text(),'${device_ip}')]
     Set Selenium Implicit Wait  ${orig_wait}
 
