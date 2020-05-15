@@ -2,7 +2,7 @@
 Library   SeleniumLibrary
 Resource  ../Resources/AllResources.robot
 
-Documentation    Regression test for JUS-536: postgres columns too small to contain subcomponent data in postgres - event and alarm entries.
+Documentation    Regression test for JUS-661: syslog error: invalid byte sequence for encoding "UTF8".
 
 *** Variables ***
 ${syslog}  /var/log/syslog
