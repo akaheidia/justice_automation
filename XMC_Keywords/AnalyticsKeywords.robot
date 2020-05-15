@@ -108,9 +108,10 @@ XMC Analytics Configuration Add Engine Select Profile
 
 XMC Analytics Configuration Add Engine Click OK
     # Give the button a chance to become enabled
-    : FOR  ${index}  IN RANGE  1  10
-    \    ${ok_enabled}=  Run Keyword And Return Status  Page Should Contain Element  ${xmc_analytics_add_engine_dialog_ok_btn}${xmc_btn_enabled_xpath_value}
-    \    Exit For Loop If  ${ok_enabled} == True
+    FOR  ${index}  IN RANGE  1  10
+        ${ok_enabled}=  Run Keyword And Return Status  Page Should Contain Element  ${xmc_analytics_add_engine_dialog_ok_btn}${xmc_btn_enabled_xpath_value}
+        Exit For Loop If  ${ok_enabled} == True
+    END
     Page Should Contain Element  ${xmc_analytics_add_engine_dialog_ok_btn}${xmc_btn_enabled_xpath_value}
     Click Element  ${xmc_analytics_add_engine_dialog_ok_btn}${xmc_btn_enabled_xpath_value}
 

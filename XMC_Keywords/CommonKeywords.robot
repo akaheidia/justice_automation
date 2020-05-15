@@ -58,11 +58,12 @@ XMC Restart Server
 XMC Wait For Server Restart
     [Arguments]  ${url}  ${browser}
     Open and Maximize Browser  ${url}  ${browser}
-    : FOR  ${index}  IN RANGE  1  10000
-    \    Reload Page
-    \    ${page_loaded}=  Run Keyword And Return Status  Element Should Be Visible  ${xmc_login_logo_image}
-    \    Exit For Loop If  ${page_loaded} == True
-    \    sleep  2 seconds
+    FOR  ${index}  IN RANGE  1  10000
+        Reload Page
+        ${page_loaded}=  Run Keyword And Return Status  Element Should Be Visible  ${xmc_login_logo_image}
+        Exit For Loop If  ${page_loaded} == True
+        sleep  2 seconds
+    END
     Element Should Be Visible  ${xmc_login_logo_image}
     Close Browser
 
