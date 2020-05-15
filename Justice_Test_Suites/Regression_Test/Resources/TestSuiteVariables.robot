@@ -2,7 +2,7 @@
 ${BROWSER}                       Chrome
 
 # Scripts
-${robot_script_dir}                 ../../Justice_Scripts
+${robot_script_dir}                 Justice_Scripts
 ${docker_metrics_script}            docker_metrics.py
 ${docker_metrics_request_template}  request.template
 
