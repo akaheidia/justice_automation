@@ -11,7 +11,7 @@ Suite Teardown  Close SSH Connection
 ${port_list}    9200,9300,5432,4369,15671,15672,25672
 
 *** Test Cases ***
-Execute Command and Verify Output
+Confirm Ports Are Closed
 #    ${output}=  Execute Command  apt-get update
 #    Log To Console  ${output}
 #    ${output}=  Execute Command  apt --fix-broken install
