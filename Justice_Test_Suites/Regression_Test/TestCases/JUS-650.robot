@@ -3,7 +3,7 @@ Library  Collections
 Library  RequestsLibrary
 Resource  ../Resources/AllResources.robot
 
-Documentation  Regression test for JUS-648: Add itemID to ports when they are returned by getTagsByID.
+Documentation  Regression test for JUS-650: Add itemID to ports when they are returned by getTagsByID.
 
 Suite Setup    Set Access Token
 
