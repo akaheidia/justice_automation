@@ -23,10 +23,10 @@ Run Script To Gather Docker Metrics
 *** Keywords ***
 Delete Docker Metrics Script Files
     OperatingSystem.Remove File  ${test_filename}.csv
-    OperatingSystem.Remove File  docker_metrics.py
-    OperatingSystem.Remove File  request.template
+    OperatingSystem.Remove File  ${docker_metrics_script}
+    OperatingSystem.Remove File  ${docker_metrics_request_template}
     OperatingSystem.Remove File  request.json
     OperatingSystem.File Should Not Exist  ${test_filename}.csv
-    OperatingSystem.File Should Not Exist  docker_metrics.py
-    OperatingSystem.File Should Not Exist  request.template
+    OperatingSystem.File Should Not Exist  ${docker_metrics_script}
+    OperatingSystem.File Should Not Exist  ${docker_metrics_request_template}
     OperatingSystem.File Should Not Exist  request.json
