@@ -7,10 +7,7 @@ Documentation   Regression test for JUS-616: Performance script used to gather m
 Suite Teardown  Delete Docker Metrics Script Files
 
 *** Variables ***
-${test_filename}                    metrics_test
-${robot_script_dir}                 ../../Justice_Scripts
-${docker_metrics_script}            docker_metrics.py
-${docker_metrics_request_template}  request.template
+${test_filename}  metrics_test
 
 *** Test Cases ***
 Copy Docker Metrics Script To Current Directory
