@@ -1,7 +1,7 @@
 *** Settings ***
 Library   SSHLibrary
 Library   SeleniumLibrary
-Resource  ../Resources/AllResources.robot
+Resource  ../../Resources/AllResources.robot
 
 Documentation   Regression test for JUS-529: Resync: Resync messages continue to come in even after "Resync completed successfully" message is received.
 

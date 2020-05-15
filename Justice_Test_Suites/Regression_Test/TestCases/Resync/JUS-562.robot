@@ -1,7 +1,7 @@
 *** Settings ***
 Library   SSHLibrary
 Library   SeleniumLibrary
-Resource  ../Resources/AllResources.robot
+Resource  ../../Resources/AllResources.robot
 
 Documentation   Regression test for JUS-562: Resync: Resync does not occur if XMC server is restarted while disconnected.
 

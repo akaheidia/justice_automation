@@ -1,7 +1,7 @@
 *** Settings ***
 Library   SSHLibrary
 Library   SeleniumLibrary
-Resource  ../Resources/AllResources.robot
+Resource  ../../Resources/AllResources.robot
 
 Documentation   Regression test for JUS-532: Resync: Log is flooded with messages - should be DEBUG level instead of INFO.
 
