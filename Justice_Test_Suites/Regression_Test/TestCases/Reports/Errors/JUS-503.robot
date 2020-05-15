@@ -1,6 +1,6 @@
 *** Settings ***
 Library   SeleniumLibrary
-Resource  ../Resources/AllResources.robot
+Resource  ../../../Resources/AllResources.robot
 
 Documentation    Regression test for JUS-503: Reports - Breadcrumbs: Navigating to level 5 site causes error: 414 Request - URI Too Large.
 

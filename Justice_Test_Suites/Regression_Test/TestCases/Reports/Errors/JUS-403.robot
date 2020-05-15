@@ -1,6 +1,6 @@
 *** Settings ***
 Library   SeleniumLibrary
-Resource  ../Resources/AllResources.robot
+Resource  ../../../Resources/AllResources.robot
 
 Documentation    Regression test for JUS-403: Reports - Port Utilization: operator does not exist: bigint = character varying.
 ...              This test assumes the devices have already been created which are collecting/reporting port statistics.

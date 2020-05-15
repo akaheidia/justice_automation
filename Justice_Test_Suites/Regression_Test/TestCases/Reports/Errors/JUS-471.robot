@@ -1,6 +1,6 @@
 *** Settings ***
 Library   SeleniumLibrary
-Resource  ../Resources/AllResources.robot
+Resource  ../../../Resources/AllResources.robot
 
 Documentation    Regression test for JUS-471: Reports: accessing reports page loads secondary Monitor page, then rdSecureKey error on refresh.
 
@@ -8,7 +8,6 @@ Suite Setup      Open Browser and Log In  ${JUS_URL}  ${BROWSER}  ${JUS_USERNAME
 Suite Teardown   Log Out and Close Browser
 
 *** Test Cases ***
-
 Confirm Reports Page Loads Correctly
     Click Monitor
     Click List Slider
