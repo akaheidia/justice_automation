@@ -1,6 +1,6 @@
 *** Settings ***
 Library   SeleniumLibrary
-Resource  ../Resources/AllResources.robot
+Resource  ../../Resources/AllResources.robot
 
 Documentation    Regression test for all resync issues in non-verbose mode;  includes the following:
 ...              JUS-203: resync message when justice starts up

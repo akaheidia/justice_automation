@@ -1,6 +1,6 @@
 *** Settings ***
 Library   SeleniumLibrary
-Resource  ../Resources/AllResources.robot
+Resource  ../../Resources/AllResources.robot
 
 Documentation    Regression test for all resync issues in verbose mode;  includes the following:
 ...              JUS-529: Resync: Resync messages continue to come in even after "Resync completed successfully" message is received
