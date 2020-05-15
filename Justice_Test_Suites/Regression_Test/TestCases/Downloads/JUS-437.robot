@@ -1,7 +1,7 @@
 *** Settings ***
 Library   SeleniumLibrary
 Library   OperatingSystem
-Resource  ../Resources/AllResources.robot
+Resource  ../../Resources/AllResources.robot
 
 Documentation    Regression test for JUS-437: CSV Download: created file does not include .csv extension.
 

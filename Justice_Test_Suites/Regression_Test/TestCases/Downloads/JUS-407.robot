@@ -1,13 +1,12 @@
 *** Settings ***
 Library   SeleniumLibrary
 Library   OperatingSystem
-Resource  ../Resources/AllResources.robot
+Resource  ../../Resources/AllResources.robot
 
 Documentation    Regression test for JUS-407: CSV Download: output is unreadable for Device:Alarms data.
 
 Suite Setup      Log In and Navigate to Filtered Devices Tab
 Suite Teardown   Log Out and Close Browser
-
 
 *** Test Cases ***
 Confirm CSV All Rows

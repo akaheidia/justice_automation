@@ -1,7 +1,7 @@
 *** Settings ***
 Library   SeleniumLibrary
 Library   OperatingSystem
-Resource  ../Resources/AllResources.robot
+Resource  ../../Resources/AllResources.robot
 
 Documentation    Regression test for JUS-619: CSV Download for End-Systems has Undefined for Username column.
 

@@ -1,7 +1,7 @@
 *** Settings ***
 Library   SeleniumLibrary
 Library   OperatingSystem
-Resource  ../Resources/AllResources.robot
+Resource  ../../Resources/AllResources.robot
 
 Documentation    Regression test for JUS-408: CSV Download: output is unreadable for Alarms/Events time data.
 
@@ -9,7 +9,6 @@ Suite Setup      Log In and Navigate to List View
 Suite Teardown   Log Out and Close Browser
 
 *** Test Cases ***
-
 Confirm CSV All Rows for Alarms
     Navigate to Alarms and Set Filter  ${XMC_HOSTNAME}
     Download CSV All Rows
