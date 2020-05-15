@@ -1,6 +1,6 @@
 *** Settings ***
 Library   SeleniumLibrary
-Resource  ../Resources/AllResources.robot
+Resource  ../../Resources/AllResources.robot
 
 Documentation    Regression test for JUS-365: Endpoints: Table is displaying the same row over and over.
 
@@ -9,7 +9,6 @@ Suite Teardown   Log Out and Close Browser
 
 *** Variables ***
 ${xmc_with_endsystems}    ${XMC_2_HOSTNAME}
-
 
 *** Test Cases ***
 Confirm Rows Not Duplicated

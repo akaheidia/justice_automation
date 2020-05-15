@@ -3,7 +3,7 @@ Library   SeleniumLibrary
 Library   OperatingSystem
 Library   Collections
 Library   RequestsLibrary
-Resource  ../Resources/AllResources.robot
+Resource  ../../Resources/AllResources.robot
 
 Documentation    Regression test for JUS-432: Usability: inconsistent terminolog between Justice and XMC: End Points vs End-Systems.
 
