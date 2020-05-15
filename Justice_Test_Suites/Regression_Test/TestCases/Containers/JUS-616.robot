@@ -11,7 +11,7 @@ ${test_filename}  metrics_test
 
 *** Test Cases ***
 Copy Docker Metrics Script To Current Directory
-    Copy Files  ${robot_script_dir}/${docker_metrics_script}  ${robot_script_dir}/${docker_metrics_request_template}  .
+    Copy Files  ${robot_script_dir}${/}${docker_metrics_script}  ${robot_script_dir}${/}${docker_metrics_request_template}  .
     OperatingSystem.File Should Exist  ${docker_metrics_script}
     OperatingSystem.File Should Exist  ${docker_metrics_request_template}
 
