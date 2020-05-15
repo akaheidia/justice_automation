@@ -1,12 +1,11 @@
 *** Settings ***
 Library   SeleniumLibrary
-Resource  ../Resources/AllResources.robot
+Resource  ../../../Resources/AllResources.robot
 
 Documentation    Regression test for JUS-280: Add security to prevent access to LOGI reports without proper authentication.
 
 *** Variables ***
 ${get_secure_key_url}  ${JUS_URL}/justice/rdTemplate/rdGetSecureKey.aspx?Username=root
-
 
 *** Test Cases ***
 Confirm Reports Cannot Bypass Authentication
