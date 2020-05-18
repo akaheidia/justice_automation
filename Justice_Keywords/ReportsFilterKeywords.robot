@@ -87,9 +87,10 @@ Set Reports Filter Device Tags
 
     # Loop over the list of device tags to select
     @{device_tags}=  Split String  ${value}  ,
-    :FOR  ${item}  IN  @{device_tags}
-    \    Page Should Contain Element  xpath://span[contains(text(),'${item}')]
-    \    Click Element  xpath://span[contains(text(),'${item}')]
+    FOR  ${item}  IN  @{device_tags}
+        Page Should Contain Element  xpath://span[contains(text(),'${item}')]
+        Click Element  xpath://span[contains(text(),'${item}')]
+    END
 
     # Close the Device Tags selector
     ${open}=  Run Keyword And Return Status  Element Should Be Visible  ${reports_filter_panel_device_tags_choice_list_open}
@@ -113,9 +114,10 @@ Set Reports Filter Device Types
 
     # Loop over the list of device types to select
     @{device_types}=  Split String  ${value}  ,
-    :FOR  ${item}  IN  @{device_types}
-    \    Page Should Contain Element  xpath://span[contains(text(),'${item}')]
-    \    Click Element  xpath://span[contains(text(),'${item}')]
+    FOR  ${item}  IN  @{device_types}
+        Page Should Contain Element  xpath://span[contains(text(),'${item}')]
+        Click Element  xpath://span[contains(text(),'${item}')]
+    END
 
     # Close the Device Type selector
     ${open}=  Run Keyword And Return Status  Element Should Be Visible  ${reports_filter_panel_device_type_choice_list_open}
@@ -139,9 +141,10 @@ Set Reports Filter Months
 
     # Loop over the list of months to select
     @{device_types}=  Split String  ${value}  ,
-    :FOR  ${item}  IN  @{device_types}
-    \    Page Should Contain Element  xpath://span[contains(text(),'${item}')]
-    \    Click Element  xpath://span[contains(text(),'${item}')]
+    FOR  ${item}  IN  @{device_types}
+        Page Should Contain Element  xpath://span[contains(text(),'${item}')]
+        Click Element  xpath://span[contains(text(),'${item}')]
+    END
 
     # Close the Month selector
     ${open}=  Run Keyword And Return Status  Element Should Be Visible  ${reports_filter_panel_month_choice_list_open}

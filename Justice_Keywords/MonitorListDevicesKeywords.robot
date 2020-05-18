@@ -97,9 +97,10 @@ Assign Device To Tags
     Confirm Add Devices To Tag Panel Visible
     # Loop over the list of tags to select
     @{tags}=  Split String  ${tag_list}  ,
-    :FOR  ${tag}  IN  @{tags}
-    \    Confirm Add Devices To Tag Panel Contains Tag  ${tag}
-    \    Add Devices To Tag Select Tag  ${tag}
+    FOR  ${tag}  IN  @{tags}
+        Confirm Add Devices To Tag Panel Contains Tag  ${tag}
+        Add Devices To Tag Select Tag  ${tag}
+    END
     Add Devices To Tag Click Save
 
 Confirm Device Assigned To Tag
