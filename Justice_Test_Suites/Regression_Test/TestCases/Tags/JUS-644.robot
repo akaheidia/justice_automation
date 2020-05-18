@@ -63,6 +63,7 @@ Assign Test Devices To Test Tag
 
 Clean Up Tags and Log Out and Close Browser
     Show Tags Panel
+    sleep  1 second
     Tags Panel Select Tag  ${test_tag}
     Edit Tag Click Delete
     Edit Tag Confirm Delete Tag Click OK
@@ -72,7 +73,9 @@ Clean Up Tags and Log Out and Close Browser
 
 Open Manage Tags And Expand Test Tag Row
     Show Tags Panel
+    sleep  1 second
     Tags Panel Click Manage
+    sleep  1 second
     Confirm Manage Tags Panel Contains Tag  ${test_tag}
     Manage Tags Expand Row  ${test_tag}
 
