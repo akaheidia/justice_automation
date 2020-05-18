@@ -27,6 +27,7 @@ Confirm Add From Add Devices To Tag Panel
 
 Confirm Manage From Add Devices To Tag Panel
     Add Devices To Tag Click Manage
+    sleep  1 second
     Confirm Manage Tags Panel Contains Tag  ${test_tag}
     Manage Tags Select Tag  ${test_tag}
     sleep  1 second
