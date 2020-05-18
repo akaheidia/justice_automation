@@ -32,6 +32,7 @@ Log In and Set Up Tags
     Click List Slider
     Click Devices Tab
     Tags Panel Create Tag  ${test_tag}
+    sleep  1 second
     Assign Device To Tags  ${test_device_1}  ${test_tag}
     sleep  1 second
     Assign Device To Tags  ${test_device_2}  ${test_tag}
