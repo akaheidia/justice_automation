@@ -211,6 +211,7 @@ Confirm Manage Tags Device Not Assigned To Tag
 
 Manage Tags Select Tag
     [Arguments]  ${value}
+    Log  Select ${value} in Manage Tags View
     Wait Until Element Is Visible  xpath://app-manage-tags-dialog//div[text()='${value}']
     ${need_to_click}=  Run Keyword And Return Status  Element Should Be Visible  xpath://div[text()='${value}']/../..//div[contains(@class,'center-checkboxes')]//input[@aria-checked='false']
     Run Keyword If  ${need_to_click} == True  Click Element  xpath://div[text()='${value}']/../..//div[contains(@class,'center-checkboxes')]
