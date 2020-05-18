@@ -53,6 +53,7 @@ Log In and Navigate to Ports View
     Click Devices Tab
     Confirm Devices Tab Selected
     Search Field Enter Text  ${test_device}
+    Confirm Device In Table  ${test_device}
     Click Device Details Arrow  ${test_device}
     Confirm Device Details Page Loaded  ${test_device}
     Confirm Device Details Dashboard Page Loaded
