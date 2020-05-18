@@ -10,8 +10,9 @@ Suite Teardown   Log Out and Close Browser
 *** Test Cases ***
 Confirm Reports Page Does Not Time Out
     Navigate to Network Summary Report
+    sleep  3 seconds
     Confirm Network Summary Reports Page Title
     sleep  35 minutes
     Click Device Availability Drilldown
-    sleep  5 seconds
+    sleep  3 seconds
     Confirm Top N Top Device Availability Reports Page Title
