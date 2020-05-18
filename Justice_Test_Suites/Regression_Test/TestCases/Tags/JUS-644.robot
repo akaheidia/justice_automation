@@ -46,19 +46,12 @@ Log In and Create Tag and Assign Devices To Tag
     Click List Slider
     Click Devices Tab
     Set Server Filter  ${XMC_HOSTNAME}
-    Create Tag For Test
+    Tags Panel Create Tag  ${test_tag}
     Assign Test Devices To Test Tag
-
-Create Tag For Test
-    Show Tags Panel
-    Tags Panel Click Add
-    Add Tag Set Name  ${test_tag}
-    Add Tag Click Save
-    Confirm Tags Panel Contains Tag  ${test_tag}
-    Tags Panel Click Close
 
 Assign Test Devices To Test Tag
     Search Field Enter Text  ${device_filter}
+    sleep  1 second
     Select Device In Table  ${test_device_1}
     Select Device In Table  ${test_device_2}
     Search Field Clear Text
