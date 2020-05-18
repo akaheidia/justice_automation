@@ -13,4 +13,5 @@ Confirm Reports Page Does Not Time Out
     Confirm Network Summary Reports Page Title
     sleep  35 minutes
     Click Device Availability Drilldown
+    sleep  5 seconds
     Confirm Top N Top Device Availability Reports Page Title
