@@ -75,34 +75,34 @@ Confirm Tags Panel Tag Device Count Value
 # Edit Tag Dialog
 Edit Tag Set Name
     [Arguments]  ${value}
-    Element Should Be Visible  ${tags_panel_edit_tag_dialog_name}
+    Wait Until Element Is Visible  ${tags_panel_edit_tag_dialog_name}
     Input Text  ${tags_panel_edit_tag_dialog_name}  ${value}  clear=True
 
 Edit Tag Select Star
-    Element Should Be Visible  ${tags_panel_edit_tag_dialog_star_unselected}
+    Wait Until Element Is Visible  ${tags_panel_edit_tag_dialog_star_unselected}
     Click Element  ${tags_panel_edit_tag_dialog_star_unselected}
-    Element Should Be Visible  ${tags_panel_edit_tag_dialog_star_selected}
+    Wait Until Element Is Visible  ${tags_panel_edit_tag_dialog_star_selected}
 
 Edit Tag Deselect Star
-    Element Should Be Visible  ${tags_panel_edit_tag_dialog_star_selected}
+    Wait Until Element Is Visible  ${tags_panel_edit_tag_dialog_star_selected}
     Click Element  ${tags_panel_edit_tag_dialog_star_selected}
-    Element Should Be Visible  ${tags_panel_edit_tag_dialog_star_unselected}
+    Wait Until Element Is Visible  ${tags_panel_edit_tag_dialog_star_unselected}
 
 Edit Tag Set Description
     [Arguments]  ${value}
-    Element Should Be Visible  ${tags_panel_edit_tag_dialog_description}
+    Wait Until Element Is Visible  ${tags_panel_edit_tag_dialog_description}
     Input Text  ${tags_panel_edit_tag_dialog_description}  ${value}  clear=True
 
 Edit Tag Click Delete
-    Element Should Be Visible  ${tags_panel_edit_tag_dialog_delete}
+    Wait Until Element Is Visible  ${tags_panel_edit_tag_dialog_delete}
     Click Element  ${tags_panel_edit_tag_dialog_delete}
 
 Edit Tag Click Cancel
-    Element Should Be Visible  ${tags_panel_edit_tag_dialog_cancel}
+    Wait Until Element Is Visible  ${tags_panel_edit_tag_dialog_cancel}
     Click Element  ${tags_panel_edit_tag_dialog_cancel}
 
 Edit Tag Click Save
-    Element Should Be Visible  ${tags_panel_edit_tag_dialog_save}
+    Wait Until Element Is Visible  ${tags_panel_edit_tag_dialog_save}
     Click Element  ${tags_panel_edit_tag_dialog_save}
 
 Confirm Edit Tag Dialog Visible
@@ -129,30 +129,30 @@ Confirm Edit Tag Dialog Star Not Selected
 # Add Tag Dialog
 Add Tag Set Name
     [Arguments]  ${value}
-    Element Should Be Visible  ${tags_add_tag_dialog_name}
+    Wait Until Element Is Visible  ${tags_add_tag_dialog_name}
     Input Text  ${tags_add_tag_dialog_name}  ${value}  clear=True
 
 Add Tag Select Star
-    Element Should Be Visible  ${tags_add_tag_dialog_star_unselected}
+    Wait Until Element Is Visible  ${tags_add_tag_dialog_star_unselected}
     Click Element  ${tags_add_tag_dialog_star_unselected}
-    Element Should Be Visible  ${tags_add_tag_dialog_star_selected}
+    Wait Until Element Is Visible  ${tags_add_tag_dialog_star_selected}
 
 Add Tag Deselect Star
-    Element Should Be Visible  ${tags_add_tag_dialog_star_selected}
+    Wait Until Element Is Visible  ${tags_add_tag_dialog_star_selected}
     Click Element  ${tags_add_tag_dialog_star_selected}
-    Element Should Be Visible  ${tags_add_tag_dialog_star_unselected}
+    Wait Until Element Is Visible  ${tags_add_tag_dialog_star_unselected}
 
 Add Tag Set Description
     [Arguments]  ${value}
-    Element Should Be Visible  ${tags_add_tag_dialog_description}
+    Wait Until Element Is Visible  ${tags_add_tag_dialog_description}
     Input Text  ${tags_add_tag_dialog_description}  ${value}  clear=True
 
 Add Tag Click Save
-    Element Should Be Visible  ${tags_add_tag_dialog_save_enabled}
+    Wait Until Element Is Visible  ${tags_add_tag_dialog_save_enabled}
     Click Element  ${tags_add_tag_dialog_save}
 
 Add Tag Click Cancel
-    Element Should Be Visible  ${tags_add_tag_dialog_cancel}
+    Wait Until Element Is Visible  ${tags_add_tag_dialog_cancel}
     Click Element  ${tags_add_tag_dialog_cancel}
 
 
