@@ -80,20 +80,21 @@ Assign Device To Tag
     Search Field Enter Text  ${ip}
     sleep  1 second
     Select Device In Table  ${ip}
-    Search Field Clear Text
     Click Add Devices To Tag
+    sleep  1 second
     Confirm Add Devices To Tag Panel Visible
     Confirm Add Devices To Tag Panel Contains Tag  ${tag}
     Add Devices To Tag Select Tag  ${tag}
     Add Devices To Tag Click Save
+    Search Field Clear Text
 
 Assign Device To Tags
     [Arguments]  ${ip}  ${tag_list}
     Search Field Enter Text  ${ip}
     sleep  1 second
     Select Device In Table  ${ip}
-    Search Field Clear Text
     Click Add Devices To Tag
+    sleep  1 second
     Confirm Add Devices To Tag Panel Visible
     # Loop over the list of tags to select
     @{tags}=  Split String  ${tag_list}  ,
@@ -102,6 +103,7 @@ Assign Device To Tags
         Add Devices To Tag Select Tag  ${tag}
     END
     Add Devices To Tag Click Save
+    Search Field Clear Text
 
 Confirm Device Assigned To Tag
     [Arguments]  ${ip}  ${tag}
