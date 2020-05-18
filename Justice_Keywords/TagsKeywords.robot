@@ -8,6 +8,7 @@ Documentation    Keywords specific to the Tags Panel.
 Tags Panel Create Tag
     [Arguments]  ${tag_name}
     Show Tags Panel
+    sleep  1 second
     Tags Panel Click Add
     Add Tag Set Name  ${tag_name}
     Add Tag Click Save
