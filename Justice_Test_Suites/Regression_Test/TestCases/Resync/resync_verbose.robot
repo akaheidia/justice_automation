@@ -23,8 +23,8 @@ ${url_for_xmc}      ${XMC_URL}
 ${url_for_jus}      ${JUS_URL}
 ${resync_end_msg}   Resync Completed successfully.
 ${timer_canceled}   Resync Finished timer canceled
-${resync_msg_sent}  RESYNC message sent for type = EVENT
-${debug_msg}        DEBUG [com.extreme.outboundmessage.OutboundMessageEngine] RESYNC message sent for type = EVENT
+${resync_msg_sent}  RESYNC message sent
+${debug_msg}        DEBUG [com.extreme.outboundmessage.OutboundMessageEngine] RESYNC message sent
 
 *** Test Cases ***
 Change Data Pump Diagnostic Level To Verbose
