@@ -19,7 +19,10 @@ Wait For Network Summary Report Page To Load
     Unselect Frame
 
 Click Device Availability Drilldown
+    sleep  2 seconds
+    Wait Until Page Contains Element  xpath://iframe
     Select Frame  xpath://iframe
+    Wait Until Page Contains Element  xpath://iframe[@id='device_availability']
     Select Frame  xpath://iframe[@id='device_availability']
 
     Wait Until Page Contains Element  ${reports_device_availability_drilldown}
@@ -29,7 +32,10 @@ Click Device Availability Drilldown
     Unselect Frame
 
 Click Site Availability Drilldown
+    sleep  2 seconds
+    Wait Until Page Contains Element  xpath://iframe
     Select Frame  xpath://iframe
+    Wait Until Page Contains Element  xpath://iframe[@id='site_availability']
     Select Frame  xpath://iframe[@id='site_availability']
 
     Wait Until Page Contains Element  ${reports_site_availability_drilldown}
@@ -39,7 +45,10 @@ Click Site Availability Drilldown
     Unselect Frame
 
 Click Top APs by Clients Drilldown
+    sleep  2 seconds
+    Wait Until Page Contains Element  xpath://iframe
     Select Frame  xpath://iframe
+    Wait Until Page Contains Element  xpath://iframe[@id='ap_clients']
     Select Frame  xpath://iframe[@id='ap_clients']
 
     Wait Until Page Contains Element  ${reports_top_aps_by_clients_drilldown}
@@ -49,7 +58,10 @@ Click Top APs by Clients Drilldown
     Unselect Frame
 
 Click Top APs by Bandwidth Drilldown
+    sleep  2 seconds
+    Wait Until Page Contains Element  xpath://iframe
     Select Frame  xpath://iframe
+    Wait Until Page Contains Element  xpath://iframe[@id='ap_bandwidth']
     Select Frame  xpath://iframe[@id='ap_bandwidth']
 
     Wait Until Page Contains Element  ${reports_top_aps_by_bandwidth_drilldown}
@@ -59,7 +71,10 @@ Click Top APs by Bandwidth Drilldown
     Unselect Frame
 
 Click Port Utilization Drilldown
+    sleep  2 seconds
+    Wait Until Page Contains Element  xpath://iframe
     Select Frame  xpath://iframe
+    Wait Until Page Contains Element  xpath://iframe[@id='port_utilization']
     Select Frame  xpath://iframe[@id='port_utilization']
 
     Wait Until Page Contains Element  ${reports_port_utilization_drilldown}
@@ -69,7 +84,10 @@ Click Port Utilization Drilldown
     Unselect Frame
 
 Click Port Error Drilldown
+    sleep  2 seconds
+    Wait Until Page Contains Element  xpath://iframe
     Select Frame  xpath://iframe
+    Wait Until Page Contains Element  xpath://iframe[@id='port_error']
     Select Frame  xpath://iframe[@id='port_error']
 
     Wait Until Page Contains Element  ${reports_port_error_drilldown}
@@ -79,7 +97,10 @@ Click Port Error Drilldown
     Unselect Frame
 
 Click End Systems Drilldown
+    sleep  2 seconds
+    Wait Until Page Contains Element  xpath://iframe
     Select Frame  xpath://iframe
+    Wait Until Page Contains Element  xpath://iframe[@id='endsystems']
     Select Frame  xpath://iframe[@id='endsystems']
 
     Wait Until Page Contains Element  ${reports_endsystems_drilldown}
@@ -90,7 +111,10 @@ Click End Systems Drilldown
 
 Click End System Pie Slice Drilldown
     [Arguments]  ${value}
+    sleep  2 seconds
+    Wait Until Page Contains Element  xpath://iframe
     Select Frame  xpath://iframe
+    Wait Until Page Contains Element  xpath://iframe[@id='endsystems']
     Select Frame  xpath://iframe[@id='endsystems']
 
     Wait Until Page Contains Element  xpath://*[name()='tspan' and text()='${value}']
@@ -102,7 +126,10 @@ Click End System Pie Slice Drilldown
     Unselect Frame
 
 Click CPU Utilization Drilldown
+    sleep  2 seconds
+    Wait Until Page Contains Element  xpath://iframe
     Select Frame  xpath://iframe
+    Wait Until Page Contains Element  xpath://iframe[@id='cpu_utilization']
     Select Frame  xpath://iframe[@id='cpu_utilization']
 
     Wait Until Page Contains Element  ${reports_cpu_utilization_drilldown}
@@ -112,7 +139,10 @@ Click CPU Utilization Drilldown
     Unselect Frame
 
 Click Memory Utilization Drilldown
+    sleep  2 seconds
+    Wait Until Page Contains Element  xpath://iframe
     Select Frame  xpath://iframe
+    Wait Until Page Contains Element  xpath://iframe[@id='memory_utilization']
     Select Frame  xpath://iframe[@id='memory_utilization']
 
     Wait Until Page Contains Element  ${reports_memory_utilization_drilldown}
@@ -124,7 +154,9 @@ Click Memory Utilization Drilldown
 
 Click Device Availability Device Drilldown
     [Arguments]  ${ip}
+    Wait Until Page Contains Element  xpath://iframe
     Select Frame  xpath://iframe
+    Wait Until Page Contains Element  xpath://iframe[@id='device_availability']
     Select Frame  xpath://iframe[@id='device_availability']
 
     Wait Until Page Contains Element  xpath://a[contains(text(),'${ip}')]
@@ -135,7 +167,9 @@ Click Device Availability Device Drilldown
 
 Click Site Availability Site Drilldown
     [Arguments]  ${site}
+    Wait Until Page Contains Element  xpath://iframe
     Select Frame  xpath://iframe
+    Wait Until Page Contains Element  xpath://iframe[@id='site_availability']
     Select Frame  xpath://iframe[@id='site_availability']
 
     Wait Until Page Contains Element  xpath://a[contains(text(),'${site}')]
