@@ -12,7 +12,7 @@ Confirm Device Label Allows Drilldown
     Navigate to Network Summary Report
     Confirm Network Summary Reports Page Title
     Change Report Time Range to Last Hour
-    sleep  2 seconds
+    Wait For Network Summary Report Page To Load
     Confirm Device Availability Panel Has Data
     Click Device Availability Device Drilldown  ${device_down_site_device_down}
     Confirm Device Overview Report Page Title
@@ -22,7 +22,7 @@ Confirm Site Label Allows Drilldown
     Navigate to Network Summary Report
     Confirm Network Summary Reports Page Title
     Change Report Time Range to Last Hour
-    sleep  2 seconds
+    Wait For Network Summary Report Page To Load
     Confirm Site Availability Panel Has Data
     Click Site Availability Site Drilldown  ${site_device_down}
     Confirm Device Availability Report Page Title
