@@ -501,7 +501,9 @@ Confirm Top N Top Site Availability Reports Page Title
 
 Confirm Top N Top CPU Utilization Reports Page Title
     sleep  4 seconds
+    Wait Until Page Contains Element  xpath://iframe
     Select Frame  xpath://iframe
+    Wait Until Page Contains Element  xpath://iframe[@id='resource']
     Select Frame  xpath://iframe[@id='resource']
 
     Page Should Contain Element  ${reports_topn_top_cpu_utilization_page_title}
@@ -511,7 +513,9 @@ Confirm Top N Top CPU Utilization Reports Page Title
 
 Confirm Top N Top Memory Utilization Reports Page Title
     sleep  4 seconds
+    Wait Until Page Contains Element  xpath://iframe
     Select Frame  xpath://iframe
+    Wait Until Page Contains Element  xpath://iframe[@id='resource']
     Select Frame  xpath://iframe[@id='resource']
 
     Page Should Contain Element  ${reports_topn_top_memory_utilization_page_title}
@@ -521,7 +525,9 @@ Confirm Top N Top Memory Utilization Reports Page Title
 
 Confirm Top N Top Port Utilization Reports Page Title
     sleep  4 seconds
+    Wait Until Page Contains Element  xpath://iframe
     Select Frame  xpath://iframe
+    Wait Until Page Contains Element  xpath://iframe[@id='resource']
     Select Frame  xpath://iframe[@id='resource']
 
     Page Should Contain Element  ${reports_topn_top_port_utilization_page_title}
@@ -531,7 +537,9 @@ Confirm Top N Top Port Utilization Reports Page Title
 
 Confirm Top N Top Port Error Reports Page Title
     sleep  4 seconds
+    Wait Until Page Contains Element  xpath://iframe
     Select Frame  xpath://iframe
+    Wait Until Page Contains Element  xpath://iframe[@id='resource']
     Select Frame  xpath://iframe[@id='resource']
 
     Page Should Contain Element  ${reports_topn_top_port_error_page_title}
@@ -541,7 +549,9 @@ Confirm Top N Top Port Error Reports Page Title
 
 Confirm Top N Top APs by Clients Reports Page Title
     sleep  4 seconds
+    Wait Until Page Contains Element  xpath://iframe
     Select Frame  xpath://iframe
+    Wait Until Page Contains Element  xpath://iframe[@id='resource']
     Select Frame  xpath://iframe[@id='resource']
 
     Page Should Contain Element  ${reports_topn_top_aps_by_clients_page_title}
@@ -551,7 +561,9 @@ Confirm Top N Top APs by Clients Reports Page Title
 
 Confirm Top N Top APs by Bandwidth Reports Page Title
     sleep  4 seconds
+    Wait Until Page Contains Element  xpath://iframe
     Select Frame  xpath://iframe
+    Wait Until Page Contains Element  xpath://iframe[@id='resource']
     Select Frame  xpath://iframe[@id='resource']
 
     Page Should Contain Element  ${reports_topn_top_aps_by_bandwidth_page_title}
@@ -561,42 +573,50 @@ Confirm Top N Top APs by Bandwidth Reports Page Title
 
 
 Confirm Analytics Summary Reports Page Title
+    Wait Until Page Contains Element  xpath://iframe
     Select Frame  xpath://iframe
     Page Should Contain Element  ${reports_analytics_analytics_summary_page_title}
     Unselect Frame
 
 Confirm Analytics Top Applications by Clients Reports Page Title
+    Wait Until Page Contains Element  xpath://iframe
     Select Frame  xpath://iframe
     Page Should Contain Element  ${reports_analytics_top_applications_by_clients_page_title}
     Unselect Frame
 
 Confirm Analytics Top Applications by Volume Reports Page Title
+    Wait Until Page Contains Element  xpath://iframe
     Select Frame  xpath://iframe
     Page Should Contain Element  ${reports_analytics_top_applications_by_volume_page_title}
     Unselect Frame
 
 Confirm Analytics Slowest Responding Applications Reports Page Title
+    Wait Until Page Contains Element  xpath://iframe
     Select Frame  xpath://iframe
     Page Should Contain Element  ${reports_analytics_slowest_responding_applications_page_title}
     Unselect Frame
 
 Confirm Analytics Daily Analytics Usage Reports Page Title
+    Wait Until Page Contains Element  xpath://iframe
     Select Frame  xpath://iframe
     Page Should Contain Element  ${reports_analytics_daily_usage_page_title}
     Unselect Frame
 
 Confirm Analytics Monthly Analytics Usage Reports Page Title
+    Wait Until Page Contains Element  xpath://iframe
     Select Frame  xpath://iframe
     Page Should Contain Element  ${reports_analytics_monthly_usage_page_title}
     Unselect Frame
 
 Confirm Analytics Quarterly Analytics Summary Reports Page Title
+    Wait Until Page Contains Element  xpath://iframe
     Select Frame  xpath://iframe
     Page Should Contain Element  ${reports_analytics_quarterly_summary_page_title}
     Unselect Frame
 
 Confirm Breadcrumb Contains Text
     [Arguments]  ${value}
+    Wait Until Page Contains Element  xpath://iframe
     Select Frame  xpath://iframe
     sleep  1 second
     Wait Until Page Contains Element  xpath://table//div//span[contains(text(),'${value}')]
@@ -605,6 +625,7 @@ Confirm Breadcrumb Contains Text
 Confirm Breadcrumb Does Not Contain Text
     [Arguments]  ${value}
     ${orig_wait}=  Set Selenium Implicit Wait  1 second
+    Wait Until Page Contains Element  xpath://iframe
     Select Frame  xpath://iframe
     Page Should Not Contain Element  xpath://table//div//span[contains(text(),'${value}')]
     Unselect Frame
