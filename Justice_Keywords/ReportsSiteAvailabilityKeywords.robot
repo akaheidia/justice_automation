@@ -87,8 +87,11 @@ Site Availability Drill Into Site
     Select Frame  xpath://iframe[@id='availability']
 
     sleep  1 second
-    Wait Until Page Contains Element  xpath://span[contains(text(), '${site}')]/..
-    Click Element  xpath://span[contains(text(), '${site}')]/..
+    # Determine the "ends-with" value by taking the length of the entire string, subtracting the length of the string being looked for,
+    # and seeing if the resulting substring at the end of the entire string matches the string we are looking for.
+    # This can be changed to "ends-with" xpath 2.0 string function when browsers support xpath 2.0.
+    Wait Until Page Contains Element  xpath://span[(substring(text(), string-length(text()) - string-length('${site}') +1) = '${site}') and not(@class='hidden')]
+    Click Element  xpath://span[(substring(text(), string-length(text()) - string-length('${site}') +1) = '${site}') and not(@class='hidden')]
 
     Unselect Frame
     Unselect Frame
