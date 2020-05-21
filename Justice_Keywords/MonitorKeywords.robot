@@ -82,6 +82,7 @@ Confirm Map Slider Selected
 
 Confirm Filter Panel Visible
     Page Should Contain Element  ${filter_panel_title}
+    Element Should Be Visible  ${filter_panel_title}
 
 Confirm Filter Panel Not Visible
     ${orig_wait}=  Set Selenium Implicit Wait  1 second
@@ -90,6 +91,7 @@ Confirm Filter Panel Not Visible
 
 Confirm Tags Panel Visible
     Page Should Contain Element  ${tags_panel_title}
+    Element Should Be Visible  ${tags_panel_title}
 
 Confirm Tags Panel Not Visible
     ${orig_wait}=  Set Selenium Implicit Wait  1 second
@@ -98,6 +100,7 @@ Confirm Tags Panel Not Visible
 
 Confirm Search Field Visible
     Page Should Contain Element  ${search_field_text}
+    Element Should Be Visible  ${search_field_text}
 
 Confirm Search Field Not Visible
     ${orig_wait}=  Set Selenium Implicit Wait  1 second
