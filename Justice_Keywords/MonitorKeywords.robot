@@ -39,6 +39,7 @@ Show Tags Panel
     Run Keyword If  ${need_to_show}  Click Element  ${monitor_tags_icon}
     ...    ELSE  Log  Tags Panel Already Shown
     Set Selenium Implicit Wait  ${orig_wait}
+    sleep  1 second
     Wait Until Element Is Visible  ${tags_panel_title}
 
 Hide Tags Panel
