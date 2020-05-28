@@ -94,7 +94,7 @@ Reconnect To RabbitMQ
 
 
 Wait Until Download Completes
-    FOR  ${index}  IN RANGE  1  100
+    FOR  ${index}  IN RANGE  1  1000
         ${download_complete}=  Run Keyword And Return Status  Page Should Contain Text  Download Complete
         Exit For Loop If  ${download_complete} == True
     END
