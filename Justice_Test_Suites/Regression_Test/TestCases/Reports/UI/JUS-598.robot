@@ -20,8 +20,8 @@ Confirm Columns In End Systems Report Table
     Confirm Network Summary Reports Page Title
     Show Reports Filter Panel
     Set Reports Filter Time Range  Custom
-    Set Reports Filter Custom Start Date  2/26/2020
-    Set Reports Filter Custom End Date    2/27/2020
+    Set Reports Filter Custom Start Date  5/27/2020
+    Set Reports Filter Custom End Date    5/29/2020
     Apply Reports Filter
     sleep  3 seconds
     Click End Systems Drilldown
