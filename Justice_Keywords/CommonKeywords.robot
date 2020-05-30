@@ -92,6 +92,14 @@ Reconnect To RabbitMQ
 
     Close SSH Connection
 
+List RabbitMQ Connections
+    [Arguments]  ${jus_ip}  ${jus_user}  ${jus_pwd}  ${xmc_ip}  ${prompt}
+    SSH To Justice Server  ${jus_ip}  ${jus_user}  ${jus_pwd}
+
+    Write Command and Log Output  ${prompt}  docker exec -i -t justice_rabbitmq_1 rabbitmqctl list_connections
+
+    Close SSH Connection
+
 
 Wait Until Download Completes
     FOR  ${index}  IN RANGE  1  1000
