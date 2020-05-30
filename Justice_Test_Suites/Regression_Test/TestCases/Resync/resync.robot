@@ -42,7 +42,9 @@ ${info_msg}                  INFO [com.extreme.outboundmessage.OutboundMessageEn
 *** Test Cases ***
 Disconnect XMC From Justice Before Creating Devices
 # JUS-318
-    Disconnect From RabbitMQ  ${jus_ip}  ${jus_user}  ${jus_pwd}  ${xmc_ip}  ${prompt}
+    List RabbitMQ Connections  ${jus_ip}  ${jus_user}  ${jus_pwd}  ${xmc_ip}  ${prompt}
+    Disconnect From RabbitMQ   ${jus_ip}  ${jus_user}  ${jus_pwd}  ${xmc_ip}  ${prompt}
+    List RabbitMQ Connections  ${jus_ip}  ${jus_user}  ${jus_pwd}  ${xmc_ip}  ${prompt}
     XMC Confirm Server Log Message Output  ${xmc_ip}  ${xmc_user}  ${xmc_pwd}  ${xmc_log}  ${no_connection_msg}
 
 Create Analytics Engine In XMC
@@ -86,6 +88,7 @@ Connect XMC To Justice After Creating Devices and Confirm Resync Messages
 # JUS-492
 # JUS-532
     Reconnect To RabbitMQ  ${jus_ip}  ${jus_user}  ${jus_pwd}  ${xmc_ip}  ${prompt}
+    List RabbitMQ Connections  ${jus_ip}  ${jus_user}  ${jus_pwd}  ${xmc_ip}  ${prompt}
 
     sleep  60 seconds
     XMC Confirm Server Log Message Output  ${xmc_ip}  ${xmc_user}  ${xmc_pwd}  ${xmc_log}  ${resync_start_msg}
@@ -119,6 +122,7 @@ Confirm Devices Added To Justice
 Disconnect XMC From Justice Before Deleting Devices
 # JUS-318
     Disconnect From RabbitMQ  ${jus_ip}  ${jus_user}  ${jus_pwd}  ${xmc_ip}  ${prompt}
+    List RabbitMQ Connections  ${jus_ip}  ${jus_user}  ${jus_pwd}  ${xmc_ip}  ${prompt}
     XMC Confirm Server Log Message Output  ${xmc_ip}  ${xmc_user}  ${xmc_pwd}  ${xmc_log}  ${no_connection_msg}
 
 Delete Analytics Engine From XMC
@@ -161,6 +165,7 @@ Connect XMC To Justice After Deleting Devices
 # JUS-492
 # JUS-532
     Reconnect To RabbitMQ  ${jus_ip}  ${jus_user}  ${jus_pwd}  ${xmc_ip}  ${prompt}
+    List RabbitMQ Connections  ${jus_ip}  ${jus_user}  ${jus_pwd}  ${xmc_ip}  ${prompt}
     sleep  60 seconds
     sleep  60 seconds
     sleep  60 seconds

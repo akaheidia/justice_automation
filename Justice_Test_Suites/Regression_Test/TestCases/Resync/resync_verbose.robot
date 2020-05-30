@@ -42,7 +42,9 @@ Change Data Pump Diagnostic Level To Verbose
 Confirm Resync Messages Not Seen After Resync Complete
 # JUS-529
 # JUS-532
-    Disconnect From RabbitMQ  ${jus_ip}  ${jus_user}  ${jus_pwd}  ${xmc_ip}  ${prompt}
+    List RabbitMQ Connections  ${jus_ip}  ${jus_user}  ${jus_pwd}  ${xmc_ip}  ${prompt}
+    Disconnect From RabbitMQ   ${jus_ip}  ${jus_user}  ${jus_pwd}  ${xmc_ip}  ${prompt}
+    List RabbitMQ Connections  ${jus_ip}  ${jus_user}  ${jus_pwd}  ${xmc_ip}  ${prompt}
     sleep  30 seconds
     Reconnect To RabbitMQ  ${jus_ip}  ${jus_user}  ${jus_pwd}  ${xmc_ip}  ${prompt}
     sleep  60 seconds
