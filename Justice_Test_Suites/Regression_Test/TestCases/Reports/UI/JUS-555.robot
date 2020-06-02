@@ -16,7 +16,7 @@ Confirm Analytics Summary Top Sites Labels Display Optimally
     Set Reports Filter Time Range  Last 3 Days
     Apply Reports Filter
     Hide Reports Filter Panel
-    sleep  2 seconds
+    sleep  4 seconds
     Confirm Top Sites by Clients Site Label  ${site_child_2}
     Confirm Top Sites by Volume Site Label  ${site_child_2}
 
@@ -28,7 +28,7 @@ Confirm Network Summary Site Availability Labels Display Optimally
     Set Reports Filter Time Range  Last 3 Days
     Apply Reports Filter
     Hide Reports Filter Panel
-    sleep  2 seconds
+    sleep  4 seconds
     Confirm Site Availability Panel Has Data
     Confirm Site Availability Site Label  ${site_device_down}
     Confirm Site Availability Site Label  justice-XMC-201.extr...
