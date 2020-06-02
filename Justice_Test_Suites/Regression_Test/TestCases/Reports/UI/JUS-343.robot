@@ -12,7 +12,7 @@ Confirm Back Button Works
     Navigate to Network Summary Report
     Confirm Network Summary Reports Page Title
     Click Device Availability Drilldown
-    sleep  2 seconds
+    sleep  4 seconds
     Confirm Top N Device Availability Report Page Title
     Go Back
     Confirm Network Summary Reports Page Title

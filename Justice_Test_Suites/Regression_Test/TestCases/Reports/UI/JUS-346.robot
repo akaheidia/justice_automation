@@ -35,5 +35,6 @@ Confirm Filter Panel Remains Closed If Closed And Drill Down
     sleep  2 seconds
     Hide Reports Filter Panel
     Confirm Reports Filter Panel Not Visible
+    sleep  2 seconds
     Site Availability Drill Into Site  ${site_device_down}
     Confirm Reports Filter Panel Not Visible
