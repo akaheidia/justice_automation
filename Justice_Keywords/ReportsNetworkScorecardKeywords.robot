@@ -7,10 +7,11 @@ Documentation    Keywords specific to the Network Scorecard Report page.
 *** Keywords ***
 
 Wait For Network Scorecard Report Page To Load
+    sleep  5 seconds
     Select Frame  xpath://iframe
-    Select Frame  xpath://iframe[@id='device_availability']
+    Select Frame  xpath://iframe[@id='availability']
 
-    Wait Until Page Contains Element  ${reports_device_availability_drilldown}  timeout=10 seconds
+    Wait Until Page Contains Element  ${reports_site_availability_drilldown}  timeout=10 seconds
 
     Unselect Frame
     Unselect Frame

@@ -29,12 +29,13 @@ Navigate To Analytics Report Menu
 
 
 Navigate to Network Scorecard Report
-    Set Selenium Implicit Wait  2 seconds
+    Set Selenium Implicit Wait  5 seconds
     Navigate to Reports and Show Reports Menu
     Click Network Scorecard Report Menu
+    Wait For Network Scorecard Report Page To Load
 
 Navigate to Network Summary Report
-    Set Selenium Implicit Wait  2 seconds
+    Set Selenium Implicit Wait  10 seconds
     Navigate to Reports and Show Reports Menu
     Click Network Summary Report Menu
     Wait For Network Summary Report Page To Load

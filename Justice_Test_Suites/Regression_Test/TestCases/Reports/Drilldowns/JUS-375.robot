@@ -12,47 +12,47 @@ Test Setup       Navigate To Network Scorecard Report
 Confirm Site Availability Label Drilldown
     Confirm Network Scorecard Reports Page Title
     Click Network Scorecard Site Availability Drilldown
-    sleep  2 seconds
+    sleep  4 seconds
     Confirm Site Availability Reports Page Title
 
 Confirm Site CPU Utilization Label Drilldown
     Confirm Network Scorecard Reports Page Title
     Click Network Scorecard Site CPU Utilization Drilldown
-    sleep  2 seconds
+    sleep  4 seconds
     Confirm Site CPU Utilization Reports Page Title
 
 Confirm Site Memory Utilization Label Drilldown
     Confirm Network Scorecard Reports Page Title
     Click Network Scorecard Site Memory Utilization Drilldown
-    sleep  2 seconds
+    sleep  4 seconds
     Confirm Site Memory Utilization Reports Page Title
 
 Confirm Total Clients Label Drilldown
     Confirm Network Scorecard Reports Page Title
     Click Network Scorecard Total Clients Drilldown
-    sleep  2 seconds
+    sleep  4 seconds
     Confirm Total Clients Reports Page Title
 
 Confirm Site Port Utilization Label Drilldown
     Confirm Network Scorecard Reports Page Title
     Click Network Scorecard Site Port Utilization Drilldown
-    sleep  2 seconds
+    sleep  4 seconds
     Confirm Site Port Utilization Reports Page Title
 
 Confirm Site Port Error Label Drilldown
     Confirm Network Scorecard Reports Page Title
     Click Network Scorecard Site Port Error Drilldown
-    sleep  2 seconds
+    sleep  4 seconds
     Confirm Site Port Error Reports Page Title
 
 Confirm Site Wireless Volume Label Drilldown
     Confirm Network Scorecard Reports Page Title
     Click Network Scorecard Site Wireless Volume Drilldown
-    sleep  2 seconds
+    sleep  4 seconds
     Confirm Site Wireless Volume Reports Page Title
 
 Confirm Tracked Application Response Time Label Drilldown
     Confirm Network Scorecard Reports Page Title
     Click Network Scorecard Tracked Application Response Time Drilldown
-    sleep  2 seconds
+    sleep  4 seconds
     Confirm Tracked Application Response Time Reports Page Title
