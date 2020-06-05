@@ -154,6 +154,7 @@ Click Memory Utilization Drilldown
 
 Click Device Availability Device Drilldown
     [Arguments]  ${ip}
+    sleep  2 seconds
     Wait Until Page Contains Element  xpath://iframe
     Select Frame  xpath://iframe
     Wait Until Page Contains Element  xpath://iframe[@id='device_availability']
@@ -167,6 +168,7 @@ Click Device Availability Device Drilldown
 
 Click Site Availability Site Drilldown
     [Arguments]  ${site}
+    sleep  2 seconds
     Wait Until Page Contains Element  xpath://iframe
     Select Frame  xpath://iframe
     Wait Until Page Contains Element  xpath://iframe[@id='site_availability']
@@ -180,6 +182,7 @@ Click Site Availability Site Drilldown
 
 
 Confirm Device Availability Panel Has Data
+    sleep  2 seconds
     ${orig_wait}=  Set Selenium Implicit Wait  1 second
     Select Frame  xpath://iframe
     Select Frame  xpath://iframe[@id='device_availability']
@@ -191,6 +194,7 @@ Confirm Device Availability Panel Has Data
     Set Selenium Implicit Wait  ${orig_wait}
 
 Confirm Device Availability Panel Has No Data
+    sleep  2 seconds
     Select Frame  xpath://iframe
     Select Frame  xpath://iframe[@id='device_availability']
 
@@ -200,6 +204,7 @@ Confirm Device Availability Panel Has No Data
     Unselect Frame
 
 Confirm Site Availability Panel Has Data
+    sleep  2 seconds
     ${orig_wait}=  Set Selenium Implicit Wait  1 second
     Select Frame  xpath://iframe
     Select Frame  xpath://iframe[@id='site_availability']
@@ -211,6 +216,7 @@ Confirm Site Availability Panel Has Data
     Set Selenium Implicit Wait  ${orig_wait}
 
 Confirm Site Availability Panel Has No Data
+    sleep  2 seconds
     Select Frame  xpath://iframe
     Select Frame  xpath://iframe[@id='site_availability']
 
@@ -220,6 +226,7 @@ Confirm Site Availability Panel Has No Data
     Unselect Frame
 
 Confirm Top APs by Clients Panel Has Data
+    sleep  2 seconds
     ${orig_wait}=  Set Selenium Implicit Wait  1 second
     Select Frame  xpath://iframe
     Select Frame  xpath://iframe[@id='ap_clients']
@@ -231,6 +238,7 @@ Confirm Top APs by Clients Panel Has Data
     Set Selenium Implicit Wait  ${orig_wait}
 
 Confirm Top APs by Bandwidth Panel Has Data
+    sleep  2 seconds
     ${orig_wait}=  Set Selenium Implicit Wait  1 second
     Select Frame  xpath://iframe
     Select Frame  xpath://iframe[@id='ap_bandwidth']
@@ -242,6 +250,7 @@ Confirm Top APs by Bandwidth Panel Has Data
     Set Selenium Implicit Wait  ${orig_wait}
 
 Confirm End Systems Panel Has Data
+    sleep  2 seconds
     ${orig_wait}=  Set Selenium Implicit Wait  1 second
     Select Frame  xpath://iframe
     Select Frame  xpath://iframe[@id='endsystems']
@@ -255,6 +264,7 @@ Confirm End Systems Panel Has Data
 
 Confirm Site Availability Site Label
     [Arguments]  ${site}
+    sleep  2 seconds
     Select Frame  xpath://iframe
     Select Frame  xpath://iframe[@id='site_availability']
 

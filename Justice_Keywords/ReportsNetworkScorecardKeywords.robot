@@ -18,6 +18,7 @@ Wait For Network Scorecard Report Page To Load
 
 
 Click Network Scorecard Site Availability Drilldown
+    sleep  2 seconds
     Select Frame  xpath://iframe
     Select Frame  xpath://iframe[@id='availability']
 
@@ -28,6 +29,7 @@ Click Network Scorecard Site Availability Drilldown
     Unselect Frame
 
 Click Network Scorecard Site CPU Utilization Drilldown
+    sleep  2 seconds
     Select Frame  xpath://iframe
     Select Frame  xpath://iframe[@id='cpu']
 
@@ -38,6 +40,7 @@ Click Network Scorecard Site CPU Utilization Drilldown
     Unselect Frame
 
 Click Network Scorecard Site Memory Utilization Drilldown
+    sleep  2 seconds
     Select Frame  xpath://iframe
     Select Frame  xpath://iframe[@id='memory']
 
@@ -48,6 +51,7 @@ Click Network Scorecard Site Memory Utilization Drilldown
     Unselect Frame
 
 Click Network Scorecard Total Clients Drilldown
+    sleep  2 seconds
     Select Frame  xpath://iframe
     Select Frame  xpath://iframe[@id='clients']
 
@@ -58,6 +62,7 @@ Click Network Scorecard Total Clients Drilldown
     Unselect Frame
 
 Click Network Scorecard Site Port Utilization Drilldown
+    sleep  2 seconds
     Select Frame  xpath://iframe
     Select Frame  xpath://iframe[@id='port_utilization']
 
@@ -68,6 +73,7 @@ Click Network Scorecard Site Port Utilization Drilldown
     Unselect Frame
 
 Click Network Scorecard Site Port Error Drilldown
+    sleep  2 seconds
     Select Frame  xpath://iframe
     Select Frame  xpath://iframe[@id='port_error']
 
@@ -78,6 +84,7 @@ Click Network Scorecard Site Port Error Drilldown
     Unselect Frame
 
 Click Network Scorecard Site Wireless Volume Drilldown
+    sleep  2 seconds
     Select Frame  xpath://iframe
     Select Frame  xpath://iframe[@id='volume']
 
@@ -88,6 +95,7 @@ Click Network Scorecard Site Wireless Volume Drilldown
     Unselect Frame
 
 Click Network Scorecard Tracked Application Response Time Drilldown
+    sleep  2 seconds
     Select Frame  xpath://iframe
     Select Frame  xpath://iframe[@id='app_response']
 
@@ -99,6 +107,7 @@ Click Network Scorecard Tracked Application Response Time Drilldown
 
 
 Click Network Scorecard Site Availability Donut
+    sleep  2 seconds
     Select Frame  xpath://iframe
     Select Frame  xpath://iframe[@id='availability']
 
@@ -109,8 +118,8 @@ Click Network Scorecard Site Availability Donut
     Unselect Frame
 
 
-
 Confirm Network Scorecard Tracked Application Response Time Has Value
+    sleep  2 seconds
     Select Frame  xpath://iframe
     Select Frame  xpath://iframe[@id='app_response']
 
